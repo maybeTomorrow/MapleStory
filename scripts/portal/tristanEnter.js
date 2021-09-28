@@ -1,4 +1,4 @@
 function enter(pi) {
-	pi.playerMessage("ÌØÀïË¹Ì¹µÄÁé»ê£ºÄã»¹Ã»ÓĞÍ¨¹ıÕâÀïµÄ×Ê¸ñ¡£");
+	pi.playerMessage("ç‰¹é‡Œæ–¯å¦çš„çµé­‚ï¼šä½ è¿˜æ²¡æœ‰é€šè¿‡è¿™é‡Œçš„èµ„æ ¼ã€‚");
 	return false;
 }

@@ -1,4 +1,4 @@
-//ÎÏÅ£¸±±¾PQ
+//èœ—ç‰›å‰¯æœ¬PQ
 
 /*
 INSERT monsterdrops (monsterid,itemid,chance) VALUES (9300001,4001007,1);
@@ -22,7 +22,7 @@ function monsterValue(eim, mobId) {
 }
 
 function setup() {
-	exitMap = em.getChannelServer().getMapFactory().getMap(970030002); //ĞİÏ¢´¦
+	exitMap = em.getChannelServer().getMapFactory().getMap(970030002); //ä¼‘æ¯å¤„
 	var instanceName = "woniu" + instanceId;
 	var eim = em.newInstance(instanceName);
 	var mf = eim.getMapFactory();

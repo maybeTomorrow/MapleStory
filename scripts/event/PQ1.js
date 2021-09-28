@@ -3,8 +3,8 @@ importPackage(net.sf.odinms.world);
 var exitMap; 
 var instanceId; 
 var minPlayers = 6;
-var mapId = 970030103; //ÈÎÎñµã
-var qtmapId = 970030001; //Áì½±µØµã
+var mapId = 970030103; //ä»»åŠ¡ç‚¹
+var qtmapId = 970030001; //é¢†å¥–åœ°ç‚¹
 
 importPackage(net.sf.odinms.world); 
 var exitMap; 
@@ -38,7 +38,7 @@ function playerEntry(eim, player) {
   
  //TODO: hold time across map changes 
  player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(120));
- player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "½øÈë¸±±¾µØÍ¼.ÓĞÊ±¼äÏŞÖÆ!ÇëÔÚ¹æ¶¨Ê±¼äÄÚÍê³É!")); 
+ player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "è¿›å…¥å‰¯æœ¬åœ°å›¾.æœ‰æ—¶é—´é™åˆ¶!è¯·åœ¨è§„å®šæ—¶é—´å†…å®Œæˆ!")); 
  startInstance(eim); 
 } 
 function playerDead(eim, player) { 

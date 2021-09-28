@@ -1,4 +1,4 @@
-//ºº»¯
+//æ±‰åŒ–
 
 importPackage(net.sf.odinms.tools);
 
@@ -28,8 +28,8 @@ function scheduleNew() {
 	em.setProperty("docked", "true");
 	em.setProperty("entry", "true");
 	if(toggleMsg) {
-		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "º½°à¹«¸æ:ÄÌ²èÃ°ÏÕµºº½°àK001´Î¿ªÍùÌì¿ÕÖ®³ÇµÄÒÑ¾­µ½´ï¡£"));
-		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "º½°à¹«¸æ:ÄÌ²èÃ°ÏÕµºº½°àK002´Î¿ªÍùÉñÄ¾´åµÄÒÑ¾­µ½´ï¡£"));
+		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "èˆªç­å…¬å‘Š:å¥¶èŒ¶å†’é™©å²›èˆªç­K001æ¬¡å¼€å¾€å¤©ç©ºä¹‹åŸçš„å·²ç»åˆ°è¾¾ã€‚"));
+		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "èˆªç­å…¬å‘Š:å¥¶èŒ¶å†’é™©å²›èˆªç­K002æ¬¡å¼€å¾€ç¥æœ¨æ‘çš„å·²ç»åˆ°è¾¾ã€‚"));
 	}
 	em.schedule("stopEntry", closeTime);
 	em.schedule("takeoff", beginTime);
@@ -50,8 +50,8 @@ function takeoff() {
 		temp2.next().changeMap(Subway_to_KC, Subway_to_KC.getPortal(0));
 	}
 	if(toggleMsg) {
-		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "º½°à¹«¸æ:ÄÌ²èÃ°ÏÕµºº½°àK001´Î¿ªÍùÉñÄ¾´åµÄÒÑ¾­·¢³ö£¬À´²»¼°³Ë×øµÄµºÃñÇëµÈºòÏÂ¸ö°à´Î¡£"));
-		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "º½°à¹«¸æ:ÄÌ²èÃ°ÏÕµºº½°àK002´Î¿ªÍùÌì¿ÕÖ®µºµÄÒÑ¾­·¢³ö£¬À´²»¼°³Ë×øµÄµºÃñÇëµÈºòÏÂ¸ö°à´Î¡£"));
+		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "èˆªç­å…¬å‘Š:å¥¶èŒ¶å†’é™©å²›èˆªç­K001æ¬¡å¼€å¾€ç¥æœ¨æ‘çš„å·²ç»å‘å‡ºï¼Œæ¥ä¸åŠä¹˜åçš„å²›æ°‘è¯·ç­‰å€™ä¸‹ä¸ªç­æ¬¡ã€‚"));
+		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(1, "èˆªç­å…¬å‘Š:å¥¶èŒ¶å†’é™©å²›èˆªç­K002æ¬¡å¼€å¾€å¤©ç©ºä¹‹å²›çš„å·²ç»å‘å‡ºï¼Œæ¥ä¸åŠä¹˜åçš„å²›æ°‘è¯·ç­‰å€™ä¸‹ä¸ªç­æ¬¡ã€‚"));
 	}
 	var temp = rideTime / 1000;
 	Subway_to_KC.broadcastMessage(MaplePacketCreator.getClock(temp));

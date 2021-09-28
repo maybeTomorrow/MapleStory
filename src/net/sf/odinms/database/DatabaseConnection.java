@@ -44,6 +44,7 @@ public class DatabaseConnection {
         if (props == null) {
             throw new RuntimeException("DatabaseConnection not initialized");
         }
+
         return con.get();
     }
 
@@ -64,6 +65,30 @@ public class DatabaseConnection {
     private static class ThreadLocalConnection extends ThreadLocal<Connection> {
 
         public static Collection<Connection> allConnections = new LinkedList<Connection>();
+
+        @Override
+        public Connection get() {
+            Connection con=super.get();
+            try {
+                if(con.isClosed()){
+                    log.info("closed reconnected");
+                    String driver = props.getProperty("driver");
+                    String url = props.getProperty("url");
+                    String user = props.getProperty("user");
+                    String password = props.getProperty("password");
+                    try {
+                        Class.forName(driver);
+                        con = DriverManager.getConnection(url, user, password);
+                    } catch (ClassNotFoundException e) {
+                        log.error("ERROR", e);
+                    }
+                    this.set(con);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return con;
+        }
 
         @Override
         protected Connection initialValue() {

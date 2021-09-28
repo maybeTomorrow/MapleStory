@@ -3,13 +3,13 @@
 	Puro
     Made by Daenerys
 */
-¡¾¡¿function start() {
-    cm.sendYesNo("ÄãÏëÒªÈ¥Èð¶÷µº±ØÐëÖ§¸¶#b 80 ·ã±Ò#k µ½ÄÇ±ßÔ¼Ò»·ÖÖÓ.");
+ã€ã€‘function start() {
+    cm.sendYesNo("ä½ æƒ³è¦åŽ»ç‘žæ©å²›å¿…é¡»æ”¯ä»˜#b 80 æž«å¸#k åˆ°é‚£è¾¹çº¦ä¸€åˆ†é’Ÿ.");
 }
 
 function action(mode, type, selection) {
     if (mode == 0) {
-	cm.sendOk("µÈÄã¿¼ÂÇºÃÔÙÀ´ÕÒÎÒ°É!");
+	cm.sendOk("ç­‰ä½ è€ƒè™‘å¥½å†æ¥æ‰¾æˆ‘å§!");
 	cm.dispose();
 	} else {
     if(cm.getPlayer().getMeso() >= 80) {

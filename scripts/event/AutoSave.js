@@ -1,5 +1,5 @@
 /* 
- * ×Ô¶¯±£´æ½ÇÉ«Êı¾İ
+ * è‡ªåŠ¨ä¿å­˜è§’è‰²æ•°æ®
  */
 
 var setupTask;
@@ -9,7 +9,7 @@ function init() {
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 1000 * 60 * 1); //10·ÖÖÓ±£´æ1´Î
+    setupTask = em.schedule("start", 1000 * 60 * 1); //10åˆ†é’Ÿä¿å­˜1æ¬¡
 }
 
 function cancelSchedule() {

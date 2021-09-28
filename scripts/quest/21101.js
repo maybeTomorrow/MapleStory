@@ -12,7 +12,7 @@ function start(mode, type, selection) {
         	else
             		status--;
 		if (status == 0) {
-			qm.sendYesNo("#b(ÈÃÎÒÈ·ÈÏ×Ô¼ºÊÇ²»ÊÇÊ¹ÓÃ#p1201001#µÄÓ¢ĞÛ£¿Ê¹¾¢×¥×¡#p1201001#ÊÔÊÔ£¬¿Ï¶¨»áÓĞÊ²Ã´·´Ó³µÄ¡£)#k");
+			qm.sendYesNo("#b(è®©æˆ‘ç¡®è®¤è‡ªå·±æ˜¯ä¸æ˜¯ä½¿ç”¨#p1201001#çš„è‹±é›„ï¼Ÿä½¿åŠ²æŠ“ä½#p1201001#è¯•è¯•ï¼Œè‚¯å®šä¼šæœ‰ä»€ä¹ˆåæ˜ çš„ã€‚)#k");
 		} else if (status == 1) {
 			if (qm.getPlayer().getJob().getId() == 2000) {
 				qm.updateQuest(21101, "create@");
@@ -26,7 +26,7 @@ function start(mode, type, selection) {
 				qm.getPlayer().setMaxMp(qm.getPlayer().getMaxMp() + 15);
 				qm.getPlayer().changeSkillLevel(net.sf.odinms.client.SkillFactory.getSkill(20009000), 0, -1);
 				qm.getPlayer().changeSkillLevel(net.sf.odinms.client.SkillFactory.getSkill(20009000), 1, 0);
-				qm.sendNextPrev("#b(ËÆºõÏëÆğÀ´ÁËÊ²Ã´¡­¡­)#k", 3);
+				qm.sendNextPrev("#b(ä¼¼ä¹æƒ³èµ·æ¥äº†ä»€ä¹ˆâ€¦â€¦)#k", 3);
 			}
 		} else if (status == 2) {
 			qm.warp(914090100);

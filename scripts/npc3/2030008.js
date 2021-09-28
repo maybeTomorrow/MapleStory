@@ -61,20 +61,20 @@ function action(mode, type, selection) {
 			if (cm.getPlayer().getLevel() >= minLevel) {
 				if (cm.getQuestStatus(100200) != net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED && cm.getQuestStatus(100200) != net.sf.odinms.client.MapleQuestStatus.Status.STARTED) {
 					cm.startQuest(100200);
-					cm.sendOk("ÄãÏëÌôÕ½´ó¹ÖÎï #bÔúÀ¥#k £¿ ÕâÒ»ÇĞ¶¼²»ÊÇÈİÒ×µÄ¡£Ê×ÏÈÈÃÎÒÀ´²âÊÔÏÂÄãµÄÄÜÁ¦°É£¡");
+					cm.sendOk("ä½ æƒ³æŒ‘æˆ˜å¤§æ€ªç‰© #bæ‰æ˜†#k ï¼Ÿ è¿™ä¸€åˆ‡éƒ½ä¸æ˜¯å®¹æ˜“çš„ã€‚é¦–å…ˆè®©æˆ‘æ¥æµ‹è¯•ä¸‹ä½ çš„èƒ½åŠ›å§ï¼");
 					cm.dispose();
 					return;
 				} else if (cm.getQuestStatus(100201) == net.sf.odinms.client.MapleQuestStatus.Status.STARTED) {
 					teethmode = 1;
 					cm.sendNext("Have you got the items I asked for? This ain't no charity.");
 				} else {
-					cm.sendSimple("ºÃ¡£¡£¡£ÎÒ¿´ÄãÃÇÓĞ³ä·ÖµÄ×Ê¸ñ£¬ÄãÏëÌôÕ½ÄÇÒ»½×¶Î£¿ #b\r\n#L0#·Ï¿óµ÷²é(µÚÒ»½×¶Î)#l\r\n#L1#ÔúÀ¥ÃÔ¹¬µ÷²é(µÚ¶ş½×¶Î)#l\r\n#L2#ÖÎÁ¶ÑûÇë(µÚÈı½×¶Î)#l");						
+					cm.sendSimple("å¥½ã€‚ã€‚ã€‚æˆ‘çœ‹ä½ ä»¬æœ‰å……åˆ†çš„èµ„æ ¼ï¼Œä½ æƒ³æŒ‘æˆ˜é‚£ä¸€é˜¶æ®µï¼Ÿ #b\r\n#L0#åºŸçŸ¿è°ƒæŸ¥(ç¬¬ä¸€é˜¶æ®µ)#l\r\n#L1#æ‰æ˜†è¿·å®«è°ƒæŸ¥(ç¬¬äºŒé˜¶æ®µ)#l\r\n#L2#æ²»ç‚¼é‚€è¯·(ç¬¬ä¸‰é˜¶æ®µ)#l");						
 				}
 				if (cm.getQuestStatus(100201) == net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED) {
 					teethmode = 2;
 				}
 			} else {
-				cm.sendOk("°´ÕÕÄãÄ¿Ç°µÄÇé¿ö£¬Äã»¹²»ÄÜÂú×ã½øĞĞÕâÏîÈÎÎñµÄÄÜÁ¦£¬µ±Äã±äµÄÇ¿´óµÄÊ±ºò£¬ÔÙÀ´ÕÒÎÒ°É£¡");
+				cm.sendOk("æŒ‰ç…§ä½ ç›®å‰çš„æƒ…å†µï¼Œä½ è¿˜ä¸èƒ½æ»¡è¶³è¿›è¡Œè¿™é¡¹ä»»åŠ¡çš„èƒ½åŠ›ï¼Œå½“ä½ å˜çš„å¼ºå¤§çš„æ—¶å€™ï¼Œå†æ¥æ‰¾æˆ‘å§ï¼");
 				cm.dispose();
 			}
 		} else if (status == 1) {
@@ -96,10 +96,10 @@ function action(mode, type, selection) {
 			}
 			if (selection == 0) {
 				if (cm.getParty() == null) {
-					cm.sendNext("½øÈëµ÷²éÇ°£¬ÄãÓ¦¸ÃÓĞÒ»¸ö¶ÓÎé¡£ÇëÏÈ×é¶Ó¡£");
+					cm.sendNext("è¿›å…¥è°ƒæŸ¥å‰ï¼Œä½ åº”è¯¥æœ‰ä¸€ä¸ªé˜Ÿä¼ã€‚è¯·å…ˆç»„é˜Ÿã€‚");
 					cm.dispose();
 				} else if (!cm.isLeader()) {
-					cm.sendNext("ÇëÈÃ×é¶Ó³¤ºÍÎÒ½²»°£¬¾ö¶¨½øÈëÊ±¼ä¡£");
+					cm.sendNext("è¯·è®©ç»„é˜Ÿé•¿å’Œæˆ‘è®²è¯ï¼Œå†³å®šè¿›å…¥æ—¶é—´ã€‚");
 					cm.dispose();
 				} else {
 					var party = cm.getParty().getMembers();
@@ -113,7 +113,7 @@ function action(mode, type, selection) {
 					if (next) {
 						var em = cm.getEventManager("ZakumPQ");
 						if (em == null) {
-							cm.sendOk("½Å±¾·¢Éú´íÎó£¬ÇëÁªÏµ¹ÜÀíÔ±£¡");
+							cm.sendOk("è„šæœ¬å‘ç”Ÿé”™è¯¯ï¼Œè¯·è”ç³»ç®¡ç†å‘˜ï¼");
 						} else {
 							em.startInstance(cm.getParty(), cm.getChar().getMap());
 							party = cm.getChar().getEventInstance().getPlayers();
@@ -123,7 +123,7 @@ function action(mode, type, selection) {
 						}
 						cm.dispose();
 					} else {
-						cm.sendNext("µ±Ç°×é¶ÓÖĞÍæ¼Ò×´Ì¬´íÎó£¡");
+						cm.sendNext("å½“å‰ç»„é˜Ÿä¸­ç©å®¶çŠ¶æ€é”™è¯¯ï¼");
 						cm.dispose();
 					}
 				}
@@ -135,7 +135,7 @@ function action(mode, type, selection) {
 					if (cm.haveItem(4031062))
 						cm.sendNext("You've already got the #bBreath of Lava#k, you don't need to do this stage.");
 					else
-						cm.sendNext("ÇëÏÈÍê³ÉÇ°ÃæµÄµ÷²éÈÎÎñ¡£");
+						cm.sendNext("è¯·å…ˆå®Œæˆå‰é¢çš„è°ƒæŸ¥ä»»åŠ¡ã€‚");
 					cm.dispose();
 				}
 			} else if (selection == 2) { //Golden Tooth Collection
@@ -148,7 +148,7 @@ function action(mode, type, selection) {
 					cm.sendYesNo("Okay, you've completed the earlier trials.  Now, with a little hard work I can get you the #bseeds of Zakum#k necessary to enter combat.  But first, my teeths are not as good as they used to be.  You ever seen a dentist in Maple Story?  Well, I heard the Miner Zombies have gold teeth.  I'd like you to collect #b30 Zombie's Lost Gold Tooth#k so I can build myself some dentures.  Then I'll be able to get you the items you desire.\r\nRequired:\r\n#i4000082##b x 30");
 				
 				} else {
-					cm.sendNext("ÇëÏÈÍê³ÉÇ°ÃæµÄµ÷²éÈÎÎñ¡£");
+					cm.sendNext("è¯·å…ˆå®Œæˆå‰é¢çš„è°ƒæŸ¥ä»»åŠ¡ã€‚");
 					cm.dispose();
 				}
 			}

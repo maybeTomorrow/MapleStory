@@ -52,7 +52,7 @@ function monsterValue(eim, mobId) {
 }
 
 function setup() {
-	exitMap = em.getChannelServer().getMapFactory().getMap(922000009); // ³ö¿Ú
+	exitMap = em.getChannelServer().getMapFactory().getMap(922000009); // å‡ºå£
 	var instanceName = "tzPQ" + instanceId;
 	var eim = em.newInstance(instanceName);
 	var mf = eim.getMapFactory();

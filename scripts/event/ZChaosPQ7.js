@@ -1,5 +1,5 @@
 /* 
- * ´óÔË¶¯»á ½â·Å°¢Ë¹Íú[À§ÄÑ]
+ * å¤§è¿åŠ¨ä¼š è§£æ”¾é˜¿æ–¯æ—º[å›°éš¾]
  */
 
 function init() {
@@ -81,8 +81,8 @@ function allMonstersDead(eim) {
 
 
 function end(eim, player){
-    em.broadcastYellowMsg("[À§ÄÑÄ£Ê½]Ï£À­ÒÑ±»»÷°Ü£¬ÓÂÊ¿ÃÇ½â·ÅÁË°¢Ë¹Íú³Ç£¡");
-    em.broadcastServerMsg(5120059, "[À§ÄÑÄ£Ê½]Ï£À­ÒÑ±»»÷°Ü£¬ÇëÔÚ10ÃëÄÚµã»÷NPC»ñµÃ½±Àø¡£" ,true);
+    em.broadcastYellowMsg("[å›°éš¾æ¨¡å¼]å¸Œæ‹‰å·²è¢«å‡»è´¥ï¼Œå‹‡å£«ä»¬è§£æ”¾äº†é˜¿æ–¯æ—ºåŸï¼");
+    em.broadcastServerMsg(5120059, "[å›°éš¾æ¨¡å¼]å¸Œæ‹‰å·²è¢«å‡»è´¥ï¼Œè¯·åœ¨10ç§’å†…ç‚¹å‡»NPCè·å¾—å¥–åŠ±ã€‚" ,true);
     eim.startEventTimer(1000 * 10); //10 min
     eim.getMapInstance(5).spawnNpc(9330192, new java.awt.Point(169, 196));
 	

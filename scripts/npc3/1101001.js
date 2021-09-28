@@ -22,7 +22,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("»¶Ó­À´µ½Ê¥µØ£¡");
+			cm.sendOk("æ¬¢è¿æ¥åˆ°åœ£åœ°ï¼");
 		} else if (status == 1) {
 			cm.dispose();
 		}

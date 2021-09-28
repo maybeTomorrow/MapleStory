@@ -41,10 +41,10 @@ function enter(pi) {
 			pi.warp(240010100, "elli00");
 		}
 		pi.gainItem(4031346, -1);
-		pi.playerMessage("Ê¹ÓÃÁËÉñÆøµÄÖÖ×Ó.");
+		pi.playerMessage("ä½¿ç”¨äº†ç¥æ°”çš„ç§å­.");
 		return true;
 	} else {
-		pi.playerMessage("Ã»ÓĞ×ã¹»µÄÎïÆ·.ÎŞ·¨½øÈë.");
+		pi.playerMessage("æ²¡æœ‰è¶³å¤Ÿçš„ç‰©å“.æ— æ³•è¿›å…¥.");
 		return false;
 	}
 }

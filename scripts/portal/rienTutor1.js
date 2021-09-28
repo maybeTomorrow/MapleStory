@@ -1,6 +1,6 @@
 function enter(pi) {
 	if (!pi.isQuestFinished(21010)) {
-		pi.playerMessage("你必须完成任务后，才能进入下一个地图！");
+		pi.playerMessage("浣犲繀椤诲畬鎴愪换鍔″悗锛屾墠鑳借繘鍏ヤ笅涓�涓湴鍥撅紒");
 		return false;
 	}
 	pi.warp(140090200, 1);

@@ -1,5 +1,5 @@
 /* 
- * »ìãçÆ·¿ËçÍ
+ * æ··æ²Œå“å…‹ç¼¤
  */
 
 function init() {
@@ -12,7 +12,7 @@ function setup(eim, leaderid) {
     var eim = em.newInstance("ChaosPinkBean");
     eim.setInstanceMap(270051100).resetFully();
     em.setProperty("state", "1");
-    eim.startEventTimer(7200000); // 2 Ğ¡Ê±
+    eim.startEventTimer(7200000); // 2 å°æ—¶
     return eim;
 }
 

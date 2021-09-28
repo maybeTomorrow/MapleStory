@@ -30,6 +30,6 @@
 var status;
 
 function start() {
-	cm.sendOk("要做出美味的食物可不是件容易的事情！");
+	cm.sendOk("瑕佸仛鍑虹編鍛崇殑椋熺墿鍙笉鏄欢瀹规槗鐨勪簨鎯咃紒");
 	cm.dispose();
 }

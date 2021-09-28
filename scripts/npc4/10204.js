@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendOk("¹ö¿ª.");
+	    cm.sendOk("æ»šå¼€.");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("Ïë³ÉÎªº£µÁÂğ?");
+	cm.sendNext("æƒ³æˆä¸ºæµ·ç›—å—?");
     } else if (status == 1) {
-	cm.sendYesNo("ÒªÎÒ¶ÌÔİ°ïÄãÊµÏÖÃÎÏëÂğ?");
+	cm.sendYesNo("è¦æˆ‘çŸ­æš‚å¸®ä½ å®ç°æ¢¦æƒ³å—?");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020500, 0); // Effect/Direction3.img/magician/Scene00

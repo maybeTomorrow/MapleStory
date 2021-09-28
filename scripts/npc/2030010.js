@@ -49,7 +49,7 @@
  		else
  			status--;
  		if (status == 0) {
-			cm.sendYesNo("你想要离开这里到外面去吗？");
+			cm.sendYesNo("浣犳兂瑕佺寮�杩欓噷鍒板闈㈠幓鍚楋紵");
 		}
 		if (status == 1) {
 			var eim = cm.getPlayer().getEventInstance();

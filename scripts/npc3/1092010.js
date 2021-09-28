@@ -44,7 +44,7 @@ function action(mode, type, selection) {
 	else
 		status--;
 	if (status == 0) {
-		cm.sendOk("(¹Î¹Î...)");
+		cm.sendOk("(åˆ®åˆ®...)");
 		cm.dispose();
 		}
 	}

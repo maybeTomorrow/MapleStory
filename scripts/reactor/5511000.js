@@ -1,9 +1,9 @@
 /* 
-    ±©Á¦ĞÜ½Å±¾ 
-    Ç×Ç××ìÃ°ÏÕ Ğ¾ËéÍõ×ÓĞŞ¸Ä
+    æš´åŠ›ç†Šè„šæœ¬ 
+    äº²äº²å˜´å†’é™© èŠ¯ç¢ç‹å­ä¿®æ”¹
 
-    ¸ù¾İ 51»áÔ±oung ·¢µÄ¿§·È¶Ë ±©Á¦ĞÜÕÙ»½½Å±¾ĞŞ¸ÄµÃÖ®
-    ·ÇÍ¬ÒâÄÚ½ûÖ¹×ªÔØ 
+    æ ¹æ® 51ä¼šå‘˜oung å‘çš„å’–å•¡ç«¯ æš´åŠ›ç†Šå¬å”¤è„šæœ¬ä¿®æ”¹å¾—ä¹‹
+    éåŒæ„å†…ç¦æ­¢è½¬è½½ 
 
 */ 
 
@@ -14,6 +14,6 @@ function act() {
  if (rm.getPlayer().getMap().getMonsterById(9420546) == null && rm.getPlayer().getMap().getMonsterById(9420547) == null && rm.getPlayer().getMap().getMonsterById(9420548) == null && rm.getPlayer().getMap().getMonsterById(9420549) == null ) { 
   rm.getReactor().getMap().addMapTimer(2 * 60 * 60,551030100); 
  }
-rm.mapMessage("±©Á¦ĞÜ³É¹¦ÕÙ»½!"); 
+rm.mapMessage("æš´åŠ›ç†ŠæˆåŠŸå¬å”¤!"); 
   rm.spawnMonster(9420541);   
 } 

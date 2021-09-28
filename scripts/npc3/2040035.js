@@ -33,14 +33,14 @@ var rand2 = Math.floor(Math.random() * 5);
 	if (status == 0) {
 		for(var i = 1;i<=5;i++){
 		if(cm.getPlayer().getInventory(net.sf.odinms.client.MapleInventoryType.getByType(i)).isFull()){
-		cm.sendOk("ÄúÖÁÉÙÓ¦¸ÃÈÃËùÓĞ°ü¹ü¶¼¿Õ³öÒ»¸ñ");
+		cm.sendOk("æ‚¨è‡³å°‘åº”è¯¥è®©æ‰€æœ‰åŒ…è£¹éƒ½ç©ºå‡ºä¸€æ ¼");
 		cm.dispose();
 		return;
 		}
 		}
 		var ii = net.sf.odinms.server.MapleItemInformationProvider.getInstance();		                
 		var type = ii.getInventoryType(itemSet[rand]);
-		if(ii.getInventoryType(itemSet[rand]).getType() == 1){	//×°±¸Àà	 		
+		if(ii.getInventoryType(itemSet[rand]).getType() == 1){	//è£…å¤‡ç±»	 		
 		var toDrop = ii.randomizeStats(ii.getEquipById(itemSet[rand])).copy();
 		var cishu = Math.floor(Math.random() * 3) + toDrop.getUpgradeSlots();	    				
 //		toDrop.setUpgradeSlots(cishu);				
@@ -57,9 +57,9 @@ var rand2 = Math.floor(Math.random() * 5);
 		toDrop.setExpiration(temptime);											
 		}	
 							
-		}else if(ii.getInventoryType(itemSet[rand]).getType() == 3){ //ÒÎ×Ó
+		}else if(ii.getInventoryType(itemSet[rand]).getType() == 3){ //æ¤…å­
 		var toDrop = new net.sf.odinms.client.Item(itemSet[rand],0,1).copy();
-		if(itemSet[rand] == 3010018){ //PBÖ»¸øÒ»ÌìµÄ
+		if(itemSet[rand] == 3010018){ //PBåªç»™ä¸€å¤©çš„
 		var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000);
 		}else{
 		if(rand2 == 0){
@@ -75,7 +75,7 @@ var rand2 = Math.floor(Math.random() * 5);
 		toDrop.setExpiration(temptime);						
 		}else{
 
-		if(Math.floor(itemSet[rand] / 10000) == 202){ //ÆäËüÒ»Ğ©¶«Î÷
+		if(Math.floor(itemSet[rand] / 10000) == 202){ //å…¶å®ƒä¸€äº›ä¸œè¥¿
 		var toDrop = new net.sf.odinms.client.Item(itemSet[rand],0,suliang).copy();	
 		}else{
 		var toDrop = new net.sf.odinms.client.Item(itemSet[rand],0,1).copy();				
@@ -84,10 +84,10 @@ var rand2 = Math.floor(Math.random() * 5);
 
 		cm.getPlayer().getInventory(type).addItem(toDrop);
 		cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop));	
-		cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null,net.sf.odinms.tools.MaplePacketCreator.getItemMegas(cm.getC().getChannel(),cm.getPlayer().getName() + " : " + "´ÓÍæ¾ß³ÇÈÎÎñÖĞ»ñµÃ£¡´ó¼ÒÒ»Æğ¹§Ï²Ëû£¨Ëı£©°É£¡£¡£¡",toDrop, true).getBytes());	
+		cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null,net.sf.odinms.tools.MaplePacketCreator.getItemMegas(cm.getC().getChannel(),cm.getPlayer().getName() + " : " + "ä»ç©å…·åŸä»»åŠ¡ä¸­è·å¾—ï¼å¤§å®¶ä¸€èµ·æ­å–œä»–ï¼ˆå¥¹ï¼‰å§ï¼ï¼ï¼",toDrop, true).getBytes());	
 		cm.removeAll(4001022);
 		cm.removeAll(4001023); 
-		cm.gainItem(4000313,1);//»Æ½ğ·ãÒ¶
+		cm.gainItem(4000313,1);//é»„é‡‘æ«å¶
 		cm.warp(100000200,0);
                 cm.setboss(1);
 		cm.dispose();

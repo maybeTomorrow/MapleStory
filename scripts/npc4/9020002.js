@@ -29,9 +29,9 @@ function action(mode, type, selection){
 	    if (mapId == 103000805) {
 		cm.removeAll(4001008);
 	    cm.removeAll(4001156);
-		outText = "��ȷ��Ҫ�뿪��ͼ����";
+		outText = "你确定要离开地图？？";
 	    } else {
-		outText = "һ�����뿪��ͼ���㽫���ò�������������������������ٴγ��ԡ��㻹��Ҫ�뿪�����ͼ��";
+		outText = "一旦你离开地图，你将不得不重新启动整个任务，如果你想再次尝试。你还是要离开这个地图？";
 	    }
 	    if (status == 0) {
 		cm.sendYesNo(outText);

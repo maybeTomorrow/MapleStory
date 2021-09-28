@@ -21,15 +21,15 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         }
-if(cm.haveItem(4031326,1)){//ÓĞ²ÆÉñµÄĞÅ¼şµÄÍæ¼Ò£¬¿ÉÒÔ»ñµÃ¶·ÉñÖ¤Îï
+if(cm.haveItem(4031326,1)){//æœ‰è´¢ç¥çš„ä¿¡ä»¶çš„ç©å®¶ï¼Œå¯ä»¥è·å¾—æ–—ç¥è¯ç‰©
 	cm.gainItem(4310015,+1);}
-        cm.gainItem(4001158, 1);//Å®ÉñµÄÓğÃ«
-        cm.gainItem(4002002, 1);//Å®ÉñµÄÓğÃ«
-        cm.gainItem(4001322, 2);//À¶±¦Ê¯
+        cm.gainItem(4001158, 1);//å¥³ç¥çš„ç¾½æ¯›
+        cm.gainItem(4002002, 1);//å¥³ç¥çš„ç¾½æ¯›
+        cm.gainItem(4001322, 2);//è“å®çŸ³
         cm.getPlayer().endPartyQuest(1203); //might be a bad implentation.. incase they dc or something
         //cm.gainNX(100);
         cm.warp(200080101);
-		cm.À®°È(2, "¹§Ï²[" + cm.getPlayer().getName() + "]³É¹¦Í¨¹Ø¡¾Ìì¿Õ×é¶Ó-Å®ÉñËş¡¿×é¶ÓÈÎÎñ£¬»ñµÃÁË½±Àø£¡");
+		cm.å–‡å­(2, "æ­å–œ[" + cm.getPlayer().getName() + "]æˆåŠŸé€šå…³ã€å¤©ç©ºç»„é˜Ÿ-å¥³ç¥å¡”ã€‘ç»„é˜Ÿä»»åŠ¡ï¼Œè·å¾—äº†å¥–åŠ±ï¼");
         //cm.addTrait("will", 50);
         //cm.addTrait("charm", 10);
         break;

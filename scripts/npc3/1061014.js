@@ -1,17 +1,17 @@
 /***************************
-*     ¡¶Vr001 ·â²â°æ ONLINE¡·    *
+*     ã€ŠVr001 å°æµ‹ç‰ˆ ONLINEã€‹    *
 ****************************
-*    1061014  -  ÎŞÓ°      *
-*    PQ£ºòùòğÄ§µÄÄ©ÈÕ      *
+*    1061014  -  æ— å½±      *
+*    PQï¼šè™è é­”çš„æœ«æ—¥      *
 ***************************/
 
 var status = 0;
 
-var minLevel = 70; //×îµÍµÈ¼¶
-var maxLevel = 120; //×î¸ßµÈ¼¶
+var minLevel = 70; //æœ€ä½ç­‰çº§
+var maxLevel = 120; //æœ€é«˜ç­‰çº§
 
-var minPartySize = 1; //×îÉÙ³ÉÔ±
-var maxPartySize = 6; //×î´ó³ÉÔ±
+var minPartySize = 1; //æœ€å°‘æˆå‘˜
+var maxPartySize = 6; //æœ€å¤§æˆå‘˜
 
 function start() {
 	status = -1;
@@ -31,14 +31,14 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			// Èç¹ûÊÇÔÚÒ»¸ö×é¶ÓÉÏ.Ã»ÓĞµ¼ÑÔ.Ö±½Ó¼ì²é×é¶ÓÌõ¼ş
-			if (cm.getParty() == null) { // ²»ÊÇ×é¶Ó
-				cm.sendOk("#bòùòğÄ§µÄÄ©ÈÕ#kPQÈÎÎñ - ÈÎÎñ¿É»ñ½±Àø£º\r\n\r\n#e#bºÎÂ¶Ë¹Ö®ÑÛ#k     #dº£Á¿¾­Ñé#k    #r´óÁ¿µã¾í¡¢Ã°ÏÕ±Ò\r\n*******************************************\r\n#n#bµ«ÊÇÏµÍ³ÅĞ¶ÏÄãÃ»ÓĞ×é¶Ó.ÄãÎŞ·¨ÌôÕ½Õâ¸öPQÈÎÎñ£¡\r\n#bÇëÓµÓĞ×Ô¼ºµÄ×é¶ÓºóÈÃ¶Ó³¤À´ºÍÎÒ¶Ô»°£¡\r\n\r\n¸öÈËÇé¿ö£º\r\nÄ¿Ç°ÒÑ¾­Íê³É¸ÃÌôÕ½ #r"+cm.getboss()+"#k #b´Î£¡");
-				cm.mapMessage("ÔÚÕâ¸ö×é¶ÓÌôÕ½ÈÎÎñÖĞ£¬Äã×Ü¹²Íê³ÉÁË "+cm.getboss()+" ´Î£¡");		
+			// å¦‚æœæ˜¯åœ¨ä¸€ä¸ªç»„é˜Ÿä¸Š.æ²¡æœ‰å¯¼è¨€.ç›´æ¥æ£€æŸ¥ç»„é˜Ÿæ¡ä»¶
+			if (cm.getParty() == null) { // ä¸æ˜¯ç»„é˜Ÿ
+				cm.sendOk("#bè™è é­”çš„æœ«æ—¥#kPQä»»åŠ¡ - ä»»åŠ¡å¯è·å¥–åŠ±ï¼š\r\n\r\n#e#bä½•éœ²æ–¯ä¹‹çœ¼#k     #dæµ·é‡ç»éªŒ#k    #rå¤§é‡ç‚¹å·ã€å†’é™©å¸\r\n*******************************************\r\n#n#bä½†æ˜¯ç³»ç»Ÿåˆ¤æ–­ä½ æ²¡æœ‰ç»„é˜Ÿ.ä½ æ— æ³•æŒ‘æˆ˜è¿™ä¸ªPQä»»åŠ¡ï¼\r\n#bè¯·æ‹¥æœ‰è‡ªå·±çš„ç»„é˜Ÿåè®©é˜Ÿé•¿æ¥å’Œæˆ‘å¯¹è¯ï¼\r\n\r\nä¸ªäººæƒ…å†µï¼š\r\nç›®å‰å·²ç»å®Œæˆè¯¥æŒ‘æˆ˜ #r"+cm.getboss()+"#k #bæ¬¡ï¼");
+				cm.mapMessage("åœ¨è¿™ä¸ªç»„é˜ŸæŒ‘æˆ˜ä»»åŠ¡ä¸­ï¼Œä½ æ€»å…±å®Œæˆäº† "+cm.getboss()+" æ¬¡ï¼");		
 				cm.dispose();
-			} else if (!cm.isLeader()) { // ²»ÊÇ×é³¤
-				cm.sendOk("Èç¹ûÄãÏëÍê³É#b¹ÖÎïÍ¨¼©Áî#kPQ£¬ÇëÈÃÄãµÄ#bĞ¡×é×é³¤#kºÍÎÒ¶Ô»°.");
-				cm.mapMessage("ÔÚÕâ¸ö×é¶ÓÌôÕ½ÈÎÎñÖĞ£¬Äã×Ü¹²Íê³ÉÁË "+cm.getboss()+" ´Î£¡");
+			} else if (!cm.isLeader()) { // ä¸æ˜¯ç»„é•¿
+				cm.sendOk("å¦‚æœä½ æƒ³å®Œæˆ#bæ€ªç‰©é€šç¼‰ä»¤#kPQï¼Œè¯·è®©ä½ çš„#bå°ç»„ç»„é•¿#kå’Œæˆ‘å¯¹è¯.");
+				cm.mapMessage("åœ¨è¿™ä¸ªç»„é˜ŸæŒ‘æˆ˜ä»»åŠ¡ä¸­ï¼Œä½ æ€»å…±å®Œæˆäº† "+cm.getboss()+" æ¬¡ï¼");
 				cm.dispose();
 			} else {
 				// Check if all party members are within PQ levels
@@ -62,11 +62,11 @@ function action(mode, type, selection) {
 				if (party.size() < minPartySize || party.size() > maxPartySize || inMap < minPartySize) {
 					next = false;
 				}
-				if (next) { //¼ÓÔØ»î¶¯½Å±¾
-					var em = cm.getEventManager("Vr001 ·â²â°æpq");
-					cm.serverNotice("Íæ¼Ò: " + cm.c.getPlayer().getName() + " µÄĞ¡×é½øÈëÁËPQ!!");
+				if (next) { //åŠ è½½æ´»åŠ¨è„šæœ¬
+					var em = cm.getEventManager("Vr001 å°æµ‹ç‰ˆpq");
+					cm.serverNotice("ç©å®¶: " + cm.c.getPlayer().getName() + " çš„å°ç»„è¿›å…¥äº†PQ!!");
 					if (em == null) {
-						cm.sendOk("ÎŞ·¨¼ÓÔØÕâ¸ö½Å±¾¡£½Å±¾Ãû³Æ£º#bVr001 ·â²â°æpq#k\r\n#eÇëÁªÏµ¹ÜÀíÔ±½â¾ö£¡#kQQ#r100807851");
+						cm.sendOk("æ— æ³•åŠ è½½è¿™ä¸ªè„šæœ¬ã€‚è„šæœ¬åç§°ï¼š#bVr001 å°æµ‹ç‰ˆpq#k\r\n#eè¯·è”ç³»ç®¡ç†å‘˜è§£å†³ï¼#kQQ#r100807851");
 					} else {
 						if (em.getProperty("entryPossible") != "false") {
 							em.startInstance(cm.getParty(),cm.getPlayer().getMap());
@@ -86,12 +86,12 @@ function action(mode, type, selection) {
 							}
 							if (playersInPQ <= 1)
 								em.setProperty("entryPossible", "true");
-							cm.sendOk("ÒÑ¾­ÓĞĞ¡×é½øÈëÁË¸ÃPQ¡£ÇëÉÔºóÔÙÊÔ£¡");
+							cm.sendOk("å·²ç»æœ‰å°ç»„è¿›å…¥äº†è¯¥PQã€‚è¯·ç¨åå†è¯•ï¼");
 						}
 					}
 					cm.dispose();
 				} else {
-					cm.sendNext("#rĞèÒª×é¶Ó³ÉÔ±:" + minPartySize + " ¸öÍæ¼Ò¡£ µÈ¼¶·¶Î§,×îµÍ " + minLevel + "¼¶ ×î¸ß " + maxLevel + "¼¶.\r\n\r\n#k#bÇë¼ì²éÄãµÄĞ¡×éÊÇ·ñ´ïµ½ÒÔÉÏÌõ¼ş£¡£¡");
+					cm.sendNext("#réœ€è¦ç»„é˜Ÿæˆå‘˜:" + minPartySize + " ä¸ªç©å®¶ã€‚ ç­‰çº§èŒƒå›´,æœ€ä½ " + minLevel + "çº§ æœ€é«˜ " + maxLevel + "çº§.\r\n\r\n#k#bè¯·æ£€æŸ¥ä½ çš„å°ç»„æ˜¯å¦è¾¾åˆ°ä»¥ä¸Šæ¡ä»¶ï¼ï¼");
 					cm.dispose();
 				}
 			}

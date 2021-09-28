@@ -1,5 +1,5 @@
 /*
- *	组队任务：阿斯旺
+ *	缁勯槦浠诲姟锛氶樋鏂椇
  */
 
 var minPlayers = 1;
@@ -16,7 +16,7 @@ function setup(level, leaderid) {
     eim.setInstanceMap(955000100).resetPQ(level);
     eim.setInstanceMap(955000200).resetPQ(level);
     eim.setInstanceMap(955000300).resetPQ(level);
-    eim.startEventTimer(1200000); //20 分钟
+    eim.startEventTimer(1200000); //20 鍒嗛挓
     return eim;
 }
 

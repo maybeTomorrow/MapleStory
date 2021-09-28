@@ -57,24 +57,24 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             }
-            cm.sendSimple("Èç¹ûÏëÒª´´½¨Ô¶Õ÷¶ÓÌôÕ½ÔúÀ¥¾ÍÒª´ÓÎÒÕâÀï¿ªÊ¼£¬ÄãÏë£¿ #b\r\n\r\n#L0#´´½¨Ô¶Õ÷¶ÓÎé#l\r\n#L1#²Î¼ÓÔ¶Õ÷¶ÓÎé#l");
+            cm.sendSimple("å¦‚æœæƒ³è¦åˆ›å»ºè¿œå¾é˜ŸæŒ‘æˆ˜æ‰æ˜†å°±è¦ä»æˆ‘è¿™é‡Œå¼€å§‹ï¼Œä½ æƒ³ï¼Ÿ #b\r\n\r\n#L0#åˆ›å»ºè¿œå¾é˜Ÿä¼#l\r\n#L1#å‚åŠ è¿œå¾é˜Ÿä¼#l");
         } else if (status == 1) {
             state = selection;
             if (selection == 0)
-                cm.sendGetText("´´½¨ĞÂµÄÔ¶Õ÷¶ÓÎé£¬ÄãĞèÒªÉèÖÃÒ»¸öÃÜÂëÀ´¿ØÖÆ²»±ØÒªµÄ½øÈë£¡ÔÚÏÂÃæÊäÈë½øÈëÃÜÂë¡£²¢¸æËßÄãÏ£ÍûºÍÄãÒ»ÆğÕ½¶·µÄÈË£¡");
+                cm.sendGetText("åˆ›å»ºæ–°çš„è¿œå¾é˜Ÿä¼ï¼Œä½ éœ€è¦è®¾ç½®ä¸€ä¸ªå¯†ç æ¥æ§åˆ¶ä¸å¿…è¦çš„è¿›å…¥ï¼åœ¨ä¸‹é¢è¾“å…¥è¿›å…¥å¯†ç ã€‚å¹¶å‘Šè¯‰ä½ å¸Œæœ›å’Œä½ ä¸€èµ·æˆ˜æ–—çš„äººï¼");
             
             else if (selection == 1)
-                cm.sendGetText("Èç¹ûÏëÒª¼ÓÈëÌôÕ½ÔúÀ¥µÄ¶ÓÎé£¬ÄúĞèÒªÊäÈëÃÜÂë¡£Èç¹ûÄã²»ÖªµÀËüÊÇÊ²Ã´£¬ÇëÄãĞèÒªÄãµÄ¶ÓÎéÁìµ¼¡£");
+                cm.sendGetText("å¦‚æœæƒ³è¦åŠ å…¥æŒ‘æˆ˜æ‰æ˜†çš„é˜Ÿä¼ï¼Œæ‚¨éœ€è¦è¾“å…¥å¯†ç ã€‚å¦‚æœä½ ä¸çŸ¥é“å®ƒæ˜¯ä»€ä¹ˆï¼Œè¯·ä½ éœ€è¦ä½ çš„é˜Ÿä¼é¢†å¯¼ã€‚");
             
         } else if (status == 2) {
             var em = cm.getEventManager("ZakumBattle");
             var passwd = cm.getText();
             if (em == null)
-                cm.sendOk("ÏµÍ³´íÎó.ÇëÉÔºóÔÙÊÔ!");
+                cm.sendOk("ç³»ç»Ÿé”™è¯¯.è¯·ç¨åå†è¯•!");
             else {
                 if (state == 0) { // Leader
                     if (getEimForString(em,passwd) != null)
-                        cm.sendOk("Äã²»ÄÜÊ¹ÓÃ´ËÃÜÂë!");
+                        cm.sendOk("ä½ ä¸èƒ½ä½¿ç”¨æ­¤å¯†ç !");
                     else { // start Zakum Battle
                         var eim = em.newInstance("Zakum" + passwd);
                         em.startInstance(eim,cm.getPlayer().getName());
@@ -84,16 +84,16 @@ function action(mode, type, selection) {
                 if (state == 1) { // Member
                     var eim = getEimForString(em,passwd);
                     if (eim == null)
-                        cm.sendOk("Ä¿Ç°Õâ¸öÃÜÂë²¢Î´×¢²áÈÎºÎÕ½¶·£¡");
+                        cm.sendOk("ç›®å‰è¿™ä¸ªå¯†ç å¹¶æœªæ³¨å†Œä»»ä½•æˆ˜æ–—ï¼");
                     else {
                         if (eim.getProperty("canEnter").toLowerCase() == "true") {
                             if (eim.getPlayers().size() < maxPlayers)
                                 eim.registerPlayer(cm.getPlayer());
                             else
-                                cm.sendOk("¶Ô²»Æğ,ÀïÃæÒÑ¾­ÂúÔ±ÁË!");
+                                cm.sendOk("å¯¹ä¸èµ·,é‡Œé¢å·²ç»æ»¡å‘˜äº†!");
                         }
                         else 
-                            cm.sendOk("¶Ô²»Æğ,ÀïÃæÒÑ¾­¿ªÊ¼ÁËÌôÕ½´ó¹ÖÎïÔúÀ§µÄÕ½¶·!");
+                            cm.sendOk("å¯¹ä¸èµ·,é‡Œé¢å·²ç»å¼€å§‹äº†æŒ‘æˆ˜å¤§æ€ªç‰©æ‰å›°çš„æˆ˜æ–—!");
                     }
                 }
             }

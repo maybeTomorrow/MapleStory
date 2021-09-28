@@ -22,14 +22,14 @@ function action(mode, type, selection) {
         }  
         if (status == 0) {			
               if (cm.getPlayer().getMap().getMonsterById(8820009) != null) {
-			cm.sendYesNo("ÄãÒªÌôÕ½´ò¹ÖÎïPBÂğ£¿");
+			cm.sendYesNo("ä½ è¦æŒ‘æˆ˜æ‰“æ€ªç‰©PBå—ï¼Ÿ");
 		} else {
-			cm.sendOk("PBÒÑ¾­±»ÕÙ»½£¡");
+			cm.sendOk("PBå·²ç»è¢«å¬å”¤ï¼");
 			cm.dispose();
 		}
         } else if (status == 1) {
 		cm.getPlayer().getMap().killMonster(cm.getPlayer().getMap().getMonsterById(8820009), cm.getPlayer(), false);
-                cm.sendOk("·Ç³£ºÃ£¡¼ÓÓÍ°É£¡Ï£ÍûÄãÄÜ¼á³ÖÏÂÀ´¡£");
+                cm.sendOk("éå¸¸å¥½ï¼åŠ æ²¹å§ï¼å¸Œæœ›ä½ èƒ½åšæŒä¸‹æ¥ã€‚");
                 cm.dispose();
         }
     }

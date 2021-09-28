@@ -1,4 +1,4 @@
 function enter(pi) {
-	pi.showInstruction("欢迎来到本服务器\r\n祝您游戏愉快", 110, 20);
+	pi.showInstruction("娆㈣繋鏉ュ埌鏈湇鍔″櫒\r\n绁濇偍娓告垙鎰夊揩", 110, 20);
 	return true;
 }

@@ -20,12 +20,12 @@ function action(mode, type, selection) {
 
 		if (status == 0) { 
 			if (cm.getMapMobsIds().size() <= 0) {
-				cm.sendOk("µ±Ç°µØÍ¼Ã»ÓÐË¢ÐÂ¹ÖÎï£¬ÎÞ·¨²é¿´±¬ÂÊ¡£");
+				cm.sendOk("å½“å‰åœ°å›¾æ²¡æœ‰åˆ·æ–°æ€ªç‰©ï¼Œæ— æ³•æŸ¥çœ‹çˆ†çŽ‡ã€‚");
 				cm.dispose();
 				return;
 			}
 			mobIds = cm.getMapMobsIds();
-			var selStr = "ÇëÑ¡ÔñÄãÒª²é¿´¹ÖÎïµÄ±¬ÂÊ¡£\r\n\r\n#r µ±Ç°µØÍ¼×Ü¹²:["+mobIds.size()+"]ÖÖ¹Ö#k";
+			var selStr = "è¯·é€‰æ‹©ä½ è¦æŸ¥çœ‹æ€ªç‰©çš„çˆ†çŽ‡ã€‚\r\n\r\n#r å½“å‰åœ°å›¾æ€»å…±:["+mobIds.size()+"]ç§æ€ª#k";
 			for (var i=0;i<mobIds.size();i++) {
 				 selStr +="\r\n#b#L" + i + "##o"+mobIds.get(i)+"##l";				
 			}
@@ -33,18 +33,18 @@ function action(mode, type, selection) {
         } else if (status == 1) {
 			slc=selection;
 			if(slc<0||slc>=mobIds.size()){
-				cm.sendOk("Ã»ÓÐÑ¡ÔñµÄ¹ÖÎï");
+				cm.sendOk("æ²¡æœ‰é€‰æ‹©çš„æ€ªç‰©");
 				cm.dispose();
 				return;
 			}
 
 			var mobId=mobIds.get(slc);
             if (cm.getMapMobDropsIds(mobId).size() <= 0) {
-				cm.sendOk("µ±Ç°µØÍ¼Ã»ÓÐË¢ÐÂ¹ÖÎï£¬ÎÞ·¨²é¿´±¬ÂÊ¡£");
+				cm.sendOk("å½“å‰åœ°å›¾æ²¡æœ‰åˆ·æ–°æ€ªç‰©ï¼Œæ— æ³•æŸ¥çœ‹çˆ†çŽ‡ã€‚");
 				cm.dispose();
 				return;
 			}
-			var selStr = "#r#o"+mobId+"#±¬ÂÊ¡£\r\n\r\n#k";
+			var selStr = "#r#o"+mobId+"#çˆ†çŽ‡ã€‚\r\n\r\n#k";
 
 			var items = cm.getMapMobDropsIds(mobId);
 			for (var i=0;i<items.size();i++) {

@@ -23,6 +23,7 @@ package net.sf.odinms.tools;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 
 /**
  * Provides a suite of utilities for manipulating strings.
@@ -34,6 +35,7 @@ import java.io.StringWriter;
  */
 public class StringUtil {
 
+    public static Charset ASCII = Charset.forName("GBK");
     /**
      * Gets a string padded from the left to <code>length</code> by
      * <code>padchar</code>.
@@ -45,7 +47,7 @@ public class StringUtil {
      */
     public static String getLeftPaddedStr(String in, char padchar, int length) {
         StringBuilder builder = new StringBuilder(length);
-        for (int x = in.getBytes().length; x < length; x++) {
+        for (int x = in.getBytes(StringUtil.ASCII).length; x < length; x++) {
             builder.append(padchar);
         }
         builder.append(in);
@@ -63,7 +65,7 @@ public class StringUtil {
      */
     public static String getRightPaddedStr(String in, char padchar, int length) {
         StringBuilder builder = new StringBuilder(in);
-        for (int x = in.getBytes().length; x < length; x++) {
+        for (int x = in.getBytes(StringUtil.ASCII).length; x < length; x++) {
             builder.append(padchar);
         }
         return builder.toString();

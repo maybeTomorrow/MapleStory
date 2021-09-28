@@ -1,19 +1,19 @@
 /*
- ½á¹¹×«Ğ´By ×Ú´ï
+ ç»“æ„æ’°å†™By å®—è¾¾
  */
 
 /* global cm */
 
 var status = -1;
-var Editing = false // true = Î¬ĞŞÖĞ£¬ false = ¿ª·Å¡£
+var Editing = false // true = ç»´ä¿®ä¸­ï¼Œ false = å¼€æ”¾ã€‚
 var msg = "";
 
 
 function start() {
     if (status = -1) {
-       msg = "»¶Ó­À´Íæ Æ¨Æ¨¹ÈVer:113\r\n"+
-			"¿ìÀ´¼ÓÈëÎÒÃÇ http:ppms.tw \r\n"+
-			"ÈÈÃÅÊ±¶ÎÈËÊı¶¼ÊÇÆÆÇ§µÄà¸\r\n";
+       msg = "æ¬¢è¿æ¥ç© å±å±è°·Ver:113\r\n"+
+			"å¿«æ¥åŠ å…¥æˆ‘ä»¬ http:ppms.tw \r\n"+
+			"çƒ­é—¨æ—¶æ®µäººæ•°éƒ½æ˜¯ç ´åƒçš„å–”\r\n";
         cm.sendNext(msg);
         cm.dispose();
         return;

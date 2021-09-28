@@ -18,7 +18,7 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status >= 2) {
-	    cm.sendNext("ÓÐºÜ¶à¿´µ½ÔÚÕâ¸öÕòÉÏÁË¡£»ØÀ´ÕÒÎÒÃÇ£¬µ±ÄãÐèÒªÈ¥²»Í¬µÄÕò.");
+	    cm.sendNext("æœ‰å¾ˆå¤šçœ‹åˆ°åœ¨è¿™ä¸ªé•‡ä¸Šäº†ã€‚å›žæ¥æ‰¾æˆ‘ä»¬ï¼Œå½“ä½ éœ€è¦åŽ»ä¸åŒçš„é•‡.");
 	    cm.safeDispose();
 	    return;
 	}
@@ -26,17 +26,17 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendNext("ÄúºÃ~! ¾¨ÓãºÅ¼Æ³Ì³µ. ÏëÒªÍùÆäËû´å×¯°²È«ÓÖ¿ìËÙµÄÒÆ¶¯Âð? Èç¹ûÊÇÕâÑù ÎªÁËÓÅÏÈ¿¼Á¿Âú×ã¹Ë¿Í, ÇëÊ¹ÓÃ #b#p1092014##k Ç×ÇÐµÄËÍÄãµ½ÏëÒªµ½´ïµÄµØ·½£¡");
+	cm.sendNext("æ‚¨å¥½~! é²¸é±¼å·è®¡ç¨‹è½¦. æƒ³è¦å¾€å…¶ä»–æ‘åº„å®‰å…¨åˆå¿«é€Ÿçš„ç§»åŠ¨å—? å¦‚æžœæ˜¯è¿™æ · ä¸ºäº†ä¼˜å…ˆè€ƒé‡æ»¡è¶³é¡¾å®¢, è¯·ä½¿ç”¨ #b#p1092014##k äº²åˆ‡çš„é€ä½ åˆ°æƒ³è¦åˆ°è¾¾çš„åœ°æ–¹ï¼");
     } else if (status == 1) {
 	if (cm.getJob() == 0) {
-	    var selStr = "ÎÒÃÇÓÐÌØÊâ90%ÕÛ¿Û£¬¶ÔÓÚÐÂÊÖÑ¡ÔñÄãµÄÄ¿µÄµØ#b \n\rÇëÑ¡ÔñÄ¿µÄµØ.#b";
+	    var selStr = "æˆ‘ä»¬æœ‰ç‰¹æ®Š90%æŠ˜æ‰£ï¼Œå¯¹äºŽæ–°æ‰‹é€‰æ‹©ä½ çš„ç›®çš„åœ°#b \n\rè¯·é€‰æ‹©ç›®çš„åœ°.#b";
 	    for (var i = 0; i < maps.length; i++) {
-		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " ·ã±Ò)#l";
+		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + costBeginner[i] + " æž«å¸)#l";
 	    }
 	} else {
-	    var selStr = "ÇëÑ¡ÔñÄ¿µÄµØ.#b";
+	    var selStr = "è¯·é€‰æ‹©ç›®çš„åœ°.#b";
 	    for (var i = 0; i < maps.length; i++) {
-		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " ·ã±Ò)#l";
+		selStr += "\r\n#L" + i + "##m" + maps[i] + "# (" + cost[i] + " æž«å¸)#l";
 	    }
 	}
 	cm.sendSimple(selStr);
@@ -48,11 +48,11 @@ function action(mode, type, selection) {
 	    sCost = rCost[selection];
 	    show = cost[selection];
 	}
-	cm.sendYesNo("ÄãÔÚÕâÀïÃ»ÓÐÈÎºÎ¶«Î÷×ö£¬ÊÇ°É? #b#m" + maps[selection] + "##k Ëû½«»¨·ÑÄãµÄ #b"+ show + " ·ã±Ò#k.");
+	cm.sendYesNo("ä½ åœ¨è¿™é‡Œæ²¡æœ‰ä»»ä½•ä¸œè¥¿åšï¼Œæ˜¯å§? #b#m" + maps[selection] + "##k ä»–å°†èŠ±è´¹ä½ çš„ #b"+ show + " æž«å¸#k.");
 	selectedMap = selection;
     } else if (status == 3) {
 	if (cm.getMeso() < sCost) {
-	    cm.sendNext("ºÜ±§Ç¸ÓÉÓÚÄãÃ»ÓÐ×ã¹»µÄ·ã±Ò ËùÒÔÄã½«ÎÞ·¨³Ë×ø³ö×â³µ!");
+	    cm.sendNext("å¾ˆæŠ±æ­‰ç”±äºŽä½ æ²¡æœ‰è¶³å¤Ÿçš„æž«å¸ æ‰€ä»¥ä½ å°†æ— æ³•ä¹˜åå‡ºç§Ÿè½¦!");
 	    cm.safeDispose();
 	} else {
 	    cm.gainMeso(-sCost);

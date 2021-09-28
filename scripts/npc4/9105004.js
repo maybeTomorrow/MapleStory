@@ -21,7 +21,7 @@ function action(mode, type, selection) {
 	    break;
 	case 889100100:
     	if (status == 0) {
-	        cm.sendSimple("°²°² ÌıËµÑ©ÈË±»Ñ©¾«ÁéÖĞ³öÁË Çë¸÷Î»Ç¿´óµÄÖĞÂ·±£»¤Ñ©ÈË#b\r\n\r\n#L0#±£»¤Ñ©ÈË - ¼òµ¥ (µÈ¼¶ 10 ÒÔÉÏ 30µÈÒÔÏÂ)#l\r\n#L1#±£»¤Ñ©ÈË - ÖĞµÈ (µÈ¼¶ 30 ÒÔÉÏ 70µÈÒÔÏÂ)#l\r\n#L2#±£»¤Ñ©ÈË - À§ÄÑ (µÈ¼¶ 70 ÒÔÉÏ)#l");
+	        cm.sendSimple("å®‰å®‰ å¬è¯´é›ªäººè¢«é›ªç²¾çµä¸­å‡ºäº† è¯·å„ä½å¼ºå¤§çš„ä¸­è·¯ä¿æŠ¤é›ªäºº#b\r\n\r\n#L0#ä¿æŠ¤é›ªäºº - ç®€å• (ç­‰çº§ 10 ä»¥ä¸Š 30ç­‰ä»¥ä¸‹)#l\r\n#L1#ä¿æŠ¤é›ªäºº - ä¸­ç­‰ (ç­‰çº§ 30 ä»¥ä¸Š 70ç­‰ä»¥ä¸‹)#l\r\n#L2#ä¿æŠ¤é›ªäºº - å›°éš¾ (ç­‰çº§ 70 ä»¥ä¸Š)#l");
     	} else if (status == 1) {
                 var level = cm.getPlayerStat("LVL");
 	        if (selection == 0 && level <= 10 || level <= 30) {
@@ -34,7 +34,7 @@ function action(mode, type, selection) {
 		    cm.warp(889100020,0); //exit map lobby
 		    cm.dispose();
                 } else {
-		    cm.sendOk("ÄãµÄµÈ¼¶²»¹»»òÊÇ³¬¹ı");
+		    cm.sendOk("ä½ çš„ç­‰çº§ä¸å¤Ÿæˆ–æ˜¯è¶…è¿‡");
 		    cm.dispose();
                 }
         }
@@ -43,7 +43,7 @@ function action(mode, type, selection) {
 	case 889100010:
 	case 889100020:
     	    if (status == 0) {
-	        cm.sendSimple("ÓÂÊ¿°²°²°¢!#b\r\n\r\n#L0#ÎÒµÄ¾ŞĞÍÄ§°ô´øºÃÁË ÎÒÒªÇ°Íù±£»¤Ñ©ÈË#l");
+	        cm.sendSimple("å‹‡å£«å®‰å®‰é˜¿!#b\r\n\r\n#L0#æˆ‘çš„å·¨å‹é­”æ£’å¸¦å¥½äº† æˆ‘è¦å‰å¾€ä¿æŠ¤é›ªäºº#l");
     	    } else if (status == 1) {
 			var s = ((cm.getMapId() % 100) / 10) | 0;
    		    var em = cm.getEventManager("Christmas");
@@ -53,7 +53,7 @@ function action(mode, type, selection) {
 			return;
     		    }
 		    if (cm.getPlayer().getParty() == null || !cm.isLeader()) {
-			cm.sendOk("Çë¶Ó³¤À´ÕÒÎÒ¶Ô»°");
+			cm.sendOk("è¯·é˜Ÿé•¿æ¥æ‰¾æˆ‘å¯¹è¯");
 		    } else {
 			var party = cm.getPlayer().getParty().getMembers();
 			var mapId = cm.getPlayer().getMapId();
@@ -73,10 +73,10 @@ function action(mode, type, selection) {
 		    		if (em.getInstance("Christmas" + s) == null) {
 					em.startInstance_Party("" + s, cm.getPlayer());
 		    		} else {
-					cm.sendOk("ÇëÈ·ÈÏÄãµÄÆäËû¶ÓÔ±ÓĞÃ»ÓĞÔÚÕâ±ß");
+					cm.sendOk("è¯·ç¡®è®¤ä½ çš„å…¶ä»–é˜Ÿå‘˜æœ‰æ²¡æœ‰åœ¨è¿™è¾¹");
 		    		}
 			} else {
-				cm.sendOk("±ØĞëÒªËÄÈË(º¬)ÒÔÉÏ");
+				cm.sendOk("å¿…é¡»è¦å››äºº(å«)ä»¥ä¸Š");
 			}
 		    }
 	        cm.dispose();
@@ -86,12 +86,12 @@ function action(mode, type, selection) {
 	case 889100011:
 	case 889100021:
 		if (cm.getPlayer().getEventInstance() == null) {
-			cm.sendOk("ÖĞÂ·×îºóÏ£Íû °İÍĞÄãÃÇÁË!");
+			cm.sendOk("ä¸­è·¯æœ€åå¸Œæœ› æ‹œæ‰˜ä½ ä»¬äº†!");
 		} else {
 			if (!cm.getPlayer().getEventInstance().getProperty("stage").equals("1")) {
-				cm.sendOk("ÖĞÂ·×îºóÏ£Íû °İÍĞÄãÃÇÁË!");
+				cm.sendOk("ä¸­è·¯æœ€åå¸Œæœ› æ‹œæ‰˜ä½ ä»¬äº†!");
 			} else if (cm.getPlayer().getMap().countMonsterById(9400319) > 0 || cm.getPlayer().getMap().countMonsterById(9400320) > 0 || cm.getPlayer().getMap().countMonsterById(9400321) > 0) {
-				cm.sendOk("ÖĞÂ·×îºóÏ£Íû °İÍĞÄãÃÇÁË!");
+				cm.sendOk("ä¸­è·¯æœ€åå¸Œæœ› æ‹œæ‰˜ä½ ä»¬äº†!");
 			} else {
                         	cm.showEffect(false, "quest/party/clear");
                         	cm.playSound(false, "Party1/Clear");

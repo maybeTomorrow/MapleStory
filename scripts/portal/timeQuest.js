@@ -75,7 +75,7 @@ function enter(pi) {
         return true;
     } else {
         pi.warp(tomap,0);
-        pi.getPlayer().dropMessage("ÈÎÎñÍê³ÉÖ®Ç°£¬ÊÇÎŞ·¨½øÈëÏÂÒ»¹ØµØÍ¼µÄ¡£ÄúÒÑ±»ÏµÍ³×Ô¶¯·µ»Ø£¡");
+        pi.getPlayer().dropMessage("ä»»åŠ¡å®Œæˆä¹‹å‰ï¼Œæ˜¯æ— æ³•è¿›å…¥ä¸‹ä¸€å…³åœ°å›¾çš„ã€‚æ‚¨å·²è¢«ç³»ç»Ÿè‡ªåŠ¨è¿”å›ï¼");
         return true;
     }
 }  

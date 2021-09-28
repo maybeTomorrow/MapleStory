@@ -26,14 +26,14 @@ function action(mode, type, selection) {
 		if (status == 0) {
 			// Lakelis has no preamble, directly checks if you're in a party
 			if (cm.getParty() == null) { // No Party
-				cm.sendOk("ÄúÏëÒªÌôÕ½#bÔ¶¹Å¾«Áé#kÂğ?ÄÇÃ´Äú±ØĞëÒªÓĞÒ»¸ö×é¶ÓàŞ!\r\n¡¤µÈ¼¶ÒªÇó:51¼¶-?¼¶.\r\n¡¤¶ÓÎéÒªÇó:3~6ÈË\r\n#k¡¤ÈÎÎñ½±Àø:#bĞÂÊÖ´óÁ¿¾­Ñé.");
+				cm.sendOk("æ‚¨æƒ³è¦æŒ‘æˆ˜#bè¿œå¤ç²¾çµ#kå—?é‚£ä¹ˆæ‚¨å¿…é¡»è¦æœ‰ä¸€ä¸ªç»„é˜Ÿå™¢!\r\nÂ·ç­‰çº§è¦æ±‚:51çº§-?çº§.\r\nÂ·é˜Ÿä¼è¦æ±‚:3~6äºº\r\n#kÂ·ä»»åŠ¡å¥–åŠ±:#bæ–°æ‰‹å¤§é‡ç»éªŒ.");
 				cm.dispose();
 
                        } else if (cm.getChar().getVip()<0) { // Not Party Leader
-				cm.sendOk("¶Ó³¤ĞèÒª»áÔ±µÈ¼¶ÔÚ1ĞÇ£¬»òÒÔÉÏ£¬²ÅÄÜ½øÈë.");
+				cm.sendOk("é˜Ÿé•¿éœ€è¦ä¼šå‘˜ç­‰çº§åœ¨1æ˜Ÿï¼Œæˆ–ä»¥ä¸Šï¼Œæ‰èƒ½è¿›å…¥.");
 				cm.dispose();
                       } else if (!cm.isLeader()) { // Not Party Leader
-				cm.sendOk("Èç¹ûÏëÒªÌôÕ½#bÔ¶¹Å¾«Áé×é¶ÓĞŞÁ¶#kÇëÈÃÄãÃÇµÄ#b×é¶Ó³¤#kÀ´ÕÒÎÒ°É!.");
+				cm.sendOk("å¦‚æœæƒ³è¦æŒ‘æˆ˜#bè¿œå¤ç²¾çµç»„é˜Ÿä¿®ç‚¼#kè¯·è®©ä½ ä»¬çš„#bç»„é˜Ÿé•¿#kæ¥æ‰¾æˆ‘å§!.");
 				cm.dispose();
 			} else {
 				// Check if all party members are within PQ levels
@@ -62,7 +62,7 @@ function action(mode, type, selection) {
 					var em = cm.warpParty(920010000);
 					cm.getMap(920010000).addMapTimer(600, 920011200);
 		if (em == null) {
-						cm.sendOk("ÄãÒÑ½øÈë¸±±¾µØÍ¼.Çë²é¿´Ïà¹ØNPCÁË½â¸±±¾");
+						cm.sendOk("ä½ å·²è¿›å…¥å‰¯æœ¬åœ°å›¾.è¯·æŸ¥çœ‹ç›¸å…³NPCäº†è§£å‰¯æœ¬");
 					} else {
 						if (em.getProperty("entryPossible") != "false") {
 							// Begin the PQ.
@@ -93,7 +93,7 @@ function action(mode, type, selection) {
 					
                       
 			} else {
-					cm.sendNext("ÄúÏëÒªÌôÕ½#bÔ¶¹Å¾«Áé#kÂğ?ÄÇÃ´Äú±ØĞëÒªÓĞÒ»¸ö×é¶ÓàŞ!\r\n¡¤µÈ¼¶ÒªÇó:51¼¶-?¼¶.\r\n¡¤¶Ó³¤ÒªÇó:#r3~6ÈË.\r\n#k¡¤ÈÎÎñ½±Àø:#b¾­Ñé.#k\r\n\r\nÄúµÄ×é¶Ó±ØĞëÓĞ#b3~6#kÃû¶ÓÔ±,²¢ÇÒ¶¼ÔÚ´ËµØÍ¼ÖĞ.\r\nµÈ¼¶±ØĞëÔÚ#b51-#b?#k¼¶Ö®¼ä!\r\nÄ¿Ç°Ö»ÓĞ#b" + inMap + "Î»¶ÓÔ±#kÔÚ´ËµØÍ¼!.");
+					cm.sendNext("æ‚¨æƒ³è¦æŒ‘æˆ˜#bè¿œå¤ç²¾çµ#kå—?é‚£ä¹ˆæ‚¨å¿…é¡»è¦æœ‰ä¸€ä¸ªç»„é˜Ÿå™¢!\r\nÂ·ç­‰çº§è¦æ±‚:51çº§-?çº§.\r\nÂ·é˜Ÿé•¿è¦æ±‚:#r3~6äºº.\r\n#kÂ·ä»»åŠ¡å¥–åŠ±:#bç»éªŒ.#k\r\n\r\næ‚¨çš„ç»„é˜Ÿå¿…é¡»æœ‰#b3~6#kåé˜Ÿå‘˜,å¹¶ä¸”éƒ½åœ¨æ­¤åœ°å›¾ä¸­.\r\nç­‰çº§å¿…é¡»åœ¨#b51-#b?#kçº§ä¹‹é—´!\r\nç›®å‰åªæœ‰#b" + inMap + "ä½é˜Ÿå‘˜#kåœ¨æ­¤åœ°å›¾!.");
 					cm.dispose();
 				}
 			}

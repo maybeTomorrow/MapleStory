@@ -38,7 +38,7 @@ function playerEntry(eim, player) {
   
  //TODO: hold time across map changes 
  player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(120));
- player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "¹ÖÎïÇ¿»¯ÁË¡­¡­")); 
+ player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "æ€ªç‰©å¼ºåŒ–äº†â€¦â€¦")); 
  startInstance(eim); 
 } 
 function playerDead(eim, player) { 

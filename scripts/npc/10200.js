@@ -21,9 +21,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("¹­ÊÖÓµÓÐ¸ßÃô½Ý¼°Á¦Á¿,ÔÚÕ½¶·ÖÐ¸ºÔðÔ¶¾àÀë¹¥»÷,¼ÙÈç¹­ÊÖÖ°ÒµÄÜÇÉÃîµØÔËÓÃµØÊÆµÄ»°,´òÁÔ¿ÉÊÇ·Ç³£ÇáËÉÀ÷º¦¡£");
+			cm.sendNext("å¼“æ‰‹æ‹¥æœ‰é«˜æ•æ·åŠåŠ›é‡,åœ¨æˆ˜æ–—ä¸­è´Ÿè´£è¿œè·ç¦»æ”»å‡»,å‡å¦‚å¼“æ‰‹èŒä¸šèƒ½å·§å¦™åœ°è¿ç”¨åœ°åŠ¿çš„è¯,æ‰“çŒŽå¯æ˜¯éžå¸¸è½»æ¾åŽ‰å®³ã€‚");
 		} else if (status == 1) {
-			cm.sendYesNo("ÔõÃ´Ñù£¿ÄãÏëÌåÑé¹­ÊÖÂð£¿");
+			cm.sendYesNo("æ€Žä¹ˆæ ·ï¼Ÿä½ æƒ³ä½“éªŒå¼“æ‰‹å—ï¼Ÿ");
 		} else if (status == 2) {
 			cm.lockUI();
 			cm.warp(1020300);

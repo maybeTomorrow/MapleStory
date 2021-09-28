@@ -52,7 +52,7 @@ function action(mode, type, selection) {
 					eim.disbandParty();
 					cm.getEventManager("LudiPQ").setProperty("entryPossible", "true");
 				} else {
-			cm.sendOk("喊你队长来和我说!");
+			cm.sendOk("鍠婁綘闃熼暱鏉ュ拰鎴戣!");
 				}
 				cm.dispose();
 			}

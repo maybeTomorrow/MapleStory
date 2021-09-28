@@ -21,6 +21,8 @@
 
 package net.sf.odinms.tools.data.output;
 
+import net.sf.odinms.tools.StringUtil;
+
 import java.nio.charset.Charset;
 
 /**
@@ -129,16 +131,16 @@ public class GenericLittleEndianWriter implements LittleEndianWriter {
      */
     @Override
     public void writeMapleAsciiString(String s) {
-        writeShort((short) s.getBytes().length);
+        writeShort((short) s.getBytes(StringUtil.ASCII).length);
         writeAsciiString(s);
     }
 
     public void writeMapleNameString(String s) {
-        if (s.getBytes().length > 12) {
+        if (s.getBytes(StringUtil.ASCII).length > 12) {
             s = s.substring(0, 12);
         }
         writeAsciiString(s);
-        for (int x = s.getBytes().length; x < 12; x++) {
+        for (int x = s.getBytes(StringUtil.ASCII).length; x < 12; x++) {
             write(0);
         }
     }

@@ -26,9 +26,9 @@ var sss ="#fUI/UIWindow.img/QuestIcon/3/0#";
 
 	if (status == 0) {
 
-	    var textz = "\r\nÄãÒªÌôÕ½#r ´óòÚò¼Íõ#k£¿Ï£ÍûÄãÓĞÄÇ¸öÊµÁ¦\r\n";
+	    var textz = "\r\nä½ è¦æŒ‘æˆ˜#r å¤§èœˆèš£ç‹#kï¼Ÿå¸Œæœ›ä½ æœ‰é‚£ä¸ªå®åŠ›\r\n";
 
-		textz += "#r#L0#"+ttt+"ÌôÕ½òÚò¼Íõ    #d(Ò»ÌìÁ½´Î)\r\n";
+		textz += "#r#L0#"+ttt+"æŒ‘æˆ˜èœˆèš£ç‹    #d(ä¸€å¤©ä¸¤æ¬¡)\r\n";
 
 		cm.sendSimple (textz);  
 
@@ -36,10 +36,10 @@ var sss ="#fUI/UIWindow.img/QuestIcon/3/0#";
 
 	if (selection == 0){
                  if (cm.getLevel() < 40) {
-	            cm.sendOk("µÈ¼¶²»×ã40");
+	            cm.sendOk("ç­‰çº§ä¸è¶³40");
                     cm.dispose();
 			} else if(cm.getBossLog("WG") >= 5 ){	
-	            cm.sendOk("#b´óòÚò¼Íõ#k Ã¿ÌìÖ»ÄÜÌôÕ½#r 5 #k´Î");
+	            cm.sendOk("#bå¤§èœˆèš£ç‹#k æ¯å¤©åªèƒ½æŒ‘æˆ˜#r 5 #kæ¬¡");
                     cm.dispose();
                         }else{
                         cm.setBossLog("WG");

@@ -14,7 +14,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendYesNo("#rƒ„ «≤ª «œÎº§ªÓÀ˘”–ººƒ‹?µ´ «±ÿ–Îª®∑—1000µ„»Ø≤≈ƒ‹∞Ôƒ„º§ªÓ≈∂£°\r\n£®»Áπ˚ƒ„√ª”–µ„»Ø«Î¡™œµøÕ∑˛π∫¬ÚªÚ’ﬂ»• –≥°ƒ«±ﬂ∂“ªª£°£©\r\n£®»Áπ˚’“øÕ∑˛π∫¬Úƒ„ªπø…“‘œÚÀ˚À˜“™≥‰÷µ¿Ò∞¸≈∂£°£©\r\n   #k±ªΩ˚÷π π”√µƒººƒ‹Œ™:\r\n ”¢–€    :#bΩ¯Ω◊∂∑∆¯.ø˚ª®±¶µ‰.\r\n #k∫⁄∆Ô ø  :#b¡ÈªÍ÷˙¡¶.\r\n #k≥Â∑Ê∂”≥§:#b≥¨º∂±‰…Ì.");
+			cm.sendYesNo("#r‰Ω†ÊòØ‰∏çÊòØÊÉ≥ÊøÄÊ¥ªÊâÄÊúâÊäÄËÉΩ?‰ΩÜÊòØÂøÖÈ°ªËä±Ë¥π1000ÁÇπÂà∏ÊâçËÉΩÂ∏Æ‰Ω†ÊøÄÊ¥ªÂì¶ÔºÅ\r\nÔºàÂ¶ÇÊûú‰Ω†Ê≤°ÊúâÁÇπÂà∏ËØ∑ËÅîÁ≥ªÂÆ¢ÊúçË¥≠‰π∞ÊàñËÄÖÂéªÂ∏ÇÂú∫ÈÇ£ËæπÂÖëÊç¢ÔºÅÔºâ\r\nÔºàÂ¶ÇÊûúÊâæÂÆ¢ÊúçË¥≠‰π∞‰Ω†ËøòÂèØ‰ª•Âêë‰ªñÁ¥¢Ë¶ÅÂÖÖÂÄºÁ§ºÂåÖÂì¶ÔºÅÔºâ\r\n   #kË¢´Á¶ÅÊ≠¢‰ΩøÁî®ÁöÑÊäÄËÉΩ‰∏∫:\r\n Ëã±ÈõÑ    :#bËøõÈò∂ÊñóÊ∞î.ËëµËä±ÂÆùÂÖ∏.\r\n #kÈªëÈ™ëÂ£´  :#bÁÅµÈ≠ÇÂä©Âäõ.\r\n #kÂÜ≤ÈîãÈòüÈïø:#bË∂ÖÁ∫ßÂèòË∫´.");
 		} else if (status == 1) {
             if (cm.getNX() > 1000) {
 			cm.teachSkill(1003,0,0);
@@ -214,10 +214,10 @@ function action(mode, type, selection) {
 				cm.teachSkill(4211001,0,0);
 				cm.teachSkill(4211006,0,0);
 				cm.teachSkill(1120004,0,0);
-				//cm.teachSkill(1120003,00);//Ω˚÷π
+				//cm.teachSkill(1120003,00);//Á¶ÅÊ≠¢
 				cm.teachSkill(1120005,0,0);
 				cm.teachSkill(1121008,0,0);
-				//cm.teachSkill(1121010,0,0);//Ω˚÷π
+				//cm.teachSkill(1121010,0,0);//Á¶ÅÊ≠¢
 				cm.teachSkill(1121006,0,0);
 				cm.teachSkill(1121002,0,0);
 				cm.teachSkill(1220005,0,0);
@@ -320,7 +320,7 @@ function action(mode, type, selection) {
 				cm.teachSkill(5121000,0,0); //Maple Warrior
 				cm.teachSkill(5121001,0,0); //Dragon Strike
 				cm.teachSkill(5121002,0,0); //Energy Orb
-				//cm.teachSkill(5121003,0,0); //Ω˚÷π//Super Transformation
+				//cm.teachSkill(5121003,0,0); //Á¶ÅÊ≠¢//Super Transformation
 				cm.teachSkill(5121004,0,0); //Demolition
 				cm.teachSkill(5121005,0,0); //Snatch
 				cm.teachSkill(5121007,0,0); //Barrage
@@ -370,10 +370,10 @@ function action(mode, type, selection) {
 			cm.teachSkill(20001006,0,0);
 			cm.teachSkill(20001007,0,0);
                         cm.maxAllSkills(20);
-			cm.sendOk("º§ªÓ≥…π¶");
+			cm.sendOk("ÊøÄÊ¥ªÊàêÂäü");
 			cm.dispose();
 } else {
-  cm.sendOk("±ß«∏£°ƒ„≤¢√ª”–1000µ„»Ø£°");
+  cm.sendOk("Êä±Ê≠âÔºÅ‰Ω†Âπ∂Ê≤°Êúâ1000ÁÇπÂà∏ÔºÅ");
 cm.dispose();
 			}cm.dispose();
 	    }	

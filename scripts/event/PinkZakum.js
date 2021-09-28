@@ -1,5 +1,5 @@
 /* 
- * ·ÛÉ«ÔúÀ¥
+ * ç²‰è‰²æ‰æ˜†
  */
 
 function init() {
@@ -16,7 +16,7 @@ function setup(eim, leaderid) {
     var map = eim.setInstanceMap(689013000);
     map.resetFully();
     map.spawnPinkZakum(1, 328)
-    eim.startEventTimer(1200000); //30 ·ÖÖÓ
+    eim.startEventTimer(1200000); //30 åˆ†é’Ÿ
     return eim;
 }
 

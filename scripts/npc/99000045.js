@@ -49,15 +49,15 @@ function action(mode, type, selection) {
 					cm.getJob().equals(net.sf.cherry.client.MapleJob.SHADOWER) ||
 					cm.getJob().equals(net.sf.cherry.client.MapleJob.CORSAIR) ||
 					cm.getJob().equals(net.sf.cherry.client.MapleJob.BUCCANEER))) {
-			cm.sendOk("ÔõÃ´ÁË£¿Ã°ÏÕ»¹ËãË³Àû°É¡£ËÄ×ªºóÀ´¼ûÎÒ¡£ÎÒ»á°ïÖúÄã¡£");
+			cm.sendOk("æ€ä¹ˆäº†ï¼Ÿå†’é™©è¿˜ç®—é¡ºåˆ©å§ã€‚å››è½¬åæ¥è§æˆ‘ã€‚æˆ‘ä¼šå¸®åŠ©ä½ ã€‚");
 			cm.dispose();
 		} else if (cm.getQuestStatus(999950).equals(net.sf.cherry.client.MapleQuestStatus.Status.COMPLETED)) {
-			cm.sendOk("ÔõÃ´ÁË£¿ÄãËÄ×ªµÄ¼¼ÄÜÈ«²¿¶¼Íê³ÉÁË£¿");
+			cm.sendOk("æ€ä¹ˆäº†ï¼Ÿä½ å››è½¬çš„æŠ€èƒ½å…¨éƒ¨éƒ½å®Œæˆäº†ï¼Ÿ");
 			cm.dispose();
 		} else {
 			status = 0;
 			cm.startQuest(999950);
-			cm.sendYesNo("àÅ£¬ºÜºÃ£¬¿´À´ÄãĞèÒªÌáÉıÒ»Ğ©ËÄ×ªµÄ¼¼ÄÜ¡£ÎÒ¿ÉÒÔÎªÄã°Ñ¸÷Ïî¼¼ÄÜÌá¸ß10µã£¡ĞèÒª #b30,000,000 ½ğ±Ò#k. ÈçºÎ£¿");
+			cm.sendYesNo("å—¯ï¼Œå¾ˆå¥½ï¼Œçœ‹æ¥ä½ éœ€è¦æå‡ä¸€äº›å››è½¬çš„æŠ€èƒ½ã€‚æˆ‘å¯ä»¥ä¸ºä½ æŠŠå„é¡¹æŠ€èƒ½æé«˜10ç‚¹ï¼éœ€è¦ #b30,000,000 é‡‘å¸#k. å¦‚ä½•ï¼Ÿ");
 		}
 	} else if (status == 0) {
 		if (mode == 1 && cm.getMeso() >= 30000000) {
@@ -378,13 +378,13 @@ function action(mode, type, selection) {
 					cm.teachSkill(5220002,0,10); //wrath of the octopi
 					}
 			cm.completeQuest(999950);
-			cm.sendOk("²Ù×÷³É¹¦£¬¼¼ÄÜÒÑ¾­³É¹¦ÌáÉı£¡");
+			cm.sendOk("æ“ä½œæˆåŠŸï¼ŒæŠ€èƒ½å·²ç»æˆåŠŸæå‡ï¼");
 			cm.dispose();
 		} else if (mode == 1 && cm.getMeso() < 30000000) {
-			cm.sendNext("ÄãËÆºõÃ»ÓĞ×ã¹»µÄ½ğ±Ò£¡");
+			cm.sendNext("ä½ ä¼¼ä¹æ²¡æœ‰è¶³å¤Ÿçš„é‡‘å¸ï¼");
 			cm.dispose();
 		} else {
-			cm.sendNext("àÅ¡£²»Ô¸Òâ¾ÍËãÁË¡£ÄÇÃ´ÔÙ¼û£¡£¡£¡");
+			cm.sendNext("å—¯ã€‚ä¸æ„¿æ„å°±ç®—äº†ã€‚é‚£ä¹ˆå†è§ï¼ï¼ï¼");
 			cm.dispose();
 		}
 	}

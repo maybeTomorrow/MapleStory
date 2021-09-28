@@ -42,10 +42,10 @@ function action(mode, type, selection) {
 					} 
 				}
 				if(player != null && boss != null){
-					cm.sendOk("ÌôÕ½PBµÄÕ½ÕùÒÑ¾­¿ªÊ¼.ÄúÏÖÔÚÎÞ·¨½øÈë");
+					cm.sendOk("æŒ‘æˆ˜PBçš„æˆ˜äº‰å·²ç»å¼€å§‹.æ‚¨çŽ°åœ¨æ— æ³•è¿›å…¥");
 					cm.dispose();
 				}else{
-					cm.sendYesNo("¿´ÆðÀ´ºÃÏñÃ»ÓÐÈËÔÚÀïÃæÄØ¡£ÄãÏë½øÈ¥Âð?");					
+					cm.sendYesNo("çœ‹èµ·æ¥å¥½åƒæ²¡æœ‰äººåœ¨é‡Œé¢å‘¢ã€‚ä½ æƒ³è¿›åŽ»å—?");					
 				}
 			
         		

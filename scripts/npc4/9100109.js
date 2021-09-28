@@ -1,4 +1,4 @@
-﻿/*
+锘�/*
 	Name: GMS-like Gachapon
 	Place: New Leaf City
  */
@@ -13,9 +13,9 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 	if (cm.haveItem(5220000)) {
-	    cm.sendYesNo("你有一些 #b快乐百宝卷吗#k .\r\n你想试试你的运气吗?");
+	    cm.sendYesNo("浣犳湁涓€浜� #b蹇箰鐧惧疂鍗峰悧#k .\r\n浣犳兂璇曡瘯浣犵殑杩愭皵鍚�?");
 	} else {
-	    cm.sendOk("你没#v5220000#。请在商城买张票，才可以回来给我。谢谢你.");
+	    cm.sendOk("浣犳病#v5220000#銆傝鍦ㄥ晢鍩庝拱寮犵エ锛屾墠鍙互鍥炴潵缁欐垜銆傝阿璋綘.");
 	    cm.safeDispose();
 	}
     } else if (status == 1) {
@@ -40,9 +40,9 @@ function action(mode, type, selection) {
 
 	if (item != -1) {
 	    cm.gainItem(5220000, -1);
-	    cm.sendOk("你已经获得 #b#t" + item + "##k.");
+	    cm.sendOk("浣犲凡缁忚幏寰� #b#t" + item + "##k.");
 	} else {
-	    cm.sendOk("请检查您的物品清单，看看是否有票，或如果背包满了.");
+	    cm.sendOk("璇锋鏌ユ偍鐨勭墿鍝佹竻鍗曪紝鐪嬬湅鏄惁鏈夌エ锛屾垨濡傛灉鑳屽寘婊′簡.");
 	}
 	cm.safeDispose();
     }

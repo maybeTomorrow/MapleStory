@@ -6,7 +6,7 @@ function enter(pi) {
 		pi.warp(670010600, 4);
 		return true;
 	} else {
-		pi.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "ÃÅÒÑ¹Ø±Õ"));
+		pi.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "é—¨å·²å…³é—­"));
 		return false;
 	}
 }

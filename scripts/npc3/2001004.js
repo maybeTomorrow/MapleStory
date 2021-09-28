@@ -1,5 +1,5 @@
 function start() { 
-    cm.sendYesNo("我们有一个美丽的圣诞树。\r\n你想去看看它吗？");
+    cm.sendYesNo("鎴戜滑鏈変竴涓編涓界殑鍦ｈ癁鏍戙�俓r\n浣犳兂鍘荤湅鐪嬪畠鍚楋紵");
 } 
 function action(mode, type, selection) { 
     cm.warp(209000001);

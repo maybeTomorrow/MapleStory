@@ -1,5 +1,5 @@
 /*
- *	Ô¶Õ÷ÈÎÎñ£ºÏ£À­ - 170 ¼¶À§ÄÑÄ£Ê½
+ *	è¿œå¾ä»»åŠ¡ï¼šå¸Œæ‹‰ - 170 çº§å›°éš¾æ¨¡å¼
  */
 
 function init() {
@@ -11,13 +11,13 @@ function setup(eim, leaderid) {
     em.setProperty("state", "1");
     em.setProperty("leader", "true");
     var eim = em.newInstance("Hillah_170");
-    var map = eim.setInstanceMap(262031300); //ÉèÖÃ»î¶¯½Å±¾µÄµØÍ¼
-    map.resetFully(false); //ÖØÖÃµØÍ¼
+    var map = eim.setInstanceMap(262031300); //è®¾ç½®æ´»åŠ¨è„šæœ¬çš„åœ°å›¾
+    map.resetFully(false); //é‡ç½®åœ°å›¾
     map.setSpawns(false);
-    var mob = em.getMonster(8870100); //Ï£À­ - 190¼¶
+    var mob = em.getMonster(8870100); //å¸Œæ‹‰ - 190çº§
     eim.registerMonster(mob);
     map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(134, 196));
-    eim.startEventTimer(3600000); //60·ÖÖÓ
+    eim.startEventTimer(3600000); //60åˆ†é’Ÿ
     return eim;
 }
 

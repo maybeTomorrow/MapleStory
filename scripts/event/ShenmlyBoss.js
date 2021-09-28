@@ -1,5 +1,5 @@
 /* 
- * 神秘领域
+ * 绁炵棰嗗煙
  */
 
 function init() {
@@ -108,7 +108,7 @@ function setup(eim, leaderid) {
     map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(57, 392));
     }
     }
-    eim.startEventTimer(60 * 60 * 1000); //一小时
+    eim.startEventTimer(60 * 60 * 1000); //涓�灏忔椂
     return eim;
 }
 

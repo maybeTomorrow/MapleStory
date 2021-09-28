@@ -1,6 +1,6 @@
 /* Author: Xterminator
-	NPC Name: 		Èğ¶÷
-	Map(s): 		Maple Road : ²Êºç´å (1010000)
+	NPC Name: 		ç‘æ©
+	Map(s): 		Maple Road : å½©è™¹æ‘ (1010000)
 	Description: 		Talks about Amherst
 */
 var status = 0;
@@ -19,11 +19,11 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("ÎÒ¿ÉÒÔËÍÄãÈ¥Ìì¿ÕÖ®³Ç.");
+			cm.sendNext("æˆ‘å¯ä»¥é€ä½ å»å¤©ç©ºä¹‹åŸ.");
 		} else if (status == 1) {
-			cm.sendNextPrev("ÏëÈ¥Âğ£¿");
+			cm.sendNextPrev("æƒ³å»å—ï¼Ÿ");
 		} else if (status == 2) {
-			cm.sendPrev("µãÏÂÒ»Ïî¿ªÊ¼½øÈë£¡Èç¹û²»È¥Çëµã½áÊø¶Ô»°£¡");
+			cm.sendPrev("ç‚¹ä¸‹ä¸€é¡¹å¼€å§‹è¿›å…¥ï¼å¦‚æœä¸å»è¯·ç‚¹ç»“æŸå¯¹è¯ï¼");
 		} else if (status == 3) {			
 			cm.warp(200000100,0);
 			cm.dispose();

@@ -34,7 +34,7 @@ function start() {
 
 function action(mode, type, selection) {
 	if (status == 0) {
-		cm.sendYesNo("ÄãÏë»Øµ½Íæ¾ßËşµÚ2¸öÄ§·¨Ê¯Âğ?");
+		cm.sendYesNo("ä½ æƒ³å›åˆ°ç©å…·å¡”ç¬¬2ä¸ªé­”æ³•çŸ³å—?");
 		status++;
 	} else {
 		if ((status == 1 && type == 1 && selection == -1 && mode == 0) || mode == -1) {
@@ -47,7 +47,7 @@ function action(mode, type, selection) {
 					cm.warp(221022900, 0);
 					cm.dispose();
 				} else {
-					cm.sendOk("ÄãĞèÒªÖÁÉÙÒ»ÕÅÍæ¾ßËşµÄÄ§·¨Ê¯¾õĞÑ¾í.");
+					cm.sendOk("ä½ éœ€è¦è‡³å°‘ä¸€å¼ ç©å…·å¡”çš„é­”æ³•çŸ³è§‰é†’å·.");
 					cm.dispose();
 				}
 			}

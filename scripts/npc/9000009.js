@@ -19,10 +19,10 @@ function action(mode, type, selection) {
 			status--;
 		if (status == 0) {
 			
-				cm.sendSimple("是否进行了赞助呢？可以找我拿到点卷哦！\r\n#r账户累计充值了:"+cm.getcz()+"人民币！\r\n#L0#领取点卷");
+				cm.sendSimple("鏄惁杩涜浜嗚禐鍔╁憿锛熷彲浠ユ壘鎴戞嬁鍒扮偣鍗峰摝锛乗r\n#r璐︽埛绱鍏呭�间簡:"+cm.getcz()+"浜烘皯甯侊紒\r\n#L0#棰嗗彇鐐瑰嵎");
 			
 				}else{
-				cm.sendOk("看来你并没有赞助过，无法领取点卷");
+				cm.sendOk("鐪嬫潵浣犲苟娌℃湁璧炲姪杩囷紝鏃犳硶棰嗗彇鐐瑰嵎");
 				cm.dispose();
 				}
 			}

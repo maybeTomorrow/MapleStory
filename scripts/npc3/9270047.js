@@ -21,9 +21,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("´ÓÎÒÕâÀï¿ÉÒÔÃâ·Ñ´«ËÍ³öÈ¥.µ«ÊÇ½«¼õÉÙÒ»´Î½øÀ´µÄ»ú»áÅ¶!");
+			cm.sendNext("ä»æˆ‘è¿™é‡Œå¯ä»¥å…è´¹ä¼ é€å‡ºå».ä½†æ˜¯å°†å‡å°‘ä¸€æ¬¡è¿›æ¥çš„æœºä¼šå“¦!");
 		} else if (status == 1) {
-			cm.sendYesNo("ÔõÃ´Ñù£¿ÄãÏë³öÈ¥Âğ£¿");
+			cm.sendYesNo("æ€ä¹ˆæ ·ï¼Ÿä½ æƒ³å‡ºå»å—ï¼Ÿ");
 		} else if (status == 2) {
 			cm.warp(551030100); 
 			cm.dispose();

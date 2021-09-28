@@ -1,17 +1,17 @@
 /*
-	¾ÅÁéÁúÈÎÎñ--·´Ó¦¶ş½Å±¾
+	ä¹çµé¾™ä»»åŠ¡--ååº”äºŒè„šæœ¬
 	
-	Ğ¾ËéÍõ×ÓÖÆ×÷
+	èŠ¯ç¢ç‹å­åˆ¶ä½œ
 */
 
 function act() {
-	var map = rm.getPlayer().getClient().getChannelServer().getMapFactory().getMap(240040610);  //ÍâÃæµÄµØÍ¼
-	var Reactors = rm.getReactor();  // ±¾ReactorsÀà
+	var map = rm.getPlayer().getClient().getChannelServer().getMapFactory().getMap(240040610);  //å¤–é¢çš„åœ°å›¾
+	var Reactors = rm.getReactor();  // æœ¬Reactorsç±»
 	var qust = net.sf.odinms.server.quest.MapleQuest.getInstance(3706);	
 	var quststats = new net.sf.odinms.client.MapleQuestStatus(qust,net.sf.odinms.client.MapleQuestStatus.Status.STARTED,2081007);
-	rm.spawnNpc(2081008, rm.getPlayer());	 //Ë¢NPC³öÀ´
+	rm.spawnNpc(2081008, rm.getPlayer());	 //åˆ·NPCå‡ºæ¥
 	new net.sf.odinms.server.maps.MapMonitor(rm.getReactor().getMap(),map.getPortal(10),rm.getPlayer().getClient().getChannel(),Reactors);			
-	rm.getReactor().getMap().broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.destroyReactor(Reactors)); //Ïú»ÙReactor
-	rm.getPlayer().updateQuest(quststats);		//¸üĞÂÈÎÎñ
-	rm.mapMessage("Ò»Ö»Áú±¦±¦´ÓÕâ¸öµ°Àï±ÄÁË³öÀ´.");
+	rm.getReactor().getMap().broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.destroyReactor(Reactors)); //é”€æ¯Reactor
+	rm.getPlayer().updateQuest(quststats);		//æ›´æ–°ä»»åŠ¡
+	rm.mapMessage("ä¸€åªé¾™å®å®ä»è¿™ä¸ªè›‹é‡Œè¹¦äº†å‡ºæ¥.");
 }

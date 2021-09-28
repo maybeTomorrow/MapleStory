@@ -15,7 +15,7 @@ function action(mode, type ,selection) {
 	}
 	
 	if (status == 0) {
-		cm.sendOk("���Ǳ����ĵ��߻���NPC\r\n�ҿ��԰����������㲻��Ҫ����Ʒ��\r\n\r\n#L1#��Ҫѡ����ɾ������#l\r\n\r\n#L2#��Ҫ�Ա�����λɾ������#l");
+		cm.sendOk("我是本服的道具回收NPC\r\n我可以帮你清理掉你不想要的物品！\r\n\r\n#L1#我要选择性删除道具#l\r\n\r\n#L2#我要以背包栏位删除道具#l");
 	} else if (selection == 1){
 		cm.openNpc(9900004,191);
 	} else if (selection == 2){

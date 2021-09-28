@@ -43,9 +43,9 @@ function action(mode, type, selection) {
 	status++;
 	if (status == 0) {
 		if(cm.haveItem(4001019)) {
-			cm.sendYesNo("ʹ�� #b#t4001019# ���� #b#p2012015##k. �㽫�ᱻ���ٵĴ��͵� #b#p2012014##k �ԣ��Ƿ�ʹ�ã�");
+			cm.sendYesNo("使用 #b#t4001019# 启动 #b#p2012015##k. 你将会被快速的传送到 #b#p2012014##k 旁，是否使用？");
 		} else {
-			cm.sendOk("ӵ������������ #b#p2012015##k �Ὣ����ٵĴ��͵� #b#p2012014##k �ԣ�����û�о���Ŀǰ�޷�����ħ��ʯ��");
+			cm.sendOk("拥有神气力量的 #b#p2012015##k 会将你快速的传送到 #b#p2012014##k 旁，但是没有卷轴目前无法启动魔法石。");
 			cm.dispose();
 		}
 	}

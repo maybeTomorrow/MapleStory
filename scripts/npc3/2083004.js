@@ -35,7 +35,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (mode == 0) {
-			cm.sendOk("ÀïÃæµÄ#bºÚ°µÁúÍõ#k·Ç³£Ç¿´ó£¡£¡µ¥Æ¾Ò»¸öÈËµÄÅ¬Á¦ÊÇÕ½Ê¤²»ÁËËüµÄ£¡");
+			cm.sendOk("é‡Œé¢çš„#bé»‘æš—é¾™ç‹#kéå¸¸å¼ºå¤§ï¼ï¼å•å‡­ä¸€ä¸ªäººçš„åŠªåŠ›æ˜¯æˆ˜èƒœä¸äº†å®ƒçš„ï¼");
 			cm.dispose();
 			return;
 		}
@@ -47,10 +47,10 @@ function action(mode, type, selection) {
 		
 		if (status == 0) {
 			if (cm.getSquadState(MapleSquadType.HORNTAIL) == 0) {
-				cm.sendYesNo("Èç¹ûÄãÏë½øÈëÒÔÏÂµÄÌôÕ½¡£¡£¡£ÄãĞèÒª#b´´½¨Ò»¸öÔ¶Õ÷¶Ó#k´øÁìÄãµÄĞ¡¶Ó¶ÓÎé½øÈëºó¸÷·½ÃæµÄÍÅ½á²ÅÄÜÈÃÄãÃÇ#bÌôÕ½Ç¿´óµÄ¹ÖÎï?\r\nÏµÍ³¼ì²âµ½ÄãÃ»ÓĞĞ¡¶Ó\r\n#rÊÇ·ñ´´½¨Ò»¸öÔ¶Õ÷¶Ó£¿");
+				cm.sendYesNo("å¦‚æœä½ æƒ³è¿›å…¥ä»¥ä¸‹çš„æŒ‘æˆ˜ã€‚ã€‚ã€‚ä½ éœ€è¦#båˆ›å»ºä¸€ä¸ªè¿œå¾é˜Ÿ#kå¸¦é¢†ä½ çš„å°é˜Ÿé˜Ÿä¼è¿›å…¥åå„æ–¹é¢çš„å›¢ç»“æ‰èƒ½è®©ä½ ä»¬#bæŒ‘æˆ˜å¼ºå¤§çš„æ€ªç‰©?\r\nç³»ç»Ÿæ£€æµ‹åˆ°ä½ æ²¡æœ‰å°é˜Ÿ\r\n#ræ˜¯å¦åˆ›å»ºä¸€ä¸ªè¿œå¾é˜Ÿï¼Ÿ");
 			} else if (cm.getSquadState(MapleSquadType.HORNTAIL) == 1) {
 				if (cm.checkSquadLeader(MapleSquadType.HORNTAIL)) {
-					cm.sendSimple("ÓÂÊ¿...ÄãĞèÒª×öÊ²Ã´?\r\n#b#L1#²é¿´Ä¿Ç°Ô¶Õ÷¶ÓĞÅÏ¢#l\r\n#L2#Close registrations#l\r\n#L3#Start the fight#l\r\n#L4#¹Ø±Õ/ÍË³öÎÒµÄĞÅÏ¢#l\r\n");
+					cm.sendSimple("å‹‡å£«...ä½ éœ€è¦åšä»€ä¹ˆ?\r\n#b#L1#æŸ¥çœ‹ç›®å‰è¿œå¾é˜Ÿä¿¡æ¯#l\r\n#L2#Close registrations#l\r\n#L3#Start the fight#l\r\n#L4#å…³é—­/é€€å‡ºæˆ‘çš„ä¿¡æ¯#l\r\n");
 					status = 19;
 				} else if (cm.isSquadMember(MapleSquadType.HORNTAIL)) {
 					var noOfChars = cm.numSquadMembers(MapleSquadType.HORNTAIL);
@@ -72,7 +72,7 @@ function action(mode, type, selection) {
 				}
 			} else if (cm.getSquadState(MapleSquadType.HORNTAIL) == 2) {
 				if (cm.checkSquadLeader(MapleSquadType.HORNTAIL)) {
-					cm.sendSimple("ÓÂÊ¿...ÄãĞèÒª×öÊ²Ã´??\r\n#L1#²é¿´Ô¶Õ÷¶ÓĞÅÏ¢#l\r\n#L2#Open registrations#l\r\n#L3#Start the fight!#l");
+					cm.sendSimple("å‹‡å£«...ä½ éœ€è¦åšä»€ä¹ˆ??\r\n#L1#æŸ¥çœ‹è¿œå¾é˜Ÿä¿¡æ¯#l\r\n#L2#Open registrations#l\r\n#L3#Start the fight!#l");
 					status = 19;
 				} else if (cm.isSquadMember(MapleSquadType.HORNTAIL)) {
 					var noOfChars = cm.numSquadMembers(MapleSquadType.HORNTAIL);
@@ -83,7 +83,7 @@ function action(mode, type, selection) {
 					cm.sendSimple(toSend);
 					cm.dispose();
 				} else {
-					cm.sendOk("ÄãµÄÔ¶Õ÷¶Ó¶ÓÎéÒÑ¾­´´½¨²¢ÇÒ¼ÇÂ¼ÔÚÄÚÁË£¬Èç¹ûÓĞÍæ¼ÒĞèÒª¼ÓÈë£¬»áÔÚÎÒÕâÀïÑ¡Ôñ½øÈë£¡");
+					cm.sendOk("ä½ çš„è¿œå¾é˜Ÿé˜Ÿä¼å·²ç»åˆ›å»ºå¹¶ä¸”è®°å½•åœ¨å†…äº†ï¼Œå¦‚æœæœ‰ç©å®¶éœ€è¦åŠ å…¥ï¼Œä¼šåœ¨æˆ‘è¿™é‡Œé€‰æ‹©è¿›å…¥ï¼");
 					cm.dispose();
 					return;
 				}
@@ -95,7 +95,7 @@ function action(mode, type, selection) {
 		} else if (status == 1) {
 			if (cm.createMapleSquad(MapleSquadType.HORNTAIL) != null) {
 				cm.getPlayer().getMap().broadcastMessage(MaplePacketCreator.serverNotice(6, cm.getPlayer().getName() + " has been appointed the leader of the Horntail Squad. Please apply now if you would like to join " + cm.getPlayer().getName() + " in defeating Horntail!"));
-				cm.sendOk("ÄãµÄÔ¶Õ÷¶ÓÒÑ¾­´´½¨ÁË¡£ÒÑ¾­¼ÇÂ¼ÔÚĞÅÏ¢ÄÚ£¡£¡");
+				cm.sendOk("ä½ çš„è¿œå¾é˜Ÿå·²ç»åˆ›å»ºäº†ã€‚å·²ç»è®°å½•åœ¨ä¿¡æ¯å†…ï¼ï¼");
 				cm.dispose();
 				return;
 			} else {
@@ -120,13 +120,13 @@ function action(mode, type, selection) {
 		} else if (status == 20) {
 			if (selection == 1) {
 				var noOfChars = cm.numSquadMembers(MapleSquadType.HORNTAIL);
-				var toSend = "Ä¿Ç°µÄÔ¶Õ÷¶ÓĞÅÏ¢£¨ÅÅĞò²»·ÖÊµÁ¦£©:\r\n";
+				var toSend = "ç›®å‰çš„è¿œå¾é˜Ÿä¿¡æ¯ï¼ˆæ’åºä¸åˆ†å®åŠ›ï¼‰:\r\n";
 				for (var i = 1; i <= noOfChars; i++) {
 					if (i == 1) {
-						toSend += "#L" + i + "##rµÚ " + i + ": " + cm.getSquadMember(MapleSquadType.HORNTAIL, i - 1).getName() + "#l#k" + "\r\n";
+						toSend += "#L" + i + "##rç¬¬ " + i + ": " + cm.getSquadMember(MapleSquadType.HORNTAIL, i - 1).getName() + "#l#k" + "\r\n";
 					}
 					else {
-						toSend += "#L" + i + "#µÚ " + i + ": " + cm.getSquadMember(MapleSquadType.HORNTAIL, i - 1).getName() + "#l" + "\r\n";
+						toSend += "#L" + i + "#ç¬¬ " + i + ": " + cm.getSquadMember(MapleSquadType.HORNTAIL, i - 1).getName() + "#l" + "\r\n";
 					}
 				}
 				cm.sendSimple(toSend);

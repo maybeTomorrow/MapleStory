@@ -11,7 +11,7 @@ function action(mode, type, selection) {
     else {
         if (status >= 0 && mode == 0) {
 
-            cm.sendOk("ºÙßİ£¡");
+            cm.sendOk("å˜¿å’»ï¼");
             cm.dispose();
             return;
         }
@@ -22,19 +22,19 @@ function action(mode, type, selection) {
             status--;
         }
         if (status == 0) {
-            cm.sendGetNumber("Ç¿»¯×°±¸£¿Ğ´ÈëÄãÒªÇ¿»¯µÄ×°±¸¸ñÊı°É£¡\r\n(#rPS£º×îºÃ°Ñ×°±¸·ÅÔÚ×°±¸À¸µÚÒ»¸ñÈ»ºó¸ñÊıÌî£º1)",0,0,1000);
+            cm.sendGetNumber("å¼ºåŒ–è£…å¤‡ï¼Ÿå†™å…¥ä½ è¦å¼ºåŒ–çš„è£…å¤‡æ ¼æ•°å§ï¼\r\n(#rPSï¼šæœ€å¥½æŠŠè£…å¤‡æ”¾åœ¨è£…å¤‡æ ç¬¬ä¸€æ ¼ç„¶åæ ¼æ•°å¡«ï¼š1)",0,0,1000);
         }
         else if(status == 1){
             xz = selection;
-            cm.sendYesNo("Ç¿»¯µÄ×°±¸Îª£ºµÚ"+xz+"¸ñ£¡ÊÇ·ñ¼ÌĞø£¿");
+            cm.sendYesNo("å¼ºåŒ–çš„è£…å¤‡ä¸ºï¼šç¬¬"+xz+"æ ¼ï¼æ˜¯å¦ç»§ç»­ï¼Ÿ");
         }else if(status == 2){
-			if(cm.haveItem(4251202,1) && cm.haveItem(4251302,1)){//¸ßµÈÎå²Ê£¬¸ßµÈºÚ°µ
+			if(cm.haveItem(4251202,1) && cm.haveItem(4251302,1)){//é«˜ç­‰äº”å½©ï¼Œé«˜ç­‰é»‘æš—
 			cm.gainItem(4251202, -1);
 			cm.gainItem(4251302, -1);				
 			cm.itemqh(xz,1);
 			cm.dispose();
 		    }else{
-            cm.sendOk("¶Ô²»Æğ£¬Äã²»ÊÇ¹ÜÀíÔ±ÎŞ·¨Ê¹ÓÃ´Ë¹¦ÄÜ£¡");
+            cm.sendOk("å¯¹ä¸èµ·ï¼Œä½ ä¸æ˜¯ç®¡ç†å‘˜æ— æ³•ä½¿ç”¨æ­¤åŠŸèƒ½ï¼");
             cm.dispose();
 			}
         }    

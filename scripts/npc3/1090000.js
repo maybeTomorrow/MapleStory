@@ -1,5 +1,5 @@
 /*
-Vr001 ·â²â°æ ONLINEĞŞÕı!
+Vr001 å°æµ‹ç‰ˆ ONLINEä¿®æ­£!
 */
 importPackage(net.sf.odinms.client);
 
@@ -30,7 +30,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendSimple("ÄãÓĞÊ²Ã´ÒªÎÊÎÒ?#b\r\n#L0#ÎÒÏëÖªµÀ¹ØÓÚº£µÁ¡­¡­");
+			cm.sendSimple("ä½ æœ‰ä»€ä¹ˆè¦é—®æˆ‘?#b\r\n#L0#æˆ‘æƒ³çŸ¥é“å…³äºæµ·ç›—â€¦â€¦");
 		} else if (status == 1) {
 			if (cm.getJob().equals(MapleJob.BRAWLER) || cm.getJob().equals(MapleJob.GUNSLINGER)) {
 				if (cm.getPlayer().getLevel() <= 69) {
@@ -50,40 +50,40 @@ function action(mode, type, selection) {
 			} else if (cm.getJob().equals(MapleJob.PIRATE)) {
 				if (cm.getQuestStatus(2191).equals(MapleQuestStatus.Status.COMPLETED)) {
 					status = 35;
-					cm.sendNext("»¶Ó­µÚ¶ş´Î×ªÖ°! #bÈ­ÊÖ#k.");
+					cm.sendNext("æ¬¢è¿ç¬¬äºŒæ¬¡è½¬èŒ! #bæ‹³æ‰‹#k.");
 				} else if (cm.getQuestStatus(2192).equals(MapleQuestStatus.Status.COMPLETED)) {
 					status = 40;
 					cm.sendNext("Okay, as promised, you will now become a #bGunslinger#k.");
 				} else if (cm.getQuestStatus(2191).equals(MapleQuestStatus.Status.STARTED)) {
 					status = 29;
-					cm.sendNext("ºÃµÄ.ÎÒÏÖÔÚËÍÄã½øÈ¥~\r\n#b15 #t4031856##k.ÔÚÄãµãÏÂÒ»²½µÄÊ±ºò,ÎÒ»áÖ±½Ó°ÑÈÎÎñÎïÆ·ËÍ¸øÄã.È»ºóÄãÔÙµã½áÊø¶Ô»°¾ÍÄÜ×ªÖ°ÁË!");
+					cm.sendNext("å¥½çš„.æˆ‘ç°åœ¨é€ä½ è¿›å»~\r\n#b15 #t4031856##k.åœ¨ä½ ç‚¹ä¸‹ä¸€æ­¥çš„æ—¶å€™,æˆ‘ä¼šç›´æ¥æŠŠä»»åŠ¡ç‰©å“é€ç»™ä½ .ç„¶åä½ å†ç‚¹ç»“æŸå¯¹è¯å°±èƒ½è½¬èŒäº†!");
 				cm.gainItem(4031856,15);
 				} else if (cm.getQuestStatus(2192).equals(MapleQuestStatus.Status.STARTED)) {
 					status = 31;
 					cm.sendNext("Okay, now I'll take you to the test room. Here are the instructions: defeat the Octopirates and gather #b15 #t4031857#s#k. The Octopirates you'll see here are highly trained and are very quick, so I suggest you really buckle down and get ready for this.");
 				} else if (cm.getPlayer().getLevel() <= 29) {
 					status = 9;
-					cm.sendSimple("ÄãÓĞÊ²Ã´ÒÉÎÊÄØ?#b\r\n#L0#Ê²Ã´ÊÇº£µÁ?#l\r\n#L1#ÎäÆ÷º£µÁÊÇ×÷Ê²Ã´µÄÄÜÊ¹ÓÃ?#l\r\n#L2#¿ø¼×º£µÁÊÇ×÷Ê²Ã´µÄÄÜÊ¹ÓÃ#l\r\n#L3#Ê²Ã´ÊÇº£µÁ¼¼ÄÜ?");
+					cm.sendSimple("ä½ æœ‰ä»€ä¹ˆç–‘é—®å‘¢?#b\r\n#L0#ä»€ä¹ˆæ˜¯æµ·ç›—?#l\r\n#L1#æ­¦å™¨æµ·ç›—æ˜¯ä½œä»€ä¹ˆçš„èƒ½ä½¿ç”¨?#l\r\n#L2#ç›”ç”²æµ·ç›—æ˜¯ä½œä»€ä¹ˆçš„èƒ½ä½¿ç”¨#l\r\n#L3#ä»€ä¹ˆæ˜¯æµ·ç›—æŠ€èƒ½?");
 				} else if (cm.getPlayer().getLevel() >= 30) {
 					status = 22;
 					cm.sendSimple("Do you want to know more about Brawlers and Gunslingers? It'd be good to know in advance, so you'll have a clear picture of what you want to become for your job advancement...\r\n#b#L0# Please explain to me what being a Brawler is all about.#k#l\r\n#b#L1# Please explain to me what being a Gunslinger is all about.#k#l");
 				} 
 			} else if (cm.getJob().equals(MapleJob.BEGINNER)) {
-				cm.sendNext("×ªÖ°³Éº£µÁĞèÒªµÈ¼¶´ïµ½#d10¼¶#k...#dÃô½İ´ïµ½20µã#kÅ¶!");
+				cm.sendNext("è½¬èŒæˆæµ·ç›—éœ€è¦ç­‰çº§è¾¾åˆ°#d10çº§#k...#dæ•æ·è¾¾åˆ°20ç‚¹#kå“¦!");
 			} else {
-				cm.sendNext("º£µÁÊÇÒ»¸ö½üÕ½µÄÖ°Òµ.±ÈÆğÕ½Ê¿À´,º£µÁÓµÓĞºÜÇ¿µÄ½üÕ½Á¦Á¿.º£µÁ¿ÉÒÔ·ÖÎª»ğÇ¹ÊÖºÍÈ­ÊÖÕâÁ½¸ö¶ş×ªÖ°Òµ.¶¼ºÜÇ¿´ó...ÄãÏë²»ÏëÌåÑéÒ»ÏÂº£µÁÄØ?ÌåÑéº£µÁÖ»ĞèÒªµÈ¼¶´ïµ½10¼¶.ÊôĞÔ´ïµ½±ê×¼¾ÍĞĞÁË!");
+				cm.sendNext("æµ·ç›—æ˜¯ä¸€ä¸ªè¿‘æˆ˜çš„èŒä¸š.æ¯”èµ·æˆ˜å£«æ¥,æµ·ç›—æ‹¥æœ‰å¾ˆå¼ºçš„è¿‘æˆ˜åŠ›é‡.æµ·ç›—å¯ä»¥åˆ†ä¸ºç«æªæ‰‹å’Œæ‹³æ‰‹è¿™ä¸¤ä¸ªäºŒè½¬èŒä¸š.éƒ½å¾ˆå¼ºå¤§...ä½ æƒ³ä¸æƒ³ä½“éªŒä¸€ä¸‹æµ·ç›—å‘¢?ä½“éªŒæµ·ç›—åªéœ€è¦ç­‰çº§è¾¾åˆ°10çº§.å±æ€§è¾¾åˆ°æ ‡å‡†å°±è¡Œäº†!");
 				cm.dispose();
 			}
 		} else if (status == 2) {
 			if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getDex() >= 1) {
 				requirements = true;
-				cm.sendYesNo("Äã´ïµ½ÁËÒªÇó£¬ÊÇ·ñÏëµ±Ò»ÃûÍş·çµÄ#bº£µÁ#kÄØ?");
+				cm.sendYesNo("ä½ è¾¾åˆ°äº†è¦æ±‚ï¼Œæ˜¯å¦æƒ³å½“ä¸€åå¨é£çš„#bæµ·ç›—#kå‘¢?");
 			} else {
-				cm.sendNextPrev("Äã»òĞí¿ÉÒÔ¿´¿´×ÔÉíµÄÊôĞÔ..¿´¿´ÆäËûÖ°ÒµÊÇ·ñÊÊºÏÄØ?");
+				cm.sendNextPrev("ä½ æˆ–è®¸å¯ä»¥çœ‹çœ‹è‡ªèº«çš„å±æ€§..çœ‹çœ‹å…¶ä»–èŒä¸šæ˜¯å¦é€‚åˆå‘¢?");
 			}
 		} else if (status == 3) {
 			if (requirements)
-				cm.sendNext("³ÉÎªÁËº£µÁºó.Äã¿ÉÒÔÀ´ÎÒÕâÀï¼ÌĞø×ªÖ°,¹ºÂò¶«Î÷µÈµÈ!ÀÖÈ¤ºÜ¶à!ÄãÊÇ·ñÏë³ÉÎªÄØ?");
+				cm.sendNext("æˆä¸ºäº†æµ·ç›—å.ä½ å¯ä»¥æ¥æˆ‘è¿™é‡Œç»§ç»­è½¬èŒ,è´­ä¹°ä¸œè¥¿ç­‰ç­‰!ä¹è¶£å¾ˆå¤š!ä½ æ˜¯å¦æƒ³æˆä¸ºå‘¢?");
 			else
 				cm.dispose();
 		} else if (status == 4) {
@@ -96,15 +96,15 @@ function action(mode, type, selection) {
 				cm.gainItem(1492014, 1);
 				cm.gainItem(2330006, 600);
 			}
-			cm.sendNextPrev("ÄãÒÑ¾­³ÉÎªÁËÒ»¸öº£µÁÁË!Í¬Ê±,ÎÒ¸øÓèÁËÄãÒ»Ğ©ÎïÆ·!ÓµÓĞËüÃÇ,Äã¿ÉÒÔ¸ü³©ÓÎÃ°ÏÕÊÀ½ç.ÔÚÄãµÄÅ¬Á¦½øÒ»²½ÌáÉıµÄÊ±ºò,Äã¿ÉÒÔÀ´ÕÒÎÒÔÙ´Î×ªÖ°.¾àÀëÄãÏÂÒ»´Î×ªÖ°ÊÇĞèÒª´ïµ½#b30#k¼¶!");
+			cm.sendNextPrev("ä½ å·²ç»æˆä¸ºäº†ä¸€ä¸ªæµ·ç›—äº†!åŒæ—¶,æˆ‘ç»™äºˆäº†ä½ ä¸€äº›ç‰©å“!æ‹¥æœ‰å®ƒä»¬,ä½ å¯ä»¥æ›´ç•…æ¸¸å†’é™©ä¸–ç•Œ.åœ¨ä½ çš„åŠªåŠ›è¿›ä¸€æ­¥æå‡çš„æ—¶å€™,ä½ å¯ä»¥æ¥æ‰¾æˆ‘å†æ¬¡è½¬èŒ.è·ç¦»ä½ ä¸‹ä¸€æ¬¡è½¬èŒæ˜¯éœ€è¦è¾¾åˆ°#b30#kçº§!");
 		} else if (status == 5) {
-			cm.sendNextPrev("Í¬Ê±ÎÒ¸øÄãÁËÒ»Ğ©#dSP#kµãÊı.Äã¿ÉÒÔ³¢ÊÔÔö¼Ó¼¸¸ö¼¼ÄÜ.ÔÚÄãÃ¿´ÎÉı¼¶µÄÊ±ºò.¿ÉÒÔ»ñµÃ3µã#dSP#k!ÄãÍ¬Ê±Ò²ÓµÓĞÁËº£µÁµÄÒ»×ª¼¼ÄÜ!");
+			cm.sendNextPrev("åŒæ—¶æˆ‘ç»™ä½ äº†ä¸€äº›#dSP#kç‚¹æ•°.ä½ å¯ä»¥å°è¯•å¢åŠ å‡ ä¸ªæŠ€èƒ½.åœ¨ä½ æ¯æ¬¡å‡çº§çš„æ—¶å€™.å¯ä»¥è·å¾—3ç‚¹#dSP#k!ä½ åŒæ—¶ä¹Ÿæ‹¥æœ‰äº†æµ·ç›—çš„ä¸€è½¬æŠ€èƒ½!");
 		} else if (status == 6) {
-			cm.sendNextPrev("×¢Òâ.ÄãÏÖÔÚÒÑ¾­×ªÖ°ÁËµÄ.µ±ÄãµÄHPºÄ¾¡µÄÊ±ºò.Äã»á¶ªÊ§²¿·ÖµÄEXPÖµ.ËùÒÔ,Ç§Íò²»ÒªÈÃ×Ô¼ºËÀÍö.ÕâÒâÎ¶×ÅÄã»áÊ§È¥×Ô¼ºĞÁ¿à´ò¹ÖµÃµ½µÄEXP");
+			cm.sendNextPrev("æ³¨æ„.ä½ ç°åœ¨å·²ç»è½¬èŒäº†çš„.å½“ä½ çš„HPè€—å°½çš„æ—¶å€™.ä½ ä¼šä¸¢å¤±éƒ¨åˆ†çš„EXPå€¼.æ‰€ä»¥,åƒä¸‡ä¸è¦è®©è‡ªå·±æ­»äº¡.è¿™æ„å‘³ç€ä½ ä¼šå¤±å»è‡ªå·±è¾›è‹¦æ‰“æ€ªå¾—åˆ°çš„EXP");
 		} else if (status == 7) {
-			cm.sendNextPrev("ÄãÏÖÔÚ¿ÉÒÔ³¢ÊÔ´©º£µÁµÄ×°±¸ÁË!");
+			cm.sendNextPrev("ä½ ç°åœ¨å¯ä»¥å°è¯•ç©¿æµ·ç›—çš„è£…å¤‡äº†!");
 		} else if (status == 8) {
-			cm.sendNextPrev("Èç¹ûÄã²»ÖªµÀ×Ô¼º¶ş×ªÖ°ÒµµÄ¼ÓµãµÄ»°,Äã²»·ÁÊ¹ÓÃÏÂÊôĞÔµã´°¿ÚµÄ#b×Ô¶¯¼Óµã#k¹¦ÄÜ!");
+			cm.sendNextPrev("å¦‚æœä½ ä¸çŸ¥é“è‡ªå·±äºŒè½¬èŒä¸šçš„åŠ ç‚¹çš„è¯,ä½ ä¸å¦¨ä½¿ç”¨ä¸‹å±æ€§ç‚¹çª—å£çš„#bè‡ªåŠ¨åŠ ç‚¹#kåŠŸèƒ½!");
 		} else if (status == 10) {
 			if (selection == 0) {
 				status = 11;
@@ -164,10 +164,10 @@ function action(mode, type, selection) {
 		} else if (status == 28) {
 			cm.sendNextPrev("Next, we'll talk about #b#q5201005##k. This skill allows you to jump without being affected by Maple's law of gravity. This will allow you to stay afloat longer, and land on the ground later than regular jumps. If you use #b#q5201005##k from a high place, don't you think you'll be able to attack monsters in midair?");
 		} else if (status == 29) {
-			cm.sendNext("ºÃµÄ.ÎÒÏÖÔÚËÍÄã½øÈ¥~\r\n#b15 #t4031856#s#k. ÔÚÄãµêÏÂÒ»²½µÄÊ±ºò,ÎÒ»áÖ±½ÓËÍ¸øÄã15¸ö#t#t4031856#s#k");
+			cm.sendNext("å¥½çš„.æˆ‘ç°åœ¨é€ä½ è¿›å»~\r\n#b15 #t4031856#s#k. åœ¨ä½ åº—ä¸‹ä¸€æ­¥çš„æ—¶å€™,æˆ‘ä¼šç›´æ¥é€ç»™ä½ 15ä¸ª#t#t4031856#s#k");
 		cm.gainItem(4031856, 15);
 		} else if (status == 30) {
-			cm.sendNextPrev("ÄãÓ¦¸ÃÒÑ¾­»ñµÃÈÎÎñÎïÆ·ÁË°É?Ö±½Óµã#r½áÊø¶Ô»°#k¼´¿É!");
+			cm.sendNextPrev("ä½ åº”è¯¥å·²ç»è·å¾—ä»»åŠ¡ç‰©å“äº†å§?ç›´æ¥ç‚¹#rç»“æŸå¯¹è¯#kå³å¯!");
 		} else if (status == 31) {
 			cm.removeAll(4031856);
 			var em = cm.getEventManager("Brawler");
@@ -177,44 +177,44 @@ function action(mode, type, selection) {
 				cm.sendNext("There was a error while warping, please notify the GMs to fix this problem.");
 			cm.dispose();
 		} else if (status == 32) {
-			cm.sendNext("µãÏÂÒ»²½»ñµÃ15¸ö#t4031857#s#.");
+			cm.sendNext("ç‚¹ä¸‹ä¸€æ­¥è·å¾—15ä¸ª#t4031857#s#.");
 		cm.gainItem(4031857, 15);
 		} else if (status == 33) {
-			cm.sendNextPrev("³öÀ´¼ÌĞø½»ÈÎÎñ°É£¡.");
+			cm.sendNextPrev("å‡ºæ¥ç»§ç»­äº¤ä»»åŠ¡å§ï¼.");
 		} else if (status == 34) {
 			cm.removeAll(4031857);
 			var em = cm.getEventManager("Gunslinger");
 			if (em != null)
 				em.newInstance(cm.getPlayer().getName()).registerPlayer(cm.getPlayer());
 			else
-				cm.sendNext("Óö¼ûÁËÒ»¸ö´íÎóµÄ½Å±¾º¯Êı!Çë¸æËßGM½â¾ö!");
+				cm.sendNext("é‡è§äº†ä¸€ä¸ªé”™è¯¯çš„è„šæœ¬å‡½æ•°!è¯·å‘Šè¯‰GMè§£å†³!");
 			cm.dispose();
 		} else if (status == 35) {
-			cm.sendNext("»¶Ó­µÚ¶ş´Î×ªÖ°! #b#Brawler");
+			cm.sendNext("æ¬¢è¿ç¬¬äºŒæ¬¡è½¬èŒ! #b#Brawler");
 		} else if (status == 36) {
 			if (cm.getJob().equals(MapleJob.PIRATE)) {
 				cm.changeJob(MapleJob.BRAWLER);
 			}
-			cm.sendNextPrev("³É¹¦ÁË.");
+			cm.sendNextPrev("æˆåŠŸäº†.");
 		} else if (status == 37) {
-			cm.sendNextPrev("£¡£¤@#%#£¤¡­¡­%&%¡­¡­@");
+			cm.sendNextPrev("ï¼ï¿¥@#%#ï¿¥â€¦â€¦%&%â€¦â€¦@");
 		} else if (status == 38) {
 			cm.sendNextPrev("$%^$^%!@#*^!@*&#^*!&@%^#%!@^()_)_).");
 		} else if (status == 39) {
-			cm.sendNextPrev("ÌıÃ÷°×ÁËÂğ?");
+			cm.sendNextPrev("å¬æ˜ç™½äº†å—?");
 		} else if (status == 40) {
-			cm.sendNext("³ÉÎªÒ»¸ö #bÇ¹ÊÖ#k.?");
+			cm.sendNext("æˆä¸ºä¸€ä¸ª #bæªæ‰‹#k.?");
 		} else if (status == 41) {
 			if (cm.getJob().equals(MapleJob.PIRATE)) {
 				cm.changeJob(MapleJob.GUNSLINGER);
 			}
-			cm.sendNextPrev("ºÃ, ´ÓÔÚÕâÀïÔÚÍâÃæµÄÖ®ÉÏ, ÄãÊÇÒ» #bÇ¹ÊÖ#k."); // ²»ÊÇÍêÈ«
+			cm.sendNextPrev("å¥½, ä»åœ¨è¿™é‡Œåœ¨å¤–é¢çš„ä¹‹ä¸Š, ä½ æ˜¯ä¸€ #bæªæ‰‹#k."); // ä¸æ˜¯å®Œå…¨
 		} else if (status == 42) {
-			cm.sendNextPrev("£¡£¤%#¡­¡­£¤%*¡­¡­¡­¡­&@#.");
+			cm.sendNextPrev("ï¼ï¿¥%#â€¦â€¦ï¿¥%*â€¦â€¦â€¦â€¦&@#.");
 		} else if (status == 43) {
-			cm.sendNextPrev("2#£¤@%#£¤¡­¡­£¤%&%£¤¡­¡­@#£¤#.");
+			cm.sendNextPrev("2#ï¿¥@%#ï¿¥â€¦â€¦ï¿¥%&%ï¿¥â€¦â€¦@#ï¿¥#.");
 		} else if (status == 44) {
-			cm.sendNextPrev("ÎÒ½«ÔÚÕâÀï¶ÔÄãÊÇºò²¹."); // Not complete
+			cm.sendNextPrev("æˆ‘å°†åœ¨è¿™é‡Œå¯¹ä½ æ˜¯å€™è¡¥."); // Not complete
 		}
 	}
 }

@@ -1,6 +1,6 @@
 function start() {
 	//cm.sendSimple("<3 <3");
-	cm.sendSimple("#b你好 #k#h  ##e  #b我是排名系统.#k\r\n#L0##r家族排名\r\n\r\n#L1##g等级排名\r\n\r\n#L2##b金币排名#l");//\r\n#L2##b金币排名#l
+	cm.sendSimple("#b浣犲ソ #k#h  ##e  #b鎴戞槸鎺掑悕绯荤粺.#k\r\n#L0##r瀹舵棌鎺掑悕\r\n\r\n#L1##g绛夌骇鎺掑悕\r\n\r\n#L2##b閲戝竵鎺掑悕#l");//\r\n#L2##b閲戝竵鎺掑悕#l
 }
 
 function action(mode, type, selection) {

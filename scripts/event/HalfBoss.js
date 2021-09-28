@@ -1,5 +1,5 @@
 /* 
- * °ë°ë
+ * åŠåŠ
  */
 
 
@@ -15,7 +15,7 @@ function setup(eim, leaderid) {
     var map = eim.setInstanceMap(105200110);
     map.resetFully();
     eim.getMapFactory().getMap(105200110).killAllMonsters(false);
-    eim.startEventTimer(15 * 60 * 1000); //15·ÖÖÓ
+    eim.startEventTimer(15 * 60 * 1000); //15åˆ†é’Ÿ
     return eim;
 }
 

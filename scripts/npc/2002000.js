@@ -3,7 +3,7 @@ Happyville Warp NPC
 */
 
 function start() {
-    cm.sendSimple("ÎÒÖªµÀÓÐÒ»¸öÍ¯»°°ãµÄÊÀ½ç£¬ÄãÏë²»ÏëÈ¥¿´¿´ÄØ£¿\r\n#L0#Ç°ÍùÐÒ¸£´å!#l\r\n\#L1#·µ»ØÄ§·¨ÃÜÁÖ#l");
+    cm.sendSimple("æˆ‘çŸ¥é“æœ‰ä¸€ä¸ªç«¥è¯èˆ¬çš„ä¸–ç•Œï¼Œä½ æƒ³ä¸æƒ³åŽ»çœ‹çœ‹å‘¢ï¼Ÿ\r\n#L0#å‰å¾€å¹¸ç¦æ‘!#l\r\n\#L1#è¿”å›žé­”æ³•å¯†æž—#l");
 }
 
 function action(mode, type, selection) {

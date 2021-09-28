@@ -9,14 +9,14 @@ function action(mode, type, selection) {
     if (status == 0) {
 		if (cm.getPlayer().getMapId() == 105050400) {
 			if (cm.getPlayer().getLevel() < 40 && cm.haveItem(4032496)) {
-				cm.sendYesNo("你想到达地狱大公散步的地方?");
+				cm.sendYesNo("浣犳兂鍒拌揪鍦扮嫳澶у叕鏁ｆ鐨勫湴鏂�?");
 			} else {
-				cm.sendOk("你需要少于40级并且需要恶魔猎手的饰品进入.");
+				cm.sendOk("浣犻渶瑕佸皯浜�40绾у苟涓旈渶瑕佹伓榄旂寧鎵嬬殑楗板搧杩涘叆.");
 				cm.dispose();
 			}
 		} else if (cm.getPlayer().getMapId() == 677000011) { //warp to another astaroth map.
 			if (cm.getParty() == null) {
-				cm.sendOk("你必须在次开组队.");
+				cm.sendOk("浣犲繀椤诲湪娆″紑缁勯槦.");
 			} else {
 				var party = cm.getParty().getMembers();
 				var mapId = cm.getMapId();
@@ -39,7 +39,7 @@ function action(mode, type, selection) {
 					next = false;
 				}
 				if (!next) {
-					cm.sendOk("在同一张地图上，您需要你的组队人数为2人.");
+					cm.sendOk("鍦ㄥ悓涓€寮犲湴鍥句笂锛屾偍闇€瑕佷綘鐨勭粍闃熶汉鏁颁负2浜�.");
 					cm.dispose();
 					return;
 				}
@@ -49,7 +49,7 @@ function action(mode, type, selection) {
 		} else if (cm.getPlayer().getMapId() == 677000013) { //warp to another astaroth map.
 			if (cm.getPlayer().getLevel() < 40 && cm.haveItem(4032496)) {
 				if (cm.getParty() == null) {
-					cm.sendOk("你必须在这里开组队.");
+					cm.sendOk("浣犲繀椤诲湪杩欓噷寮€缁勯槦.");
 				} else {
 					var party = cm.getParty().getMembers();
 					var mapId = cm.getMapId();
@@ -73,12 +73,12 @@ function action(mode, type, selection) {
 					}
 					if (next) {
 						if (cm.getMap(677000012).getCharactersSize() > 0) {
-							cm.sendOk("有人试图打败地狱大公已经.");
+							cm.sendOk("鏈変汉璇曞浘鎵撹触鍦扮嫳澶у叕宸茬粡.");
 						} else {
 							cm.warpParty(677000012);
 						}
 					} else {
-						cm.sendOk("在同一张地图上，在同一张地图上，您需要你的组队人数为2人.");
+						cm.sendOk("鍦ㄥ悓涓€寮犲湴鍥句笂锛屽湪鍚屼竴寮犲湴鍥句笂锛屾偍闇€瑕佷綘鐨勭粍闃熶汉鏁颁负2浜�.");
 					}
 				}
 			} else {

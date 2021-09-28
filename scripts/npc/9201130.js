@@ -8,9 +8,9 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 		if (cm.getPlayer().getLevel() < 40 && cm.haveItem(4032485)) {
-			cm.sendYesNo("你想移动到隐藏地图?");
+			cm.sendYesNo("浣犳兂绉诲姩鍒伴殣钘忓湴鍥�?");
 		} else {
-			cm.sendOk("你需要小于40级，需要进入要有大型钱币模型.");
+			cm.sendOk("浣犻渶瑕佸皬浜�40绾э紝闇€瑕佽繘鍏ヨ鏈夊ぇ鍨嬮挶甯佹ā鍨�.");
 			cm.dispose();
 		}
 } else {

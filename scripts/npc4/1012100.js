@@ -17,7 +17,7 @@ function start() {
 
 function action(mode, type, selection) {
     if (mode == 0 && status == 2) {
-        cm.sendOk("ÇëÖØÊÔ.");
+        cm.sendOk("è¯·é‡è¯•.");
         cm.dispose();
         return;
     }
@@ -28,82 +28,82 @@ function action(mode, type, selection) {
     if (status == 0) {
 	if (cm.getJob() == 0) {
 		if (cm.getPlayer().getLevel() >= 10) {
-		cm.sendNext("ÄãÒª×ªÖ°³ÉÎªÒ»Î» #r¹­¼ıÊÖ#k ?");
+		cm.sendNext("ä½ è¦è½¬èŒæˆä¸ºä¸€ä½ #rå¼“ç®­æ‰‹#k ?");
 	    } else {
-		cm.sendOk("Äã»¹²»ÄÜ×ªÖ°³ÉÎª #r¹­¼ıÊÖ#k ²ÌB8.");
+		cm.sendOk("ä½ è¿˜ä¸èƒ½è½¬èŒæˆä¸º #rå¼“ç®­æ‰‹#k è”¡B8.");
 		cm.dispose();
 	    }
 	} else {
-	    if (cm.getPlayer().getLevel() >= 30 && cm.getJob() == 300) { // ¹­¼ıÊÖ
+	    if (cm.getPlayer().getLevel() >= 30 && cm.getJob() == 300) { // å¼“ç®­æ‰‹
 		if (cm.haveItem(4031012, 1)) {
 		    if (cm.haveItem(4031012, 1)) {
 			status = 20;
-			cm.sendNext("ÎÒ¿´µ½ÄãÍê³ÉÁË²âÊÔ. ÏëÒª¼ÌĞø×ªÖ°ÇëµãÏÂÒ»Ò³!");
+			cm.sendNext("æˆ‘çœ‹åˆ°ä½ å®Œæˆäº†æµ‹è¯•. æƒ³è¦ç»§ç»­è½¬èŒè¯·ç‚¹ä¸‹ä¸€é¡µ!");
 		    } else {
 			if (!cm.haveItem(4031010)) {
 			    cm.gainItem(4031010, 1);
 			}
-			cm.sendOk("ÇëÈ¥ÕÒ #r¹­¼ıÊÖ×ªÖ°½Ì¹Ù#k.")
+			cm.sendOk("è¯·å»æ‰¾ #rå¼“ç®­æ‰‹è½¬èŒæ•™å®˜#k.")
 			cm.dispose();
 		    }
 		} else {
 		    status = 10;
-		    cm.sendNext("ÄãÒÑ¾­¿ÉÒÔ×ªÖ°ÁË,Òª×ªÖ°ÇëµãÏÂÒ»Ò³.");
+		    cm.sendNext("ä½ å·²ç»å¯ä»¥è½¬èŒäº†,è¦è½¬èŒè¯·ç‚¹ä¸‹ä¸€é¡µ.");
 		}
 	    } else if (cm.getPlayer().getLevel() >= 70 && cm.getJob() == 310 || cm.getJob() == 320) {
 		if (cm.haveItem(4031059,1)) {
 			cm.gainItem(4031057,1);
 			cm.gainItem(4031059, -1);
 			cm.warp(211000001, 0);
-		    cm.sendOk("ÄãÍê³ÉÁËÒ»¸ö¿¼Ñé£¬ÏÖÔÚÈ¥ÕÒ #bÀÙÄİ#k.");
+		    cm.sendOk("ä½ å®Œæˆäº†ä¸€ä¸ªè€ƒéªŒï¼Œç°åœ¨å»æ‰¾ #bè•¾å¦®#k.");
 		} else {
-		    cm.sendOk("àË, #b#h0##k! ÎÒĞèÒªÒ»¸ö #bºÚ·û#k. ¿ìÈ¥ÕÒÒì´ÎÔª¿Õ¼äÄÃ¸øÎÒ");
+		    cm.sendOk("å—¨, #b#h0##k! æˆ‘éœ€è¦ä¸€ä¸ª #bé»‘ç¬¦#k. å¿«å»æ‰¾å¼‚æ¬¡å…ƒç©ºé—´æ‹¿ç»™æˆ‘");
 		}
 		cm.dispose();
 	    } else {
-		cm.sendOk("ÄãºÃ,ÎÒÊÇ¹­¼ıÊÖ×ªÖ°¹Ù.");
+		cm.sendOk("ä½ å¥½,æˆ‘æ˜¯å¼“ç®­æ‰‹è½¬èŒå®˜.");
 		cm.dispose();
 	    }
 	}
     } else if (status == 1) {
-	cm.sendNextPrev("Ò»µ©×ªÖ°ÁË¾Í²»ÄÜ·´»Ú,Èç¹û²»Ïë×ªÖ°ÇëµãÉÏÒ»Ò³.");
+	cm.sendNextPrev("ä¸€æ—¦è½¬èŒäº†å°±ä¸èƒ½åæ‚”,å¦‚æœä¸æƒ³è½¬èŒè¯·ç‚¹ä¸Šä¸€é¡µ.");
     } else if (status == 2) {
-	cm.sendYesNo("ÄãÕæµÄÒª³ÉÎªÒ»Î» #r¹­¼ıÊÖ#k ?");
+	cm.sendYesNo("ä½ çœŸçš„è¦æˆä¸ºä¸€ä½ #rå¼“ç®­æ‰‹#k ?");
     } else if (status == 3) {
 	if (cm.getJob() == 0) {
-		cm.changeJob(300); // ¹­¼ıÊÖ
+		cm.changeJob(300); // å¼“ç®­æ‰‹
 		cm.resetStats(4, 25, 4, 4);
 	}
 	cm.forceCompleteQuest(6700);
 	cm.gainItem(1452002, 1);
 	cm.gainItem(2060000, 1000);
-	cm.sendOk("×ªÖ°³É¹¦ ! ÇëÈ¥¿ª´´ÌìÏÂ°É.");
+	cm.sendOk("è½¬èŒæˆåŠŸ ! è¯·å»å¼€åˆ›å¤©ä¸‹å§.");
 	cm.dispose();
     } else if (status == 11) {
-	cm.sendNextPrev("Äã¿ÉÒÔÑ¡ÔñÄãÒª×ªÖ°³ÉÎªÒ»Î» #rÁÔÈË#k, #råó¹­ÊÖ#k.")
+	cm.sendNextPrev("ä½ å¯ä»¥é€‰æ‹©ä½ è¦è½¬èŒæˆä¸ºä¸€ä½ #rçŒäºº#k, #rå¼©å¼“æ‰‹#k.")
     } else if (status == 12) {
-	cm.askAcceptDecline("µ«ÊÇÎÒ±ØĞëÏÈ²âÊÔÄã,Äã×¼±¸ºÃÁËÂğ ?");
+	cm.askAcceptDecline("ä½†æ˜¯æˆ‘å¿…é¡»å…ˆæµ‹è¯•ä½ ,ä½ å‡†å¤‡å¥½äº†å— ?");
     } else if (status == 13) {
 	cm.gainItem(4031010, 1);
 	cm.warp(106010000);
-	cm.sendOk("ÇëÈ¥ÕÒ #b¹­¼ıÊÖ×ªÖ°½Ì¹Ù#k . Ëû»á°ïÖúÄãµÄ.");
+	cm.sendOk("è¯·å»æ‰¾ #bå¼“ç®­æ‰‹è½¬èŒæ•™å®˜#k . ä»–ä¼šå¸®åŠ©ä½ çš„.");
 	cm.dispose();
     } else if (status == 21) {
-	cm.sendSimple("ÄãÏëÒª³ÉÎªÊ²Ã´ ? #b\r\n#L0#ÁÔÈË#l\r\n#L1#åó¹­ÊÖ#l#k");
+	cm.sendSimple("ä½ æƒ³è¦æˆä¸ºä»€ä¹ˆ ? #b\r\n#L0#çŒäºº#l\r\n#L1#å¼©å¼“æ‰‹#l#k");
     } else if (status == 22) {
 	var jobName;
 	if (selection == 0) {
-	    jobName = "ÁÔÈË";
+	    jobName = "çŒäºº";
 	    job = 310;
 	} else if (selection == 1) {
-	    jobName = "åó¹­ÊÖ";
+	    jobName = "å¼©å¼“æ‰‹";
 	    job = 320;
 	}
-	cm.sendYesNo("ÄãÕæµÄÒª³ÉÎªÒ»Î» #r" + jobName + "#k?");
+	cm.sendYesNo("ä½ çœŸçš„è¦æˆä¸ºä¸€ä½ #r" + jobName + "#k?");
     } else if (status == 23) {
 	cm.changeJob(job);
 	cm.gainItem(4031012, -1);
-	cm.sendOk("×ªÖ°³É¹¦ ! ÇëÈ¥¿ª´´ÌìÏÂ°É.");
+	cm.sendOk("è½¬èŒæˆåŠŸ ! è¯·å»å¼€åˆ›å¤©ä¸‹å§.");
 	cm.dispose();
     }
 }	

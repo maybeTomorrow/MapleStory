@@ -12,7 +12,7 @@ function enter(pi) {
                 boss = o;
         }
         if (boss != null) {
-            pi.getPlayer().dropMessage("ÀïÃæÒÑ¾­¿ªÊ¼ÁË¶Ô¿¹" + boss.getName() + "µÄÕ½¶·¡£");
+            pi.getPlayer().dropMessage("é‡Œé¢å·²ç»å¼€å§‹äº†å¯¹æŠ—" + boss.getName() + "çš„æˆ˜æ–—ã€‚");
             return false;
         }
     }

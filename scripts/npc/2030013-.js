@@ -4,18 +4,18 @@ var log = "ZakumChallage";
 
 function start() {
 	if (cm.getPlayer().getClient().getChannel() != 1 && cm.getPlayer().getClient().getChannel() != 2) {
-		cm.playerMessage(5, "Ö»ÄÜÔÚ1Æµ»ò2Æµ´ò");
+		cm.playerMessage(5, "åªèƒ½åœ¨1é¢‘æˆ–2é¢‘æ‰“");
 		cm.dispose();
 		return false;
 	}
     var level = cm.getPlayerStat("LVL");
 	
     if (!cm.haveItem(4001017) || level < 50 || cm.getBossLog(log) > 5) {
-		cm.playerMessage(5, "ÄãÃ»ÓĞ»ğÑæÖ®ÑÛ»òÕßÊÇÄãµÄµÈ¼¶ÉĞÎ´´ïµ½50 »òÃ¿ÌìµÄÌôÕ½³¬¹ıÎå´Î");
+		cm.playerMessage(5, "ä½ æ²¡æœ‰ç«ç„°ä¹‹çœ¼æˆ–è€…æ˜¯ä½ çš„ç­‰çº§å°šæœªè¾¾åˆ°50 æˆ–æ¯å¤©çš„æŒ‘æˆ˜è¶…è¿‡äº”æ¬¡");
 		cm.dispose();
     } else {
 		if (cm.getPlayer().getParty() == null){
-			cm.sendNext("Çë×é¶ÓºóÔÙ¸úÎÒËµ»°");
+			cm.sendNext("è¯·ç»„é˜Ÿåå†è·Ÿæˆ‘è¯´è¯");
 		    cm.dispose();
 			return;
 		} else {
@@ -34,15 +34,15 @@ function start() {
 
             if (!next) {
 				if(victim != null){
-					cm.sendNext("ÇëÈ·ÈÏÄú¸úÄúµÄ¶ÓÔ±("+victim.getName()+")ÔÚÕâÒ»ÕÅµØÍ¼ µÈ¼¶³¬¹ıÎåÊ® ¶¼ÓĞ»ğÑæÖ®ÑÛ ÌôÕ½Ã»ÓĞ³¬¹ıÎå´Î");
+					cm.sendNext("è¯·ç¡®è®¤æ‚¨è·Ÿæ‚¨çš„é˜Ÿå‘˜("+victim.getName()+")åœ¨è¿™ä¸€å¼ åœ°å›¾ ç­‰çº§è¶…è¿‡äº”å éƒ½æœ‰ç«ç„°ä¹‹çœ¼ æŒ‘æˆ˜æ²¡æœ‰è¶…è¿‡äº”æ¬¡");
 				} else {
-					cm.sendNext("ÇëÈ·ÈÏÄú¸úÄúµÄ¶ÓÔ±ÔÚÕâÒ»ÕÅµØÍ¼ µÈ¼¶³¬¹ıÎåÊ® ¶¼ÓĞ»ğÑæÖ®ÑÛ ÌôÕ½Ã»ÓĞ³¬¹ıÎå´Î");
+					cm.sendNext("è¯·ç¡®è®¤æ‚¨è·Ÿæ‚¨çš„é˜Ÿå‘˜åœ¨è¿™ä¸€å¼ åœ°å›¾ ç­‰çº§è¶…è¿‡äº”å éƒ½æœ‰ç«ç„°ä¹‹çœ¼ æŒ‘æˆ˜æ²¡æœ‰è¶…è¿‡äº”æ¬¡");
                 }
 				cm.dispose();
                 return;
             }
 			if (!cm.isLeader()) {
-				cm.playerMessage(5, "ÇëÈÃÄãµÄ¶Ó³¤À´ÕÒÎÒ");
+				cm.playerMessage(5, "è¯·è®©ä½ çš„é˜Ÿé•¿æ¥æ‰¾æˆ‘");
 			} else if (cm.getPlayerCount(280030000) <= 0) { // Fant. Map
 				var FantMap = cm.getMap(280030000);
 				FantMap.resetFully();

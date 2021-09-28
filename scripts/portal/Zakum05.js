@@ -1,9 +1,9 @@
 
 /* 
-    ÔúÀ¥ÃÅ¿Ú½Å±¾
-    Ğ¾ËéÍõ×ÓÖÆ×÷
-    Ç×Ç××ìÃ°ÏÕ
-    ·ÇÍ¬ÒâÄÚ½ûÖ¹×ªÔØ 
+    æ‰æ˜†é—¨å£è„šæœ¬
+    èŠ¯ç¢ç‹å­åˆ¶ä½œ
+    äº²äº²å˜´å†’é™©
+    éåŒæ„å†…ç¦æ­¢è½¬è½½ 
 */ 
 
 importPackage(net.sf.odinms.server.maps); 
@@ -31,25 +31,25 @@ function enter(pi) {
 }
 if (pi.getPlayer().getClient().getChannel() !=2) 
 {
-	sendMessage(pi,"ÔúÀ¥´ó¹ÖÎïÖ»ÔÚµÚ¶şÆµµÀÕÙ»½¡£");
+	sendMessage(pi,"æ‰æ˜†å¤§æ€ªç‰©åªåœ¨ç¬¬äºŒé¢‘é“å¬å”¤ã€‚");
 	return false;
 }
 
 if (!pi.haveItem(4001017))
 { 
-  	sendMessage(pi,"ÄãÃ»ÓĞÕÙ»½ÔúÀ¥ÓÃµÄÄãÃ»ÓĞ»ğÑæµÄÑÛ,Çë¼ì²é..."); 
+  	sendMessage(pi,"ä½ æ²¡æœ‰å¬å”¤æ‰æ˜†ç”¨çš„ä½ æ²¡æœ‰ç«ç„°çš„çœ¼,è¯·æ£€æŸ¥..."); 
 	return false; 
 }
 
 if(player != null && boss != null)
 {
-	sendMessage(pi,"¶Ô¿¹´óBOSSÕıÔÚ½øĞĞÖĞ¡£¡£¡£"); 
+	sendMessage(pi,"å¯¹æŠ—å¤§BOSSæ­£åœ¨è¿›è¡Œä¸­ã€‚ã€‚ã€‚"); 
   	return false; 
 }
 
  if (pi.getBossLog('zakum')>=10)
 { 
-  	sendMessage(pi,"Ã¿Ìì×î¶àÖ»ÄÜÌôÕ½10´ÎÔúÀ¥,Äú½ñÌìÒÑ¾­ÎŞ·¨ÔÙ½øÈë"); 
+  	sendMessage(pi,"æ¯å¤©æœ€å¤šåªèƒ½æŒ‘æˆ˜10æ¬¡æ‰æ˜†,æ‚¨ä»Šå¤©å·²ç»æ— æ³•å†è¿›å…¥"); 
   	return false; 	
 } 
 

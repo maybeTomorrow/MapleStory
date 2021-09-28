@@ -31,15 +31,15 @@ function playerEntry(eim, player) {
     player.changeTeam(type == 2 || map.getAndSwitchTeam() ? 0 : 1);
     player.changeMap(map, map.getPortal(type == 0 ? 0 : (type == 3 ? (player.getTeam() == 0 ? 3 : 1) : (player.getTeam() == 0 ? 2 : 3))));
     eim.setProperty("" + player.getId(), "0");
-    eim.broadcastPlayerMsg( - 7, player.getName() + " Èë³¡ÁË¡£");
+    eim.broadcastPlayerMsg( - 7, player.getName() + " å…¥åœºäº†ã€‚");
     player.getStat().recalcLocalStats(player);
     player.getStat().heal(player);
 
     var i = getMaxPlayerCount(type);
     broadcastType(eim, player);
     if (eim.getProperty("started").equals("0")) {
-        eim.broadcastPacket(UIPacket.getMidMsg("µ±Ç°£º" + eim.getPlayerCount() + "ÈË/¿ÉÒÔ¿ªÊ¼£º" + i + "ÈË", true, 1));
-        eim.broadcastPacket(UIPacket.getMidMsg("Ä¿Ç°ÕýÔÚÕÐÄ¼²Î¼Ó´óÂÒ¶·µÄÈËÔ±¡£", true, 0));
+        eim.broadcastPacket(UIPacket.getMidMsg("å½“å‰ï¼š" + eim.getPlayerCount() + "äºº/å¯ä»¥å¼€å§‹ï¼š" + i + "äºº", true, 1));
+        eim.broadcastPacket(UIPacket.getMidMsg("ç›®å‰æ­£åœ¨æ‹›å‹Ÿå‚åŠ å¤§ä¹±æ–—çš„äººå‘˜ã€‚", true, 0));
         if (eim.getPlayerCount() >= (player.isGM() ? 2 : i)) {
             eim.broadcastPacket(UIPacket.clearMidMsg());
             eim.broadcastPacket(MaplePacketCreator.getPVPScore(0, false));

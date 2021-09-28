@@ -1,8 +1,8 @@
 
 /* 
-    ´óÊ÷Ñı½Å±¾¡£ 
-    Ç×Ç××ìÃ°ÏÕ Ğ¾ËéÍõ×Ó ĞŞ¸Ä
-    ·ÇÍ¬ÒâÄÚ½ûÖ¹×ªÔØ 
+    å¤§æ ‘å¦–è„šæœ¬ã€‚ 
+    äº²äº²å˜´å†’é™© èŠ¯ç¢ç‹å­ ä¿®æ”¹
+    éåŒæ„å†…ç¦æ­¢è½¬è½½ 
 */ 
 
 importPackage(net.sf.cherry.server.maps); 
@@ -28,12 +28,12 @@ function enter(pi) {
 
 
  if (pi.getBossLog('treeboss00')>=5) {   
-  sendMessage(pi,"Ã¿ÌìÌôÕ½5´Î£¡ÄãÃ÷ÌìÔÙÀ´°É"); 
+  sendMessage(pi,"æ¯å¤©æŒ‘æˆ˜5æ¬¡ï¼ä½ æ˜å¤©å†æ¥å§"); 
   return false; }
    
 
 if(player != null && boss != null){
-	sendMessage(pi,"¶Ô¿¹ ´óÊ÷ÑıBOSS »¹ÔÚ½øĞĞÖĞ¡£¡£ÇëÉÔºòÔÙÀ´¡£¡£¡£"); 
+	sendMessage(pi,"å¯¹æŠ— å¤§æ ‘å¦–BOSS è¿˜åœ¨è¿›è¡Œä¸­ã€‚ã€‚è¯·ç¨å€™å†æ¥ã€‚ã€‚ã€‚"); 
   	return false; }
 
  if (treeboss00Map.getCharacters().isEmpty() && pi.getBossLog('treeboss00') < 5) { 

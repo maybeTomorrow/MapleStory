@@ -26,10 +26,10 @@ function action(mode, type, selection) {
 		if (status == 0) {
 			// Lakelis has no preamble, directly checks if you're in a party
 			if (cm.getParty() == null) { // No Party
-				cm.sendOk("ÄúÏëÒªÌôÕ½#bòÚò¼#kÂğ?ÄÇÃ´Äú±ØĞëÒªÓĞÒ»¸ö×é¶ÓàŞ!");
+				cm.sendOk("æ‚¨æƒ³è¦æŒ‘æˆ˜#bèœˆèš£#kå—?é‚£ä¹ˆæ‚¨å¿…é¡»è¦æœ‰ä¸€ä¸ªç»„é˜Ÿå™¢!");
 				cm.dispose();
                       } else if (!cm.isLeader()) { // Not Party Leader
-				cm.sendOk("Èç¹ûÏëÒªÌôÕ½#bòÚò¼#kÇëÈÃÄãÃÇµÄ#b×é¶Ó³¤#kÀ´ÕÒÎÒ°É!.");
+				cm.sendOk("å¦‚æœæƒ³è¦æŒ‘æˆ˜#bèœˆèš£#kè¯·è®©ä½ ä»¬çš„#bç»„é˜Ÿé•¿#kæ¥æ‰¾æˆ‘å§!.");
 				cm.dispose();
 			} else {
 				// Check if all party members are within PQ levels
@@ -59,7 +59,7 @@ function action(mode, type, selection) {
 					var em = cm.warpParty(701010323);
 					cm.getMap(701010323).addMapTimer(600, 701010320);
 		if (em == null) {
-						cm.sendOk("ÄãÒÑ½øÈë¸±±¾µØÍ¼.Çë²é¿´Ïà¹ØNPCÁË½â¸±±¾");
+						cm.sendOk("ä½ å·²è¿›å…¥å‰¯æœ¬åœ°å›¾.è¯·æŸ¥çœ‹ç›¸å…³NPCäº†è§£å‰¯æœ¬");
 					} else {
 						if (em.getProperty("entryPossible") != "false") {
 							// Begin the PQ.
@@ -90,7 +90,7 @@ function action(mode, type, selection) {
 					
                       
 			} else {
-					cm.sendNext("ÄúÏëÒªÌôÕ½#bòÚò¼#kÂğ?ÄÇÃ´Äú±ØĞëÒªÓĞÒ»¸ö×é¶ÓàŞ!\r\nÄ¿Ç°Ö»ÓĞ#b" + inMap + "Î»¶ÓÔ±#kÔÚ´ËµØÍ¼!.");
+					cm.sendNext("æ‚¨æƒ³è¦æŒ‘æˆ˜#bèœˆèš£#kå—?é‚£ä¹ˆæ‚¨å¿…é¡»è¦æœ‰ä¸€ä¸ªç»„é˜Ÿå™¢!\r\nç›®å‰åªæœ‰#b" + inMap + "ä½é˜Ÿå‘˜#kåœ¨æ­¤åœ°å›¾!.");
 		cm.getItemEffect(2210002).applyTo(cm.getPlayer());			
                     cm.dispose();
 				}

@@ -25,7 +25,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendSimple("���,�������ִ��˼��˰������ִ�곤!�������#b���ִ�������߼���Ա��#k��#b���ִ�Ⱦ���߼���Ա��#k,��ͷ��ĵİѷ��ͽ�����,�һ����������.��ô��Ҫ��ʲô?��ѡ���!.\r\n#L0#�ı䷢��(ʹ��#b���ִ�������߼���Ա��#k)#l\r\n#L1#Ⱦɫ(ʹ��#b���ִ�Ⱦ���߼���Ա��#k)#l");						
+			cm.sendSimple("你好,我是射手村人见人爱的射手村店长!如果你有#b射手村美发店高级会员卡#k或#b射手村染发高级会员卡#k,你就放心的把发型交给我,我会让你满意的.那么你要做什么?请选择吧!.\r\n#L0#改变发型(使用#b射手村美发店高级会员卡#k)#l\r\n#L1#染色(使用#b射手村染发高级会员卡#k)#l");						
 		} else if (status == 1) {
 			if (selection == 0) {
 				beauty = 1;
@@ -40,7 +40,7 @@ function action(mode, type, selection) {
 						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				}
-				cm.sendStyle("�ҿ��Ըı���ķ���,���������ڿ�����Ư������Ϊʲô�����Ÿı�����? �������#b���ִ�������߼���Ա��#k,�ҽ������ı���ķ���,��ôѡ��һ������Ҫ���·��Ͱ�!", hairnew,5150001);
+				cm.sendStyle("我可以改变你的发型,让它比现在看起来漂亮。你为什么不试着改变它下? 如果你有#b射手村美发店高级会员卡#k,我将会帮你改变你的发型,那么选择一个你想要的新发型吧!", hairnew,5150001);
 			} else if (selection == 1) {
 				beauty = 2;
 				haircolor = Array();
@@ -48,7 +48,7 @@ function action(mode, type, selection) {
 				for(var i = 0; i < 8; i++) {
 					haircolor.push(current + i);
 				}
-				cm.sendStyle("�ҿ��Ըı���ķ�ɫ,���������ڿ�����Ư��. ��Ϊʲô�����Ÿı�����? �������#b���ִ�Ⱦ���߼���Ա��#k,�ҽ������ı���ķ�ɫ,��ôѡ��һ������Ҫ���·�ɫ��!", haircolor,5151001);
+				cm.sendStyle("我可以改变你的发色,让它比现在看起来漂亮. 你为什么不试着改变它下? 如果你有#b射手村染发高级会员卡#k,我将会帮你改变你的发色,那么选择一个你想要的新发色吧!", haircolor,5151001);
 			}
 			}else if (status == 2){
 			cm.dispose();
@@ -56,14 +56,14 @@ function action(mode, type, selection) {
 				if (cm.haveItem(5150001) == true){
 					cm.gainItem(5150001, -1);
 					cm.setHair(hairnew[selection]);
-					cm.sendOk("����,����������̾����·��Ͱ�!");
+					cm.sendOk("好了,让朋友们赞叹你的新发型吧!");
 				}else if (cm.getPlayer().getCSPoints(1)>=980) {
 					cm.getPlayer().modifyCSPoints(1,-980);
 					cm.getPlayer().UpdateCash();
 				  cm.setHair(hairnew[selection]);
-				 	cm.sendOk("#e����,���������һ���ϲ�����������!");					
+				 	cm.sendOk("#e好了,你的朋友们一定认不出来是你了!");					
 				}else{
-					cm.sendOk("�������㲢û�����ǵĸ߼���Ա��,�ҿ��²��ܸ��������������,�Һܱ�Ǹ.�����ȹ����.");
+					cm.sendOk("看起来你并没有我们的高级会员卡,我恐怕不能给你进行整形手术,我很抱歉.请你先购买吧.");
 				}
 				
 			}
@@ -71,14 +71,14 @@ function action(mode, type, selection) {
 				if (cm.haveItem(5151001) == true){
 					cm.gainItem(5151001, -1);
 					cm.setHair(haircolor[selection]);
-					cm.sendOk("����,����������̾����·�ɫ��!");
+					cm.sendOk("好了,让朋友们赞叹你的新发色吧!");
 				}else if (cm.getPlayer().getCSPoints(1)>=980) {
 					cm.getPlayer().modifyCSPoints(1,-980);
 					cm.getPlayer().UpdateCash();
 				  cm.setHair(haircolor[selection]);
-				 	cm.sendOk("#e����,���������һ���ϲ�����������!");					
+				 	cm.sendOk("#e好了,你的朋友们一定认不出来是你了!");					
 				}else {
-					cm.sendOk("�������㲢û�����ǵĸ߼���Ա��,�ҿ��²��ܸ���Ⱦ��,�Һܱ�Ǹ.�����ȹ����.");
+					cm.sendOk("看起来你并没有我们的高级会员卡,我恐怕不能给你染发,我很抱歉.请你先购买吧.");
 				}
 			}
 		}

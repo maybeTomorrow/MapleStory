@@ -6,6 +6,6 @@ rm.changeMusic("Bgm06/FinalFight");
  if (rm.getPlayer().getMap().getMonsterById(9420541) == null && rm.getPlayer().getMap().getMonsterById(9420542) == null && rm.getPlayer().getMap().getMonsterById(9420543) == null && rm.getPlayer().getMap().getMonsterById(9420544) == null ) { 
  rm.getReactor().getMap().addMapTimer(2 * 60 * 60,551030100);   
  } 
- rm.mapMessage("ÈçÄãËùÔ¸£¬ĞÄ°ÌÊ¨Íõ³öÏÖÁË!"); 
+ rm.mapMessage("å¦‚ä½ æ‰€æ„¿ï¼Œå¿ƒç–¤ç‹®ç‹å‡ºç°äº†!"); 
 rm.spawnMonster(9420546); 
 } 

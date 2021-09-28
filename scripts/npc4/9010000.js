@@ -1,5 +1,5 @@
 function start() {
-    cm.sendOk("ÔõÃ´ÑùÂÃÍ¾Óä¿ìÂğ£¿");
+    cm.sendOk("æ€ä¹ˆæ ·æ—…é€”æ„‰å¿«å—ï¼Ÿ");
     cm.safeDispose();
 }
 

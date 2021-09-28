@@ -1,5 +1,5 @@
-//Íæ¾ß³ÇµçÌİÏµÍ³ĞŞ¸´
-//ĞŞ¸´
+//ç©å…·åŸç”µæ¢¯ç³»ç»Ÿä¿®å¤
+//ä¿®å¤
 
 importPackage(net.sf.odinms.scripting.reactor);
 var elevator_s;

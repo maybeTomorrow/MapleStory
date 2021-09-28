@@ -20,6 +20,6 @@
  */
 
 function enter(pi) {
-	pi.showInstruction("°´#e#b[¡û],[¡ú]#k#n¼ü¾Í¿ÉÒÔÒÆ¶¯", 100, 5);
+	pi.showInstruction("æŒ‰#e#b[â†],[â†’]#k#né”®å°±å¯ä»¥ç§»åŠ¨", 100, 5);
 	return false;
 }

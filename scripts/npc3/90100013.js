@@ -19,13 +19,13 @@ function action(mode, type, selection) {
 	else
 		status--;
 	if (status == 0) {
-		cm.sendYesNo("Ê×´Î³äÖµÀñ°üÁìÈ¡µØµã!ÄãÊÇ·ñÁìÈ¡£¿");
+		cm.sendYesNo("é¦–æ¬¡å……å€¼ç¤¼åŒ…é¢†å–åœ°ç‚¹!ä½ æ˜¯å¦é¢†å–ï¼Ÿ");
 	} else if (status == 1) {
 		if (cm.getChar().getsc() == 0) {;
-			cm.sendOk("¶Ô²»Æğ£¡ÄãÃ»ÓĞ³äÖµ¹ı£¡");
+			cm.sendOk("å¯¹ä¸èµ·ï¼ä½ æ²¡æœ‰å……å€¼è¿‡ï¼");
 			cm.dispose();
 		} else {
-			cm.sendOk("Ã¿¸öÕÊºÅÖ»¿ÉÒÔÁìÈ¡#b1´Î#k¡£ÄãÒÑ¾­ÁìÈ¡¹ıÁË£¡");
+			cm.sendOk("æ¯ä¸ªå¸å·åªå¯ä»¥é¢†å–#b1æ¬¡#kã€‚ä½ å·²ç»é¢†å–è¿‡äº†ï¼");
 			cm.dispose();
 		       }	
 		}

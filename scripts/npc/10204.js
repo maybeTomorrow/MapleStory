@@ -21,9 +21,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("����ƾ������ݼ�����������˷���ٷ����еĶ�ǹ���߿���ʹ��˲����Լ���˵ĸ���.ʹ�ö�ǹ�ĺ�������ѡ�������ӵ�����Ч�ع������˻������ڴ��Ϲ�������,ʹ�ø�ȭ�׵ĺ������Ա����󷢻Ӹ�ǿ��������");
+			cm.sendNext("海盗凭借高敏捷及力量给与敌人发射百发百中的短枪或者可以使用瞬间制约敌人的格斗术.使用短枪的海盗可以选择属性子弹更有效地攻击敌人或者坐在船上攻击敌人,使用格拳甲的海盗可以变身后发挥更强的力量。");
 		} else if (status == 1) {
-			cm.sendYesNo("��ô�����������麣����");
+			cm.sendYesNo("怎么样？你想体验海盗吗？");
 		} else if (status == 2) {
 			cm.lockUI();
 			cm.warp(1020500);

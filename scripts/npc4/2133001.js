@@ -8,16 +8,16 @@ function action(mode, type, selection) {
     }
     switch(cm.getPlayer().getMapId()) {
 	case 930000000:
-	    cm.sendNext("»¶Ó­£¬ÇëÍ¨¹ı¹âÈ¦½øÈë£¡.");
+	    cm.sendNext("æ¬¢è¿ï¼Œè¯·é€šè¿‡å…‰åœˆè¿›å…¥ï¼.");
 	    break;
 	case 930000010:
 	    cm.warpParty(100000000);
 	    break;
 	case 930000100:
-	    cm.sendNext("ÎÒÃÇ±ØĞëÏûÃğËùÓĞµÄ¹ÖÎï");
+	    cm.sendNext("æˆ‘ä»¬å¿…é¡»æ¶ˆç­æ‰€æœ‰çš„æ€ªç‰©");
 	    break;
 	case 930000200:
-	    cm.sendNext("ÎÒÃÇ±ØĞëÏûÃğËùÓĞµÄ¹ÖÎï");
+	    cm.sendNext("æˆ‘ä»¬å¿…é¡»æ¶ˆç­æ‰€æœ‰çš„æ€ªç‰©");
 	    break;
 	case 930000300:
 		cm.givePartyExp(50000);
@@ -30,17 +30,17 @@ function action(mode, type, selection) {
 		cm.gainItem(4001169,-10);
 	    } else if (!cm.haveItem(2270004)) {
 		cm.gainItem(2270004,10);
-		cm.sendOk("¾»»¯ÕâĞ©¹ÖÎïµÄºÃÔËÆø£¡");
+		cm.sendOk("å‡€åŒ–è¿™äº›æ€ªç‰©çš„å¥½è¿æ°”ï¼");
 	    } else {
-		cm.sendOk("ÎÒÃÇ±ØĞëÏûÃğ¹ÖÎï£¬»ñµÃ10¸ö¹ÖÎïÖ®Öé");
+		cm.sendOk("æˆ‘ä»¬å¿…é¡»æ¶ˆç­æ€ªç‰©ï¼Œè·å¾—10ä¸ªæ€ªç‰©ä¹‹ç ");
 	    }
 	    break;
 	case 930000600:
 	    cm.sendNext("This is it! Place the Magic Stone on the Altar!");
 	    break;
 	case 930000700:
-	    cm.removeAll(4001169);//¹ÖÎïÖ®Öé
-	    cm.removeAll(2270004);//¾»»¯Ö®Öé
+	    cm.removeAll(4001169);//æ€ªç‰©ä¹‹ç 
+	    cm.removeAll(2270004);//å‡€åŒ–ä¹‹ç 
 	    cm.removeAll(4001162);
 	    cm.removeAll(4001163);
 	    cm.warp(930000800,0);

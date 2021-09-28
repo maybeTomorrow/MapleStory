@@ -14,7 +14,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("你似乎还没有满足任务的要求，先去见见右边的闵先生吧！");
+			cm.sendOk("浣犱技涔庤繕娌℃湁婊¤冻浠诲姟鐨勮姹傦紝鍏堝幓瑙佽鍙宠竟鐨勯椀鍏堢敓鍚э紒");
 			cm.dispose();
 		}
 	}

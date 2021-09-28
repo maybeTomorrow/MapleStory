@@ -42,7 +42,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (status >= 2 && mode == 0) {
-			cm.sendOk("好的。下次再见！");
+			cm.sendOk("濂界殑銆備笅娆″啀瑙侊紒");
 			cm.dispose();
 			return;
 		}

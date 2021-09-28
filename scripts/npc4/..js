@@ -1,4 +1,4 @@
-/*¶Ò»»ĞèÒª #v4000425#  »òÕß #v4000424#  »òÕß #v4000423# »òÕß#v4000422#*/
+/*å…‘æ¢éœ€è¦ #v4000425#  æˆ–è€… #v4000424#  æˆ–è€… #v4000423# æˆ–è€…#v4000422#*/
 importPackage(net.sf.cherry.client);
 function start() {
     status = -1;
@@ -12,7 +12,7 @@ function action(mode, type, selection) {
     else {
         if (status >= 0 && mode == 0) {
 
-            cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+            cm.sendOk("æ„Ÿè°¢ä½ çš„å…‰ä¸´ï¼");
             cm.dispose();
             return;
         }
@@ -29,18 +29,18 @@ function action(mode, type, selection) {
             for (i = 0; i < 10; i++) {
                 text += "";
             }
-            text += "ÏëÕÙ»½bossÂğ...\r\n"
-            text += "#L1##bÊ¹ÓÃ10¸ö#v4001266#ÕÙ»½BOSS\r\n";//ÆßÌì
+            text += "æƒ³å¬å”¤bosså—...\r\n"
+            text += "#L1##bä½¿ç”¨10ä¸ª#v4001266#å¬å”¤BOSS\r\n";//ä¸ƒå¤©
             cm.sendSimple(text);
 			
-        } else if (selection == 1) { //×âÆ¾·ãÒ¶¶ú»·
+        } else if (selection == 1) { //ç§Ÿå‡­æ«å¶è€³ç¯
 
            if(cm.haveItem(4001266,10)){
 			   cm.gainItem(4001266,-10);
 				 cm.summonMobter(5220004, 1);
 			   cm.dispose();
 		   }else{
-			   cm.sendOk("ÎïÆ·ÊıÁ¿²»×ã£¡");
+			   cm.sendOk("ç‰©å“æ•°é‡ä¸è¶³ï¼");
 			   cm.dispose();
 		   }
         

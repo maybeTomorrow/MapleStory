@@ -1,24 +1,24 @@
 /* 
-½á»éEvent
+ç»“å©šEvent
 
 CherryMS LoveMXD
 
-Ô­´´½Å±¾¡£·ÇÍ¬Òâ½ûÖ¹×ªÔØ
+åŸåˆ›è„šæœ¬ã€‚éåŒæ„ç¦æ­¢è½¬è½½
 
 
-ÈÎÎñºÅÂëËµÃ÷£º£¨Ö»ÊÇÄÚÖÃµÄÅĞ¶ÏÓÃ´¦£¬²¢²»ÔÚNPCÍâÏÔÊ¾¡££©
+ä»»åŠ¡å·ç è¯´æ˜ï¼šï¼ˆåªæ˜¯å†…ç½®çš„åˆ¤æ–­ç”¨å¤„ï¼Œå¹¶ä¸åœ¨NPCå¤–æ˜¾ç¤ºã€‚ï¼‰
 
-1000 = µÇ¼Ç£¨´´½¨Êı¾İ£©ÈÎÎñ
-1001 = ´´½¨ÃÜÂëÈÎÎñ
-1002 = Å®·½ÊäÈëÃÜÂëÍê³ÉÈÎÎñ
-1003 = ÄĞ·½¸øÓè
+1000 = ç™»è®°ï¼ˆåˆ›å»ºæ•°æ®ï¼‰ä»»åŠ¡
+1001 = åˆ›å»ºå¯†ç ä»»åŠ¡
+1002 = å¥³æ–¹è¾“å…¥å¯†ç å®Œæˆä»»åŠ¡
+1003 = ç”·æ–¹ç»™äºˆ
 */
 var status = 0;
-var boymain2 = "°¢ßÖ¡£½á»é½øÕ¹µÃ²»´íÅ¶¡£¡£#b\r\n#L3#ÎÒ°ÑÎÒµÄÃÜÂëÍü¼ÇÁË"
-var boymain1 = "àÅàÅ¡£¡£²»´í²»´í¡£¡£¿´À´ÄãÒÑ¾­µÇ¼ÇºÃÁË¡£¡£¡£¡£¡£#b\r\n\r\n#L2#ÎÒÏëÉèÖÃÇó°®ÃÜÂë"
-var boymain = "ÌğÃÛµÄÁµÈË¶¼ÊÇÒ»²½Ò»²½×ß³öÀ´µÄ£¡#b\r\n\r\n#L0#ÎÒÏëºÍĞÄÖĞµÄËı¶©»é¡£";
-var grilmain1 = "àÅ£¿ÄãÓĞÇó°®ÃÜÂëÁËÂğ£¿#b\r\n\r\n#L1#ÎÒÏëÊäÈëÇó°®ÃÜÂë"
-var main = "ÌğÃÛµÄÁµÈË¡£¡£¹ş¹ş¡£¡£ÕâÎÒ¼û¶àÁË¡£¡£"
+var boymain2 = "é˜¿å’§ã€‚ç»“å©šè¿›å±•å¾—ä¸é”™å“¦ã€‚ã€‚#b\r\n#L3#æˆ‘æŠŠæˆ‘çš„å¯†ç å¿˜è®°äº†"
+var boymain1 = "å—¯å—¯ã€‚ã€‚ä¸é”™ä¸é”™ã€‚ã€‚çœ‹æ¥ä½ å·²ç»ç™»è®°å¥½äº†ã€‚ã€‚ã€‚ã€‚ã€‚#b\r\n\r\n#L2#æˆ‘æƒ³è®¾ç½®æ±‚çˆ±å¯†ç "
+var boymain = "ç”œèœœçš„æ‹äººéƒ½æ˜¯ä¸€æ­¥ä¸€æ­¥èµ°å‡ºæ¥çš„ï¼#b\r\n\r\n#L0#æˆ‘æƒ³å’Œå¿ƒä¸­çš„å¥¹è®¢å©šã€‚";
+var grilmain1 = "å—¯ï¼Ÿä½ æœ‰æ±‚çˆ±å¯†ç äº†å—ï¼Ÿ#b\r\n\r\n#L1#æˆ‘æƒ³è¾“å…¥æ±‚çˆ±å¯†ç "
+var main = "ç”œèœœçš„æ‹äººã€‚ã€‚å“ˆå“ˆã€‚ã€‚è¿™æˆ‘è§å¤šäº†ã€‚ã€‚"
 
 function start() {
 	status = -1;
@@ -33,7 +33,7 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 		} else if (status == 2 && mode == 0) {
-			cm.sendNext("àÅ¡£¡£Èç¹ûÓĞÊ²Ã´ÊÂµÄ»°¿ÉÒÔÀ´ÕÒÎÒ¡£ÎÒÔÚÕâÀïµÈÄã¡£");
+			cm.sendNext("å—¯ã€‚ã€‚å¦‚æœæœ‰ä»€ä¹ˆäº‹çš„è¯å¯ä»¥æ¥æ‰¾æˆ‘ã€‚æˆ‘åœ¨è¿™é‡Œç­‰ä½ ã€‚");
 		}
 		if (mode == 1)
 			status++;
@@ -41,29 +41,29 @@ function action(mode, type, selection) {
 			status--;
                                           if (status == 0) {
 if (cm.MissionStatus(cm.getPlayer().getId(),1022,0,0)){
-cm.sendOk("¸Ï¿ì½øÈëÊ¥·ãµîÌÃ°É£¡")
+cm.sendOk("èµ¶å¿«è¿›å…¥åœ£æ«æ®¿å ‚å§ï¼")
 cm.dispose();
 }else if (cm.MissionStatus(cm.getPlayer().getId(),1016,0,0)){
-cm.sendOk("ºÇºÇ£¬¿ªĞÄ°É£¿")
+cm.sendOk("å‘µå‘µï¼Œå¼€å¿ƒå§ï¼Ÿ")
 cm.dispose();
 }else if (cm.MissionStatus(cm.getPlayer().getId(),1016,0,0)){
-cm.sendOk("ºÇºÇ£¬¿ªĞÄ°É£¿")
+cm.sendOk("å‘µå‘µï¼Œå¼€å¿ƒå§ï¼Ÿ")
 cm.dispose();
-}else if(cm.MissionStatus(cm.getPlayer().getId(),1018,0,0)){//¼ì²éÃÜÂëÈÎÎñÊÇ·ñÍê³ÉÁË
+}else if(cm.MissionStatus(cm.getPlayer().getId(),1018,0,0)){//æ£€æŸ¥å¯†ç ä»»åŠ¡æ˜¯å¦å®Œæˆäº†
  cm.sendSimple(boymain2);                                
-}else if (cm.MissionStatus(cm.getPlayer().getId(),1019,0,0) && cm.getChar().getGender() == 0) {//ÄĞÉúµÇ¼ÇÈÎÎñ
+}else if (cm.MissionStatus(cm.getPlayer().getId(),1019,0,0) && cm.getChar().getGender() == 0) {//ç”·ç”Ÿç™»è®°ä»»åŠ¡
                                           cm.sendSimple(boymain1);
-}else if (cm.MissionStatus(cm.getPlayer().getId(),1020,0,0)) {//Å®·½ÊäÈëÃÜÂëÈÎÎñÍê³É
-cm.sendOk("½á»é½øĞĞµÃÔõÃ´Ñù£¿Óä¿ì°É¡£¡£");
+}else if (cm.MissionStatus(cm.getPlayer().getId(),1020,0,0)) {//å¥³æ–¹è¾“å…¥å¯†ç ä»»åŠ¡å®Œæˆ
+cm.sendOk("ç»“å©šè¿›è¡Œå¾—æ€ä¹ˆæ ·ï¼Ÿæ„‰å¿«å§ã€‚ã€‚");
 cm.dispose();
-}else if (cm.MissionStatus(cm.getPlayer().getId(),1021,0,0)){//ÄĞ·½¸øÓèÅ®·½ÊäÈëÃÜÂëµÄÈÎÎñ
+}else if (cm.MissionStatus(cm.getPlayer().getId(),1021,0,0)){//ç”·æ–¹ç»™äºˆå¥³æ–¹è¾“å…¥å¯†ç çš„ä»»åŠ¡
 cm.sendSimple(grilmain1);
-}else if (cm.MissionStatus(cm.getPlayer().getId(),1016,0,0)){//¶©»éÈÎÎñÍê³É
-cm.sendOk("½á»é½øĞĞµÃÔõÃ´Ñù¡£¡£ºÍÄãµÄÆŞ×Ó²½ÉÏÊ¥·ãµîÌÃ°É¡£")
+}else if (cm.MissionStatus(cm.getPlayer().getId(),1016,0,0)){//è®¢å©šä»»åŠ¡å®Œæˆ
+cm.sendOk("ç»“å©šè¿›è¡Œå¾—æ€ä¹ˆæ ·ã€‚ã€‚å’Œä½ çš„å¦»å­æ­¥ä¸Šåœ£æ«æ®¿å ‚å§ã€‚")
 cm.dispose();
-                                          }else if(cm.getChar().getGender() == 0) {//Èç¹ûÊÇÄĞÉú
+                                          }else if(cm.getChar().getGender() == 0) {//å¦‚æœæ˜¯ç”·ç”Ÿ
                                           cm.sendSimple(boymain);
-                                          }else if(cm.getChar().getGender() == 1) {//Èç¹ûÊÇÅ®Éú
+                                          }else if(cm.getChar().getGender() == 1) {//å¦‚æœæ˜¯å¥³ç”Ÿ
                                            cm.sendOk(main);
 cm.dispose();
 }else{
@@ -71,86 +71,86 @@ cm.sendOk(main)
 cm.dispose();
 }
 //cm.sendOk(""+cm.getPlayer().getMarriageId()+"");
-                                          } else if (status == 1) {//Ñ¡Ïî²¿·Ö
-			if (selection == 0) { // ÒÆ¶¯µ½½á»éµîÌÃ
-				cm.sendNext("àÅ¡£¡£ÈÃÎÒÏëÏë¡£ºÙºÙ¡£Äã»¹²»ÖªµÀ¶Ô·½µÄ½ÇÉ«ID°É¡£¡£Ã»¹ØÏµ¡£ÎÒ¸æËßÄã¡£¡£ÔÚÁÄÌìÀ¸ÖĞÊäÈë#b@online#k.ÕÒµ½Äã¶Ô·½µÄÃû×ÖÖĞµÄ#b¶ÔÓ¦ID#k¡£ÊäÈë¾ÍĞĞÁË¡£¡£ÔõÃ´Ñù£¿");
+                                          } else if (status == 1) {//é€‰é¡¹éƒ¨åˆ†
+			if (selection == 0) { // ç§»åŠ¨åˆ°ç»“å©šæ®¿å ‚
+				cm.sendNext("å—¯ã€‚ã€‚è®©æˆ‘æƒ³æƒ³ã€‚å˜¿å˜¿ã€‚ä½ è¿˜ä¸çŸ¥é“å¯¹æ–¹çš„è§’è‰²IDå§ã€‚ã€‚æ²¡å…³ç³»ã€‚æˆ‘å‘Šè¯‰ä½ ã€‚ã€‚åœ¨èŠå¤©æ ä¸­è¾“å…¥#b@online#k.æ‰¾åˆ°ä½ å¯¹æ–¹çš„åå­—ä¸­çš„#bå¯¹åº”ID#kã€‚è¾“å…¥å°±è¡Œäº†ã€‚ã€‚æ€ä¹ˆæ ·ï¼Ÿ");
 			} else if (selection == 1){
                                           status = 10;
-                                          cm.sendGetText("ĞÄÖĞµÄËûÔõÃ´ÑùÄØ?ÊÇ·ñ³¤µÃÓ¢ÓÂÎŞ±È¡£¡£¹ş¹ş¡£¡£ÇëÊäÈëÄãµÄÇó°®ÃÜÂë°É£¡");
+                                          cm.sendGetText("å¿ƒä¸­çš„ä»–æ€ä¹ˆæ ·å‘¢?æ˜¯å¦é•¿å¾—è‹±å‹‡æ— æ¯”ã€‚ã€‚å“ˆå“ˆã€‚ã€‚è¯·è¾“å…¥ä½ çš„æ±‚çˆ±å¯†ç å§ï¼");
 }else if (selection == 2){
 status = 4;
-cm.sendNext("ÓÖÓĞÒ»¶ÔĞÒ¸£µÄÁµÈËµ®ÉúÁËÑ½¡£¡£ºÃ°É¡£¡£ÎÒ¸øÄãÃÜÂë¡£ÈÃÄãµÄÀÏÆÅÊäÈëÎÒ¸øµÄÃÜÂë¡£¡£ÕâÑù×Ó¾ÍÕæÕıµÄµÇ¼Ç³É¹¦À­£¡");
+cm.sendNext("åˆæœ‰ä¸€å¯¹å¹¸ç¦çš„æ‹äººè¯ç”Ÿäº†å‘€ã€‚ã€‚å¥½å§ã€‚ã€‚æˆ‘ç»™ä½ å¯†ç ã€‚è®©ä½ çš„è€å©†è¾“å…¥æˆ‘ç»™çš„å¯†ç ã€‚ã€‚è¿™æ ·å­å°±çœŸæ­£çš„ç™»è®°æˆåŠŸæ‹‰ï¼");
 }else if (selection == 3){
 status = 6;
-cm.sendNext("Ñ½Ñ½¡£¡£ÄãÔõÃ´ÕâÃ´²»Ğ¡ĞÄÄØ¡£¡£µÈµÈ¡£¡£ÎÒ·­·­ÎÒµÄÊ¥Êé¡£¡£");
+cm.sendNext("å‘€å‘€ã€‚ã€‚ä½ æ€ä¹ˆè¿™ä¹ˆä¸å°å¿ƒå‘¢ã€‚ã€‚ç­‰ç­‰ã€‚ã€‚æˆ‘ç¿»ç¿»æˆ‘çš„åœ£ä¹¦ã€‚ã€‚");
 }
-		} else if (status == 2) { //¹ØÓÚ½á»éÏêÇé
-			cm.sendGetText("ÇëÊäÈë¶Ô·½µÄ½ÇÉ«ID\r\n");
+		} else if (status == 2) { //å…³äºç»“å©šè¯¦æƒ…
+			cm.sendGetText("è¯·è¾“å…¥å¯¹æ–¹çš„è§’è‰²ID\r\n");
 		} else if (status == 3) {
-                                           //cm.sendOk("Äã¸Õ²ÅÊäÈëµÄÊÇ£º"+cm.getText()+"");
+                                           //cm.sendOk("ä½ åˆšæ‰è¾“å…¥çš„æ˜¯ï¼š"+cm.getText()+"");
 /*if(cm.getText() == cm.getPlayer()){
-cm.startPopMessage("ÇëÊäÈëÕıÈ·µÄºÅÂë")
+cm.startPopMessage("è¯·è¾“å…¥æ­£ç¡®çš„å·ç ")
 }else */if (cm.createMarriage(cm.getPlayer(),cm.getText())){
-                                          cm.startPopMessage("µÇ¼Ç³É¹¦¡£ÇëÖØĞÂ´ò¿ªNPC¡£");
+                                          cm.startPopMessage("ç™»è®°æˆåŠŸã€‚è¯·é‡æ–°æ‰“å¼€NPCã€‚");
 //cm.setMarriageData(cm.getPlayer(),2,1);
-                                          cm.startPopMessage(cm.getPlayer().getMarriageId()," ÄúµÄÕÊºÅ±»µÇ¼Ç½á»é¡£\r\nÇëÈ·ÈÏÊÇ·ñÎª±¾ÈË²Ù×÷")
+                                          cm.startPopMessage(cm.getPlayer().getMarriageId()," æ‚¨çš„å¸å·è¢«ç™»è®°ç»“å©šã€‚\r\nè¯·ç¡®è®¤æ˜¯å¦ä¸ºæœ¬äººæ“ä½œ")
                                           cm.MissionMake(cm.getPlayer().getId(),1019,0,0,0,0);
-                                          cm.MissionFinish(cm.getPlayer().getId(),1019);//Íê³ÉµÇ¼ÇÈÎÎñ
+                                          cm.MissionFinish(cm.getPlayer().getId(),1019);//å®Œæˆç™»è®°ä»»åŠ¡
 
 cm.dispose();
                                        }else{
-                                            cm.startPopMessage("ÇëÈ·ÈÏ¶Ô·½ÊÇ·ñÔÚ´ËµØÍ¼¡£");
+                                            cm.startPopMessage("è¯·ç¡®è®¤å¯¹æ–¹æ˜¯å¦åœ¨æ­¤åœ°å›¾ã€‚");
                                        }
 		} else if (status == 4) { //Menu
 			cm.sendOk("dd")
 		} else if (status == 5){
                                         if(cm.getPlayerOnline(cm.getPlayer().getMarriageId()) == false){
-cm.startPopMessage("¶Ô·½Ã»ÓĞÔÚÏß»òÕß²»ÔÚÒ»¸öÆµµÀ¡£\r\nÇëÖØÊÔºóÔÙÊÔ¡£");
+cm.startPopMessage("å¯¹æ–¹æ²¡æœ‰åœ¨çº¿æˆ–è€…ä¸åœ¨ä¸€ä¸ªé¢‘é“ã€‚\r\nè¯·é‡è¯•åå†è¯•ã€‚");
 }else if (cm.getSameMap(cm.getPlayer().getMarriageId()) == false){
-cm.startPopMessage("¶Ô·½Ã»ÓĞ²»ÓëÄúÍ¬¸öµØÍ¼¡£\r\nÇëÖØÊÔºóÔÙÊÔ¡£");
+cm.startPopMessage("å¯¹æ–¹æ²¡æœ‰ä¸ä¸æ‚¨åŒä¸ªåœ°å›¾ã€‚\r\nè¯·é‡è¯•åå†è¯•ã€‚");
 }else{
 cm.setMarriagePassword(cm.getPlayer(),cm.RandomString(1000000,9999999));
-cm.sendOk("ÉèÖÃÍê±Ï¡£ÄúµÄÇó°®ÃÜÂëÎª£º#b"+cm.getMarriagePassword(cm.getPlayer())+"#k")
+cm.sendOk("è®¾ç½®å®Œæ¯•ã€‚æ‚¨çš„æ±‚çˆ±å¯†ç ä¸ºï¼š#b"+cm.getMarriagePassword(cm.getPlayer())+"#k")
 cm.setMarriageData(cm.getPlayer(),1,cm.RandomString(1,1));
 cm.MissionMake(cm.getPlayer().getId(),1018,0,0,0,0);
-cm.MissionFinish(cm.getPlayer().getId(),1018);//Íê³ÉÃÜÂëÈÎÎñ
-cm.MissionMake(cm.getPlayer().getMarriageId(),1021,0,0,0,0);//¸øÅ®·½µÄÈÎÎñ
-cm.MissionFinish(cm.getPlayer().getMarriageId(),1021);//¸øÅ®·½µÄÈÎÎñ
-cm.startPopMessage(cm.getPlayer().getMarriageId(),"µÇ¼Ç³É¹¦£¬ÄúÏÖÔÚ¿ÉÒÔÊäÈëÇó°®ÃÜÂëÁË")
+cm.MissionFinish(cm.getPlayer().getId(),1018);//å®Œæˆå¯†ç ä»»åŠ¡
+cm.MissionMake(cm.getPlayer().getMarriageId(),1021,0,0,0,0);//ç»™å¥³æ–¹çš„ä»»åŠ¡
+cm.MissionFinish(cm.getPlayer().getMarriageId(),1021);//ç»™å¥³æ–¹çš„ä»»åŠ¡
+cm.startPopMessage(cm.getPlayer().getMarriageId(),"ç™»è®°æˆåŠŸï¼Œæ‚¨ç°åœ¨å¯ä»¥è¾“å…¥æ±‚çˆ±å¯†ç äº†")
 cm.dispose();
 }
                             } else if (status == 6){
-                                         cm.sendOk("½ñÌìÌìÆøºÜºÃ²»ÊÇÂğ£¿");
+                                         cm.sendOk("ä»Šå¤©å¤©æ°”å¾ˆå¥½ä¸æ˜¯å—ï¼Ÿ");
 cm.dispose();
                            } else if (status == 7){
-                                          cm.sendNext("µÈµÈ¡£¡£Ê¥ÊéºÃºñµÄ¡£¡£");
+                                          cm.sendNext("ç­‰ç­‰ã€‚ã€‚åœ£ä¹¦å¥½åšçš„ã€‚ã€‚");
                            }else if (status == 8){
-                                         cm.sendNext("Å¶Å¶£¡£¡ÕÒµ½ÁË¡£ÄúµÄÇó°®ÃÜÂëÎª£º#b"+cm.getMarriagePassword(cm.getPlayer())+"#k");
+                                         cm.sendNext("å“¦å“¦ï¼ï¼æ‰¾åˆ°äº†ã€‚æ‚¨çš„æ±‚çˆ±å¯†ç ä¸ºï¼š#b"+cm.getMarriagePassword(cm.getPlayer())+"#k");
                            }else if (status == 9){
-                                        cm.sendNext("ÏÂ´Î×¢ÒâµãÀ²£¡ÕâÃ´ÖØÒªµÄ¶«Î÷¿É²»ÄÜÂÒ¶ªÅ¶£¡");
+                                        cm.sendNext("ä¸‹æ¬¡æ³¨æ„ç‚¹å•¦ï¼è¿™ä¹ˆé‡è¦çš„ä¸œè¥¿å¯ä¸èƒ½ä¹±ä¸¢å“¦ï¼");
 cm.dispose();
 }else if (status == 10){
-cm.sendOk("½ñÌìÌìÆøºÜºÃ²»ÊÇÂğ£¿")
+cm.sendOk("ä»Šå¤©å¤©æ°”å¾ˆå¥½ä¸æ˜¯å—ï¼Ÿ")
 }else if (status == 11){
 if(cm.getMarriagePassword(cm.getPlayer()).equals(cm.getText()) == false){
-cm.startPopMessage("´íÎóµÄ¶©»éÃÜÂë¡£");
+cm.startPopMessage("é”™è¯¯çš„è®¢å©šå¯†ç ã€‚");
 }else if(cm.getPlayerOnline(cm.getPlayer().getMarriageId()) == false){
-cm.startPopMessage("¶Ô·½Ã»ÓĞÔÚÏß»òÕß²»ÔÚÒ»¸öÆµµÀ¡£\r\nÇëÖØÊÔºóÔÙÊÔ¡£");
+cm.startPopMessage("å¯¹æ–¹æ²¡æœ‰åœ¨çº¿æˆ–è€…ä¸åœ¨ä¸€ä¸ªé¢‘é“ã€‚\r\nè¯·é‡è¯•åå†è¯•ã€‚");
 }else if (cm.getSameMap(cm.getPlayer().getMarriageId()) == false){
-cm.startPopMessage("¶Ô·½Ã»ÓĞ²»ÓëÄúÍ¬¸öµØÍ¼¡£\r\nÇëÖØÊÔºóÔÙÊÔ¡£");
+cm.startPopMessage("å¯¹æ–¹æ²¡æœ‰ä¸ä¸æ‚¨åŒä¸ªåœ°å›¾ã€‚\r\nè¯·é‡è¯•åå†è¯•ã€‚");
 }else{
-cm.startPopMessage(cm.getPlayer().getMarriageId(),"¶©»éÍê±Ï£¬ÏÖÔÚ¿ÉÒÔ½øÈëÊ¥·ãµîÌÃÁË¡£")
-cm.startPopMessage("¶©»éÍê±Ï£¬ÏÖÔÚ¿ÉÒÔ½øÈëÊ¥·ãµîÌÃÁË¡£");
+cm.startPopMessage(cm.getPlayer().getMarriageId(),"è®¢å©šå®Œæ¯•ï¼Œç°åœ¨å¯ä»¥è¿›å…¥åœ£æ«æ®¿å ‚äº†ã€‚")
+cm.startPopMessage("è®¢å©šå®Œæ¯•ï¼Œç°åœ¨å¯ä»¥è¿›å…¥åœ£æ«æ®¿å ‚äº†ã€‚");
 cm.setMarriageData(cm.getPlayer(),2,cm.RandomString(1,1));
-cm.MissionMake(cm.getPlayer().getId(),1016,0,0,0,0);//Áô×Å×öÏÂÃæµÄÅĞ¶Ï
-cm.MissionFinish(cm.getPlayer().getId(),1016);//Áô×Å×öÏÂÃæµÄÅĞ¶Ï
-cm.MissionMake(cm.getPlayer().getId(),1025,0,0,0,0);//ÅĞ¶ÏĞÔ±ğÓÃ¡£
-cm.MissionFinish(cm.getPlayer().getId(),1025);//ÅĞ¶ÏĞÔ±ğÓÃ¡£
-cm.MissionMake(cm.getPlayer().getMarriageId(),1016,0,0,0,0);//Áô×Å×öÏÂÃæµÄÅĞ¶Ï
+cm.MissionMake(cm.getPlayer().getId(),1016,0,0,0,0);//ç•™ç€åšä¸‹é¢çš„åˆ¤æ–­
+cm.MissionFinish(cm.getPlayer().getId(),1016);//ç•™ç€åšä¸‹é¢çš„åˆ¤æ–­
+cm.MissionMake(cm.getPlayer().getId(),1025,0,0,0,0);//åˆ¤æ–­æ€§åˆ«ç”¨ã€‚
+cm.MissionFinish(cm.getPlayer().getId(),1025);//åˆ¤æ–­æ€§åˆ«ç”¨ã€‚
+cm.MissionMake(cm.getPlayer().getMarriageId(),1016,0,0,0,0);//ç•™ç€åšä¸‹é¢çš„åˆ¤æ–­
 cm.MissionFinish(cm.getPlayer().getMarriageId(),1016);
-cm.MissionMake(cm.getPlayer().getMarriageId(),1022,0,0,0,0);//Áô×Å×öÏÂÃæµÄÅĞ¶Ï
+cm.MissionMake(cm.getPlayer().getMarriageId(),1022,0,0,0,0);//ç•™ç€åšä¸‹é¢çš„åˆ¤æ–­
 cm.MissionFinish(cm.getPlayer().getMarriageId(),1022);
-cm.MissionMake(cm.getPlayer().getMarriageId(),1026,0,0,0,0);//Áô×Å×öÏÂÃæµÄÅĞ¶Ï
+cm.MissionMake(cm.getPlayer().getMarriageId(),1026,0,0,0,0);//ç•™ç€åšä¸‹é¢çš„åˆ¤æ–­
 cm.MissionFinish(cm.getPlayer().getMarriageId(),1026);
 }
 }

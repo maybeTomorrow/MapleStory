@@ -1,11 +1,11 @@
-//ºº»¯
+//æ±‰åŒ–
 
 importPackage(net.sf.odinms.tools);
 
 //Time Setting is in millisecond
-var closeTime = 20000; //¿ª·Å¶àÉÙÊ±¼äÍ£Ö¹Íæ¼Ò½øÈëµÈºò20Ãë
-var beginTime = 30000; //ÔÚµÈºòÇøÄÚ¶àÉÙÊ±¼ä¿ªÊ¼ĞĞÊ»30Ãë
-var rideTime = 60000; //ĞèÒªµÄÊ±¼äµ½´ïÄ¿µÄµØ1·ÖÖÓ
+var closeTime = 20000; //å¼€æ”¾å¤šå°‘æ—¶é—´åœæ­¢ç©å®¶è¿›å…¥ç­‰å€™20ç§’
+var beginTime = 30000; //åœ¨ç­‰å€™åŒºå†…å¤šå°‘æ—¶é—´å¼€å§‹è¡Œé©¶30ç§’
+var rideTime = 60000; //éœ€è¦çš„æ—¶é—´åˆ°è¾¾ç›®çš„åœ°1åˆ†é’Ÿ
 var KC_Waiting;
 var Subway_to_KC;
 var KC_docked;
@@ -28,8 +28,8 @@ function scheduleNew() {
 	em.setProperty("docked", "true");
 	em.setProperty("entry", "true");
 	if(toggleMsg) {
-		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "µØÌúÁĞ³µ2ºÅÏß:¿ªÍù·ÏÆú¶¼ÊĞµÄÁĞ³µÒÑ¾­µ½´ï¡£"));
-		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "µØÌúÁĞ³µ1ºÅÏß:¿ªÍùĞÂÒ¶³ÇµÄÁĞ³µÒÑ¾­µ½´ï¡£"));
+		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "åœ°é“åˆ—è½¦2å·çº¿:å¼€å¾€åºŸå¼ƒéƒ½å¸‚çš„åˆ—è½¦å·²ç»åˆ°è¾¾ã€‚"));
+		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "åœ°é“åˆ—è½¦1å·çº¿:å¼€å¾€æ–°å¶åŸçš„åˆ—è½¦å·²ç»åˆ°è¾¾ã€‚"));
 	}
 	em.schedule("stopEntry", closeTime);
 	em.schedule("takeoff", beginTime);
@@ -50,8 +50,8 @@ function takeoff() {
 		temp2.next().changeMap(Subway_to_KC, Subway_to_KC.getPortal(0));
 	}
 	if(toggleMsg) {
-		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "µØÌúÁĞ³µ1ºÅÏß:¿ªÍùĞÂÒ¶³ÇµÄÁĞ³µÒÑ¾­·¢³ö£¬À´²»¼°³Ë×øµÄµºÃñÇëµÈºòÏÂ¸ö°à´Î¡£"));
-		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "µØÌúÁĞ³µ2ºÅÏß:¿ªÍù·ÏÆú¶¼ÊĞµÄÁĞ³µÒÑ¾­·¢³ö£¬À´²»¼°³Ë×øµÄµºÃñÇëµÈºòÏÂ¸ö°à´Î¡£"));
+		KC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "åœ°é“åˆ—è½¦1å·çº¿:å¼€å¾€æ–°å¶åŸçš„åˆ—è½¦å·²ç»å‘å‡ºï¼Œæ¥ä¸åŠä¹˜åçš„å²›æ°‘è¯·ç­‰å€™ä¸‹ä¸ªç­æ¬¡ã€‚"));
+		NLC_docked.broadcastMessage(MaplePacketCreator.serverNotice(6, "åœ°é“åˆ—è½¦2å·çº¿:å¼€å¾€åºŸå¼ƒéƒ½å¸‚çš„åˆ—è½¦å·²ç»å‘å‡ºï¼Œæ¥ä¸åŠä¹˜åçš„å²›æ°‘è¯·ç­‰å€™ä¸‹ä¸ªç­æ¬¡ã€‚"));
 	}
 	var temp = rideTime/1000;
 	Subway_to_KC.broadcastMessage(MaplePacketCreator.getClock(temp));

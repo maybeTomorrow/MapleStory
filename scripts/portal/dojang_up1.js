@@ -4,7 +4,7 @@ importPackage(net.sf.odinms.tools);
 function enter(pi) {
     if (pi.getPlayer().getMap().getMonsterById(9300216) != null) {
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.dojoWarpUp());
-        pi.getPlayer().message("»ñµÃÁË" + pi.getPlayer().addDojoPointsByMap() + "µãĞŞÁ¶µãÊı¡£×ÜĞŞÁ¶µãÊıÎª" + pi.getPlayer().getDojoPoints() + "µã¡£");
+        pi.getPlayer().message("è·å¾—äº†" + pi.getPlayer().addDojoPointsByMap() + "ç‚¹ä¿®ç‚¼ç‚¹æ•°ã€‚æ€»ä¿®ç‚¼ç‚¹æ•°ä¸º" + pi.getPlayer().getDojoPoints() + "ç‚¹ã€‚");
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.updateDojoStats(pi.getPlayer(),1));
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.dojoWarpUp());
         var reactor = pi.getPlayer().getMap().getReactorByName("door");
@@ -18,7 +18,7 @@ function enter(pi) {
                 pi.getC().getChannelServer().getMapFactory().getMap(pi.getPlayer().getMapId() + 100).killAllMonsters();
         return true;
     } else {
-        pi.getPlayer().message("»¹ÓĞ¹ÖÎïÃ»ÓĞÏûÃğ¡£");
+        pi.getPlayer().message("è¿˜æœ‰æ€ªç‰©æ²¡æœ‰æ¶ˆç­ã€‚");
     }
     return false;
 }

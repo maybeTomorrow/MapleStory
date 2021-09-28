@@ -4,7 +4,7 @@ function enter(pi) {
         pi.warp(670010200, 4);
         return true;
     } else {
-        pi.getPlayer().dropMessage(5, "你不能从这里过去");
+        pi.getPlayer().dropMessage(5, "浣犱笉鑳戒粠杩欓噷杩囧幓");
         return false;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * 
- * @ð�յ�
- * ת��npc
+ * @冒险岛
+ * 转向npc
  * ************
  * 9310058 NPC ID
  */
@@ -10,7 +10,7 @@ function start() {
 
     action(1, 0, 0);
 }
-var jf = 4; //���ö��ٻ��ֿ��Ե㿪npc
+var jf = 4; //设置多少积分可以点开npc
 function action(mode, type, selection) {
     if (mode == -1) {
         cm.dispose();
@@ -18,7 +18,7 @@ function action(mode, type, selection) {
     else {
         if (status >= 0 && mode == 0) {
 
-            cm.sendOk("�ź�...");
+            cm.sendOk("嗯哼...");
             cm.dispose();
             return;
         }
@@ -29,17 +29,17 @@ function action(mode, type, selection) {
             status--;
         }
         if (status == 0) {
-            cm.sendSimple("��ӭ�һ���Ʒ�����г齱��Ҫ���� #b����#k ���� #r�������ĵ�#k ��\r\nĿǰʣ�����Ϊ: #r#e"+cm.getboss()+" #n#k�㣨�齱һ������ 4 �㣩��\r\n�ö�����˭�����أ�\r\n#L0##b���л��ֳ齱 - ÿ������ 4 ����\r\n\r\n#L1#���������齱 - ÿ������ 1 ��");
+            cm.sendSimple("欢迎兑换奖品。进行抽奖需要消耗 #b积分#k 或者 #r飞天猪的蛋#k 。\r\n目前剩余积分为: #r#e"+cm.getboss()+" #n#k点（抽奖一次消耗 4 点）！\r\n好东西被谁拿走呢？\r\n#L0##b进行积分抽奖 - 每次消耗 4 积分\r\n\r\n#L1#进行猪蛋抽奖 - 每次消耗 1 个");
         } else if (status == 1) {
-            if (selection == 0) { //���ֳ齱
+            if (selection == 0) { //积分抽奖
                 if(cm.getboss() >= jf){
-                cm.openNpc(9310097); //��д���ֳ齱��npcid
+                cm.openNpc(9310097); //填写积分抽奖的npcid
                 }else{
-                    cm.sendOk("��Ļ��ֲ��� "+jf+" �㡣�޷�ʹ�øù��ܣ�\r\n#r���ֿ����ڸ����л��Ŷ��ֻҪ��ɣ����л��ּ�¼��Ŷ��");
+                    cm.sendOk("你的积分不足 "+jf+" 点。无法使用该功能！\r\n#r积分可以在副本中获得哦！只要完成，都有积分记录的哦！");
 		    cm.dispose();
                 }
-            } else if (selection == 1) {//�������ĵ��齱
-                cm.openNpc(9310096);//��д���������齱��npcid
+            } else if (selection == 1) {//飞天猪的蛋抽奖
+                cm.openNpc(9310096);//填写飞天猪蛋抽奖的npcid
             }
         }
     }

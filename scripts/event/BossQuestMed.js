@@ -2,19 +2,19 @@ var eventmapid = 220080001;
 var returnmap = 980010000;
 
 var monster = new Array(
-4130103, // Õ½¼×´µÅİÅİÓã
-9300039, // Ô¶¹Å¾«Áé
-9300119, // ÀÏº£µÁ
-9300152, // ÉúÆøµÄ·¨À¼¿Ï
-9400549, // ËÀÁéÆïÊ¿
-9300028, // °¬Àï¸ğË¹
-8180000, // »ğÑæÁú
-8180001, // ÌìÓ¥
-9500392, // À­ÍßÄÇ
-8220003, // ´óº£ÊŞ
-8210011, // µÚ¶ş×ùËşµÄ°¢Äá
-9400014, // ÌìÇò
-8500001 // ÅÁÆÕÀ­Í¼Ë¹µÄ×ùÖÓ
+4130103, // æˆ˜ç”²å¹æ³¡æ³¡é±¼
+9300039, // è¿œå¤ç²¾çµ
+9300119, // è€æµ·ç›—
+9300152, // ç”Ÿæ°”çš„æ³•å…°è‚¯
+9400549, // æ­»çµéª‘å£«
+9300028, // è‰¾é‡Œè‘›æ–¯
+8180000, // ç«ç„°é¾™
+8180001, // å¤©é¹°
+9500392, // æ‹‰ç“¦é‚£
+8220003, // å¤§æµ·å…½
+8210011, // ç¬¬äºŒåº§å¡”çš„é˜¿å°¼
+9400014, // å¤©çƒ
+8500001 // å¸•æ™®æ‹‰å›¾æ–¯çš„åº§é’Ÿ
 );
 
 function init() {
@@ -173,7 +173,7 @@ function allMonstersDead(eim) {
     var totalp = parseInt(eim.getProperty("points")) + num;
 
     eim.setProperty("points", totalp);
-    //ÔİÊ±È¥µô½±Àø
+    //æš‚æ—¶å»æ‰å¥–åŠ±
     //eim.broadcastPlayerMsg(5, "Your team've gained " + num + " points! With a total of " + totalp + ".");
 
     eim.saveBossQuest(num);
@@ -182,7 +182,7 @@ function allMonstersDead(eim) {
         eim.broadcastPlayerMsg(6, "Prepare! The next boss will appear in a glimpse of an eye!");
     } else {
         eim.saveBossQuest(1000);
-        //ÔİÊ±È¥µô½±Àø
+        //æš‚æ—¶å»æ‰å¥–åŠ±
         //eim.broadcastPlayerMsg(5, "Your team've beaten the MED mode and have gained an extra 1000 points!");
     }
     // When invoking unregisterMonster(MapleMonster mob) OR killed

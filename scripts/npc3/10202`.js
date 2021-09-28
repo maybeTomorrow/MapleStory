@@ -21,9 +21,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("սʿӵ�к�ǿ�Ĺ�����������,�����ս���д��ڷǳ���Ҫ�ĵ�λ.��Ϊ����������ǿ,����ѧϰ�߼����ܵĻ����Է��ӳ�ǿ��������");
+			cm.sendNext("战士拥有很强的攻击力和体力,因此在战斗中处于非常重要的地位.因为基本攻击很强,所以学习高级技能的话可以发挥超强的力量。");
 		} else if (status == 1) {
-			cm.sendYesNo("��ô������������սʿ��");
+			cm.sendYesNo("怎么样？你想体验战士吗？");
 		} else if (status == 2) {
 			cm.lockUI();
 			cm.warp(1020100);

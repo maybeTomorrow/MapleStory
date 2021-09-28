@@ -17,7 +17,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("前方的路还很漫长.");
+			cm.sendOk("鍓嶆柟鐨勮矾杩樺緢婕暱.");
 			cm.dispose();
 			return;
 		} 

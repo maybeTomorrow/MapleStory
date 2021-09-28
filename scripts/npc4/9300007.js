@@ -1,4 +1,4 @@
-﻿var status = 0
+锘縱ar status = 0
 var victim;
 var ring = 1112001;
 
@@ -17,17 +17,17 @@ function action(mode, type, selection) {
     }
     if (status == 1) {
         cm.sendSimple("" +
-                "#L1##r#e进入红鸾宫#l\r\n" +
-                "#L2##k#e我想回去了");
+                "#L1##r#e杩涘叆绾㈤妇瀹�#l\r\n" +
+                "#L2##k#e鎴戞兂鍥炲幓浜�");
     } else if (status == 2) {
         if (selection == 1) {
             if (cm.getParty() == null) {
-                cm.sendNext("请与你的另一半组队后找我");
+                cm.sendNext("璇蜂笌浣犵殑鍙︿竴鍗婄粍闃熷悗鎵炬垜");
                 cm.dispose();
                 return;
             }
             if (!cm.isLeader()) {
-                cm.sendNext("请让队长与我对话");
+                cm.sendNext("璇疯闃熼暱涓庢垜瀵硅瘽");
                 cm.dispose();
                 return;
             }
@@ -47,17 +47,17 @@ function action(mode, type, selection) {
             }
 
             if (!next) {
-                cm.sendNext("请确认您跟您的的另外一半在这一张地图、不同性別、并且都在线以及队伍中沒有其他人");
+                cm.sendNext("璇风‘璁ゆ偍璺熸偍鐨勭殑鍙﹀涓€鍗婂湪杩欎竴寮犲湴鍥俱€佷笉鍚屾€у垾銆佸苟涓旈兘鍦ㄧ嚎浠ュ強闃熶紞涓矑鏈夊叾浠栦汉");
                 cm.dispose();
                 return;
             }
 			
             if (!victim.hasEquipped(ring) || !cm.getPlayer().hasEquipped(ring)) {
-                cm.sendNext("您或您的另一半沒有装备#v" + ring + "##z" + ring + "#哦");
+                cm.sendNext("鎮ㄦ垨鎮ㄧ殑鍙︿竴鍗婃矑鏈夎澶�#v" + ring + "##z" + ring + "#鍝�");
                 cm.dispose();
                 return;
             }
-            cm.sendYesNo("確定是否要与" + victim.getName() + "结婚吗?");
+            cm.sendYesNo("纰哄畾鏄惁瑕佷笌" + victim.getName() + "缁撳鍚�?");
         } else if (selection == 2) {
             var map = cm.getSavedLocation("WEDDING");
             cm.warp(map, 0);

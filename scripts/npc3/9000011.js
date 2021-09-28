@@ -1,7 +1,7 @@
 /*
-	��Vr001 ���� ONLINE��
-      ��Ȩ�� Vr001 ���� �����
-  ��ǰ�汾��Ϊ:Ver078 - Ver079
+	《Vr001 封测版 ONLINE》
+      版权于 Vr001 封测版 服务端
+  当前版本号为:Ver078 - Ver079
 */
 importPackage(net.sf.odinms.client);
 
@@ -22,7 +22,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("�٣���ð���������𣿲�����Ҫһ��#b���Ʊ#k�ſ��Բ��룡����Ի�úܶ�Ľ����������ľ���ֵ�ȵȡ�����\r\n����Ŀǰ�ù��ܻ������Ƶ��У�");
+			cm.sendOk("嘿！你好啊！想参与活动吗？参与需要一张#b活动门票#k才可以参与！活动可以获得很多的奖励。大量的经验值等等。。。\r\n但是目前该功能还在完善当中！");
 			cm.dispose();
 			return;
 		}

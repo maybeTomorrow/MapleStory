@@ -15,16 +15,16 @@ function action(mode, type, selection) {
 	status++;
     } else {
 	if (status == 1) {
-	    cm.sendOk("ºÃ°É,²»Ïë¾Í²»Ïë(ºß((°Á½¿");
+	    cm.sendOk("å¥½å§,ä¸æƒ³å°±ä¸æƒ³(å“¼((å‚²å¨‡");
 	    cm.dispose();
 	    return;
 	}
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("Ïë³ÉÎª¹­¼ıÊÖÂğ?");
+	cm.sendNext("æƒ³æˆä¸ºå¼“ç®­æ‰‹å—?");
     } else if (status == 1) {
-	cm.sendYesNo("ÒªÎÒ¶ÌÔİ°ïÄãÊµÏÖÃÎÏëÂğ?");
+	cm.sendYesNo("è¦æˆ‘çŸ­æš‚å¸®ä½ å®ç°æ¢¦æƒ³å—?");
     } else if (status == 2) {
 	cm.MovieClipIntroUI(true);
 	cm.warp(1020300, 0); // Effect/Direction3.img/archer/Scene00

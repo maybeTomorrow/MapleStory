@@ -1,19 +1,19 @@
 /*
-Vr001 ·â²â°æ ONLINE
-ĞŞ¸Ä°æ.GMµØÍ¼µÄNPC.
+Vr001 å°æµ‹ç‰ˆ ONLINE
+ä¿®æ”¹ç‰ˆ.GMåœ°å›¾çš„NPC.
 */
 
-/** °æÈ¨£ºVr001 ·â²â°æ
-	NPC Ãû×Ö: 		Ã°ÏÕµºÔËÓªÔ±£¨ÄÚ²¿£©
-	Map(ID): 		µØÍ¼µÄIDÎª (180000000)
-	   ÓÃÍ¾: 		ÂúÊôĞÔ,×°±¸ÊôĞÔÔö¼ÓµÄ¹¦ÄÜ.±ÜÃâÏÂÏßÖÆ×÷µÄÂé·³
+/** ç‰ˆæƒï¼šVr001 å°æµ‹ç‰ˆ
+	NPC åå­—: 		å†’é™©å²›è¿è¥å‘˜ï¼ˆå†…éƒ¨ï¼‰
+	Map(ID): 		åœ°å›¾çš„IDä¸º (180000000)
+	   ç”¨é€”: 		æ»¡å±æ€§,è£…å¤‡å±æ€§å¢åŠ çš„åŠŸèƒ½.é¿å…ä¸‹çº¿åˆ¶ä½œçš„éº»çƒ¦
 */
 importPackage(net.sf.odinms.client);
 importPackage(net.sf.odinms.tools);
 
 var status = 0;
 var slot = Array();
-var stats = Array("Á¦Á¿", "Ãô½İ", "ÖÇÁ¦", "ÔËÆø", "ÉúÃüÖµ", "Ä§·¨Öµ", "ÎäÆ÷¹¥»÷", "Ä§·¨¹¥»÷", "·ÀÓùÁ¦", "Ä§·¨·ÀÓùÁ¦", "ÃüÖĞÂÊ", "»Ø±ÜÂÊ", "ÊÖ¼¼", "ÒÆ¶¯ËÙ¶È", "ÌøÔ¾Á¦");
+var stats = Array("åŠ›é‡", "æ•æ·", "æ™ºåŠ›", "è¿æ°”", "ç”Ÿå‘½å€¼", "é­”æ³•å€¼", "æ­¦å™¨æ”»å‡»", "é­”æ³•æ”»å‡»", "é˜²å¾¡åŠ›", "é­”æ³•é˜²å¾¡åŠ›", "å‘½ä¸­ç‡", "å›é¿ç‡", "æ‰‹æŠ€", "ç§»åŠ¨é€Ÿåº¦", "è·³è·ƒåŠ›");
 var selected;
 var statsSel;
 
@@ -36,9 +36,9 @@ function action(mode, type, selection) {
 			status--;
 		if (status == 0) {
 			if (cm.getPlayer().hasGMLevel(100)) {
-				cm.sendSimple("ÄãºÃ!Î°´óµÄGm!ÄãÓĞÊ²Ã´ĞèÇóÂğ?#b\r\n#L0#ÌáÉıÎÒµÄ×î´óÊôĞÔ!(Gm×¨ÓÃ)\r\n#L1#ÌáÉıÎÒµÄ×î´ó¼¼ÄÜ!(Gm×¨ÓÃ)\r\n#L2#°ïÎÒµÄ×°±¸Ôö¼Ó¸÷ÖÖÊôĞÔ!(Gm×¨ÓÃ)#k");
+				cm.sendSimple("ä½ å¥½!ä¼Ÿå¤§çš„Gm!ä½ æœ‰ä»€ä¹ˆéœ€æ±‚å—?#b\r\n#L0#æå‡æˆ‘çš„æœ€å¤§å±æ€§!(Gmä¸“ç”¨)\r\n#L1#æå‡æˆ‘çš„æœ€å¤§æŠ€èƒ½!(Gmä¸“ç”¨)\r\n#L2#å¸®æˆ‘çš„è£…å¤‡å¢åŠ å„ç§å±æ€§!(Gmä¸“ç”¨)#k");
 			} else {
-				cm.sendOk("ÎÒ¿¿...ÄãGMµÈ¼¶ÖÁÉÙĞèÒª¼¶±ğ100²Å¿ÉÒÔ»ñµÃÎÒµÄ°ïÖú!~~ÄÄÁ¹¿ì´ôÄÄÈ¥.");
+				cm.sendOk("æˆ‘é ...ä½ GMç­‰çº§è‡³å°‘éœ€è¦çº§åˆ«100æ‰å¯ä»¥è·å¾—æˆ‘çš„å¸®åŠ©!~~å“ªå‡‰å¿«å‘†å“ªå».");
 				cm.dispose();
 			}
 		} else if (status == 1) {
@@ -66,11 +66,11 @@ function action(mode, type, selection) {
 				statup.add(new Pair(MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(p.getRemainingAp())));
 				statup.add(new Pair(MapleStat.AVAILABLESP, java.lang.Integer.valueOf(p.getRemainingSp())));
 				cm.getC().getSession().write(MaplePacketCreator.updatePlayerStats(statup));
-				cm.sendOk("ÎÒÒÑ¾­°ïÄãÌáÉıÁË×î´óµÄÊôĞÔÁË!\r\n#d¸ĞĞ»Ê¹ÓÃVr001 ·â²â°æ·şÎñ¶Ë!");
+				cm.sendOk("æˆ‘å·²ç»å¸®ä½ æå‡äº†æœ€å¤§çš„å±æ€§äº†!\r\n#dæ„Ÿè°¢ä½¿ç”¨Vr001 å°æµ‹ç‰ˆæœåŠ¡ç«¯!");
 				cm.dispose();
 			} else if (selection == 1) {
 				cm.maxAllSkills(); 
-				cm.sendOk("ÎÒÒÑ¾­°ïÄãÌáÉıÁË×î´óÁË!\r\n#d¸ĞĞ»Ê¹ÓÃVr001 ·â²â°æ·şÎñ¶Ë!");
+				cm.sendOk("æˆ‘å·²ç»å¸®ä½ æå‡äº†æœ€å¤§äº†!\r\n#dæ„Ÿè°¢ä½¿ç”¨Vr001 å°æµ‹ç‰ˆæœåŠ¡ç«¯!");
 				cm.dispose();
 			} else if (selection == 2) {
 				var avail = "";
@@ -80,7 +80,7 @@ function action(mode, type, selection) {
 					}
 					slot.push(i);
 				}
-				cm.sendSimple("ÄãÏëÎªÄÄÒ»¼ş×°±¸Ôö¼ÓÊôĞÔ?\r\n#b" + avail);
+				cm.sendSimple("ä½ æƒ³ä¸ºå“ªä¸€ä»¶è£…å¤‡å¢åŠ å±æ€§?\r\n#b" + avail);
 			}
 		} else if (status == 2) {
 			selected = selection - 1;
@@ -88,13 +88,13 @@ function action(mode, type, selection) {
 			for (var i = 0; i < stats.length; i++) {
 				text += "#L" + i + "#" + stats[i] + "#l\r\n";
 			}
-			cm.sendSimple("ÄãÒªÎª #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##kÌí¼ÓÊôĞÔ.\r\nÄÇÃ´,ÄãÏëÔö¼ÓÄÄÒ»¸öÊôĞÔÄØ?\r\n#b" + text);
+			cm.sendSimple("ä½ è¦ä¸º #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##kæ·»åŠ å±æ€§.\r\né‚£ä¹ˆ,ä½ æƒ³å¢åŠ å“ªä¸€ä¸ªå±æ€§å‘¢?\r\n#b" + text);
 		} else if (status == 3) {
 			statsSel = selection;
-			cm.sendGetNumber("Äã×¼±¸ÎªÄãµÄ #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k Ìí¼Ó¶àÉÙ " + stats[statsSel] + " ÊôĞÔ?\r\n#d×¢Òâ:×î´óÎª #r32767#k !!", 0, 0, 32767);
+			cm.sendGetNumber("ä½ å‡†å¤‡ä¸ºä½ çš„ #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k æ·»åŠ å¤šå°‘ " + stats[statsSel] + " å±æ€§?\r\n#dæ³¨æ„:æœ€å¤§ä¸º #r32767#k !!", 0, 0, 32767);
 		} else if (status == 4) {
 			cm.changeStat(slot[selected], statsSel, selection);
-			cm.sendOk("³É¹¦ÎªÄãµÄ×°±¸ #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k \r\n#r" + stats[statsSel] + "ÊôĞÔ#k Ôö¼ÓÁË #b" + selection + " #kµã.");
+			cm.sendOk("æˆåŠŸä¸ºä½ çš„è£…å¤‡ #b#t" + cm.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem(slot[selected]).getItemId() + "##k \r\n#r" + stats[statsSel] + "å±æ€§#k å¢åŠ äº† #b" + selection + " #kç‚¹.");
 			cm.dispose();
 		}
 	}

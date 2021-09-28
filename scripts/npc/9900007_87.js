@@ -1,5 +1,5 @@
 function start() {
-	cm.À®°È(Î¨ÃÀÃ°ÏÕµº,"Íæ¼Ò[" + cm.getPlayer().getName() + "]ÒÑ¾­ÉÏÏßÁË~£¡"); 
+	cm.å–‡å­(å”¯ç¾å†’é™©å²›,"ç©å®¶[" + cm.getPlayer().getName() + "]å·²ç»ä¸Šçº¿äº†~ï¼"); 
 	cm.dispose();
 
     }

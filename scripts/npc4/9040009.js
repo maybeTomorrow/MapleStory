@@ -39,10 +39,10 @@ function action(mode, type, selection) {
 			    stage = parseInt(eim.getProperty("stage1phase"));
 			}
 			if (stage == 1) {
-			    cm.sendOk("在这个挑战中，我将展示我周围的雕像的图案。当我给这个词，重复的模式，我继续.");
+			    cm.sendOk("鍦ㄨ繖涓寫鎴樹腑锛屾垜灏嗗睍绀烘垜鍛ㄥ洿鐨勯洉鍍忕殑鍥炬銆傚綋鎴戠粰杩欎釜璇嶏紝閲嶅鐨勬ā寮忥紝鎴戠户缁�.");
 			}
 			else {
-			    cm.sendOk("我将为你呈现一个更难的谜题。祝你好运.")
+			    cm.sendOk("鎴戝皢涓轰綘鍛堢幇涓€涓洿闅剧殑璋滈銆傜浣犲ソ杩�.")
 			}
 		    }
 		    else if (eim.getProperty("stage1status").equals("active")) {
@@ -50,7 +50,7 @@ function action(mode, type, selection) {
 			if (eim.getProperty("stage1combo").equals(eim.getProperty("stage1guess"))) {
 			    if (stage == 3) {
 				cm.getMap().getReactorByName("statuegate").hitReactor(cm.getClient());
-				cm.sendOk("出色的工作。请进入下一阶段.");
+				cm.sendOk("鍑鸿壊鐨勫伐浣溿€傝杩涘叆涓嬩竴闃舵.");
 				cm.showEffect(true, "quest/party/clear");
 				cm.playSound(true, "Party1/Clear");
 				var prev = eim.setProperty("stage1clear","true",true);
@@ -59,21 +59,21 @@ function action(mode, type, selection) {
 				}
 			    } else {
                                                                         
-				cm.sendOk("很好的。然而，你仍然有更多的来完成。当你准备好的时候再和我说话.");
+				cm.sendOk("寰堝ソ鐨勩€傜劧鑰岋紝浣犱粛鐒舵湁鏇村鐨勬潵瀹屾垚銆傚綋浣犲噯澶囧ソ鐨勬椂鍊欏啀鍜屾垜璇磋瘽.");
 				eim.setProperty("stage1phase", stage + 1);
-				cm.mapMessage("你已经完成了部分" + stage + " 的把关人测试.");
+				cm.mapMessage("浣犲凡缁忓畬鎴愪簡閮ㄥ垎" + stage + " 鐨勬妸鍏充汉娴嬭瘯.");
 			    }
                                                                 
 			} else {
-			    cm.sendOk("你考试不及格.");
-			    cm.mapMessage("你有没有把关测试.");
+			    cm.sendOk("浣犺€冭瘯涓嶅強鏍�.");
+			    cm.mapMessage("浣犳湁娌℃湁鎶婂叧娴嬭瘯.");
 			    eim.setProperty("stage1phase","1")
 			}
 			eim.setProperty("stage1status", "waiting");
 			cm.safeDispose();
 		    }
 		    else {
-			cm.sendOk("请等待.");
+			cm.sendOk("璇风瓑寰�.");
 			cm.safeDispose();
 		    }
 		}
@@ -91,7 +91,7 @@ function action(mode, type, selection) {
                                                         reactorString += combo[i] + " ";
                                                 }
                                                 cm.playerMessage(reactorString);*/
-		    cm.mapMessage("请稍候，该组合显示.");
+		    cm.mapMessage("璇风◢鍊欙紝璇ョ粍鍚堟樉绀�.");
                                                 
 		    var delay = 5000;
 		    for (var i = 0; i < combo.length; i++) {
@@ -104,7 +104,7 @@ function action(mode, type, selection) {
 	    }
 
 	} else {
-	    cm.sendOk("我需要你的组队的队长和我说话，没有人.");
+	    cm.sendOk("鎴戦渶瑕佷綘鐨勭粍闃熺殑闃熼暱鍜屾垜璇磋瘽锛屾病鏈変汉.");
 	    cm.safeDispose();
 	}
     }

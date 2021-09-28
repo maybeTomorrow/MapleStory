@@ -40,7 +40,7 @@ function action(mode, type, selection) {
 				if (cm.getQuestStatus(2010).equals(MapleQuestStatus.Status.COMPLETED))
 					cm.sendNext("You don't seem strong enough to be able to purchase my potion ...");
 				else
-					cm.sendOk("ÎÒµÄÃÎÏëÊÇ×öÒ»¸öµ½´¦ÓÎµ´µÄÂÃĞĞ¼Ò¡£¾ÍÏñÄãÃÇ¡£¡£¡£¿ÉÊÇÎÒ°Ö°Öµ£ĞÄÎÒ£¬²»ĞèÎÒÈ¥¡£¡£¡£");
+					cm.sendOk("æˆ‘çš„æ¢¦æƒ³æ˜¯åšä¸€ä¸ªåˆ°å¤„æ¸¸è¡çš„æ—…è¡Œå®¶ã€‚å°±åƒä½ ä»¬ã€‚ã€‚ã€‚å¯æ˜¯æˆ‘çˆ¸çˆ¸æ‹…å¿ƒæˆ‘ï¼Œä¸éœ€æˆ‘å»ã€‚ã€‚ã€‚");
 				cm.dispose();
 			}
 		} else if (status == 1) {

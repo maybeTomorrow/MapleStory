@@ -45,7 +45,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendYesNo("想要离开这里外面去吗？一旦离开，再进来时就要重新开始挑战，确定要离开吗？");
+			cm.sendYesNo("鎯宠绂诲紑杩欓噷澶栭潰鍘诲悧锛熶竴鏃︾寮�锛屽啀杩涙潵鏃跺氨瑕侀噸鏂板紑濮嬫寫鎴橈紝纭畾瑕佺寮�鍚楋紵");
 		}
 		else if(status == 1) {
 			cm.warp(220080000);

@@ -1,5 +1,5 @@
 /* 
- * ½ø½×ºÚÁú
+ * è¿›é˜¶é»‘é¾™
  */
 
 
@@ -12,11 +12,11 @@ function setup(eim, leaderid) {
     em.setProperty("state", "1");
     em.setProperty("leader", "true");
     var eim = em.newInstance("ChaosHorntail");
-    var map = eim.setInstanceMap(240060201); //ÉèÖÃ»î¶¯½Å±¾µÄµØÍ¼
-    map.resetFully(); //ÖØÖÃµØÍ¼
-    var mob = em.getMonster(9999999); //»Æ½ğµ°
-    map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(-550, -260)); //Ë¢³öÕâ¸ö¹ÖÎï
-    eim.startEventTimer(7200000); //2 Ğ¡Ê±
+    var map = eim.setInstanceMap(240060201); //è®¾ç½®æ´»åŠ¨è„šæœ¬çš„åœ°å›¾
+    map.resetFully(); //é‡ç½®åœ°å›¾
+    var mob = em.getMonster(9999999); //é»„é‡‘è›‹
+    map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(-550, -260)); //åˆ·å‡ºè¿™ä¸ªæ€ªç‰©
+    eim.startEventTimer(7200000); //2 å°æ—¶
     return eim;
 }
 

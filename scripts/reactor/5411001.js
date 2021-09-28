@@ -1,7 +1,7 @@
 /* 
-    ±©Á¦ĞÜ½Å±¾ 
-    Ç×Ç××ìÃ°ÏÕ Ğ¾ËéÍõ×ÓĞŞ¸Ä    
-    ·ÇÍ¬ÒâÄÚ½ûÖ¹×ªÔØ 
+    æš´åŠ›ç†Šè„šæœ¬ 
+    äº²äº²å˜´å†’é™© èŠ¯ç¢ç‹å­ä¿®æ”¹    
+    éåŒæ„å†…ç¦æ­¢è½¬è½½ 
 
 */  
 importPackage(net.sf.cherry.server.maps); 
@@ -9,10 +9,10 @@ importPackage(net.sf.cherry.server.maps);
 function act(){
 if (rm.getPlayer().getMap().getMonsterById(9420520) == null  && rm.getPlayer().getMap().getMonsterById(9420521) == null && rm.getPlayer().getMap().getMonsterById(9420522) == null ) {
 	rm.getReactor().getMap().addMapTimer(2 * 60 * 60,541020700);   
-        rm.mapMessage("¿ËÀ×Èü¶ûÒÑ±»ÕÙ»½");
+        rm.mapMessage("å…‹é›·èµ›å°”å·²è¢«å¬å”¤");
         rm.spawnMonster(9420520, -178, -212);
         rm.createMapMonitor(1,540000000,"sp");
 	}else{
-	 rm.mapMessage("´óÊ÷ÑıÕıÔÚÌôÕ½ÖĞ.....²»ÄÜÖØ¸´ÕÙ»½!!");
+	 rm.mapMessage("å¤§æ ‘å¦–æ­£åœ¨æŒ‘æˆ˜ä¸­.....ä¸èƒ½é‡å¤å¬å”¤!!");
 	}
 }

@@ -9,7 +9,7 @@ function start(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			qm.sendAcceptDecline("¹§Ï²ÄãÒÑµ½´ï#b100¼¶#k£¬µ«Õâ²¢²»±íÊ¾ÐÞÁ¶µÄ½áÊø£¬Èç¹û¼ÌÐøÅ¬Á¦£¬Å¼¶û¿ÉÒÔÈ¥ÆïÊ¿ÍÅ³¤ÄÇÀïÌýÌýËûÃÇµÄ½¨Òé¡£Ëµ²»¶¨£¬¿ÉÒÔÑ§µ½Ê²Ã´#bÐÂ¼¼ÄÜ#k¡­¡­");
+			qm.sendAcceptDecline("æ­å–œä½ å·²åˆ°è¾¾#b100çº§#kï¼Œä½†è¿™å¹¶ä¸è¡¨ç¤ºä¿®ç‚¼çš„ç»“æŸï¼Œå¦‚æžœç»§ç»­åŠªåŠ›ï¼Œå¶å°”å¯ä»¥åŽ»éª‘å£«å›¢é•¿é‚£é‡Œå¬å¬ä»–ä»¬çš„å»ºè®®ã€‚è¯´ä¸å®šï¼Œå¯ä»¥å­¦åˆ°ä»€ä¹ˆ#bæ–°æŠ€èƒ½#kâ€¦â€¦");
 		} else if (status == 1) {
 			qm.completeQuest();
 			qm.dispose();

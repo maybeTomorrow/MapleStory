@@ -9,7 +9,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (status < 1 && mode == 0) {
-			cm.sendOk("ºÃ£¬ÐèÒªµÄÊ±ºòÔÙÀ´ÕÒÎÒ¡£");
+			cm.sendOk("å¥½ï¼Œéœ€è¦çš„æ—¶å€™å†æ¥æ‰¾æˆ‘ã€‚");
 			cm.dispose();
 			return;
 		}
@@ -20,9 +20,9 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
         if (cm.getMapId() == 240050400) {
-            cm.sendYesNo("ÄãÏëÀë¿ªÕâÀïµ½ #m240040700# Âð?");
+            cm.sendYesNo("ä½ æƒ³ç¦»å¼€è¿™é‡Œåˆ° #m240040700# å—?");
         } else {
-            cm.sendYesNo("ÄãÏëÀë¿ªÕâÀïµ½ #m240040700# Âð?");
+            cm.sendYesNo("ä½ æƒ³ç¦»å¼€è¿™é‡Œåˆ° #m240040700# å—?");
         }
     } else if (status == 1) {
         if (cm.getMapId() == 240050400) {

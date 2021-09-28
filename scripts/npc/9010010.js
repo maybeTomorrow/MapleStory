@@ -2,6 +2,6 @@
 */
 
 function action(mode, type, selection) {
-    cm.sendOk("赶紧检查您的道具栏，有意想不到的惊喜！");
+    cm.sendOk("璧剁揣妫�鏌ユ偍鐨勯亾鍏锋爮锛屾湁鎰忔兂涓嶅埌鐨勬儕鍠滐紒");
     cm.safeDispose()
 }

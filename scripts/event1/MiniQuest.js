@@ -1,6 +1,6 @@
-// ·ãÖ®µº ±ÊĞ¾ÖÆ×÷
-// ÃÔÄã°æ±¾ç³ºìÒªÈû
-//¹ºÂò¸ü¶àÁªÏµQQ¡°1239776509 
+// æ«ä¹‹å²› ç¬”èŠ¯åˆ¶ä½œ
+// è¿·ä½ ç‰ˆæœ¬ç»¯çº¢è¦å¡
+//è´­ä¹°æ›´å¤šè”ç³»QQâ€œ1239776509 
 
 importPackage(net.sf.odinms.world);
 importPackage(net.sf.odinms.client);
@@ -9,11 +9,11 @@ var exitMap;
 var instanceId;
 var monster;
 monster = new Array(
-	9400589, // µØÓü´¬³¤
-	9400590, // º£Ö®Ä§Å®
-	9400591, // ÑªÑæ½«¾ü
-	9400592, // ÁÔÄ§ÈË
-	9400593 // °µÓ°É±ÊÖ
+	9400589, // åœ°ç‹±èˆ¹é•¿
+	9400590, // æµ·ä¹‹é­”å¥³
+	9400591, // è¡€ç„°å°†å†›
+	9400592, // çŒé­”äºº
+	9400593 // æš—å½±æ€æ‰‹
 ); 
 
 
@@ -76,7 +76,7 @@ function playerExit(eim, player) {
 		dispose = true;
 	}
 	eim.saveBossQuestPoints(parseInt(eim.getProperty("points")), player);
-	player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç³ºìÒªÈû] ÓÉÓÚÎ´ÖªµÄÁ¦Á¿£¬Äã±»ËÍ³öÁËç³ºìÒªÈû£¡£¡"));
+	player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç»¯çº¢è¦å¡] ç”±äºæœªçŸ¥çš„åŠ›é‡ï¼Œä½ è¢«é€å‡ºäº†ç»¯çº¢è¦å¡ï¼ï¼"));
 	eim.unregisterPlayer(player);
 	player.changeMap(exitMap, exitMap.getPortal(0));
 	if (dispose) {
@@ -132,11 +132,11 @@ function allMonstersDead(eim) {
 		for (var i = 0; i < party.size(); i++) {
 			party.get(i).finishAchievement(2);
 		}
-		map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç³ºìÒªÈû] ¹§Ï²Äã£¡£¡ÄãÒÑ¾­»÷°ÜÁËËùÓĞç³ºìBOSS£¡£¡£¡"));
+		map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç»¯çº¢è¦å¡] æ­å–œä½ ï¼ï¼ä½ å·²ç»å‡»è´¥äº†æ‰€æœ‰ç»¯çº¢BOSSï¼ï¼ï¼"));
 		disbandParty();
 	}
 	else {
-		map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç³ºìÒªÈû] ¹§Ï²Äã£¡£¡»÷°ÜÁËµ±Ç°¹ÖÎï£¬ÏÂÒ»¸ö¹ÖÎï»áÔÚ10ÃëºóÕÙ»½¡£"));
+		map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç»¯çº¢è¦å¡] æ­å–œä½ ï¼ï¼å‡»è´¥äº†å½“å‰æ€ªç‰©ï¼Œä¸‹ä¸€ä¸ªæ€ªç‰©ä¼šåœ¨10ç§’åå¬å”¤ã€‚"));
 		map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.getClock(10));
 		eim.schedule("monsterSpawn", 10000);
 	}
@@ -165,7 +165,7 @@ function monsterSpawn(eim) {
 
 function beginQuest(eim) {
 	var map = eim.getMapInstance(803001200);
-	map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç³ºìÒªÈû] ç³ºì¹ÖÊŞ»áÔÚ30ÃëºóÕÙ»½£¬ÇëÄãÃÇ×öºÃ×îÖÜÈ«µÄ×¼±¸£¡£¡£¡"));
+	map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[ç»¯çº¢è¦å¡] ç»¯çº¢æ€ªå…½ä¼šåœ¨30ç§’åå¬å”¤ï¼Œè¯·ä½ ä»¬åšå¥½æœ€å‘¨å…¨çš„å‡†å¤‡ï¼ï¼ï¼"));
 	eim.schedule("monsterSpawn", 30000);
 	map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.getClock(30));
 }

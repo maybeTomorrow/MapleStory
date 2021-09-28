@@ -1,7 +1,7 @@
 /*
-	¡¶Vr001 ·â²â°æ ONLINE¡·
-      °æÈ¨ÓÚ Vr001 ·â²â°æ ·şÎñ¶Ë
-  µ±Ç°°æ±¾ºÅÎª:Ver078 - Ver079
+	ã€ŠVr001 å°æµ‹ç‰ˆ ONLINEã€‹
+      ç‰ˆæƒäº Vr001 å°æµ‹ç‰ˆ æœåŠ¡ç«¯
+  å½“å‰ç‰ˆæœ¬å·ä¸º:Ver078 - Ver079
 */
 importPackage(net.sf.odinms.client);
 
@@ -22,7 +22,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("ÉñÊŞ¿ì²»ĞĞÁË¡­¡­ÂÃĞĞÕß¡­¡­¾È¾ÈÎÒÃÇ");
+			cm.sendOk("ç¥å…½å¿«ä¸è¡Œäº†â€¦â€¦æ—…è¡Œè€…â€¦â€¦æ•‘æ•‘æˆ‘ä»¬");
 			cm.dispose();
 			return;
 		}

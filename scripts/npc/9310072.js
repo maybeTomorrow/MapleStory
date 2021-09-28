@@ -19,15 +19,15 @@ function action(mode, type, selection) {
 	else
 		status--;
 	if (status == 0) {
-			cm.sendYesNo("#rÄãÊÇ²»ÊÇÏë¼¤»îËùÓĞ¼¼ÄÜ? µ«ÊÇĞèÒªÖ§¸¶4500µãÈ¯²ÅÄÜ¼¤»îÅ¶£¡  \r\n\r\n   #k±»½ûÖ¹Ê¹ÓÃµÄ¼¼ÄÜÎª:\r\n Ó¢ĞÛ    :#b½ø½×¶·Æø.¿û»¨±¦µä.\r\n #kºÚÆïÊ¿  :#bÁé»êÖúÁ¦.\r\n #k³å·æ¶Ó³¤:#b³¬¼¶±äÉí.");
+			cm.sendYesNo("#rä½ æ˜¯ä¸æ˜¯æƒ³æ¿€æ´»æ‰€æœ‰æŠ€èƒ½? ä½†æ˜¯éœ€è¦æ”¯ä»˜4500ç‚¹åˆ¸æ‰èƒ½æ¿€æ´»å“¦ï¼  \r\n\r\n   #kè¢«ç¦æ­¢ä½¿ç”¨çš„æŠ€èƒ½ä¸º:\r\n è‹±é›„    :#bè¿›é˜¶æ–—æ°”.è‘µèŠ±å®å…¸.\r\n #ké»‘éª‘å£«  :#bçµé­‚åŠ©åŠ›.\r\n #kå†²é”‹é˜Ÿé•¿:#bè¶…çº§å˜èº«.");
 		} else if (status == 1) {
            if(cm.getPlayer().getCSPoints(0) >= 4500){
 			    cm.getChar().modifyCSPoints(0,-4500);
                         cm.getPlayer().maxAllSkills(30);
-			cm.sendOk("¼¤»î³É¹¦");
+			cm.sendOk("æ¿€æ´»æˆåŠŸ");
 			cm.dispose();
 } else {
-  cm.sendOk("ÄãÃ»ÓĞ4500µãÈ¯");
+  cm.sendOk("ä½ æ²¡æœ‰4500ç‚¹åˆ¸");
 cm.dispose();
 			}cm.dispose();
 	    }	

@@ -64,7 +64,7 @@ function startEvent() {
 
 function changeRates() {
     em.DoubleRateEvent(true);
-    em.broadcastServerMsg(5120014, "Ë«±¶¾­ÑéºÍË«±¶±¬ÂÊ»î¶¯¿ªÊ¼¡£", true);
+    em.broadcastServerMsg(5120014, "åŒå€ç»éªŒå’ŒåŒå€çˆ†ç‡æ´»åŠ¨å¼€å§‹ã€‚", true);
 }
 
 function refreshDates(calendar) {

@@ -52,9 +52,9 @@ function action(mode, type, selection) {
 			status--;
 		if (status == 0) {
 			if (cm.getLevel() > 9 ) {  
-				cm.sendSimple("ÄúĞèÒª¼¤»î×î´ó¼¼ÄÜÂğ?#b\r\n#L1#¼¤»î×î´ó¼¼ÄÜ!#k");
+				cm.sendSimple("æ‚¨éœ€è¦æ¿€æ´»æœ€å¤§æŠ€èƒ½å—?#b\r\n#L1#æ¿€æ´»æœ€å¤§æŠ€èƒ½!#k");
 			} else {
-				cm.sendOk("¶Ô²»Æğ£¬µÈ¼¶µ×ÓÚ10¼¶²»¸øÄãÊ¹ÓÃÕâ¸öNPC");
+				cm.sendOk("å¯¹ä¸èµ·ï¼Œç­‰çº§åº•äº10çº§ä¸ç»™ä½ ä½¿ç”¨è¿™ä¸ªNPC");
 				cm.dispose();
 			}
 		} else if (status == 1) {
@@ -101,34 +101,34 @@ function action(mode, type, selection) {
 				cm.teachSkill(20001005,0,1);
 				cm.teachSkill(20000024,0,1);
 				cm.teachSkill(20000012,0,20);
-				cm.teachSkill(21000000,0,10); //Ã¬Á¬»÷Ç¿»¯
-				cm.teachSkill(21001000,15,15); //Õ½¶·²½·¥
-				cm.teachSkill(21000002,0,20); //Ë«ÖØÖØ»÷
-				cm.teachSkill(21001000,0,20); //¿ìËÙÃ¬
-				cm.teachSkill(21100000,0,20); //¾«×¼Ã¬
-				cm.teachSkill(21100000,0,20); //ÈıÖØÖØ»÷
-				cm.teachSkill(21100002,0,30); //Õ½ÉñÍ»½ø
-				cm.teachSkill(21101000,0,20); //¿¹Ñ¹
-				cm.teachSkill(21100004,0,20); //¶·Æø±¬ÁÑ
-				cm.teachSkill(21100005,0,20); //Á¬»·ÎüÑª
-				cm.teachSkill(21110000,0,20); //±¬»÷Ç¿»¯
-				cm.teachSkill(21111000,0,20); //ÁéÇÉ»÷ÍË
-				cm.teachSkill(21110002,0,20); //È«Á¦»Ó»÷
-				cm.teachSkill(21110000,0,30); //ÖÕ¼«Í¶ÖÀ
-				cm.teachSkill(21110004,0,30); //»ÃÓ°ÀÇÑÀ
-				cm.teachSkill(21111005,0,20); //±ùÑ©Ã¬
-				cm.teachSkill(21110006,0,20); //Ğı·ç
-				cm.teachSkill(21110007,0,20); //È«Á¦»Ó»÷
-				cm.teachSkill(21110000,0,20); //È«Á¦»Ó»÷
-				cm.teachSkill(21121000,0,30); //Ã°ÏÕµºÓÂÊ¿
-				cm.teachSkill(21120000,0,30); //¹¥»÷²ßÂÔ
-				cm.teachSkill(21120002,0,30); //Õ½ÉñÖ®Îè
-				cm.teachSkill(21121000,0,30); //Õ½ÉñµÄÒâÖ¾
-				cm.teachSkill(21120004,0,30); //·ÀÊØ²ßÂÔ
-				cm.teachSkill(21120005,0,30); //¾ŞĞÜÅØÏø
-				cm.teachSkill(21120006,0,30); //×êÊ¯ĞÇ³½
-				cm.teachSkill(21120007,0,30); //Õ½ÉñÖ®¶Ü
-				cm.teachSkill(21121000,5,5); //ÓÂÊ¿µÄÒâÖ¾
+				cm.teachSkill(21000000,0,10); //çŸ›è¿å‡»å¼ºåŒ–
+				cm.teachSkill(21001000,15,15); //æˆ˜æ–—æ­¥ä¼
+				cm.teachSkill(21000002,0,20); //åŒé‡é‡å‡»
+				cm.teachSkill(21001000,0,20); //å¿«é€ŸçŸ›
+				cm.teachSkill(21100000,0,20); //ç²¾å‡†çŸ›
+				cm.teachSkill(21100000,0,20); //ä¸‰é‡é‡å‡»
+				cm.teachSkill(21100002,0,30); //æˆ˜ç¥çªè¿›
+				cm.teachSkill(21101000,0,20); //æŠ—å‹
+				cm.teachSkill(21100004,0,20); //æ–—æ°”çˆ†è£‚
+				cm.teachSkill(21100005,0,20); //è¿ç¯å¸è¡€
+				cm.teachSkill(21110000,0,20); //çˆ†å‡»å¼ºåŒ–
+				cm.teachSkill(21111000,0,20); //çµå·§å‡»é€€
+				cm.teachSkill(21110002,0,20); //å…¨åŠ›æŒ¥å‡»
+				cm.teachSkill(21110000,0,30); //ç»ˆææŠ•æ·
+				cm.teachSkill(21110004,0,30); //å¹»å½±ç‹¼ç‰™
+				cm.teachSkill(21111005,0,20); //å†°é›ªçŸ›
+				cm.teachSkill(21110006,0,20); //æ—‹é£
+				cm.teachSkill(21110007,0,20); //å…¨åŠ›æŒ¥å‡»
+				cm.teachSkill(21110000,0,20); //å…¨åŠ›æŒ¥å‡»
+				cm.teachSkill(21121000,0,30); //å†’é™©å²›å‹‡å£«
+				cm.teachSkill(21120000,0,30); //æ”»å‡»ç­–ç•¥
+				cm.teachSkill(21120002,0,30); //æˆ˜ç¥ä¹‹èˆ
+				cm.teachSkill(21121000,0,30); //æˆ˜ç¥çš„æ„å¿—
+				cm.teachSkill(21120004,0,30); //é˜²å®ˆç­–ç•¥
+				cm.teachSkill(21120005,0,30); //å·¨ç†Šå’†å“®
+				cm.teachSkill(21120006,0,30); //é’»çŸ³æ˜Ÿè¾°
+				cm.teachSkill(21120007,0,30); //æˆ˜ç¥ä¹‹ç›¾
+				cm.teachSkill(21121000,5,5); //å‹‡å£«çš„æ„å¿—
 				cm.teachSkill(9001000,0,1);
 				cm.teachSkill(9001000,0,1);
 				cm.teachSkill(9001002,0,1);
@@ -482,135 +482,135 @@ function action(mode, type, selection) {
 				cm.teachSkill(5221009,0,20); //Hypnotize
 				cm.teachSkill(522100,0,25); //Speed Infusion
 				cm.teachSkill(5220010,0,20); //BullsEye
-				//Õ½Í¯
-				//cm.teachSkill(21000000,0,10); //Ã¬Á¬»÷Ç¿»¯
-				//cm.teachSkill(21001000,15,15); //Õ½¶·²½·¥
-				//cm.teachSkill(21000002,0,20); //Ë«ÖØÖØ»÷
-				//cm.teachSkill(21001000,0,20); //¿ìËÙÃ¬
-				//cm.teachSkill(21100000,0,20); //¾«×¼Ã¬
-				//cm.teachSkill(21100000,0,20); //ÈıÖØÖØ»÷
-				//cm.teachSkill(21100002,0,30); //Õ½ÉñÍ»½ø
-				//cm.teachSkill(21101000,0,20); //¿¹Ñ¹
-				//cm.teachSkill(21100004,0,20); //¶·Æø±¬ÁÑ
-				//cm.teachSkill(21100005,0,20); //Á¬»·ÎüÑª
-				//cm.teachSkill(21110000,0,20); //±¬»÷Ç¿»¯
-				//cm.teachSkill(21111000,0,20); //ÁéÇÉ»÷ÍË
-				//cm.teachSkill(21110002,0,20); //È«Á¦»Ó»÷
-				//cm.teachSkill(21110000,0,30); //ÖÕ¼«Í¶ÖÀ
-				//cm.teachSkill(21110004,0,30); //»ÃÓ°ÀÇÑÀ
-				//cm.teachSkill(21111005,0,20); //±ùÑ©Ã¬
-				//cm.teachSkill(21110006,0,20); //Ğı·ç
-				//cm.teachSkill(21110007,0,20); //È«Á¦»Ó»÷
-				//cm.teachSkill(21110000,0,20); //È«Á¦»Ó»÷
-				//cm.teachSkill(21121000,0,30); //Ã°ÏÕµºÓÂÊ¿
-				//cm.teachSkill(21120000,0,30); //¹¥»÷²ßÂÔ
-				//cm.teachSkill(21120002,0,30); //Õ½ÉñÖ®Îè
-				//cm.teachSkill(21121000,0,30); //Õ½ÉñµÄÒâÖ¾
-				//cm.teachSkill(21120004,0,30); //·ÀÊØ²ßÂÔ
-				//cm.teachSkill(21120005,0,30); //¾ŞĞÜÅØÏø
-				//cm.teachSkill(21120006,0,30); //×êÊ¯ĞÇ³½
-				//cm.teachSkill(21120007,0,30); //Õ½ÉñÖ®¶Ü
-				//cm.teachSkill(21121000,5,5); //ÓÂÊ¿µÄÒâÖ¾
- //»êÆïÊ¿
-				cm.teachSkill(11000000,0,10); //ÉúÃü¼ÓÇ¿
-				cm.teachSkill(11001000,0,10); //Ê¥¼×Êõ
-				cm.teachSkill(11001002,0,20); //Ç¿Á¦¹¥»÷
-				cm.teachSkill(11001000,0,20); //ÈºÌå¹¥»÷
-				cm.teachSkill(11001004,0,20); //»ê¾«Áé
-				cm.teachSkill(11100000,0,20); //¾«×¼½£
-				cm.teachSkill(11101000,0,20); //¿ìËÙ½£
-				cm.teachSkill(11101002,0,30); //ÖÕ¼«½£
-				cm.teachSkill(11101000,0,20); //·ßÅ­Ö®»ğ
-				cm.teachSkill(11101004,0,30); //Áé»êÖ®ÈĞ
-				cm.teachSkill(11101005,0,10); //Áé»êÑ¸ÒÆ
-				cm.teachSkill(11110000,0,20); //Ä§Á¦»Ö¸´
-				cm.teachSkill(11111000,0,20); //¶·Æø¼¯ÖĞ
-				cm.teachSkill(11111002,0,20); //¿Ö»Å
-				cm.teachSkill(11111000,0,20); //»èÃÔ
-				cm.teachSkill(11111004,0,30); //ÇáÎè·ÉÑï
-				cm.teachSkill(11110005,0,20); //½ø½×¶·Æø
-				cm.teachSkill(11111006,0,30); //Áé»êÍ»´Ì
-				cm.teachSkill(11111007,0,20); //Áé»êÊôĞÔ
- //Ñ×ÊõÊ¿
-				cm.teachSkill(12000000,0,10); //Ä§Á¦Ç¿»¯
-				cm.teachSkill(12001000,0,10); //Ä§·¨¶Ü
-				cm.teachSkill(12001002,0,10); //Ä§·¨îø¼×
-				cm.teachSkill(12001000,0,20); //Ä§·¨Ë«»÷
-				cm.teachSkill(12001004,0,20); //Ñ×¾«Áé
-				cm.teachSkill(12101000,0,20); //¾«ÉñÁ¦
-				cm.teachSkill(12101000,0,20); //»ºËÙÊõ
-				cm.teachSkill(12101002,0,20); //»ğÑæ¼ı
-				cm.teachSkill(12101000,0,20); //¿ìËÙÒÆ¶¯
-				cm.teachSkill(12101004,0,20); //Ä§·¨¿ñ±©
-				cm.teachSkill(12101005,0,20); //×ÔÈ»Á¦ÖØÖÃ
-				cm.teachSkill(12101006,0,20); //»ğÖù
-				cm.teachSkill(12110000,0,20); //Ä§·¨¿¹ĞÔ
-				cm.teachSkill(12110000,0,20); //Ä§Á¦¼¤»¯
-				cm.teachSkill(12111002,0,20); //·âÓ¡Êõ
-				cm.teachSkill(12111000,0,20); //Ìì½µÂäĞÇ
-				cm.teachSkill(12111004,0,20); //»ğÄ§ÊŞ
-				cm.teachSkill(12111005,0,30); //»ğÀÎÊõÆÁÕÏ
-				cm.teachSkill(12111006,0,30); //»ğ·ç±©
-				cm.teachSkill(13000000,0,20); //Ç¿Á¦¼ı
-				cm.teachSkill(13000000,0,8); //Ô¶³Ì¼ı
-				cm.teachSkill(13001002,0,10); //¼¯ÖĞÊõ
-				cm.teachSkill(13001000,0,20); //¶şÁ¬Éä
-				cm.teachSkill(13001004,0,20); //·ç¾«Áé
-				cm.teachSkill(13100000,0,20); //¾«×¼¹­
-				cm.teachSkill(13101000,0,20); //¿ìËÙ¼ı
-				cm.teachSkill(13101002,0,30); //ÖÕ¼«¹­
-				cm.teachSkill(13101000,0,20); //ÎŞĞÎ¼ı
-				cm.teachSkill(13100004,0,20); //¼²·ç²½
-				cm.teachSkill(13101005,0,20); //±©·çÉä»÷
-				cm.teachSkill(13101006,0,10); //·çÓ°Âş²½
-				cm.teachSkill(13111000,0,20); //¼ıÓê
-				cm.teachSkill(13111000,0,30); //¼ıÉ¨Éä
-				cm.teachSkill(13111002,0,20); //±©·ç¼ıÓê
-				cm.teachSkill(13110000,0,20); //Éñ¼ıÊÖ
-				cm.teachSkill(13111004,0,20); //ÌæÉíÊõ
-				cm.teachSkill(13111005,0,10); //ĞÅÌìÎÌ
-				cm.teachSkill(13111006,0,20); //·çÁé´©Ô½
-				cm.teachSkill(13111007,0,20); //¼²·çÉ¨Éä
-				cm.teachSkill(14000000,0,10); //¼¯ÖĞÊõ
-				cm.teachSkill(14000000,0,8); //Ô¶³Ì°µÆ÷
-				cm.teachSkill(14001002,0,10); //×çÖäÊõ
-				cm.teachSkill(14001000,0,10); //ÒşÉíÊõ
-				cm.teachSkill(14001004,0,20); //Ë«·ÉÕ¶
-				cm.teachSkill(14001005,0,20); //Ò¹¾«Áé
-				cm.teachSkill(14100000,0,20); //¾«×¼°µÆ÷
-				cm.teachSkill(14100000,0,30); //Ç¿Á¦Í¶ÖÀ
-				cm.teachSkill(14101002,0,20); //¿ìËÙ°µÆ÷
-				cm.teachSkill(14101000,0,20); //Çá¹¦
-				cm.teachSkill(14101004,0,20); //¶ş¶ÎÌø
-				cm.teachSkill(14100005,0,10); //ÇıÖğ
-				cm.teachSkill(14101006,0,20); //ÎüÑª
-				cm.teachSkill(14111000,0,30); //Ó°·ÖÉí
-				cm.teachSkill(14111000,0,20); //Ó°ÍøÊõ
-				cm.teachSkill(14111002,0,30); //¶àÖØ·ÉïÚ
-				cm.teachSkill(14110000,0,20); //Ò©¼Á¾«Í¨
-				cm.teachSkill(14110004,0,20); //ÎäÆ÷ÓÃ¶¾Òº
-				cm.teachSkill(14111005,0,20); //ÈıÁ¬»·¹â»÷ÆÆ
-				cm.teachSkill(14111006,0,30); //¶¾Õ¨µ¯
-				cm.teachSkill(15000000,0,10); //¿ì¶¯×÷
-				cm.teachSkill(15001000,0,20); //°ÙÁÑÈ­
-				cm.teachSkill(15001002,0,20); //°ëÔÂÌß
-				cm.teachSkill(15001000,0,10); //¼²³Û
-				cm.teachSkill(15001004,0,20); //À×¾«Áé
-				cm.teachSkill(15100000,0,10); //Ç¿ÌåÊõ
-				cm.teachSkill(15100000,0,20); //¾«×¼È­
-				cm.teachSkill(15101002,0,20); //¼±ËÙÈ­
-				cm.teachSkill(15101000,0,20); //¹á¹Ç»÷
-				cm.teachSkill(15100004,0,20); //ÄÜÁ¿»ñµÃ
-				cm.teachSkill(15101005,0,20); //ÄÜÁ¿±¬ÆÆ
-				cm.teachSkill(15101006,0,20); //À×Ãù
-				cm.teachSkill(15110000,0,20); //±ØÉ±È­
-				cm.teachSkill(15111000,0,20); //ÄÜÁ¿ºÄ×ª
-				cm.teachSkill(15111002,0,10); //³¬ÈË±äĞÎ
-				cm.teachSkill(15111000,0,20); //ËéÊ¯ÂÒ»÷
-				cm.teachSkill(15111004,0,20); //¹âËÙÈ­
-				cm.teachSkill(15111005,0,20); //¼«ËÙÁìÓò
-				cm.teachSkill(15111006,0,20); //ÉÁ¹â»÷
-				cm.teachSkill(15111007,0,30); //öèÓã²¨
+				//æˆ˜ç«¥
+				//cm.teachSkill(21000000,0,10); //çŸ›è¿å‡»å¼ºåŒ–
+				//cm.teachSkill(21001000,15,15); //æˆ˜æ–—æ­¥ä¼
+				//cm.teachSkill(21000002,0,20); //åŒé‡é‡å‡»
+				//cm.teachSkill(21001000,0,20); //å¿«é€ŸçŸ›
+				//cm.teachSkill(21100000,0,20); //ç²¾å‡†çŸ›
+				//cm.teachSkill(21100000,0,20); //ä¸‰é‡é‡å‡»
+				//cm.teachSkill(21100002,0,30); //æˆ˜ç¥çªè¿›
+				//cm.teachSkill(21101000,0,20); //æŠ—å‹
+				//cm.teachSkill(21100004,0,20); //æ–—æ°”çˆ†è£‚
+				//cm.teachSkill(21100005,0,20); //è¿ç¯å¸è¡€
+				//cm.teachSkill(21110000,0,20); //çˆ†å‡»å¼ºåŒ–
+				//cm.teachSkill(21111000,0,20); //çµå·§å‡»é€€
+				//cm.teachSkill(21110002,0,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21110000,0,30); //ç»ˆææŠ•æ·
+				//cm.teachSkill(21110004,0,30); //å¹»å½±ç‹¼ç‰™
+				//cm.teachSkill(21111005,0,20); //å†°é›ªçŸ›
+				//cm.teachSkill(21110006,0,20); //æ—‹é£
+				//cm.teachSkill(21110007,0,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21110000,0,20); //å…¨åŠ›æŒ¥å‡»
+				//cm.teachSkill(21121000,0,30); //å†’é™©å²›å‹‡å£«
+				//cm.teachSkill(21120000,0,30); //æ”»å‡»ç­–ç•¥
+				//cm.teachSkill(21120002,0,30); //æˆ˜ç¥ä¹‹èˆ
+				//cm.teachSkill(21121000,0,30); //æˆ˜ç¥çš„æ„å¿—
+				//cm.teachSkill(21120004,0,30); //é˜²å®ˆç­–ç•¥
+				//cm.teachSkill(21120005,0,30); //å·¨ç†Šå’†å“®
+				//cm.teachSkill(21120006,0,30); //é’»çŸ³æ˜Ÿè¾°
+				//cm.teachSkill(21120007,0,30); //æˆ˜ç¥ä¹‹ç›¾
+				//cm.teachSkill(21121000,5,5); //å‹‡å£«çš„æ„å¿—
+ //é­‚éª‘å£«
+				cm.teachSkill(11000000,0,10); //ç”Ÿå‘½åŠ å¼º
+				cm.teachSkill(11001000,0,10); //åœ£ç”²æœ¯
+				cm.teachSkill(11001002,0,20); //å¼ºåŠ›æ”»å‡»
+				cm.teachSkill(11001000,0,20); //ç¾¤ä½“æ”»å‡»
+				cm.teachSkill(11001004,0,20); //é­‚ç²¾çµ
+				cm.teachSkill(11100000,0,20); //ç²¾å‡†å‰‘
+				cm.teachSkill(11101000,0,20); //å¿«é€Ÿå‰‘
+				cm.teachSkill(11101002,0,30); //ç»ˆæå‰‘
+				cm.teachSkill(11101000,0,20); //æ„¤æ€’ä¹‹ç«
+				cm.teachSkill(11101004,0,30); //çµé­‚ä¹‹åˆƒ
+				cm.teachSkill(11101005,0,10); //çµé­‚è¿…ç§»
+				cm.teachSkill(11110000,0,20); //é­”åŠ›æ¢å¤
+				cm.teachSkill(11111000,0,20); //æ–—æ°”é›†ä¸­
+				cm.teachSkill(11111002,0,20); //ææ…Œ
+				cm.teachSkill(11111000,0,20); //æ˜è¿·
+				cm.teachSkill(11111004,0,30); //è½»èˆé£æ‰¬
+				cm.teachSkill(11110005,0,20); //è¿›é˜¶æ–—æ°”
+				cm.teachSkill(11111006,0,30); //çµé­‚çªåˆº
+				cm.teachSkill(11111007,0,20); //çµé­‚å±æ€§
+ //ç‚æœ¯å£«
+				cm.teachSkill(12000000,0,10); //é­”åŠ›å¼ºåŒ–
+				cm.teachSkill(12001000,0,10); //é­”æ³•ç›¾
+				cm.teachSkill(12001002,0,10); //é­”æ³•é“ ç”²
+				cm.teachSkill(12001000,0,20); //é­”æ³•åŒå‡»
+				cm.teachSkill(12001004,0,20); //ç‚ç²¾çµ
+				cm.teachSkill(12101000,0,20); //ç²¾ç¥åŠ›
+				cm.teachSkill(12101000,0,20); //ç¼“é€Ÿæœ¯
+				cm.teachSkill(12101002,0,20); //ç«ç„°ç®­
+				cm.teachSkill(12101000,0,20); //å¿«é€Ÿç§»åŠ¨
+				cm.teachSkill(12101004,0,20); //é­”æ³•ç‹‚æš´
+				cm.teachSkill(12101005,0,20); //è‡ªç„¶åŠ›é‡ç½®
+				cm.teachSkill(12101006,0,20); //ç«æŸ±
+				cm.teachSkill(12110000,0,20); //é­”æ³•æŠ—æ€§
+				cm.teachSkill(12110000,0,20); //é­”åŠ›æ¿€åŒ–
+				cm.teachSkill(12111002,0,20); //å°å°æœ¯
+				cm.teachSkill(12111000,0,20); //å¤©é™è½æ˜Ÿ
+				cm.teachSkill(12111004,0,20); //ç«é­”å…½
+				cm.teachSkill(12111005,0,30); //ç«ç‰¢æœ¯å±éšœ
+				cm.teachSkill(12111006,0,30); //ç«é£æš´
+				cm.teachSkill(13000000,0,20); //å¼ºåŠ›ç®­
+				cm.teachSkill(13000000,0,8); //è¿œç¨‹ç®­
+				cm.teachSkill(13001002,0,10); //é›†ä¸­æœ¯
+				cm.teachSkill(13001000,0,20); //äºŒè¿å°„
+				cm.teachSkill(13001004,0,20); //é£ç²¾çµ
+				cm.teachSkill(13100000,0,20); //ç²¾å‡†å¼“
+				cm.teachSkill(13101000,0,20); //å¿«é€Ÿç®­
+				cm.teachSkill(13101002,0,30); //ç»ˆæå¼“
+				cm.teachSkill(13101000,0,20); //æ— å½¢ç®­
+				cm.teachSkill(13100004,0,20); //ç–¾é£æ­¥
+				cm.teachSkill(13101005,0,20); //æš´é£å°„å‡»
+				cm.teachSkill(13101006,0,10); //é£å½±æ¼«æ­¥
+				cm.teachSkill(13111000,0,20); //ç®­é›¨
+				cm.teachSkill(13111000,0,30); //ç®­æ‰«å°„
+				cm.teachSkill(13111002,0,20); //æš´é£ç®­é›¨
+				cm.teachSkill(13110000,0,20); //ç¥ç®­æ‰‹
+				cm.teachSkill(13111004,0,20); //æ›¿èº«æœ¯
+				cm.teachSkill(13111005,0,10); //ä¿¡å¤©ç¿
+				cm.teachSkill(13111006,0,20); //é£çµç©¿è¶Š
+				cm.teachSkill(13111007,0,20); //ç–¾é£æ‰«å°„
+				cm.teachSkill(14000000,0,10); //é›†ä¸­æœ¯
+				cm.teachSkill(14000000,0,8); //è¿œç¨‹æš—å™¨
+				cm.teachSkill(14001002,0,10); //è¯…å’’æœ¯
+				cm.teachSkill(14001000,0,10); //éšèº«æœ¯
+				cm.teachSkill(14001004,0,20); //åŒé£æ–©
+				cm.teachSkill(14001005,0,20); //å¤œç²¾çµ
+				cm.teachSkill(14100000,0,20); //ç²¾å‡†æš—å™¨
+				cm.teachSkill(14100000,0,30); //å¼ºåŠ›æŠ•æ·
+				cm.teachSkill(14101002,0,20); //å¿«é€Ÿæš—å™¨
+				cm.teachSkill(14101000,0,20); //è½»åŠŸ
+				cm.teachSkill(14101004,0,20); //äºŒæ®µè·³
+				cm.teachSkill(14100005,0,10); //é©±é€
+				cm.teachSkill(14101006,0,20); //å¸è¡€
+				cm.teachSkill(14111000,0,30); //å½±åˆ†èº«
+				cm.teachSkill(14111000,0,20); //å½±ç½‘æœ¯
+				cm.teachSkill(14111002,0,30); //å¤šé‡é£é•–
+				cm.teachSkill(14110000,0,20); //è¯å‰‚ç²¾é€š
+				cm.teachSkill(14110004,0,20); //æ­¦å™¨ç”¨æ¯’æ¶²
+				cm.teachSkill(14111005,0,20); //ä¸‰è¿ç¯å…‰å‡»ç ´
+				cm.teachSkill(14111006,0,30); //æ¯’ç‚¸å¼¹
+				cm.teachSkill(15000000,0,10); //å¿«åŠ¨ä½œ
+				cm.teachSkill(15001000,0,20); //ç™¾è£‚æ‹³
+				cm.teachSkill(15001002,0,20); //åŠæœˆè¸¢
+				cm.teachSkill(15001000,0,10); //ç–¾é©°
+				cm.teachSkill(15001004,0,20); //é›·ç²¾çµ
+				cm.teachSkill(15100000,0,10); //å¼ºä½“æœ¯
+				cm.teachSkill(15100000,0,20); //ç²¾å‡†æ‹³
+				cm.teachSkill(15101002,0,20); //æ€¥é€Ÿæ‹³
+				cm.teachSkill(15101000,0,20); //è´¯éª¨å‡»
+				cm.teachSkill(15100004,0,20); //èƒ½é‡è·å¾—
+				cm.teachSkill(15101005,0,20); //èƒ½é‡çˆ†ç ´
+				cm.teachSkill(15101006,0,20); //é›·é¸£
+				cm.teachSkill(15110000,0,20); //å¿…æ€æ‹³
+				cm.teachSkill(15111000,0,20); //èƒ½é‡è€—è½¬
+				cm.teachSkill(15111002,0,10); //è¶…äººå˜å½¢
+				cm.teachSkill(15111000,0,20); //ç¢çŸ³ä¹±å‡»
+				cm.teachSkill(15111004,0,20); //å…‰é€Ÿæ‹³
+				cm.teachSkill(15111005,0,20); //æé€Ÿé¢†åŸŸ
+				cm.teachSkill(15111006,0,20); //é—ªå…‰å‡»
+				cm.teachSkill(15111007,0,30); //é²¨é±¼æ³¢
 
 
 				cm.dispose();

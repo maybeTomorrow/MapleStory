@@ -38,7 +38,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (status >= 2 && mode == 0) {
-			cm.sendOk("ÄÇºÃ°É,µÈÄãÓĞµ¨Á¿ÌôÕ½òÚò¼µÄÊ±ºòÔÙÀ´ÕÒÎÒ°É£¡");
+			cm.sendOk("é‚£å¥½å§,ç­‰ä½ æœ‰èƒ†é‡æŒ‘æˆ˜èœˆèš£çš„æ—¶å€™å†æ¥æ‰¾æˆ‘å§ï¼");
 			cm.dispose();
 			return;
 		}
@@ -47,15 +47,15 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("ÄãÒª»ØÈ¥Âğ£¿ÎÒ¿ÉÒÔ°ïÖúÄã»ØÈ¥£¡");
+			cm.sendNext("ä½ è¦å›å»å—ï¼Ÿæˆ‘å¯ä»¥å¸®åŠ©ä½ å›å»ï¼");
 		} else if (status == 1) {
-			cm.sendNextPrev("ÄÇÎÒËÍÄã½øÈ¥ #bÖĞÔ­É½ÇğµØ´ø2#k°É.")
+			cm.sendNextPrev("é‚£æˆ‘é€ä½ è¿›å» #bä¸­åŸå±±ä¸˜åœ°å¸¦2#kå§.")
 		} else if (status == 2) {
 			if (cm.getMeso() < 0) {
-				cm.sendOk("ÄãÃ»ÓĞÍü¼ÇÊ²Ã´¶«Î÷°É.")
+				cm.sendOk("ä½ æ²¡æœ‰å¿˜è®°ä»€ä¹ˆä¸œè¥¿å§.")
 				cm.dispose();
 			} else {
-				cm.sendYesNo("ÄãÕæµÄÏë #b»ØÈ¥#k? ");
+				cm.sendYesNo("ä½ çœŸçš„æƒ³ #bå›å»#k? ");
 			}
 		} else if (status == 3) {
 			//var map = cm.getChar().getSavedLocation(SavedLocationType.FLORINA);

@@ -1,6 +1,6 @@
 /*
 ======================================
- ‡å‡å¸Ä¶Ë¼¼Êõ  ‡å‡åÊÕ¼¯ÕıÊ½·¢²¼
+ å›§å›§æ”¹ç«¯æŠ€æœ¯  å›§å›§æ”¶é›†æ­£å¼å‘å¸ƒ
 ======================================
 */
 var compchoice; 
@@ -20,29 +20,29 @@ var status = -1;
 var winmatch = false; 
 var losematch = false 
 var drawmatch = false; 
-var cost = 5000; //ĞèÒª¶àÉÙÇ®Íæ£¬Êä¶àÉÙ.. »òÕß×Ô¼º¸Ä¡£¡£
-var winmesos = 10000000; //Ó®Ç®£¬»òÕß×Ô¼º¸Ä
-var items = new Array(4000007, 4000006, 4000005); //ÒÔ´ËÀàÍÆ£¬ÕâĞ©¶«Î÷ÊÇÄãÏë¸øÍæ¼ÒÓ®ºóµÄËæ»ú½±Àø£¬ÎÒĞ´µÄÕâĞ©ÊÇÎÒÂÒÌí¼ÓµÄ£¬ÄãÃÇÒª×Ô¼º¸Äµô£¬ÎÒ²»ÖªµÀÓĞÃ»ÓĞÕâĞ©¶«Î÷..
+var cost = 5000; //éœ€è¦å¤šå°‘é’±ç©ï¼Œè¾“å¤šå°‘.. æˆ–è€…è‡ªå·±æ”¹ã€‚ã€‚
+var winmesos = 10000000; //èµ¢é’±ï¼Œæˆ–è€…è‡ªå·±æ”¹
+var items = new Array(4000007, 4000006, 4000005); //ä»¥æ­¤ç±»æ¨ï¼Œè¿™äº›ä¸œè¥¿æ˜¯ä½ æƒ³ç»™ç©å®¶èµ¢åçš„éšæœºå¥–åŠ±ï¼Œæˆ‘å†™çš„è¿™äº›æ˜¯æˆ‘ä¹±æ·»åŠ çš„ï¼Œä½ ä»¬è¦è‡ªå·±æ”¹æ‰ï¼Œæˆ‘ä¸çŸ¥é“æœ‰æ²¡æœ‰è¿™äº›ä¸œè¥¿..
 
 function start() { 
-    cm.sendNext(beta + "ÄãºÃ#b"+cm.getName()+"#k»¶Ó­À´µ½µÚ26½ì²ÂÈ­ÊÀ½ç×Ü¾öÈü~!"); //do not remove 
+    cm.sendNext(beta + "ä½ å¥½#b"+cm.getName()+"#kæ¬¢è¿æ¥åˆ°ç¬¬26å±ŠçŒœæ‹³ä¸–ç•Œæ€»å†³èµ›~!"); //do not remove 
 } 
 function action(mode, type, selection) {
     if (mode != 1) {
         if (status == 1)
-            cm.sendOk("¿´À´ÄãÓë±¾½ì¹Ú¾üÎŞÔµ!"); 
+            cm.sendOk("çœ‹æ¥ä½ ä¸æœ¬å±Šå† å†›æ— ç¼˜!"); 
         cm.dispose();
         return;
     } else
         status++;
     if (status == 0) { 
         if (cm.getMeso() < cost) {
-            cm.sendOk("ÄãĞèÒª" + cost + "½ğ±Ò²Å¿ÉÒÔÍæ£¡");
+            cm.sendOk("ä½ éœ€è¦" + cost + "é‡‘å¸æ‰å¯ä»¥ç©ï¼");
             cm.dispose();
         } else
-            cm.sendAcceptDecline("ÄãÏëÌôÕ½²ÂÈ­ÓÎÏ·Âğ?");
+            cm.sendAcceptDecline("ä½ æƒ³æŒ‘æˆ˜çŒœæ‹³æ¸¸æˆå—?");
     } else if (status == 1) { 
-        cm.sendSimple("ÇëÑ¡ÔñÒ»¸ö...\r\n" 
+        cm.sendSimple("è¯·é€‰æ‹©ä¸€ä¸ª...\r\n" 
         + "#L0##fUI/UIWindow.img/RpsGame/Frock##l" 
         + "#L1##fUI/UIWindow.img/RpsGame/Fpaper##l" 
         + "#L2##fUI/UIWindow.img/RpsGame/Fscissor##l" 
@@ -63,7 +63,7 @@ function action(mode, type, selection) {
         } else if (random <= 4) { 
             compchoice = "scissor"; 
         } 
-        cm.sendNext("½á¹ûÊÇ..."); //ÕâÀï¿ÉÒÔ¸Ä
+        cm.sendNext("ç»“æœæ˜¯..."); //è¿™é‡Œå¯ä»¥æ”¹
     } else if (status == 3) { 
         if (playerchoice == "rock" && compchoice == "rock") { 
             cm.sendOk(Frock + spacing + rock + draw); 

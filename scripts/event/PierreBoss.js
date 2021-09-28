@@ -1,5 +1,5 @@
 /* 
- * Æ¤°£¶û
+ * çš®åŸƒå°”
  */
 
 
@@ -19,7 +19,7 @@ function setup(eim, leaderid) {
     var mob = em.getMonster(i);
     map.spawnMonsterOnGroundBelow(mob, new java.awt.Point(497, 551));
     }
-    eim.startEventTimer(15 * 60 * 1000); //15·ÖÖÓ
+    eim.startEventTimer(15 * 60 * 1000); //15åˆ†é’Ÿ
     return eim;
 }
 

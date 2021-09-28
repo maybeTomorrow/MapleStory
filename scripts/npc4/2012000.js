@@ -21,13 +21,13 @@
 
 var ticket = new Array(4031047, 4031074, 4031331, 4031576);
 var cost = new Array(5000, 6000, 30000, 5000, 6000);
-var mapNames = new Array("Ç°ÍùÄ§·¨É­ÁÖ", "Ç°ÍùÍæ¾ß³Ç", "Ç°ÍùÉñÄ¾´å", "Ç°ÍùÄÉÎ÷É³Ä®");
-var mapName2 = new Array("Ç°ÍùÄ§·¨É­ÁÖ", "Ç°ÍùÍæ¾ß³Ç", "Ç°ÍùÉñÄ¾´å", "Ç°ÍùÄÉÎ÷É³Ä®");
+var mapNames = new Array("å‰å¾€é­”æ³•æ£®æ—", "å‰å¾€ç©å…·åŸ", "å‰å¾€ç¥æœ¨æ‘", "å‰å¾€çº³è¥¿æ²™æ¼ ");
+var mapName2 = new Array("å‰å¾€é­”æ³•æ£®æ—", "å‰å¾€ç©å…·åŸ", "å‰å¾€ç¥æœ¨æ‘", "å‰å¾€çº³è¥¿æ²™æ¼ ");
 var select;
 var status = 0;
 
 function start() {
-    var where = "ÄãºÃ,ÎÒÊÇ¸ºÔğÊÛ´¬Æ±µÄ,ÇëÎÊÄãÏëÈ¥ÄÄÀï?";
+    var where = "ä½ å¥½,æˆ‘æ˜¯è´Ÿè´£å”®èˆ¹ç¥¨çš„,è¯·é—®ä½ æƒ³å»å“ªé‡Œ?";
     for (var i = 0; i < ticket.length; i++)
         where += "\r\n#L" + i + "##b" + mapNames[i] + "#k#l";
     cm.sendSimple(where);
@@ -40,10 +40,10 @@ function action(mode, type, selection) {
         status++;
         if (status == 1) {
             select = selection;
-            cm.sendYesNo("ÄãÈ·¶¨Òª¹ºÂò " + mapName2[select] + " ĞèÒª " + (select == 0 ? 15 : 10) + " Ğ¡Ê±·ÖÖÓ, Ëü»á»¨·ÑÄã #b"+cost[select]+" ·ã±Ò#k. ÇëÎÊÄãÊÇ·ñÈ·¶¨Òª¹ºÂò #b#t"+ticket[select]+"##k?");
+            cm.sendYesNo("ä½ ç¡®å®šè¦è´­ä¹° " + mapName2[select] + " éœ€è¦ " + (select == 0 ? 15 : 10) + " å°æ—¶åˆ†é’Ÿ, å®ƒä¼šèŠ±è´¹ä½  #b"+cost[select]+" æ«å¸#k. è¯·é—®ä½ æ˜¯å¦ç¡®å®šè¦è´­ä¹° #b#t"+ticket[select]+"##k?");
         } else if(status == 2) {
             if (cm.getMeso() < cost[select] || !cm.canHold(ticket[select]))
-                cm.sendOk("ÄãÈ·¶¨ÄãÓĞ #b"+cost[select]+" ·ã±Ò#k? Èç¹ûÓĞµÄ»°,ÎÒÈ°Äú¼ì²éÏÂÉíÉÏÆäËûÀ¸Î»¿´ÊÇ·ñÓĞÃ»ÓĞÂúÁË.");
+                cm.sendOk("ä½ ç¡®å®šä½ æœ‰ #b"+cost[select]+" æ«å¸#k? å¦‚æœæœ‰çš„è¯,æˆ‘åŠæ‚¨æ£€æŸ¥ä¸‹èº«ä¸Šå…¶ä»–æ ä½çœ‹æ˜¯å¦æœ‰æ²¡æœ‰æ»¡äº†.");
             else {
                 cm.gainMeso(-cost[select]);
                 cm.gainItem(ticket[select],1);

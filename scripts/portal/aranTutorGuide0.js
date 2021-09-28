@@ -3,7 +3,7 @@ function enter(pi) {
 		pi.blockPortal();
 		return false;
 	}
-	pi.playerMessage("Ã°ÏÕµºÌáÊ¾£º°´Ò»ÏÂCTRL¼ü£¬ÄÜ¹»¶Ô¹ÖÎï½øĞĞÒ»°ã¹¥»÷¡£");
+	pi.playerMessage("å†’é™©å²›æç¤ºï¼šæŒ‰ä¸€ä¸‹CTRLé”®ï¼Œèƒ½å¤Ÿå¯¹æ€ªç‰©è¿›è¡Œä¸€èˆ¬æ”»å‡»ã€‚");
 	pi.updateAranIntroState("normal=o;arr0=o;mo1=o;mo2=o;mo3=o");
 	pi.blockPortal();
 	pi.showWZEffect("Effect/OnUserEff.img/guideEffect/aranTutorial/tutorialGuide1", 1);

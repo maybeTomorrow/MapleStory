@@ -19,128 +19,128 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            cm.sendNext("���,���Ƿ�֪��תְ������ת��?תְ���ҾͶ���!\r\n�Ҹ��� #r1-4ת#k!�������������תְ.#rս����ȥ���ʵ�Աתְ!\r\n\r\n#bð�ռ�/��ʿ��תְ����:#k\r\n10��,30��,70��,120��.\r\n");
+            cm.sendNext("你好,你是否不知道转职在哪里转呢?转职找我就对了!\r\n我负责 #r1-4转#k!你可以在我这里转职.#r战神请去找邮递员转职!\r\n\r\n#b冒险家/骑士团转职条件:#k\r\n10级,30级,70级,120级.\r\n");
         } else if (status == 1) {
             if(cm.getJob().getId() >= 1000 && cm.getJob().getId() <= 1510){
-                cm.sendNext("ϵͳ���������ʿ��ְҵ.");
+                cm.sendNext("系统检测你是骑士团职业.");
                 status = 160;
                 return;
             }
             if(cm.getJob().getId() >= 2000){
-                cm.sendOk("ս����ȥ��#b�ʵ�ԱNpc#kתְ!");
+                cm.sendOk("战神请去找#b邮递员Npc#k转职!");
                 cm.dispose();
 		//status = 163;
                 return;
             }
             if (cm.getLevel() < 255 && cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) {
                 if (cm.getLevel() < 8) {
-                    cm.sendNext("�Բ���������Ҫ�ﵽ #b[8��]#k �Ҳ���Ϊ�����");
+                    cm.sendNext("对不起，你至少要达到 #b[8级]#k 我才能为你服务！");
                     status = 98;
                 } else if (cm.getLevel() < 10) {
-                    cm.sendYesNo("������Ҫ����ħ��ʦ�ľ�����ȥ��ӡħ��������,#b����Ա#k ������ħ���Կ�,����Ӧ�þ���Ϲ�ȥ֧Ԯ��,�������������ְҵ��ǰ��������������ħ���ľ���,����һ�����ĵ�·,��ô�����Ϊ #bħ��ʦ#k ��");
+                    cm.sendYesNo("我们需要集结魔法师的精神力去封印魔王的力量,#b管理员#k 正在与魔王对抗,我们应该尽快赶过去支援他,因此你必须比其他职业提前进行修炼并领悟魔法的精髓,这是一条艰苦的道路,那么你想成为 #b魔法师#k 吗？");
                     status = 150;
                     
                 } else {
-                    cm.sendNext("����õ�һ��ְҵѡ����һ���ȽϺ���?");
+                    cm.sendNext("你觉得第一个职业选择哪一个比较好呢?");
                     status = 153;
                 }
             } else if (cm.getLevel() < 30) {
-                cm.sendNext("10��.30��.70��.120������������������תְŶ����");
+                cm.sendNext("10级.30级.70级.120级，都可以来我这里转职哦！！");
                 status = 98;
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.THIEF)) {
-                cm.sendSimple("��~�����ּ����ˣ���ϲ��ﵽ#r[30��]#k ����תְΪһ����\r\n#L0##b�̿�#l    #L1##b����#l#k");
+                cm.sendSimple("嗨~我们又见面了，恭喜你达到#r[30级]#k 你想转职为一名？\r\n#L0##b刺客#l    #L1##b侠客#l#k");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WARRIOR)) {
-                cm.sendSimple("��~�����ּ����ˣ���ϲ��ﵽ#r[30��]#k ����תְΪһ����\r\n#L2##b����#l    #L3##b��ʿ#l    #L4##bǹսʿ#l#k");
+                cm.sendSimple("嗨~我们又见面了，恭喜你达到#r[30级]#k 你想转职为一名？\r\n#L2##b剑客#l    #L3##b骑士#l    #L4##b枪战士#l#k");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.MAGICIAN)) {
-                cm.sendSimple("��~�����ּ����ˣ���ϲ��ﵽ#r[30��]#k ����תְΪһ����\r\n#L5##b����#l    #L6##b��#l    #L7##b��ʦ#l#k");
+                cm.sendSimple("嗨~我们又见面了，恭喜你达到#r[30级]#k 你想转职为一名？\r\n#L5##b冰雷#l    #L6##b火毒#l    #L7##b牧师#l#k");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BOWMAN)) {
-                cm.sendSimple("��~�����ּ����ˣ���ϲ��ﵽ#r[30��]#k ����תְΪһ����\r\n#L8##b����#l    #L9##b����#l#k");
+                cm.sendSimple("嗨~我们又见面了，恭喜你达到#r[30级]#k 你想转职为一名？\r\n#L8##b猎人#l    #L9##b弩手#l#k");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PIRATE)) {
-                cm.sendSimple("��~�����ּ����ˣ���ϲ��ﵽ#r[30��]#k ����תְΪһ����\r\n#L10##bȭ��#l   #L11##bǹ��#l");
+                cm.sendSimple("嗨~我们又见面了，恭喜你达到#r[30级]#k 你想转职为一名？\r\n#L10##b拳手#l   #L11##b枪手#l");
 
             } else if (cm.getLevel() < 70) {
-                cm.sendNext("��ô����ð�ջ���˳���ɡ���Ŭ�����лر�����Ȼ��һ�ж��������׵ġ����㵽�� #r[70��]#k ��ʱ��Ϳ��Խ���#b[������תְ]#k��ʱ������������Ŷ��");
+                cm.sendNext("怎么样？冒险还算顺利吧。有努力就有回报。当然这一切都不是容易的。当你到达 #r[70级]#k 的时候就可以进行#b[第三次转职]#k到时别忘记来找我哦！");
                 status = 98;
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN)) {
                 status = 63;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT)) {
                 status = 66;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER)) {
                 status = 69;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN)) {
                 status = 72;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_WIZARD)) {
                 status = 75;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_WIZARD)) {
                 status = 78;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)) {
                 status = 81;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)) {
                 status = 84;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE)) {
                 status = 87;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)) {
                 status = 90;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BRAWLER)) {
                 status = 93;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.GUNSLINGER)) {
                 status = 96;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[70��]#k �����ھ�Ҫ��� #b[������תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[70级]#k 你现在就要完成 #b[第三次转职]#k 吗？");
             } else if (cm.getLevel() < 120) {
-                cm.sendNext("��ô����ð�ջ���˳���ɡ���Ŭ�����лر�����Ȼ��һ�ж��������׵ġ����㵽�� #r[120��]#k ��ʱ��Ϳ��Խ���#b[���Ĵ�תְ]#k��ʱ������������Ŷ��");
+                cm.sendNext("怎么样？冒险还算顺利吧。有努力就有回报。当然这一切都不是容易的。当你到达 #r[120级]#k 的时候就可以进行#b[第四次转职]#k到时别忘记来找我哦！");
                 status = 98;
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HERMIT)) {
                 status = 105;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CHIEFBANDIT)) {
                 status = 108;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.RANGER)) {
                 status = 111;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SNIPER)) {
                 status = 114;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_MAGE)) {
                 status = 117;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_MAGE)) {
                 status = 120;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PRIEST)) {
                 status = 123;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CRUSADER)) {
                 status = 126;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WHITEKNIGHT)) {
                 status = 129;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.DRAGONKNIGHT)) {
                 status = 132;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.MARAUDER)) {
                 status = 135;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.OUTLAW)) {
                 status = 138;
-                cm.sendYesNo("��ϲ��ﵽ�� #r[120��]#k �����ھ�Ҫ��� #b[���Ĵ�תְ]#k ��");
+                cm.sendYesNo("恭喜你达到了 #r[120级]#k 你现在就要完成 #b[第四次转职]#k 吗？");
             } else if (cm.getLevel() < 255) {
-                cm.sendNext("�˲������Ѿ���������е�תְ��\r\n��������� #r[ת��]#k ,����Ҫ����Ա����ת�����ܣ�");
+                cm.sendNext("了不起，你已经完成了所有的转职！\r\n但是你可以 #r[转生]#k ,但需要管理员开启转生功能！");
                 status = 98;
             } else if (cm.getLevel() >= 255) {
-                cm.sendOk("#d����... ΰ��� #r[#h #]#k ,���Ѿ�ͨ��һ��������������ս�ĵ�·,���ڳ�Ϊ�˷�����ӿ������.����������������,�� #r[����Ա]#k #d��ӡ��ħ������������,���Ĳ��������ܼ�,����Ҫ�����ĸ���ǿ������������еľ���!"); 
+                cm.sendOk("#d啊哈... 伟大的 #r[#h #]#k ,你已经通过一个漫长而充满挑战的道路,终于成为了风起云涌的人物.但这个世界阴暗的深处,被 #r[管理员]#k #d封印的魔王正蠢蠢欲动,它的残忍无人能及,你需要修炼的更加强大才能拯救所有的居民!"); 
                 cm.dispose();
             } else {
                 cm.dispose();
@@ -148,226 +148,226 @@ function action(mode, type, selection) {
 
         } else if (status == 2) {
             if (selection == 0) {
-                jobName = "�̿�";
+                jobName = "刺客";
                 job = net.sf.odinms.client.MapleJob.ASSASSIN;
             }
             if (selection == 1) {
-                jobName = "����";
+                jobName = "侠客";
                 job = net.sf.odinms.client.MapleJob.BANDIT;
             }
             if (selection == 2) {
-                jobName = "����";
+                jobName = "剑客";
                 job = net.sf.odinms.client.MapleJob.FIGHTER;
             }
             if (selection == 3) {
-                jobName = "׼��ʿ";
+                jobName = "准骑士";
                 job = net.sf.odinms.client.MapleJob.PAGE;
             }
             if (selection == 4) {
-                jobName = "ǹսʿ";
+                jobName = "枪战士";
                 job = net.sf.odinms.client.MapleJob.SPEARMAN;
             }
             if (selection == 5) {
-                jobName = "���׷�ʦ";
+                jobName = "冰雷法师";
                 job = net.sf.odinms.client.MapleJob.IL_WIZARD;
             }
             if (selection == 6) {
-                jobName = "�𶾷�ʦ";
+                jobName = "火毒法师";
                 job = net.sf.odinms.client.MapleJob.FP_WIZARD;
             }
             if (selection == 7) {
-                jobName = "��ʦ";
+                jobName = "牧师";
                 job = net.sf.odinms.client.MapleJob.CLERIC;
             }
             if (selection == 8) {
-                jobName = "����";
+                jobName = "猎人";
                 job = net.sf.odinms.client.MapleJob.HUNTER;
             }
             if (selection == 9) {
-                jobName = "����";
+                jobName = "弩手";
                 job = net.sf.odinms.client.MapleJob.CROSSBOWMAN;
             }
             if (selection == 10) {
-                jobName = "ȭ��";
+                jobName = "拳手";
                 job = net.sf.odinms.client.MapleJob.BRAWLER;
             }
             if (selection == 11) {
-                jobName = "��ǹ��";
+                jobName = "火枪手";
                 job = net.sf.odinms.client.MapleJob.GUNSLINGER;
             }
-            cm.sendYesNo("������ѡ��Ŷ��ȷ��Ҫ��Ϊһ�� #b[" + jobName + "] #k��"); 
+            cm.sendYesNo("不错的选择哦，确定要成为一名 #b[" + jobName + "] #k吗？"); 
                         
                         
         } else if (status == 3) {
             cm.changeJob(job);
             if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN)) {
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_WIZARD)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_WIZARD)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BRAWLER)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.GUNSLINGER)) {
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             }
 
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
             cm.dispose();
 
         } else if (status == 61) {
             if (cm.getJob().equals(net.sf.odinms.client.MapleJob.ASSASSIN)) {
                 status = 63;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BANDIT)) {
                 status = 66;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HUNTER)) {
                 status = 69;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CROSSBOWMAN)) {
                 status = 72;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_WIZARD)) {
                 status = 75;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_WIZARD)) {
                 status = 78;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CLERIC)) {
                 status = 81;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FIGHTER)) {
                 status = 84;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PAGE)) {
                 status = 87;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SPEARMAN)) {
                 status = 90;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BRAWLER)) {
                 status = 93;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.GUNSLINGER)) {
                 status = 960;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXX��]#k #d,�����ھ�Ҫ��� #r[��XXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXX级]#k #d,你现在就要完成 #r[第XXX次转职]#k 吗？");
             } else { 
                 cm.dispose();
             }
 
         } else if (status == 64) {
             cm.changeJob(MapleJob.HERMIT);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 67) {
             cm.changeJob(MapleJob.CHIEFBANDIT);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 70) {
             cm.changeJob(MapleJob.RANGER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 73) {
             cm.changeJob(MapleJob.SNIPER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 76) {
             cm.changeJob(MapleJob.FP_MAGE);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 79) {
             cm.changeJob(MapleJob.IL_MAGE);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 82) {
             cm.changeJob(MapleJob.PRIEST);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 85) {
             cm.changeJob(MapleJob.CRUSADER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 88) {
             cm.changeJob(MapleJob.WHITEKNIGHT);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 91) {
             cm.changeJob(MapleJob.DRAGONKNIGHT);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
         } else if (status == 94) {
             cm.changeJob(MapleJob.MARAUDER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
         } else if (status == 97) {
             cm.changeJob(MapleJob.OUTLAW);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             cm.dispose();
         } else if (status == 99) {
-            cm.sendOk("�����ܺ�Ŷ~~���Ͱɣ��ټ���");
+            cm.sendOk("天气很好哦~~加油吧！再见！");
             cm.dispose();
 
         } else if (status == 102) {
             if (cm.getJob().equals(net.sf.odinms.client.MapleJob.HERMIT)) {
                 status = 105;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CHIEFBANDIT)) {
                 status = 108;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.RANGER)) {
                 status = 111;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.SNIPER)) {
                 status = 114;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.FP_MAGE)) {
                 status = 117;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.IL_MAGE)) {
                 status = 120;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.PRIEST)) {
                 status = 123;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.CRUSADER)) {
                 status = 126;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.WHITEKNIGHT)) {
                 status = 129;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.DRAGONKNIGHT)) {
                 status = 132;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.MARAUDER)) {
                 status = 135;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else if (cm.getJob().equals(net.sf.odinms.client.MapleJob.OUTLAW)) {
                 status = 137;
-                cm.sendYesNo("#d��ϲ��ﵽ�� #r[XXXX��]#k #d,�����ھ�Ҫ��� #r[��XXXX��תְ]#k ��");
+                cm.sendYesNo("#d恭喜你达到了 #r[XXXX级]#k #d,你现在就要完成 #r[第XXXX次转职]#k 吗？");
             } else { 
                 cm.dispose();
             }
@@ -375,8 +375,8 @@ function action(mode, type, selection) {
 
         } else if (status == 106) {
             cm.changeJob(MapleJob.NIGHTLORD);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -392,8 +392,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 109) {
             cm.changeJob(MapleJob.SHADOWER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -409,8 +409,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 112) {
             cm.changeJob(MapleJob.BOWMASTER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -426,8 +426,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 115) {
             cm.changeJob(MapleJob.CROSSBOWMASTER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -443,8 +443,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 118) {
             cm.changeJob(MapleJob.FP_ARCHMAGE);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -460,8 +460,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 121) {
             cm.changeJob(MapleJob.IL_ARCHMAGE);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -477,8 +477,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 124) {
             cm.changeJob(MapleJob.BISHOP);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -494,8 +494,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 127) {
             cm.changeJob(MapleJob.HERO);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -511,8 +511,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 130) {
             cm.changeJob(MapleJob.PALADIN);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -528,8 +528,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 133) {
             cm.changeJob(MapleJob.DARKKNIGHT);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -545,8 +545,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 136) {
             cm.changeJob(MapleJob.BUCCANEER);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5121001,0,30);
             //cm.teachSkill(5121002,0,30);
             //cm.teachSkill(5121003,0,0);
@@ -561,8 +561,8 @@ function action(mode, type, selection) {
             cm.dispose();
         } else if (status == 139) {
             cm.changeJob(MapleJob.CORSAIR);
-            cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-            //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+            cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+            //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
             //cm.teachSkill(5220001,0,30);
             //cm.teachSkill(5220011,0,30);
             //cm.teachSkill(5220002,0,30);
@@ -585,60 +585,60 @@ function action(mode, type, selection) {
                 //cm.teachSkill(2001004,0,20); //Energy Bolt
                 //cm.teachSkill(2001005,0,20); //Magic Claw
                 cm.changeJob(net.sf.odinms.client.MapleJob.MAGICIAN);
-                cm.sendOk("תְ�ɹ���ϣ�����Ϊ��ɫ�� #b[ħ��ʦ]#k ��");
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                cm.sendOk("转职成功！希望你成为出色的 #b[魔法师]#k ！");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
                 cm.dispose();
             } else {
-                cm.sendOk("��û�з�����С����: #b[20 ����]#k ��");
+                cm.sendOk("你没有符合最小需求: #b[20 智力]#k ！");
                 cm.dispose();
             }
             
         } else if (status == 154) {
-            cm.sendSimple("�������һ��ְҵ�ʺ����Ʒζ�أ�#b\r\n#L0#սʿ#l\r\n#L1#ħ��ʦ#l \r\n#L2#������#l\r\n#L3#����#l\r\n#L4#����#l#k");
+            cm.sendSimple("你觉得哪一个职业适合你的品味呢？#b\r\n#L0#战士#l\r\n#L1#魔法师#l \r\n#L2#弓箭手#l\r\n#L3#飞侠#l\r\n#L4#海盗#l#k");
 
 
         } else if (status == 155) {
             if (selection == 0) {
-                jobName = "սʿ";
+                jobName = "战士";
                 job = net.sf.odinms.client.MapleJob.WARRIOR;
 
             }
             if (selection == 1) {
-                jobName = "ħ��ʦ";
+                jobName = "魔法师";
                 job = net.sf.odinms.client.MapleJob.MAGICIAN;
 
             }
             if (selection == 2) {
-                jobName = "������";
+                jobName = "弓箭手";
                 job = net.sf.odinms.client.MapleJob.BOWMAN;
 
             }
             if (selection == 3) {
-                jobName = "����";
+                jobName = "飞侠";
                 job = net.sf.odinms.client.MapleJob.THIEF;
 
             }
             if (selection == 4) {
-                jobName = "����";
+                jobName = "海盗";
                 job = net.sf.odinms.client.MapleJob.PIRATE;
 
             }
-            cm.sendYesNo("ȷ��Ҫ��Ϊһ�� #b[" + jobName + "] #k��"); 
+            cm.sendYesNo("确定要成为一名 #b[" + jobName + "] #k吗？"); 
         } else if (status == 156) {
                 cm.changeJob(job);
-                cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְ�ɹ���");
+                cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职成功！");
                 cm.dispose();
             
         } else if (status == 161) {
             if(cm.getJob().getId() == 1000 && cm.getLevel()>=10){
-                cm.sendSimple("�������㻹��һ��������,��ѡ��һ���ʺ��Լ���ְҵ��!#b\r\n#L0#����ʿ#l #L1#����ʿ#l #L2#����ʹ��#l #L3#ҹ����#l #L4#��Ϯ��#l#k");
+                cm.sendSimple("看起来你还是一个初心者,快选择一个适合自己的职业吧!#b\r\n#L0#魂骑士#l #L1#炎术士#l #L2#风灵使者#l #L3#夜行者#l #L4#奇袭者#l#k");
             }else if(parseInt(cm.getJob().getId() / 100) >10 && cm.getLevel()>=30 && cm.getJob().getId()%100 == 0){
-                cm.sendYesNo("�����ȷ��Ҫ���еڶ���תְ����");
+                cm.sendYesNo("您真的确定要进行第二次转职了吗？");
             }else if(parseInt(cm.getJob().getId() / 100) >10 && cm.getLevel()>=70 && cm.getJob().getId()%10 == 0){
-                cm.sendYesNo("�����ȷ��Ҫ���е�����תְ����");
+                cm.sendYesNo("您真的确定要进行第三次转职了吗？");
             }else{
-                cm.sendOk("��Ŀǰ����������ʹ���ҵķ���Ŷ!");
+                cm.sendOk("您目前的条件不能使用我的服务哦!");
                 cm.dispose();
             }
         } else if (status == 162) {
@@ -682,37 +682,37 @@ function action(mode, type, selection) {
                 }
                 cm.changeJob(job);
                 cm.gainItem(1142066,1);
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְΪ��ʿ��ְҵ��");
-                cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职为骑士团职业！");
+                cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
             } else if(parseInt(cm.getJob().getId() / 100) >10 && cm.getLevel()>=30 && cm.getJob().getId()%100 == 0){
                 cm.changeJob(MapleJob.getById(cm.getJob().getId()+10));
                 cm.gainItem(1142067,1);
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְΪ��ʿ��ְҵ��");
-                cm.sendOk("תְ�ɹ������Ͷ�����������ǿ���ʱ��ǵ�������Ŷ��");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职为骑士团职业！");
+                cm.sendOk("转职成功！加油锻炼，当你变的强大的时候记的来找我哦！");
             } else if(parseInt(cm.getJob().getId() / 100) >10 && cm.getLevel()>=70 && cm.getJob().getId()%10 == 0){
                 cm.gainItem(1142068,1);
                 cm.getPlayer().gainAp(5);
                 cm.changeJob(MapleJob.getById(cm.getJob().getId()+1));
-                //cm.serverNotice("[תְϵͳ]: ��ϲ [" + cm.getPlayer() + "] ��NPC��������ʿ ����תְΪ��ʿ��ְҵ��");
-                cm.sendOk("תְ�ɹ���ϣ�����Ժ��ð��֮·˳��!");
+                //cm.serverNotice("[转职系统]: 恭喜 [" + cm.getPlayer() + "] 在NPC：菇菇博士 快速转职为骑士团职业！");
+                cm.sendOk("转职成功！希望您以后的冒险之路顺利!");
             }
             cm.dispose();
         } else if (status == 164) {
             if(cm.getJob().getId() == 2000 && cm.getLevel() >=10){
-                cm.sendYesNo("ս��ս������\r\n�������㻹��һ��սͯ,��ȷ��Ҫ���е�һ��תְ��");
+                cm.sendYesNo("战神战起来！\r\n看起来你还是一个战童,您确定要进行第一次转职吗？");
             } else if(cm.getJob().getId() == 2100 && cm.getLevel() >=30) {
-                cm.sendYesNo("ս��ս�����������ȷ��Ҫ���еڶ���תְ����");
+                cm.sendYesNo("战神战起来！您真的确定要进行第二次转职了吗？");
             } else if(cm.getJob().getId() == 2110 && cm.getLevel() >=70){
-                cm.sendYesNo("ս��ս�����������ȷ��Ҫ���е�����תְ����");
+                cm.sendYesNo("战神战起来！您真的确定要进行第三次转职了吗？");
             } else if(cm.getJob().getId() == 2111 && cm.getLevel() >=120) {
-                cm.sendYesNo("ս��ս�����������ȷ��Ҫ���е��Ĵ�תְ����");
+                cm.sendYesNo("战神战起来！您真的确定要进行第四次转职了吗？");
             } else if(cm.getJob().getId() == 2112 && cm.getLevel() >120) {
-                cm.sendOk("���Ѿ���������е�תְ�������������Ͱɣ���");
+                cm.sendOk("你已经完成了所有的转职工作。继续加油吧！！");
             } else {
-                cm.sendOk("������Ŀǰ���������һ�����Ϊ������Ŷ�����Ͱɣ�");
+                cm.sendOk("按照您目前的条件，我还不能为您服务哦！加油吧！");
                 cm.dispose();
 
-                cm.sendOk("תְ�ɹ���ϣ�����Ժ��ð��֮·˳����");
+                cm.sendOk("转职成功！希望您以后的冒险之路顺利！");
             }
             cm.dispose();
         } else {

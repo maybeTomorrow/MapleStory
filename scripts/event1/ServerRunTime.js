@@ -1,6 +1,6 @@
 /*
- °®ÉÏÃ°ÏÕµº
- ÏµÍ³×Ô¶¯ÖØĞÂÆô¶¯ ĞÅÏ¢ÌáÊ¾
+ çˆ±ä¸Šå†’é™©å²›
+ ç³»ç»Ÿè‡ªåŠ¨é‡æ–°å¯åŠ¨ ä¿¡æ¯æç¤º
 */
 var setupTask;
 
@@ -13,7 +13,7 @@ function scheduleNew() {
     cal.set(java.util.Calendar.SECOND, 5);
     var nextTime = cal.getTimeInMillis();
     while (nextTime <= java.lang.System.currentTimeMillis()) {
-        nextTime += 20000; //Ã¿Èı·ÖÖÓ180000ÌáĞÑÒ»´Î
+        nextTime += 20000; //æ¯ä¸‰åˆ†é’Ÿ180000æé†’ä¸€æ¬¡
     }
     setupTask = em.scheduleAtTimestamp("start", nextTime);
 }

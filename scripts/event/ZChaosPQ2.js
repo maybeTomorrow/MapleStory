@@ -1,5 +1,5 @@
 /* 
- * ¼ÅÄ¯µÄº½Ê±¿Õ
+ * å¯‚å¯žçš„èˆªæ—¶ç©º
  */
 function init() {
     em.setProperty("state", "0");

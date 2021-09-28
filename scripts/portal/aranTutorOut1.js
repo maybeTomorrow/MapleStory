@@ -1,6 +1,6 @@
 function enter(pi) {
 	if (!pi.isQuestActive(21000)) {
-		pi.playerMessage("±ØĞë½ÓÊÜÁËºÕÀöÄÈµÄÈÎÎñ²ÅÄÜÍ¨¹ı¡£");
+		pi.playerMessage("å¿…é¡»æ¥å—äº†èµ«ä¸½å¨œçš„ä»»åŠ¡æ‰èƒ½é€šè¿‡ã€‚");
 		pi.unblockPortal();
 	}
 	pi.aranTemporarySkills();

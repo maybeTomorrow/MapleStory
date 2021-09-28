@@ -1,5 +1,5 @@
 /* 
- * ´óÔË¶¯»á ·ãÖ®Ğ£Ô°¸ßÊÖ [À§ÄÑÄ£Ê½]
+ * å¤§è¿åŠ¨ä¼š æ«ä¹‹æ ¡å›­é«˜æ‰‹ [å›°éš¾æ¨¡å¼]
  */
 
 function init() {
@@ -182,7 +182,7 @@ function setup(level, leaderid) {
 function playerEntry(eim, player) {
     var map = eim.getMapInstance(0);
     player.changeMap(map, map.getPortal(0));
-    em.broadcastServerMsg(5120067, "¿¼ÊÔÈç¹ûÃ»ÓĞÄÃµ½ÓÅĞã½±ÕÂµÄ»°£¬¾ÍÎŞ·¨Àë¿ª¿¼³¡¡£" ,true);
+    em.broadcastServerMsg(5120067, "è€ƒè¯•å¦‚æœæ²¡æœ‰æ‹¿åˆ°ä¼˜ç§€å¥–ç« çš„è¯ï¼Œå°±æ— æ³•ç¦»å¼€è€ƒåœºã€‚" ,true);
 }
 
 function playerRevive(eim, player) {
@@ -268,73 +268,73 @@ function clearPQ(eim) {
 
 function allMonstersDead(eim) {
     if (eim.getMapInstance(0).getAllMonstersThreadsafe().size() == 0) {
-    eim.broadcastPlayerMsg(6, "ºÙ~£¬²»ÒªÔÙ´òÁË~»Øµ½½ÌÊÒ°É£¡£¡£¡ÁìÈ¡ÄãÓ¦µÃµÄ½±Àø°É¡£");
+    eim.broadcastPlayerMsg(6, "å˜¿~ï¼Œä¸è¦å†æ‰“äº†~å›åˆ°æ•™å®¤å§ï¼ï¼ï¼é¢†å–ä½ åº”å¾—çš„å¥–åŠ±å§ã€‚");
     }
 }
 
 
 function end(eim){
-    em.broadcastServerMsg(5120075, "½øÈëÈáµÀ²¿¡­Ò»µã¶¼²»ÓÃº¦ÅÂ¡£¾ÍÊÇÈëÉç¿¼ÊÔ¡£" ,true);
+    em.broadcastServerMsg(5120075, "è¿›å…¥æŸ”é“éƒ¨â€¦ä¸€ç‚¹éƒ½ä¸ç”¨å®³æ€•ã€‚å°±æ˜¯å…¥ç¤¾è€ƒè¯•ã€‚" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end1(eim){
-    em.broadcastServerMsg(5120072, "ÎÒÊÇÀ´Ä¼¼¯ĞÂÉúµÄ¡­½ñÌìÒª°ÑÄã×¥×ß£¡ºôºôºô~" ,true);
+    em.broadcastServerMsg(5120072, "æˆ‘æ˜¯æ¥å‹Ÿé›†æ–°ç”Ÿçš„â€¦ä»Šå¤©è¦æŠŠä½ æŠ“èµ°ï¼å‘¼å‘¼å‘¼~" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end2(eim){
-    em.broadcastServerMsg(5120074, "ÎÒÏëµ½ÁË²»µÃÁËµÄÀÖÇú¡­ ¡­ÎÒÔÙµ¯¸øÄãÌı~ºÇºÇºÇ" ,true);
+    em.broadcastServerMsg(5120074, "æˆ‘æƒ³åˆ°äº†ä¸å¾—äº†çš„ä¹æ›²â€¦ â€¦æˆ‘å†å¼¹ç»™ä½ å¬~å‘µå‘µå‘µ" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end3(eim){
-    em.broadcastServerMsg(5120069, "ºÜ¸ĞĞ»ÄãµÄĞÄÒâ¡­ ¡­µ«ÊÇ¿ÉÒÔÑµÁ·¶àÉÙ¡­ ¡­" ,true);
+    em.broadcastServerMsg(5120069, "å¾ˆæ„Ÿè°¢ä½ çš„å¿ƒæ„â€¦ â€¦ä½†æ˜¯å¯ä»¥è®­ç»ƒå¤šå°‘â€¦ â€¦" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end4(eim){
-    em.broadcastServerMsg(5120073, "ÏëÔÚ²Ö¿âÄÃ¶«Î÷£¬ÏÈÍ¨¹ıÎÒ°É¡­ ¡­" ,true);
+    em.broadcastServerMsg(5120073, "æƒ³åœ¨ä»“åº“æ‹¿ä¸œè¥¿ï¼Œå…ˆé€šè¿‡æˆ‘å§â€¦ â€¦" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end5(eim){
-    em.broadcastServerMsg(5120076, "Çë°ï°ïÎÒ!½©Ê¬¾¹È»ÕâÃ´¶à¡­" ,true);
+    em.broadcastServerMsg(5120076, "è¯·å¸®å¸®æˆ‘!åƒµå°¸ç«Ÿç„¶è¿™ä¹ˆå¤šâ€¦" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end6(eim){
-    em.broadcastServerMsg(5120067, "ÉíÎªµ¼Ê¦¾ø¶Ô²¼Ô­ÁÂ´ò¼ÜÕâ¼şÊÂ£¡£¡£¡Ö»ÄÜÓÃÁ¦Á¿À´×èÖ¹Äã£¡£¡£¡" ,true);
+    em.broadcastServerMsg(5120067, "èº«ä¸ºå¯¼å¸ˆç»å¯¹å¸ƒåŸè°…æ‰“æ¶è¿™ä»¶äº‹ï¼ï¼ï¼åªèƒ½ç”¨åŠ›é‡æ¥é˜»æ­¢ä½ ï¼ï¼ï¼" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end7(eim){
-    em.broadcastServerMsg(5120067, "¸Õ¸ÕÄÇ¸öÏñÊÇÒ»Ö±ÔÚµÈË­µÄĞ¡º¢¾ÍÊÇÄãÂğ£¿ÎÒµÄÂè°¡~" ,true);
+    em.broadcastServerMsg(5120067, "åˆšåˆšé‚£ä¸ªåƒæ˜¯ä¸€ç›´åœ¨ç­‰è°çš„å°å­©å°±æ˜¯ä½ å—ï¼Ÿæˆ‘çš„å¦ˆå•Š~" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end8(eim){
-    em.broadcastServerMsg(5120064, "Õâ´Î´ó¼ÒÒªÒ»ÆğºÏ×÷¡£4´óÌìÍõÖĞÈÎÒ»Î»±»»÷µ¹µÄ»°£¬¾ÍËãÊ§°Ü†ª£¡" ,true);
+    em.broadcastServerMsg(5120064, "è¿™æ¬¡å¤§å®¶è¦ä¸€èµ·åˆä½œã€‚4å¤§å¤©ç‹ä¸­ä»»ä¸€ä½è¢«å‡»å€’çš„è¯ï¼Œå°±ç®—å¤±è´¥å•°ï¼" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end9(eim){
-    em.broadcastServerMsg(5120067, "¿ì¡­¿ì¡­¿ì¡­ÎÒµÄÈË²ÎÂÜ²·ÌÀ°¡~×¥×¡ËûÃÇ£¡£¡£¡" ,true);
+    em.broadcastServerMsg(5120067, "å¿«â€¦å¿«â€¦å¿«â€¦æˆ‘çš„äººå‚èåœæ±¤å•Š~æŠ“ä½ä»–ä»¬ï¼ï¼ï¼" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end10(eim){
-    em.broadcastServerMsg(5120071, "ÎÒ¿ÉÊÇ¸ã¿ÆÑ§µÄ¡­ÄãĞĞÂğ¡­Í¬Ñ§£¿" ,true);
+    em.broadcastServerMsg(5120071, "æˆ‘å¯æ˜¯æç§‘å­¦çš„â€¦ä½ è¡Œå—â€¦åŒå­¦ï¼Ÿ" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end11(eim){
-    em.broadcastServerMsg(5120070, "Ğê~Ğê~Ğê^¡­ ¡­¸øÎÒ°²¾²µã¡­ ¡­ÕâÀï¾²Ö¹Ğú»©£¡£¡£¡" ,true);
+    em.broadcastServerMsg(5120070, "å˜˜~å˜˜~å˜˜^â€¦ â€¦ç»™æˆ‘å®‰é™ç‚¹â€¦ â€¦è¿™é‡Œé™æ­¢å–§å“—ï¼ï¼ï¼" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 
 function end12(eim){
-    em.broadcastServerMsg(5120063, "ËäÈ»ºÜÌÖÑáÄãÃÇ...µ«ÊÇÕâÑù¶Ô¾öÊÇÎŞ·¨±ÜÃâµÄ¡£" ,true);
+    em.broadcastServerMsg(5120063, "è™½ç„¶å¾ˆè®¨åŒä½ ä»¬...ä½†æ˜¯è¿™æ ·å¯¹å†³æ˜¯æ— æ³•é¿å…çš„ã€‚" ,true);
     eim.startEventTimer(1000 * 60 * 5); //5 min
 }
 

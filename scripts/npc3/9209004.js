@@ -11,7 +11,7 @@ function action(mode, type, selection) {
             else {
                 if (status >= 0 && mode == 0) {
                 
-   cm.sendOk("¸ĞĞ»ÄãµÄ¹âÁÙ£¡");
+   cm.sendOk("æ„Ÿè°¢ä½ çš„å…‰ä¸´ï¼");
    cm.dispose();
    return;                    
                 }
@@ -27,10 +27,10 @@ function action(mode, type, selection) {
 	for(i = 0; i < 10; i++){
 		text += "";
 	}				
-	text += "×ğ¾´µÄÍæ¼Ò.Ë«±¶µõ×¹»ğ±¬À´ÁÙ.Åå´÷¼´¿É»ñµÃ#b 30%¾­Ñé #kĞ§¹û\r\n»¹ÔÚµÈÊ²Ã´£¿ Äã£¬ÖµµÃÓµÓĞ£¡\r\n<30%µõ×¹¿ÉÖØµşË«±¶¿¨Ğ§¹û>\r\nÄúÕË»§Ä¿Ç°Ê£µã¾íÎª£º#r"+cm.getNX()+"#k"
-	text += "\r\n#L1##r»ñÈ¡¾«Áéµõ×¹<Ò»ÌìÊ¹ÓÃÈ¨>-2000µã¾í#k";
-	text += "\r\n#L3##d»ñÈ¡¾«Áéµõ×¹<ÆßÌìÊ¹ÓÃÈ¨>-12000µã¾í#k";
-        text += "\r\n#L4##b»ñÈ¡¾«Áéµõ×¹<30ÌìÊ¹ÓÃÈ¨>-40000µã¾í#k";
+	text += "å°Šæ•¬çš„ç©å®¶.åŒå€åŠå ç«çˆ†æ¥ä¸´.ä½©æˆ´å³å¯è·å¾—#b 30%ç»éªŒ #kæ•ˆæœ\r\nè¿˜åœ¨ç­‰ä»€ä¹ˆï¼Ÿ ä½ ï¼Œå€¼å¾—æ‹¥æœ‰ï¼\r\n<30%åŠå å¯é‡å åŒå€å¡æ•ˆæœ>\r\næ‚¨è´¦æˆ·ç›®å‰å‰©ç‚¹å·ä¸ºï¼š#r"+cm.getNX()+"#k"
+	text += "\r\n#L1##rè·å–ç²¾çµåŠå <ä¸€å¤©ä½¿ç”¨æƒ>-2000ç‚¹å·#k";
+	text += "\r\n#L3##dè·å–ç²¾çµåŠå <ä¸ƒå¤©ä½¿ç”¨æƒ>-12000ç‚¹å·#k";
+        text += "\r\n#L4##bè·å–ç²¾çµåŠå <30å¤©ä½¿ç”¨æƒ>-40000ç‚¹å·#k";
         cm.sendSimple(text);
     } else if (status == 1) {
            if (selection == 0) {      
@@ -41,21 +41,21 @@ function action(mode, type, selection) {
 			cm.gainNX(-2000);
                    //cm.getPlayer().gainsg(-10); 
                    //1002419 1122019 5030001 5071000
-		   cm.sendOk("¹§Ï²ÄãÁìÈ¡ÁË#b¾«Áéµõ×¹");
+		   cm.sendOk("æ­å–œä½ é¢†å–äº†#bç²¾çµåŠå ");
                      var ii = net.sf.odinms.server.MapleItemInformationProvider.getInstance();		                
-            var type = ii.getInventoryType(1122017); //»ñµÃ×°±¸µÄÀàĞÎ
-            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // Éú³ÉÒ»¸öEquipÀà
-            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000); //Ê±¼ä
+            var type = ii.getInventoryType(1122017); //è·å¾—è£…å¤‡çš„ç±»å½¢
+            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // ç”Ÿæˆä¸€ä¸ªEquipç±»
+            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000); //æ—¶é—´
 toDrop.setExpiration(temptime); 
 toDrop.setLocked(1);	
 toDrop.setWatk(3);
-cm.getPlayer().getInventory(type).addItem(toDrop);//½«Õâ¸ö×°±¸·ÅÈë°üÖĞ
-cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //Ë¢ĞÂ±³°ü	
+cm.getPlayer().getInventory(type).addItem(toDrop);//å°†è¿™ä¸ªè£…å¤‡æ”¾å…¥åŒ…ä¸­
+cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //åˆ·æ–°èƒŒåŒ…	
 cm.getChar().saveToDB(true);
-  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"¡¼Ë«±¶¾­Ñé¡½" + " : " + " [" + cm.getPlayer().getName() + "]»»È¡ÁË¾«Áéµõ×¹[Ò»ÌìÊ¹ÓÃÈ¨]£¡",true).getBytes()); 
+  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"ã€–åŒå€ç»éªŒã€—" + " : " + " [" + cm.getPlayer().getName() + "]æ¢å–äº†ç²¾çµåŠå [ä¸€å¤©ä½¿ç”¨æƒ]ï¼",true).getBytes()); 
 		   cm.dispose();
 	   }else{
-		   cm.sendOk("µã¾í²»×ã¡£ÇëÁªÏµ¹ÜÀíÔ±³äÖµ£¡");
+		   cm.sendOk("ç‚¹å·ä¸è¶³ã€‚è¯·è”ç³»ç®¡ç†å‘˜å……å€¼ï¼");
 		   cm.dispose();
 	   }
     }else if  (selection == 3) {
@@ -63,52 +63,52 @@ cm.getChar().saveToDB(true);
 			cm.gainNX(-12000);
                    //cm.getPlayer().gainsg(-10); 
                    //1002419 1122019 5030001 5071000
-		   cm.sendOk("¹§Ï²ÄãÁìÈ¡ÁË#b¾«Áéµõ×¹");
+		   cm.sendOk("æ­å–œä½ é¢†å–äº†#bç²¾çµåŠå ");
                      var ii = net.sf.odinms.server.MapleItemInformationProvider.getInstance();		                
-            var type = ii.getInventoryType(1122017); //»ñµÃ×°±¸µÄÀàĞÎ
-            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // Éú³ÉÒ»¸öEquipÀà
-            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*7); //Ê±¼ä
+            var type = ii.getInventoryType(1122017); //è·å¾—è£…å¤‡çš„ç±»å½¢
+            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // ç”Ÿæˆä¸€ä¸ªEquipç±»
+            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*7); //æ—¶é—´
 toDrop.setExpiration(temptime); 
 toDrop.setLocked(1);	
 toDrop.setWatk(3);
-cm.getPlayer().getInventory(type).addItem(toDrop);//½«Õâ¸ö×°±¸·ÅÈë°üÖĞ
-cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //Ë¢ĞÂ±³°ü	
+cm.getPlayer().getInventory(type).addItem(toDrop);//å°†è¿™ä¸ªè£…å¤‡æ”¾å…¥åŒ…ä¸­
+cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //åˆ·æ–°èƒŒåŒ…	
 cm.getChar().saveToDB(true);
-  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"¡¼Ë«±¶¾­Ñé¡½" + " : " + " [" + cm.getPlayer().getName() + "]»»È¡ÁË¾«Áéµõ×¹[7ÌìÊ¹ÓÃÈ¨]£¡£¡£¡£¡",true).getBytes()); 
+  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"ã€–åŒå€ç»éªŒã€—" + " : " + " [" + cm.getPlayer().getName() + "]æ¢å–äº†ç²¾çµåŠå [7å¤©ä½¿ç”¨æƒ]ï¼ï¼ï¼ï¼",true).getBytes()); 
 		   cm.dispose();
 	   }else{
-		   cm.sendOk("µã¾í²»×ã¡£ÇëÁªÏµ¹ÜÀíÔ±³äÖµ£¡");
+		   cm.sendOk("ç‚¹å·ä¸è¶³ã€‚è¯·è”ç³»ç®¡ç†å‘˜å……å€¼ï¼");
 		   cm.dispose();
 	   }
     }else if  (selection == 2) {      
 			if (cm.haveItem(4001126, 1000)) { 
 		   	cm.gainItem(4001126, -1000);
             		cm.gainNX(300);
-			cm.sendOk("×ğ¾´µÄÍæ¼Ò£¬ÄãµÄÕË»§ÒÑ¾­³É¹¦Ôö¼ÓÁË300µã¾íÁË£¡");
+			cm.sendOk("å°Šæ•¬çš„ç©å®¶ï¼Œä½ çš„è´¦æˆ·å·²ç»æˆåŠŸå¢åŠ äº†300ç‚¹å·äº†ï¼");
                   	cm.dispose();
                    	} else {
-	           	cm.sendOk("×ğ¾´µÄÍæ¼Ò£¬ÄãµÄ·ãÒ¶²»×ã1000¸ö°¡~£¡");
+	           	cm.sendOk("å°Šæ•¬çš„ç©å®¶ï¼Œä½ çš„æ«å¶ä¸è¶³1000ä¸ªå•Š~ï¼");
 			cm.dispose(); }
     }else if  (selection == 4) {
            if ((cm.getNX() >= 40000)) { 
 			cm.gainNX(-40000);
                    //cm.getPlayer().gainsg(-10); 
                    //1002419 1122019 5030001 5071000
-		   cm.sendOk("¹§Ï²ÄãÁìÈ¡ÁË#b¾«Áéµõ×¹");
+		   cm.sendOk("æ­å–œä½ é¢†å–äº†#bç²¾çµåŠå ");
                      var ii = net.sf.odinms.server.MapleItemInformationProvider.getInstance();		                
-            var type = ii.getInventoryType(1122017); //»ñµÃ×°±¸µÄÀàĞÎ
-            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // Éú³ÉÒ»¸öEquipÀà
-            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*30); //Ê±¼ä
+            var type = ii.getInventoryType(1122017); //è·å¾—è£…å¤‡çš„ç±»å½¢
+            var toDrop = ii.randomizeStats(ii.getEquipById(1122017)).copy(); // ç”Ÿæˆä¸€ä¸ªEquipç±»
+            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*30); //æ—¶é—´
 toDrop.setExpiration(temptime); 
 toDrop.setLocked(1);	
 toDrop.setWatk(6);
-cm.getPlayer().getInventory(type).addItem(toDrop);//½«Õâ¸ö×°±¸·ÅÈë°üÖĞ
-cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //Ë¢ĞÂ±³°ü	
+cm.getPlayer().getInventory(type).addItem(toDrop);//å°†è¿™ä¸ªè£…å¤‡æ”¾å…¥åŒ…ä¸­
+cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //åˆ·æ–°èƒŒåŒ…	
 cm.getChar().saveToDB(true);
-  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"¡¼Ë«±¶¾­Ñé¡½" + " : " + " [" + cm.getPlayer().getName() + "]»»È¡ÁË¾«Áéµõ×¹[30ÌìÊ¹ÓÃÈ¨]£¡£¡£¡£¡",true).getBytes()); 
+  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"ã€–åŒå€ç»éªŒã€—" + " : " + " [" + cm.getPlayer().getName() + "]æ¢å–äº†ç²¾çµåŠå [30å¤©ä½¿ç”¨æƒ]ï¼ï¼ï¼ï¼",true).getBytes()); 
 		   cm.dispose();
 	   }else{
-		   cm.sendOk("µã¾í²»×ã¡£ÇëÁªÏµ¹ÜÀíÔ±³äÖµ£¡");
+		   cm.sendOk("ç‚¹å·ä¸è¶³ã€‚è¯·è”ç³»ç®¡ç†å‘˜å……å€¼ï¼");
 		   cm.dispose();
 	   }
     }else if  (selection == 5) {
@@ -116,25 +116,25 @@ cm.getChar().saveToDB(true);
 			cm.gainNX(-202000);
                    //cm.getPlayer().gainsg(-10); 
                    //1002419 1122019 5030001 5071000
-		   cm.sendOk("¹§Ï²ÄãÁìÈ¡ÁË#bÎÂÅ¯µÄÎ§²±£¡");
+		   cm.sendOk("æ­å–œä½ é¢†å–äº†#bæ¸©æš–çš„å›´è„–ï¼");
                      var ii = net.sf.odinms.server.MapleItemInformationProvider.getInstance();		                
-            var type = ii.getInventoryType(1122018); //»ñµÃ×°±¸µÄÀàĞÎ
-            var toDrop = ii.randomizeStats(ii.getEquipById(1122018)).copy(); // Éú³ÉÒ»¸öEquipÀà
-            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*30); //Ê±¼ä
+            var type = ii.getInventoryType(1122018); //è·å¾—è£…å¤‡çš„ç±»å½¢
+            var toDrop = ii.randomizeStats(ii.getEquipById(1122018)).copy(); // ç”Ÿæˆä¸€ä¸ªEquipç±»
+            var temptime = new java.sql.Timestamp(java.lang.System.currentTimeMillis() + 1 * 24 * 60 * 60 * 1000*30); //æ—¶é—´
 toDrop.setExpiration(temptime); 
 toDrop.setLocked(1);	
 toDrop.setWatk(6);
-cm.getPlayer().getInventory(type).addItem(toDrop);//½«Õâ¸ö×°±¸·ÅÈë°üÖĞ
-cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //Ë¢ĞÂ±³°ü	
+cm.getPlayer().getInventory(type).addItem(toDrop);//å°†è¿™ä¸ªè£…å¤‡æ”¾å…¥åŒ…ä¸­
+cm.getC().getSession().write(net.sf.odinms.tools.MaplePacketCreator.addInventorySlot(type, toDrop)); //åˆ·æ–°èƒŒåŒ…	
 cm.getChar().saveToDB(true);
-  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"¡¼Ë«±¶¾­Ñé¡½" + " : " + " [" + cm.getPlayer().getName() + "]»»È¡ÁËÈ«ÊôĞÔ+2µÄË«±¶×°±¸[ÎÂÅ¯µÄÎ§²±]]£¡£¡£¡£¡",true).getBytes()); 
+  cm.getC().getChannelServer().getWorldInterface().broadcastMessage(null, net.sf.odinms.tools.MaplePacketCreator.serverNotice(12,cm.getC().getChannel(),"ã€–åŒå€ç»éªŒã€—" + " : " + " [" + cm.getPlayer().getName() + "]æ¢å–äº†å…¨å±æ€§+2çš„åŒå€è£…å¤‡[æ¸©æš–çš„å›´è„–]]ï¼ï¼ï¼ï¼",true).getBytes()); 
 		   cm.dispose();
 	   }else{
-		   cm.sendOk("µã¾í²»×ã¡£ÇëÁªÏµ¹ÜÀíÔ±³äÖµ£¡");
+		   cm.sendOk("ç‚¹å·ä¸è¶³ã€‚è¯·è”ç³»ç®¡ç†å‘˜å……å€¼ï¼");
 		   cm.dispose();
 	   }
     }else if  (selection == 6) {
-	  cm.sendOk("#bÓÎÏ·Ä£Ê½Îª·Â¹Ù·½¡£´«ËÍ¶¼ÊÇ°´ÕÕ¹Ù·½µÄ±ê×¼²ÉÈ¡¡£ÏëÈ¥Ìì¿ÕÖ®³Ç/ÉñÄ¾´å/Íæ¾ß³ÇµÄÍæ¼ÒÇëÈ¥×ø´¬¡£");
+	  cm.sendOk("#bæ¸¸æˆæ¨¡å¼ä¸ºä»¿å®˜æ–¹ã€‚ä¼ é€éƒ½æ˜¯æŒ‰ç…§å®˜æ–¹çš„æ ‡å‡†é‡‡å–ã€‚æƒ³å»å¤©ç©ºä¹‹åŸ/ç¥æœ¨æ‘/ç©å…·åŸçš„ç©å®¶è¯·å»åèˆ¹ã€‚");
 		cm.dispose();
     }else if  (selection == 7) {     
            cm.openNpc(1012103);  	     
@@ -147,10 +147,10 @@ cm.getChar().saveToDB(true);
 		   p.setExp(0) 
 		   statup.add (new net.sf.cherry.tools.Pair(net.sf.cherry.client.MapleStat.EXP, java.lang.Integer.valueOf(0))); 
 		   p.getClient().getSession().write (net.sf.cherry.tools.MaplePacketCreator.updatePlayerStats(statup));
-		   cm.sendOk("¾­ÑéÖµÒÑĞŞ¸´Íê³É");
+		   cm.sendOk("ç»éªŒå€¼å·²ä¿®å¤å®Œæˆ");
 		   cm.dispose();
 	   }else{
-		   cm.sendOk("ÄúµÄ¾­ÑéÖµÕı³£,ÎŞĞèĞŞ¸´!");
+		   cm.sendOk("æ‚¨çš„ç»éªŒå€¼æ­£å¸¸,æ— éœ€ä¿®å¤!");
 		   cm.dispose();
 	   }
     }        

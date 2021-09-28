@@ -1,10 +1,10 @@
 status = -1;
 var itemList = Array(
-// ------ ¾íÖá ------
-Array(2046110, 500, 1, 3), //ÖÜÄêÇìµ¥ÊÖÎäÆ÷¹¥»÷¾í100% 
-Array(2046111, 500, 1, 3), //ÖÜÄêÇìµ¥ÊÖÎäÆ÷Ä§Á¦¾í100% 
-Array(2046010, 500, 1, 3), //ÖÜÄêÇìË«ÊÖÎäÆ÷¹¥»÷¾í100%
-Array(2046011, 500, 1, 3)  //ÖÜÄêÇìË«ÊÖÎäÆ÷Ä§Á¦¾í100% 
+// ------ å·è½´ ------
+Array(2046110, 500, 1, 3), //å‘¨å¹´åº†å•æ‰‹æ­¦å™¨æ”»å‡»å·100% 
+Array(2046111, 500, 1, 3), //å‘¨å¹´åº†å•æ‰‹æ­¦å™¨é­”åŠ›å·100% 
+Array(2046010, 500, 1, 3), //å‘¨å¹´åº†åŒæ‰‹æ­¦å™¨æ”»å‡»å·100%
+Array(2046011, 500, 1, 3)  //å‘¨å¹´åº†åŒæ‰‹æ­¦å™¨é­”åŠ›å·100% 
 );
 
 function start() {
@@ -16,7 +16,7 @@ function action(mode, type, selection) {
         status++;
     } else {
         if (status == 0) {
-            im.sendOk("²»ÏëÊ¹ÓÃÂğ£¿¡­ÎÒµÄ¶Ç×ÓÀïÓĞ¸÷Àà#bÆæÌØ×ùÒÎ»ò¾íÖá¡¢×°±¸¡¢ĞÂÆæµÀ¾ß#kÅ¶£¡");
+            im.sendOk("ä¸æƒ³ä½¿ç”¨å—ï¼Ÿâ€¦æˆ‘çš„è‚šå­é‡Œæœ‰å„ç±»#bå¥‡ç‰¹åº§æ¤…æˆ–å·è½´ã€è£…å¤‡ã€æ–°å¥‡é“å…·#kå“¦ï¼");
             im.dispose();
         }
         status--;
@@ -36,16 +36,16 @@ function action(mode, type, selection) {
             var itemId = finalitem[finalchance][0];
             var quantity = finalitem[finalchance][2];
             var notice = finalitem[finalchance][3];
-            item = im.gainGachaponItem(itemId, quantity, "ÖÜÄêÇì100%¾íÖáÏä", notice);
+            item = im.gainGachaponItem(itemId, quantity, "å‘¨å¹´åº†100%å·è½´ç®±", notice);
             if (item != -1) {
 		im.gainItem(2431990, -1);
-                im.sendOk("Äã»ñµÃÁË #b#t" + item + "##k " + quantity + "¸ö¡£");
+                im.sendOk("ä½ è·å¾—äº† #b#t" + item + "##k " + quantity + "ä¸ªã€‚");
             } else {
-                im.sendOk("ÇëÄãÈ·ÈÏÔÚ±³°üµÄ×°±¸£¬ÏûºÄ£¬ÆäËû´°¿ÚÖĞÊÇ·ñÓĞÒ»¸ñÒÔÉÏµÄ¿Õ¼ä¡£");
+                im.sendOk("è¯·ä½ ç¡®è®¤åœ¨èƒŒåŒ…çš„è£…å¤‡ï¼Œæ¶ˆè€—ï¼Œå…¶ä»–çª—å£ä¸­æ˜¯å¦æœ‰ä¸€æ ¼ä»¥ä¸Šçš„ç©ºé—´ã€‚");
             }
             im.safeDispose();
         } else {
-            im.sendOk("½ñÌìµÄÔËÆø¿ÉÕæ²î£¬Ê²Ã´¶¼Ã»ÓĞÄÃµ½¡£");
+            im.sendOk("ä»Šå¤©çš„è¿æ°”å¯çœŸå·®ï¼Œä»€ä¹ˆéƒ½æ²¡æœ‰æ‹¿åˆ°ã€‚");
             im.safeDispose();
         }
     }

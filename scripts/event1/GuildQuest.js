@@ -1,5 +1,5 @@
 //CherryMS LoveMXD
-//·ÇÍ¬ÒâÄÚ½ûÖ¹×ªÔØ
+//éåŒæ„å†…ç¦æ­¢è½¬è½½
 //CherryMS.cn
 
 var exitMap;
@@ -41,19 +41,19 @@ function setup(eim) {
         //activate three minutes after start
         eim.setProperty("entryTimestamp",System.currentTimeMillis() + (3 * 60000));
         eim.setProperty("canEnter","true");
-	eim.schedule("begin", 3 * 60000);//3·ÖÖÓ¡£¡£¡£
+	eim.schedule("begin", 3 * 60000);//3åˆ†é’Ÿã€‚ã€‚ã€‚
 }
 
 function begin(eim) {
         eim.setProperty("canEnter","false");
         eim.schedule("earringcheck", 15000);
         var party = eim.getPlayers();
-        //if (party.size() < 6) { //Èç¹ûÒªÉÙÓÚ6ÈË¾ÍÍË³ö¾Í°Ñ//È¥µô‡Ş~
+        //if (party.size() < 6) { //å¦‚æœè¦å°‘äº6äººå°±é€€å‡ºå°±æŠŠ//å»æ‰å›–~
         //        end(eim,"There are no longer enough players to continue, and those remaining shall be warped out.");
         //} else {
 		var iter = party.iterator();
                 while (iter.hasNext()) {
-                        iter.next().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"Ò»¹ÉÉñÃØµÄÁ¦Á¿Ê¹´óÃÅ´ò¿ªÁË¡£"));
+                        iter.next().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"ä¸€è‚¡ç¥ç§˜çš„åŠ›é‡ä½¿å¤§é—¨æ‰“å¼€äº†ã€‚"));
 		}
         //}
 }
@@ -87,7 +87,7 @@ function playerDisconnected(eim, player) {
 		var iter = party.iterator();
                 while (iter.hasNext()) {
 			var pl = iter.next();
-                        pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"´øÁìÈËÔ±Àë¿ªÁË£¬ËùÏÂµÄ³ÉÔ±²»ÄÜ¼ÌĞøµ÷²é¹Å±¤¡£"));
+                        pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"å¸¦é¢†äººå‘˜ç¦»å¼€äº†ï¼Œæ‰€ä¸‹çš„æˆå‘˜ä¸èƒ½ç»§ç»­è°ƒæŸ¥å¤å ¡ã€‚"));
 			if (pl.equals(player)) {
 				removePlayer(eim, pl);
 			}			
@@ -101,7 +101,7 @@ function playerDisconnected(eim, player) {
 	else { //boot d/ced player and check if enough players left
 		removePlayer(eim, player);
                 if (party.size() < 6) { //five after player booted
-                        end(eim,"Ã»ÓĞ×ã¹»µÄ³ÉÔ±²»ÄÜ¼ÌĞøÈÎÎñ¡£");
+                        end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„æˆå‘˜ä¸èƒ½ç»§ç»­ä»»åŠ¡ã€‚");
                 }
 	}
 }
@@ -117,7 +117,7 @@ function playerExit(eim, player) {
 	player.changeMap(exitMap, exitMap.getPortal(0));
         var party = eim.getPlayers();
         if (party.size() < 6) { //five after player booted
-                end(eim,"Ã»ÓĞ×ã¹»µÄ³ÉÔ±²»ÄÜ¼ÌĞøÈÎÎñ¡£");
+                end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„æˆå‘˜ä¸èƒ½ç»§ç»­ä»»åŠ¡ã€‚");
         }
 }
 
@@ -177,7 +177,7 @@ function earringcheck(eim, player) {
 		var pl = iter.next();
                 if (pl.getHp() > 0 && pl.getMapId() > 990000200 && pl.getInventory(MapleInventoryType.EQUIPPED).countById(1032033) == 0) {
 			pl.addHP(-30000);
-			pl.getMap().broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,pl.getName() + " Íæ¼ÒÓÉÓÚÃ»ÓĞ´÷¶ú»·ÊÜµ½Ğ°¶ñÖ®Á¦µÄÓ°ÏìËÀÍö¡£"));
+			pl.getMap().broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,pl.getName() + " ç©å®¶ç”±äºæ²¡æœ‰æˆ´è€³ç¯å—åˆ°é‚ªæ¶ä¹‹åŠ›çš„å½±å“æ­»äº¡ã€‚"));
                 }
         }
         eim.schedule("earringcheck", 15000);

@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import net.sf.odinms.client.MapleClient;
 import net.sf.odinms.net.AbstractMaplePacketHandler;
+import net.sf.odinms.tools.StringUtil;
 import net.sf.odinms.tools.data.input.SeekableLittleEndianAccessor;
 import net.sf.odinms.net.world.guild.*;
 import net.sf.odinms.tools.MaplePacketCreator;
@@ -14,7 +15,7 @@ public class GuildOperationHandler extends AbstractMaplePacketHandler {
 private int paypalnx;
 
     private boolean isGuildNameAcceptable(String name) {
-        if (name.getBytes().length < 3 || name.getBytes().length > 12) {
+        if (name.getBytes(StringUtil.ASCII).length < 3 || name.getBytes(StringUtil.ASCII).length > 12) {
             return false;
         }
         return true;

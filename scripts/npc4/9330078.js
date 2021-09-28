@@ -18,10 +18,10 @@ function action(mode, type ,selection) {
 	}
 	
 	if (status == 0) {
-		cm.sendYesNo("ÔÚÎÒÕâÀï¿ÉÒÔ°ïÄãÒ»¼üÑ§Ï° \r\n  -¶ÍÔì¼¼ÄÜ#s1007#-ĞÂÊÖUFO¼¼ÄÜ#s1013#£¬¼¼ÄÜÔÚĞÂÊÖ¼¼ÄÜÀ¸Ä¿£¬¼´¿ÉÕÒµ½.");
+		cm.sendYesNo("åœ¨æˆ‘è¿™é‡Œå¯ä»¥å¸®ä½ ä¸€é”®å­¦ä¹  \r\n  -é”»é€ æŠ€èƒ½#s1007#-æ–°æ‰‹UFOæŠ€èƒ½#s1013#ï¼ŒæŠ€èƒ½åœ¨æ–°æ‰‹æŠ€èƒ½æ ç›®ï¼Œå³å¯æ‰¾åˆ°.");
 	} else if (status == 1){
 		if(cm.getPlayer().getLevel() < 2){
-			cm.sendNext("ÄãµÄµÈ¼¶Ã»ÓĞ´ïµ½2¼¶");
+			cm.sendNext("ä½ çš„ç­‰çº§æ²¡æœ‰è¾¾åˆ°2çº§");
 			cm.dispose();
 			return;
 		}
@@ -43,7 +43,7 @@ function action(mode, type ,selection) {
 			}
 			cm.teachSkill(skill[type][i], level);
 		}
-		cm.sendNext("¼¼ÄÜÒÑ¾­Ñ§Ï°³É¹¦!");
+		cm.sendNext("æŠ€èƒ½å·²ç»å­¦ä¹ æˆåŠŸ!");
 		cm.dispose();
 	} else {
 		cm.dispose();

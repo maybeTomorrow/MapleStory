@@ -1,4 +1,4 @@
-//¶¨Ê±ÕÙ»½¹ÖÎï
+//å®šæ—¶å¬å”¤æ€ªç‰©
 //CherryMS LoveMXD
 
 
@@ -9,7 +9,7 @@ function init() {
 }
 
 function scheduleNew() {
-	em.schedule("start", 1*30*1000); //Ã¿5·ÖÖÓ³öÏÖÒ»´Î
+	em.schedule("start", 1*30*1000); //æ¯5åˆ†é’Ÿå‡ºç°ä¸€æ¬¡
 }
 
 function start() {
@@ -22,7 +22,7 @@ function start() {
 		var random = Math.floor(Math.random()*7);
 		var posX;
 		var posY;
-		switch (random) { //Ò»ÏÂÊÇ×ø±ê£¬Ëæ»úÑ¡ÔñÒ»¸ö·¢Éú¡£
+		switch (random) { //ä¸€ä¸‹æ˜¯åæ ‡ï¼Œéšæœºé€‰æ‹©ä¸€ä¸ªå‘ç”Ÿã€‚
 			case 1:
 				posX = 603;
 				posY = 4;
@@ -48,7 +48,7 @@ function start() {
 				posY = 4;
 		}
 		hotSand.spawnMonsterOnGroundBelow(kingClang, new java.awt.Point(posX, posY));
-		hotSand.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[¹«¸æÊÂÏî] ¾Ş¾ÓĞ·ÔÚÕâ¸öÉ³Ì²ÉÏ³öÏÖÁË¡£"));
+		hotSand.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[å…¬å‘Šäº‹é¡¹] å·¨å±…èŸ¹åœ¨è¿™ä¸ªæ²™æ»©ä¸Šå‡ºç°äº†ã€‚"));
 	//}
 	//scheduleNew();
 }

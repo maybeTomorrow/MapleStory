@@ -1,31 +1,31 @@
 /*
-	¾ÅÁéÁúµ°ÈÎÎñ£¬Èë¿Ú¿ØÖÆ½Å±¾
+	ä¹çµé¾™è›‹ä»»åŠ¡ï¼Œå…¥å£æ§åˆ¶è„šæœ¬
 
-	by Ğ¾ËéÍõ×Ó
+	by èŠ¯ç¢ç‹å­
 */
 
 function enter(pi) {
-	var nextmap = pi.getC().getChannelServer().getMapFactory().getMap(240040611);   //½øÈëºóµÄµØÍ¼ÊµÀı
-	var obj = nextmap.getMapObjects();   //»ñÈ¡ÀïÃæµØÍ¼µÄËùÓĞµØÍ¼¶ÔÏó
-	var iter = obj.iterator();      //ÓÃÓÚ±éÀú
-	if(!pi.haveItem(4001094)){      //ÅĞ¶ÏÊÇ·ñÓĞ¾ÅÁéÁúµÄµ°
-		pi.getPlayer().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "Äú±ØĞëÓµÓĞ¾ÅÁéÁúµÄµ°²ÅÄÜ´ÓÕâÀï½øÈ¥!")); 
+	var nextmap = pi.getC().getChannelServer().getMapFactory().getMap(240040611);   //è¿›å…¥åçš„åœ°å›¾å®ä¾‹
+	var obj = nextmap.getMapObjects();   //è·å–é‡Œé¢åœ°å›¾çš„æ‰€æœ‰åœ°å›¾å¯¹è±¡
+	var iter = obj.iterator();      //ç”¨äºéå†
+	if(!pi.haveItem(4001094)){      //åˆ¤æ–­æ˜¯å¦æœ‰ä¹çµé¾™çš„è›‹
+		pi.getPlayer().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "æ‚¨å¿…é¡»æ‹¥æœ‰ä¹çµé¾™çš„è›‹æ‰èƒ½ä»è¿™é‡Œè¿›å»!")); 
 		return false;
 	}
-	if(nextmap.playerCount() > 0){  //ÅĞ¶ÏµØÍ¼ÄÚÊÇ·ñÓĞÈË½øÈëÁË
-		pi.getPlayer().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "ÀïÃæÒÑ¾­ÓĞÈËÔÚ»á¼û¾ÅÁéÁúÁË,ÇëÉÔºó½øÈë!")); 
+	if(nextmap.playerCount() > 0){  //åˆ¤æ–­åœ°å›¾å†…æ˜¯å¦æœ‰äººè¿›å…¥äº†
+		pi.getPlayer().getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "é‡Œé¢å·²ç»æœ‰äººåœ¨ä¼šè§ä¹çµé¾™äº†,è¯·ç¨åè¿›å…¥!")); 
 		return false;	
 	}
-	while (iter.hasNext()) {   //±éÀúµØÍ¼¶ÔÏó£¬ Èç¹ûÓĞNPC ÔòÒÆ³ı
+	while (iter.hasNext()) {   //éå†åœ°å›¾å¯¹è±¡ï¼Œ å¦‚æœæœ‰NPC åˆ™ç§»é™¤
 		var npcobj = iter.next();
 		if (npcobj.getType() == net.sf.odinms.server.maps.MapleMapObjectType.NPC){
-			nextmap.removeMapObject(npcobj);	//ÒÆ³ıµØÍ¼¶ÔÏó
+			nextmap.removeMapObject(npcobj);	//ç§»é™¤åœ°å›¾å¯¹è±¡
 		}
 	}
 	pi.gainItem(4001094,-1);
 	nextmap.resetReactors(); 
 	nextmap.clearMapTimer();		
 	pi.warp(240040611, "out00");
-	nextmap.addMapTimer(120,240040610);  //¼ÓÊ±¼äÏŞÖÆ
+	nextmap.addMapTimer(120,240040610);  //åŠ æ—¶é—´é™åˆ¶
 	return true;
 }

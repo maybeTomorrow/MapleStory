@@ -50,7 +50,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendSimple("���,���Ƿ�������������ĵ곤Ǯ�ϰ�!������� #b#t5150003##k �� #b#t5151003##k, ��ͷ��ĵİѷ��ͽ����ң��һ���������ġ���ô��Ҫ��ʲô��\r\n#L1#�������ͣ�ʹ�� #i5150003##t5150003##l\r\n#L2#������ɫ��ʹ�� #i5151003##t5151003##l");						
+			cm.sendSimple("你好,我是废弃都市美发店的店长钱老板!如果你有 #b#t5150003##k 或 #b#t5151003##k, 你就放心的把发型交给我，我会让你满意的。那么你要做什么？\r\n#L1#更换发型：使用 #i5150003##t5150003##l\r\n#L2#更换颜色：使用 #i5151003##t5151003##l");						
 		} else if (status == 1) {
 			if (selection == 1) {
 				beauty = 1;
@@ -65,7 +65,7 @@ function action(mode, type, selection) {
 						hairnew.push(fhair[i] + parseInt(cm.getChar().getHair() % 10));
 					}
 				}
-				cm.sendStyle("�ҿ��Ըı���ķ��ͣ����������ڿ�����Ư������Ϊʲô�����Ÿı����£�������� #b#t5150003##k �ҽ������ı���ķ��ͣ���ôѡ��һ������Ҫ���·��Ͱɣ�", hairnew, 5150003);
+				cm.sendStyle("我可以改变你的发型，让它比现在看起来漂亮。你为什么不试着改变它下？如果你有 #b#t5150003##k 我将会帮你改变你的发型，那么选择一个你想要的新发型吧！", hairnew, 5150003);
 			} else if (selection == 2) {
 				beauty = 2;
 				haircolor = Array();
@@ -73,7 +73,7 @@ function action(mode, type, selection) {
 				for(var i = 0; i < 8; i++) {
 					haircolor.push(current + i);
 				}
-				cm.sendStyle("�ҿ��Ըı���ķ�ɫ�����������ڿ�����Ư������Ϊʲô�����Ÿı����£�������� #b#t5151003##k �ҽ������ı���ķ�ɫ����ôѡ��һ������Ҫ���·�ɫ�ɣ�", haircolor, 5150003);
+				cm.sendStyle("我可以改变你的发色，让它比现在看起来漂亮。你为什么不试着改变它下？如果你有 #b#t5151003##k 我将会帮你改变你的发色，那么选择一个你想要的新发色吧！", haircolor, 5150003);
 			}
 		} else if (status == 2){
 			cm.dispose();
@@ -82,17 +82,17 @@ function action(mode, type, selection) {
 					if (cm.getPlayer().getCSPoints(1)>=980){
 						cm.getPlayer().modifyCSPoints(1,-980);
 						cm.setHair(hairnew[selection]);
-						cm.sendOk("���ˣ�����������̾����·��Ͱɣ�");
+						cm.sendOk("好了，让朋友们赞叹你的新发型吧！");
 					} else {
-						cm.sendOk("�������㲢û�����ǵĸ߼���Ա�����ҿ��²��ܸ���Ⱦ�����Һܱ�Ǹ�������ȹ���ɣ�");
+						cm.sendOk("看起来你并没有我们的高级会员卡，我恐怕不能给你染发，我很抱歉。请你先购买吧！");
 					}
 				} else {
 					if (cm.haveItem(5150003) == true){
 						cm.gainItem(5150003, -1);
 						cm.setHair(hairnew[selection]);
-						cm.sendOk("���ˣ�����������̾����·��Ͱɣ�");
+						cm.sendOk("好了，让朋友们赞叹你的新发型吧！");
 					} else {
-						cm.sendOk("�������㲢û�����ǵĸ߼���Ա�����ҿ��²��ܸ���Ⱦ�����Һܱ�Ǹ�������ȹ���ɣ�");
+						cm.sendOk("看起来你并没有我们的高级会员卡，我恐怕不能给你染发，我很抱歉。请你先购买吧！");
 					}	
 				}
 				
@@ -101,9 +101,9 @@ function action(mode, type, selection) {
 				if (cm.haveItem(5151003) == true){
 					cm.gainItem(5151003, -1);
 					cm.setHair(haircolor[selection]);
-					cm.sendOk("���ˣ�����������̾����·�ɫ�ɣ�");
+					cm.sendOk("好了，让朋友们赞叹你的新发色吧！");
 				} else {
-					cm.sendOk("�������㲢û�����ǵĸ߼���Ա�����ҿ��²��ܸ���Ⱦ�����Һܱ�Ǹ�������ȹ���ɣ�");
+					cm.sendOk("看起来你并没有我们的高级会员卡，我恐怕不能给你染发，我很抱歉。请你先购买吧！");
 				}
 			}
 		}

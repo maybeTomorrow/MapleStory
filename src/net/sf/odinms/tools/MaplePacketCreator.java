@@ -449,7 +449,7 @@ public class MaplePacketCreator {
     private static void addCharStats(MaplePacketLittleEndianWriter mplew, MapleCharacter chr) {
         mplew.writeInt(chr.getId()); // 角色ID
         mplew.writeAsciiString(chr.getName());  //自动填充到13位
-        for (int x = chr.getName().getBytes().length; x < 13; x++) { // fill to maximum name length
+        for (int x = chr.getName().getBytes(StringUtil.ASCII).length; x < 13; x++) { // fill to maximum name length
             mplew.write(0);
         }
         mplew.write(chr.getGender()); // 性别 (0 = 男, 1 = 女)
@@ -1249,11 +1249,11 @@ public class MaplePacketCreator {
         MaplePet pet = MaplePet.loadFromDb(item.getItemId(), item.getPosition(), item.getUniqueId());
         mplew.writeLong(DateUtil.getFileTimestamp(item.getExpiration() == null ? FINAL_TIME : item.getExpiration().getTime()));
         String petname = pet.getName();
-        if (petname.getBytes().length > 13) {
+        if (petname.getBytes(StringUtil.ASCII).length > 13) {
             petname = petname.substring(0, 13);
         }
         mplew.writeAsciiString(petname);
-        for (int i = petname.getBytes().length; i < 13; i++) {
+        for (int i = petname.getBytes(StringUtil.ASCII).length; i < 13; i++) {
             mplew.write(0);
         }
         mplew.write(pet.getLevel());
@@ -5229,7 +5229,7 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
      */
     public static MaplePacket sendHint(String hint, int width, int height) {
         if (width < 1) {
-            width = hint.getBytes().length * 10;
+            width = hint.getBytes(StringUtil.ASCII).length * 10;
             if (width < 40) {
                 width = 40;
             }
@@ -5662,11 +5662,11 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
         //mplew.writeLong(DateUtil.getFileTimestamp(item.getExpiration() == null ? FINAL_TIME : item.getExpiration().getTime()));
         mplew.write(HexTool.getByteArrayFromHexString("00 80 05 BB 46 E6 17 02"));
         String petname = pet.getName();
-        if (petname.getBytes().length > 13) {
+        if (petname.getBytes(StringUtil.ASCII).length > 13) {
             petname = petname.substring(0, 13);
         }
         mplew.writeAsciiString(petname);
-        for (int i = petname.getBytes().length; i < 13; i++) {
+        for (int i = petname.getBytes(StringUtil.ASCII).length; i < 13; i++) {
             mplew.write(0);
         }
         mplew.write(pet.getLevel());
@@ -6127,7 +6127,7 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
             for (MapleDueyActions dp : packages) {
                 mplew.writeInt(dp.getPackageId());
                 mplew.writeAsciiString(dp.getSender());
-                for (int i = dp.getSender().getBytes().length; i < 13; i++) {
+                for (int i = dp.getSender().getBytes(StringUtil.ASCII).length; i < 13; i++) {
                     mplew.write(0);
                 }
                 mplew.writeInt(dp.getMesos());
@@ -6956,7 +6956,7 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
         mplew.writeInt(item.getSn());
         mplew.writeShort(item.getQuantity());
         mplew.writeAsciiString(item.getSender());
-        for (int i = item.getSender().getBytes().length; i < 13; i++) {
+        for (int i = item.getSender().getBytes(StringUtil.ASCII).length; i < 13; i++) {
             mplew.write(0);
         }
         mplew.writeLong(item.getExpire() == null ? DateUtil.getFileTimestamp(FINAL_TIME) : DateUtil.getFileTimestamp(item.getExpire().getTime()));
@@ -6980,7 +6980,7 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
             mplew.writeInt(citem.getSn());
             mplew.writeShort(citem.getQuantity());
             mplew.writeAsciiString(citem.getSender());
-            for (int i = citem.getSender().getBytes().length; i < 13; i++) {
+            for (int i = citem.getSender().getBytes(StringUtil.ASCII).length; i < 13; i++) {
                 mplew.write(0);
             }
             mplew.writeLong(citem.getExpire() == null ? DateUtil.getFileTimestamp(FINAL_TIME) : DateUtil.getFileTimestamp(citem.getExpire().getTime()));
@@ -7005,11 +7005,11 @@ public static MaplePacket ZreHyzs(int npcid, ResultSet rs) throws SQLException
             mplew.writeInt(0);
             mplew.writeInt(gift.getItemId());
             mplew.writeAsciiString(gift.getSender());
-            for (int i = gift.getSender().getBytes().length; i < 13; i++) {
+            for (int i = gift.getSender().getBytes(StringUtil.ASCII).length; i < 13; i++) {
                 mplew.write(0);
             }
             mplew.writeAsciiString(gift.getMessage());
-            for (int i = gift.getMessage().getBytes().length; i < 73; i++) {
+            for (int i = gift.getMessage().getBytes(StringUtil.ASCII).length; i < 73; i++) {
                 mplew.write(0);
             }
         }

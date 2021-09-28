@@ -4,20 +4,20 @@ importPackage(net.sf.odinms.tools);
 function enter(pi) {
     if (pi.getPlayer().getMap().getMonsterById(9300216) != null) {
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.dojoWarpUp());
-        pi.getPlayer().message("»ñµÃÁË" + pi.getPlayer().addDojoPointsByMap() + "µãĞŞÁ¶µãÊı¡£×ÜĞŞÁ¶µãÊıÎª" + pi.getPlayer().getDojoPoints() + "µã¡£");
+        pi.getPlayer().message("è·å¾—äº†" + pi.getPlayer().addDojoPointsByMap() + "ç‚¹ä¿®ç‚¼ç‚¹æ•°ã€‚æ€»ä¿®ç‚¼ç‚¹æ•°ä¸º" + pi.getPlayer().getDojoPoints() + "ç‚¹ã€‚");
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.updateDojoStats(pi.getPlayer(),1));
         pi.getPlayer().getClient().getSession().write(MaplePacketCreator.dojoWarpUp());
         var reactor = pi.getPlayer().getMap().getReactorByName("door");
         reactor.delayedHitReactor(pi.getC(), 800);
-		// -- ÇåÀíµÀ³¡ÎïÆ·´úÂë -- //
+		// -- æ¸…ç†é“åœºç‰©å“ä»£ç  -- //
 		for (var i = 2022359; i < 2022433; i++) {
 		var b = -1;
 		for (var a = 0; a < 100; a++) {
-		if (pi.haveItem(i,a) == true){b += 1;}else{a=100;}//ÅĞ¶Ï´æÔÚ¸ÃÎïÆ·£¬Ôò¶ªÆú¡£
+		if (pi.haveItem(i,a) == true){b += 1;}else{a=100;}//åˆ¤æ–­å­˜åœ¨è¯¥ç‰©å“ï¼Œåˆ™ä¸¢å¼ƒã€‚
 		}
 		if (b > 0) {pi.gainItem(i, -b);}
 		}
-		// -- ÇåÀíµÀ³¡ÎïÆ·½áÊø -- //
+		// -- æ¸…ç†é“åœºç‰©å“ç»“æŸ -- //
         var stage = (pi.getPlayer().getMapId() / 100) % 100;
         var charcount = pi.getC().getChannelServer().getMapFactory().getMap(pi.getPlayer().getMapId() + 100).getCharacters().size();
         if (stage - (stage/6) | 0 == pi.getPlayer().getVanquisherStage() && charcount < 2) // we can also try 5 * stage / 6 | 0 + 1
@@ -27,7 +27,7 @@ function enter(pi) {
                 pi.getC().getChannelServer().getMapFactory().getMap(pi.getPlayer().getMapId() + 100).killAllMonsters();
         return true;
     } else {
-        pi.getPlayer().message("»¹ÓĞ¹ÖÎïÃ»ÓĞÏûÃğ¡£");
+        pi.getPlayer().message("è¿˜æœ‰æ€ªç‰©æ²¡æœ‰æ¶ˆç­ã€‚");
     }
     return false;
 }

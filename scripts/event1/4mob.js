@@ -29,11 +29,11 @@ function cancelSchedule() {
 function start() {
     scheduleNew();
 	if(em.getMin()==0){
-		startInstance(); //¹ÖÎï¹¥³Ç
+		startInstance(); //æ€ªç‰©æ”»åŸ
 	}
 }
 
-function startInstance() {//¹ÖÎï¹¥³Ç
+function startInstance() {//æ€ªç‰©æ”»åŸ
 	var mobCount = net.sf.odinms.net.channel.ChannelServer.getInstance(chanel).getMapFactory().getMap(mapId).mobCount();
 	if(mobCount==0){
 		var map = em.getChannelServer().getMapFactory().getMap(mapId, false, false); 
@@ -50,11 +50,11 @@ function startInstance() {//¹ÖÎï¹¥³Ç
 			}
 		scheduleNew2();
     }
-    em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[Ê®Íò»ğ¼±] 1ÏßÊĞ³¡Í»È»³öÏÖÒ»Í·¾ŞÊŞ£¬ÊÇÓ¢ĞÛ¾ÍÄÃÆğ±¦µ¶Kµô°É!"));
+    em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[åä¸‡ç«æ€¥] 1çº¿å¸‚åœºçªç„¶å‡ºç°ä¸€å¤´å·¨å…½ï¼Œæ˜¯è‹±é›„å°±æ‹¿èµ·å®åˆ€Kæ‰å§!"));
 	
 }           
 
-function scheduleNew2() {//¹¥³ÇÌáĞÑ
+function scheduleNew2() {//æ”»åŸæé†’
     var cal = java.util.Calendar.getInstance();
     cal.set(java.util.Calendar.SECOND, 5);
     var nextTime = cal.getTimeInMillis();
@@ -69,11 +69,11 @@ function started() {
 	var mobCount = net.sf.odinms.net.channel.ChannelServer.getInstance(chanel).getMapFactory().getMap(mapId).mobCount();
     if(mobCount==0){
 		if(checkstart>20){
-			em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[¾¯¸æ] ¾ŞÊŞÇÄÇÄµÄÏûÊ§ÔÚ1ÏßÊĞ³¡!"));
+			em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[è­¦å‘Š] å·¨å…½æ‚„æ‚„çš„æ¶ˆå¤±åœ¨1çº¿å¸‚åœº!"));
 			checkstart=0;
 		}else{
 			scheduleNew2();
-			em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[Ê®Íò»ğ¼±] 1ÏßÊĞ³¡Í»È»³öÏÖÒ»Í·¾ŞÊŞ£¬ÊÇÓ¢ĞÛ¾ÍÄÃÆğ±¦µ¶Kµô°É!"));
+			em.getChannelServer().broadcastPacket(net.sf.odinms.tools.MaplePacketCreator.serverNotice(0,"[åä¸‡ç«æ€¥] 1çº¿å¸‚åœºçªç„¶å‡ºç°ä¸€å¤´å·¨å…½ï¼Œæ˜¯è‹±é›„å°±æ‹¿èµ·å®åˆ€Kæ‰å§!"));
 			var map = em.getChannelServer().getMapFactory().getMap(mapId, false, false); 
 		var overrideStats = new net.sf.odinms.server.life.MapleMonsterStats(); 			
 			var mob = net.sf.odinms.server.life.MapleLifeFactory.getMonster(9600076);

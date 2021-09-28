@@ -17,7 +17,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendOk("我在这里呆的时间太长了……你到这里来有什么事吗？");
+			cm.sendOk("鎴戝湪杩欓噷鍛嗙殑鏃堕棿澶暱浜嗏�︹�︿綘鍒拌繖閲屾潵鏈変粈涔堜簨鍚楋紵");
 			cm.dispose();
 			return;
 		}

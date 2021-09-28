@@ -2,7 +2,7 @@ var status = -1;
 
 function start() {
 	if (cm.getPlayer().getMapId() == 551030200) {
-		cm.sendYesNo("你要出去嗎?");
+		cm.sendYesNo("浣犺鍑哄幓鍡�?");
 		status = 1;
 		return;
 	}
@@ -12,7 +12,7 @@ function start() {
 			return;
 		}
 		if (cm.getPlayer().getClient().getChannel() != 5) {
-			cm.sendOk("只能在頻道 5");
+			cm.sendOk("鍙兘鍦ㄩ牷閬� 5");
 			cm.dispose();
 			return;
 		}
@@ -24,7 +24,7 @@ function start() {
 	return;
     }
 		if (cm.getPlayer().getLevel() < 90) {
-			cm.sendOk("挑戰熊王與獅王需要90等.");
+			cm.sendOk("鎸戞埌鐔婄帇鑸囩崊鐜嬮渶瑕�90绛�.");
 			cm.dispose();
 			return;
 		}
@@ -34,7 +34,7 @@ function start() {
 	var squadAvailability = cm.getSquadAvailability("ScarTar");
 	if (squadAvailability == -1) {
 	    status = 0;
-	    cm.sendYesNo("您是否有興趣成為遠征隊的隊長？");
+	    cm.sendYesNo("鎮ㄦ槸鍚︽湁鑸堣叮鎴愮偤閬犲緛闅婄殑闅婇暦锛�");
 
 	} else if (squadAvailability == 1) {
 	    // -1 = Cancelled, 0 = not, 1 = true
@@ -49,17 +49,17 @@ function start() {
 		    cm.dispose();
 		} else if (memberType == 1) {
 		    status = 5;
-		    cm.sendSimple("你要做什麼? \r\n#b#L0#查看遠征隊名單#l \r\n#b#L1#加入遠征隊#l \r\n#b#L2#退出遠征隊#l");
+		    cm.sendSimple("浣犺鍋氫粈楹�? \r\n#b#L0#鏌ョ湅閬犲緛闅婂悕鍠�#l \r\n#b#L1#鍔犲叆閬犲緛闅�#l \r\n#b#L2#閫€鍑洪仩寰侀殜#l");
 		} else if (memberType == -1) {
 		    cm.sendOk("The squad has ended, please re-register.");
 		    cm.dispose();
 		} else {
 		    status = 5;
-		    cm.sendSimple("你要做什麼? \r\n#b#L0#查看遠征隊名單#l \r\n#b#L1#加入遠征隊#l \r\n#b#L2#退出遠征隊#l");
+		    cm.sendSimple("浣犺鍋氫粈楹�? \r\n#b#L0#鏌ョ湅閬犲緛闅婂悕鍠�#l \r\n#b#L1#鍔犲叆閬犲緛闅�#l \r\n#b#L2#閫€鍑洪仩寰侀殜#l");
 		}
 	    } else { // Is leader
 		status = 10;
-		cm.sendSimple("你要做什麼? \r\n#b#L0#查看遠征隊名單#l \r\n#b#L1#踢除隊員#l \r\n#b#L2#修改遠征隊清單#l \r\n#r#L3#進入地圖#l");
+		cm.sendSimple("浣犺鍋氫粈楹�? \r\n#b#L0#鏌ョ湅閬犲緛闅婂悕鍠�#l \r\n#b#L1#韪㈤櫎闅婂摗#l \r\n#b#L2#淇敼閬犲緛闅婃竻鍠�#l \r\n#r#L3#閫插叆鍦板湒#l");
 	    // TODO viewing!
 	    }
 	} else {
@@ -67,10 +67,10 @@ function start() {
 		if (props != null && props.equals("true")) {
 			var eim = cm.getDisconnected("ScarTarBattle");
 			if (eim == null) {
-				cm.sendOk("遠征隊與BOSS的戰鬥已經開始.");
+				cm.sendOk("閬犲緛闅婅垏BOSS鐨勬埌楝ュ凡缍撻枊濮�.");
 				cm.safeDispose();
 			} else {
-				cm.sendYesNo("你要重新進入嗎?");
+				cm.sendYesNo("浣犺閲嶆柊閫插叆鍡�?");
 				status = 2;
 			}
 		} else {
@@ -86,7 +86,7 @@ function start() {
 				cm.sendOk("The battle against the boss has already begun.");
 				cm.safeDispose();
 			} else {
-				cm.sendYesNo("你要重新進入嗎?");
+				cm.sendYesNo("浣犺閲嶆柊閫插叆鍡�?");
 				status = 2;
 			}
 		} else {
@@ -100,7 +100,7 @@ function action(mode, type, selection) {
     switch (status) {
 	case 0:
 	    if (mode == 1) {
-			if (cm.registerSquad("ScarTar", 5, "已成為遠征隊長，想要參加遠征隊的玩家請開始進行申請。")) {
+			if (cm.registerSquad("ScarTar", 5, "宸叉垚鐐洪仩寰侀殜闀凤紝鎯宠鍙冨姞閬犲緛闅婄殑鐜╁璜嬮枊濮嬮€茶鐢宠珛銆�")) {
 				cm.sendOk("You have been named the Leader of the Squad. For the next 5 minutes, you can add the members of the Expedition Squad.");
 			} else {
 				cm.sendOk("An error has occurred adding your squad.");

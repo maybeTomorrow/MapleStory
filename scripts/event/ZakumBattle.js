@@ -13,17 +13,17 @@ function init() {
 function setup(eim) {
 	exitMap = em.getChannelServer().getMapFactory().getMap(211042300);
 	if (exitMap == null) 
-		debug(eim,"Àë¿ªµÄµØÍ¼±£´æÊı¾İÊÇ²»ÕıÈ·µÄ.");
+		debug(eim,"ç¦»å¼€çš„åœ°å›¾ä¿å­˜æ•°æ®æ˜¯ä¸æ­£ç¡®çš„.");
 	eim.setProperty("canEnter","true");
-	// Ä¿Ç°ÔİÊ±ÎŞ·¨Ê¹ÓÃ
+	// ç›®å‰æš‚æ—¶æ— æ³•ä½¿ç”¨
         eim.setProperty("entryTimestamp",System.currentTimeMillis());
 }
 
 function playerEntry(eim,player) {
-	var map = eim.getMapInstance(280030000); // ×îºóÒª½øÈëµÄµØÍ¼
+	var map = eim.getMapInstance(280030000); // æœ€åè¦è¿›å…¥çš„åœ°å›¾
 	player.changeMap(map,map.getPortal(0));
 	if (exitMap == null)
-		debug(eim,"Àë¿ªµÄµØÍ¼±£´æÊı¾İÊÇ²»ÕıÈ·µÄ.");
+		debug(eim,"ç¦»å¼€çš„åœ°å›¾ä¿å­˜æ•°æ®æ˜¯ä¸æ­£ç¡®çš„.");
 }
 
 function playerRevive(eim,player) {
@@ -33,7 +33,7 @@ function playerRevive(eim,player) {
 	player.changeMap(exitMap, exitMap.getPortal(0));
 	var party = eim.getPlayers();
 	if (party.size() < minPlayers) {
-		end(eim,"Ã»ÓĞ×ã¹»µÄÍæ¼Ò,ÌôÕ½¼´½«½áÊø!");
+		end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„ç©å®¶,æŒ‘æˆ˜å³å°†ç»“æŸ!");
 	}
 	return false;
 }
@@ -48,12 +48,12 @@ function playerDisconnected(eim,player) {
 		var iter = party.iterator();
 		while (iter.hasNext()) {
 			var pl = iter.next();
-			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"±¾¶ÓÎé¶Ó³¤ÒÑ¶Ï¿ªÁ¬½Ó!"));
+			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"æœ¬é˜Ÿä¼é˜Ÿé•¿å·²æ–­å¼€è¿æ¥!"));
 		}
 	}
 	// and, if the party is too small
 	if (party.size() < minPlayers) {
-		end(eim,"Ã»ÓĞ×ã¹»µÄÍæ¼Ò,ÌôÕ½¼´½«½áÊø!");
+		end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„ç©å®¶,æŒ‘æˆ˜å³å°†ç»“æŸ!");
 	}
 }
 
@@ -63,7 +63,7 @@ function monsterValue(eim,mobId) { // potentially display time of death? does no
 		var iter = party.iterator();
 		while (iter.hasNext()) {
 			var pl = iter.next();
-			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"¹§Ï²´ò°Ü´ó¹ÖÎïÔúÀ¥£¡"));
+			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"æ­å–œæ‰“è´¥å¤§æ€ªç‰©æ‰æ˜†ï¼"));
 		}
 	}
 	return -1;
@@ -79,7 +79,7 @@ function playerExit(eim,player) {
 	player.changeMap(exitMap,exitMap.getPortal(0));
         var party = eim.getPlayers();
         if (party.size() < minPlayers) { //not enough after someone left
-                end(eim,"Ã»ÓĞ×ã¹»µÄÍæ¼Ò.Ê£ÓàµÄÍæ¼Ò½«»á±»ÒÆ¶¯.");
+                end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„ç©å®¶.å‰©ä½™çš„ç©å®¶å°†ä¼šè¢«ç§»åŠ¨.");
         }
 }
 

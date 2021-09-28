@@ -14,7 +14,7 @@ function monsterValue(eim, mobId) {
 } 
 function setup() { 
  exitMap = em.getChannelServer().getMapFactory().getMap(qtmapId); // <exit> 
- var instanceName = "pb" + instanceId;//ÈÎÎñÃû 
+ var instanceName = "pb" + instanceId;//ä»»åŠ¡å 
  var eim = em.newInstance(instanceName); 
   
  var mf = eim.getMapFactory(); 
@@ -24,7 +24,7 @@ function setup() {
  var map = mf.getMap(mapId); 
  map.shuffleReactors(); 
  var firstPortal = eim.getMapInstance(mapId).getPortal("next00"); 
- em.schedule("timeOut", 10 * 60000);//10·ÖÖÓ 
+ em.schedule("timeOut", 10 * 60000);//10åˆ†é’Ÿ 
 
  return eim; 
 } 
@@ -33,8 +33,8 @@ function playerEntry(eim, player) {
  player.changeMap(map, map.getPortal(0)); 
   
  //TODO: hold time across map changes 
- player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(600));//600ÎªÊ±¼äÏŞÖÆ10·ÖÖÓ¡£ 
- player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, " Èç¹ûÄãÏëÀë¿ª£¬¿ÉÒÔ¸úÎÒ½²»°¡£¡£")); 
+ player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(600));//600ä¸ºæ—¶é—´é™åˆ¶10åˆ†é’Ÿã€‚ 
+ player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, " å¦‚æœä½ æƒ³ç¦»å¼€ï¼Œå¯ä»¥è·Ÿæˆ‘è®²è¯ã€‚ã€‚")); 
 	if (eim.isLeader(player)){
 		 startInstance(eim); 
 		}
@@ -206,7 +206,7 @@ function allMonstersDead(eim) {
 				1442061
 				);
     }
-		price = ii.getEquipById(itemid[y]);//ÎªÎïÆ·ID 
+		price = ii.getEquipById(itemid[y]);//ä¸ºç‰©å“ID 
     map.spawnItemDrop(winner, winner, price, winner.getPosition(), true, false); 
 	
 } 

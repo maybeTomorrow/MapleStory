@@ -5,13 +5,13 @@ function action(mode, type, selection) {
     //cm.addTrait("charisma", 10);
     cm.getPlayer().endPartyQuest(1202); //might be a bad implentation.. incase they dc or something
    // cm.gainNX(100);
-if(cm.haveItem(4031326,1)){//ÓĞ²ÆÉñµÄĞÅ¼şµÄÍæ¼Ò£¬¿ÉÒÔ»ñµÃ¶·ÉñÖ¤Îï
+if(cm.haveItem(4031326,1)){//æœ‰è´¢ç¥çš„ä¿¡ä»¶çš„ç©å®¶ï¼Œå¯ä»¥è·å¾—æ–—ç¥è¯ç‰©
 	cm.gainItem(4310015,+1);}
-cm.gainItem(4001322,+2);//°×Ñ©ÈË·¨ÀÏµÄÀ¶±¦Ê¯
-cm.gainItem(4002001,+1);//À¶Æ¯
-cm.gainMeso(+30000);//¶ÁÈ¡±äÁ¿
+cm.gainItem(4001322,+2);//ç™½é›ªäººæ³•è€çš„è“å®çŸ³
+cm.gainItem(4002001,+1);//è“æ¼‚
+cm.gainMeso(+30000);//è¯»å–å˜é‡
 cm.gainExp(+80000);
     cm.warp(922010000);
-cm.À®°È(3, "[" + cm.getPlayer().getName() + "]³É¹¦Í¨¹Ø¡¾×é¶ÓÈÎÎñ - Íæ¾ß³Ç×é¶Ó¡¿»ñµÃ½±Àø£¡");
+cm.å–‡å­(3, "[" + cm.getPlayer().getName() + "]æˆåŠŸé€šå…³ã€ç»„é˜Ÿä»»åŠ¡ - ç©å…·åŸç»„é˜Ÿã€‘è·å¾—å¥–åŠ±ï¼");
     cm.dispose();
 }

@@ -13,10 +13,10 @@ function action(mode, type, selection){
 		 returm;
 	 }
 	 if(status == 0){
-		 cm.sendYesNo("你想乘坐我吗？可是很贵是否乘坐？\r\n\r\n金币需要#r" + need);
+		 cm.sendYesNo("浣犳兂涔樺潗鎴戝悧锛熷彲鏄緢璐垫槸鍚︿箻鍧愶紵\r\n\r\n閲戝竵闇€瑕�#r" + need);
 	 } else if(status == 1){
 		 if(cm.getPlayer().getMeso() < need){
-			 cm.sendNext("你的金币不够 ");
+			 cm.sendNext("浣犵殑閲戝竵涓嶅 ");
 			 cm.dispose();
 			 return;
 		 }

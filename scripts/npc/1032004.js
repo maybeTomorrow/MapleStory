@@ -50,7 +50,7 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendYesNo("ÄãÏë»Øµ½Ä§·¨ÃÜÁÖ£¿");
+			cm.sendYesNo("ä½ æƒ³å›åˆ°é­”æ³•å¯†æ—ï¼Ÿ");
 		} else if (status == 1) {
 			cm.warp(101000000,0);
 			cm.dispose();

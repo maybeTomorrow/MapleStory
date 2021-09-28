@@ -41,7 +41,7 @@ public class ErrorLogHandler implements MaplePacketHandler {
         String error = slea.readMapleAsciiString();
         try {
             RandomAccessFile file;
-            file = new RandomAccessFile("c:\\error.txt", "rw");
+            file = new RandomAccessFile(".\\error.txt", "rw");
             int num = (int) file.length();
             file.seek(num);
             file.writeBytes("\r\n");

@@ -9,10 +9,10 @@ function start() {
 	cm.start_DojoAgent(false, false);
 	cm.dispose();
     } else if (cm.getMapId() == 910000000) {
-	cm.sendYesNo("你想去特别的训练营吗?")
+	cm.sendYesNo("浣犳兂鍘荤壒鍒殑璁粌钀ュ悧?")
 	type = 1;
     } else {
-	cm.sendYesNo("你现在想出去吗?");
+	cm.sendYesNo("浣犵幇鍦ㄦ兂鍑哄幓鍚�?");
 	type = 2;
     }
 }

@@ -23,7 +23,7 @@ var status = -1;
 var sel;
 
 function start() {
-    cm.sendNext("#wÇ×°®µÄ #h #, ÎÒÊÇ #p2012006#.\r\nÇëÎÊÄãÊÇ·ñÓĞ¼ÇµÃ¹ºÂò´¬Æ±?");
+    cm.sendNext("#wäº²çˆ±çš„ #h #, æˆ‘æ˜¯ #p2012006#.\r\nè¯·é—®ä½ æ˜¯å¦æœ‰è®°å¾—è´­ä¹°èˆ¹ç¥¨?");
 }
 
 function action(mode, type, selection) {
@@ -33,10 +33,10 @@ function action(mode, type, selection) {
     }
     status++;
     if (status == 0)
-        cm.sendSimple("#wÇëÎÊÓĞÉñÃ´¿ÉÒÔ·şÎñµÄ??\r\n\r\n#L0#È¥Ä§·¨É­ÁÖ#l\r\n#L1#È¥Íæ¾ß³Ç#l\r\n#L2#È¥ÉñÄ¾´å#l\r\n#L3#È¥ÌÒ»¨ÏÉ¾³#l\r\n#L4#È¥ÄÉÏ£É³Ä®#l\r\n#L5#È¥Ò®À×¸¥#l");
+        cm.sendSimple("#wè¯·é—®æœ‰ç¥ä¹ˆå¯ä»¥æœåŠ¡çš„??\r\n\r\n#L0#å»é­”æ³•æ£®æ—#l\r\n#L1#å»ç©å…·åŸ#l\r\n#L2#å»ç¥æœ¨æ‘#l\r\n#L3#å»æ¡ƒèŠ±ä»™å¢ƒ#l\r\n#L4#å»çº³å¸Œæ²™æ¼ #l\r\n#L5#å»è€¶é›·å¼—#l");
     else if (status == 1) {
         sel = selection;
-        cm.sendNext("ºÃ #h #, ÎÒ½«´øÄãµ½ #m" + (200000110 + (sel * 10)) + "#");
+        cm.sendNext("å¥½ #h #, æˆ‘å°†å¸¦ä½ åˆ° #m" + (200000110 + (sel * 10)) + "#");
     } else if(status == 2){
         cm.warp(200000110 + (sel * 10));
         cm.dispose();

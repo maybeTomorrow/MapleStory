@@ -1,5 +1,5 @@
 /* 
- * ÑªĞÈÅ®Íõ
+ * è¡€è…¥å¥³ç‹
  */
 
 
@@ -17,7 +17,7 @@ function setup(eim, leaderid) {
     map.resetFully();
     eim.getMapFactory().getMap(105200310).killAllMonsters(false);
     map.spawnNpc(9000021, new java.awt.Point(-250, 135));
-    eim.startEventTimer(15 * 60 * 1000); //15·ÖÖÓ
+    eim.startEventTimer(15 * 60 * 1000); //15åˆ†é’Ÿ
     return eim;
 }
 

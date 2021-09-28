@@ -178,7 +178,7 @@ function action(mode, type, selection) {
 
         curMap = 8;
         var debug = true;//false
-        var nthtext = "¹Ø¿¨8";
+        var nthtext = "å…³å¡8";
         var nthobj = "boxes";
         var nthverb = "stand";
         var nthpos = "stand too close to the edges";
@@ -194,7 +194,7 @@ function action(mode, type, selection) {
                 party = eim.getPlayers();
                 preamble = eim.getProperty("leader" + nthtext + "preamble");
                 if (preamble == null) {
-                    cm.sendNext("ÄãºÃ£¬»¶Ó­À´µ½¹Ø¿¨8£¬ÕâÀïÊÇ×îÄÑµÃÒ»¹ØÅ¶£¡µ±Äã¿´¼ûÕâĞ©Ïä×ÓµÄÊ±ºòÄã¾ÍÓ¦¸ÃÏëµ½ÁË£¬Ã»´í¾ÍÊÇºÍ·ÏÆú¶¼ÊĞÄÇ±ßµÄ²î²»¶à£¬ÈÃÄãµÄ5¸ö¶ÓÓÑÕ¾ÔÚÉÏÃæ°É£¡È»ºóÓëÎÒ¶Ô»°£¬ÎÒ»áÅĞ¶Ï¶Ô´í£¡");
+                    cm.sendNext("ä½ å¥½ï¼Œæ¬¢è¿æ¥åˆ°å…³å¡8ï¼Œè¿™é‡Œæ˜¯æœ€éš¾å¾—ä¸€å…³å“¦ï¼å½“ä½ çœ‹è§è¿™äº›ç®±å­çš„æ—¶å€™ä½ å°±åº”è¯¥æƒ³åˆ°äº†ï¼Œæ²¡é”™å°±æ˜¯å’ŒåºŸå¼ƒéƒ½å¸‚é‚£è¾¹çš„å·®ä¸å¤šï¼Œè®©ä½ çš„5ä¸ªé˜Ÿå‹ç«™åœ¨ä¸Šé¢å§ï¼ç„¶åä¸æˆ‘å¯¹è¯ï¼Œæˆ‘ä¼šåˆ¤æ–­å¯¹é”™ï¼");
                     eim.setProperty("leader" + nthtext + "preamble","done");
                     var sequenceNum = Math.floor(Math.random() * curcombo.length);
                     eim.setProperty("stage" + nthtext + "combo",sequenceNum.toString());
@@ -286,7 +286,7 @@ function isLeader(){
 
 
 function clear(stage, eim, cm) {
-var nthtext = "¹Ø¿¨8";
+var nthtext = "å…³å¡8";
     	//var packetef = MaplePacketCreator.showEffect("quest/party/clear");
 	//var packetsnd = MaplePacketCreator.playSound("Party1/Clear");
 	//var packetglow = MaplePacketCreator.environmentChange("gate",2);

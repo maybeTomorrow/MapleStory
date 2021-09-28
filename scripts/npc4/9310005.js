@@ -4,7 +4,7 @@ function start() {
     cm.warp(701010322, "sp");	
     cm.dispose();
 	} else {
-	    cm.sendOk("ÄãÃ»ÓÐºÚÑòÃ«20¸ö!");
+	    cm.sendOk("ä½ æ²¡æœ‰é»‘ç¾Šæ¯›20ä¸ª!");
     cm.dispose();
 }
 }

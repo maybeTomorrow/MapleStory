@@ -28,6 +28,7 @@ import java.util.regex.Pattern;
 
 import net.sf.odinms.provider.MapleData;
 import net.sf.odinms.provider.MapleDataProviderFactory;
+import net.sf.odinms.tools.StringUtil;
 
 public class MapleCharacterUtil {
 
@@ -49,7 +50,7 @@ public class MapleCharacterUtil {
     }
 
     public static boolean isNameLegal(String name) {
-        if (name.getBytes().length < 4 || name.getBytes().length > 12 || isBanned(name)) {
+        if (name.getBytes(StringUtil.ASCII).length < 4 || name.getBytes(StringUtil.ASCII).length > 12 || isBanned(name)) {
             return false;
         }
         return namePattern.matcher(name).matches();

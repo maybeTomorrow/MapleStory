@@ -8,9 +8,9 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 		if (cm.getPlayer().getLevel() < 40 && cm.haveItem(1452084)) {
-			cm.sendYesNo("你想移动到隐藏地图?");
+			cm.sendYesNo("浣犳兂绉诲姩鍒伴殣钘忓湴鍥�?");
 		} else {
-			cm.sendOk("你需要小于40级，需要进入要有所罗门之弓.");
+			cm.sendOk("浣犻渶瑕佸皬浜�40绾э紝闇€瑕佽繘鍏ヨ鏈夋墍缃楅棬涔嬪紦.");
 			cm.dispose();
 		}
 } else {

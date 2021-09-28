@@ -33,7 +33,7 @@ if (pi.isLeader() == true) {
 	}
 	return true;
 	} else {
-	pi.playerMessage(6, "Äã²»ÊÇ¶Ó³¤,Ö»ÓĞ¶Ó³¤²Å¿ÉÒÔ¾ö¶¨½øÈëÊ±¼ä.");
+	pi.playerMessage(6, "ä½ ä¸æ˜¯é˜Ÿé•¿,åªæœ‰é˜Ÿé•¿æ‰å¯ä»¥å†³å®šè¿›å…¥æ—¶é—´.");
 	return false;
 	}
 }

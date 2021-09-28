@@ -21,9 +21,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			cm.sendNext("ħ��ʦ����ʹ�û���Ч��������ħ��,����������Ӵ�����ʹ�÷ǳ����õĸ���ħ��.2ת��ѧϰ������ħ�����Ը��෴���Եĵ����������˺�Ŷ��");
+			cm.sendNext("魔法师可以使用华丽效果的属性魔法,并可以在组队打猎中使用非常有用的辅助魔法.2转后学习的属性魔法可以给相反属性的敌人致命的伤害哦。");
 		} else if (status == 1) {
-			cm.sendYesNo("��ô������������ħ��ʦ��");
+			cm.sendYesNo("怎么样？你想体验魔法师吗？");
 		} else if (status == 2) {
 			cm.lockUI();
 			cm.warp(1020200);

@@ -1,18 +1,18 @@
 /*****************************
-Vr001 ·â²â°æ ONLINE
+Vr001 å°æµ‹ç‰ˆ ONLINE
 ******************************
-×é¶ÓÈÎÎñ½Å±¾
-·ÏÆú¶¼ÊĞÀ­¿ËÀïË¹Npc
-ËùÔÚµØÍ¼103000000
+ç»„é˜Ÿä»»åŠ¡è„šæœ¬
+åºŸå¼ƒéƒ½å¸‚æ‹‰å…‹é‡Œæ–¯Npc
+æ‰€åœ¨åœ°å›¾103000000
 *****************************/
 
 var status = 0;
 
-var minLevel = 10; //×îµÍµÈ¼¶
-var maxLevel = 200; //×î¸ßµÈ¼¶
+var minLevel = 10; //æœ€ä½ç­‰çº§
+var maxLevel = 200; //æœ€é«˜ç­‰çº§
 
-var minPartySize = 3; //×îÉÙ³ÉÔ±
-var maxPartySize = 6; //×î´ó³ÉÔ±
+var minPartySize = 3; //æœ€å°‘æˆå‘˜
+var maxPartySize = 6; //æœ€å¤§æˆå‘˜
 
 function start() {
 	status = -1;
@@ -32,9 +32,9 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			// Èç¹ûÊÇÔÚÒ»¸ö×é¶ÓÉÏ.Ã»ÓĞµ¼ÑÔ.Ö±½Ó¼ì²é×é¶ÓÌõ¼ş
-			if (cm.getParty() == null) { // ²»ÊÇ×é¶Ó
-				cm.sendOk("ÇëÈÃÄãµÄ¶Ó³¤ºÍÎÒËµ»°~");
+			// å¦‚æœæ˜¯åœ¨ä¸€ä¸ªç»„é˜Ÿä¸Š.æ²¡æœ‰å¯¼è¨€.ç›´æ¥æ£€æŸ¥ç»„é˜Ÿæ¡ä»¶
+			if (cm.getParty() == null) { // ä¸æ˜¯ç»„é˜Ÿ
+				cm.sendOk("è¯·è®©ä½ çš„é˜Ÿé•¿å’Œæˆ‘è¯´è¯~");
 				cm.dispose();
 			} else if (!cm.isLeader()) { // Not Party Leader
 				cm.sendOk("If you want to try the quest, please tell the #bleader of your party#k to talk to me.");
@@ -87,12 +87,12 @@ function action(mode, type, selection) {
 							}
 							if (playersInPQ <= 1)
 								em.setProperty("entryPossible", "true");*/
-							cm.sendOk("ÀïÃæÒÑ¾­¿ªÊ¼ÁËÕ½¶·£¬ÄãÃÇµÈµÈ°É£¬»òÕß»»¸öÆµµÀÊÔÊÔ°É£¡");
+							cm.sendOk("é‡Œé¢å·²ç»å¼€å§‹äº†æˆ˜æ–—ï¼Œä½ ä»¬ç­‰ç­‰å§ï¼Œæˆ–è€…æ¢ä¸ªé¢‘é“è¯•è¯•å§ï¼");
 						}
 					}
 					cm.dispose();
 				} else {
-					cm.sendNext("ÄãºÃ.ÄãÊÇ·ñÏëÌôÕ½Ò»ÏÂ×Ô¼ºÄØ?Èç¹ûÄãĞèÒªÌôÕ½Ò»ÏÂ×Ô¼ºµÄÄÜÁ¦,¿ÉÒÔÀ´ÕÒÎÒ!µ±È»,ĞèÒª¾ß±¸ÒÔÏÂÌõ¼ş:\r\n\r\n#rĞèÒª×é¶Ó³ÉÔ±:" + minPartySize + " ¸öÍæ¼Ò¡£ µÈ¼¶·¶Î§,×îµÍ " + minLevel + "¼¶ ×î¸ß " + maxLevel + "¼¶.");
+					cm.sendNext("ä½ å¥½.ä½ æ˜¯å¦æƒ³æŒ‘æˆ˜ä¸€ä¸‹è‡ªå·±å‘¢?å¦‚æœä½ éœ€è¦æŒ‘æˆ˜ä¸€ä¸‹è‡ªå·±çš„èƒ½åŠ›,å¯ä»¥æ¥æ‰¾æˆ‘!å½“ç„¶,éœ€è¦å…·å¤‡ä»¥ä¸‹æ¡ä»¶:\r\n\r\n#réœ€è¦ç»„é˜Ÿæˆå‘˜:" + minPartySize + " ä¸ªç©å®¶ã€‚ ç­‰çº§èŒƒå›´,æœ€ä½ " + minLevel + "çº§ æœ€é«˜ " + maxLevel + "çº§.");
 					cm.dispose();
 				}
 			}

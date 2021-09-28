@@ -1,11 +1,11 @@
 /*
-*********���ļ�ΪVr001 �������˵�NPC�ű��ļ�**********
-*********�ýű����÷����ΪVr001 ����汾Ϊ079**********
-******************��ȨVr001 ����***********************
-*****************��������װ��**********************
-****************Vr001 ��������ר��NPCJS**************
-****************��Ȩ����Vr001 ����*********************
-******************ά��/����************************
+*********该文件为Vr001 封测版服务端的NPC脚本文件**********
+*********该脚本适用服务端为Vr001 封测版版本为079**********
+******************版权Vr001 封测版***********************
+*****************制作永恒装备**********************
+****************Vr001 封测版服务端专用NPCJS**************
+****************版权所有Vr001 封测版*********************
+******************维护/更新************************
 ***************************************************
 */
 
@@ -30,8 +30,8 @@ function action(mode, type, selection) {
 	else
 		cm.dispose();
 	if (status == 0 && mode == 1) {
-		var selStr = "��������������ô�ҵ��ҵģ��ҿ��԰�������#r����װ����#k\r\n#e#r�Ķ���\r\n#b��ѡ�����������ĵ��߰ɣ�#b\r\n(��˵�����������Ҳ��������Ŷ��)"
-		var options = new Array("#r������Ʒ(ȫְҵ����)","#d�ܷ��������Ҫʲô���ϣ�");
+		var selStr = "啊哈！！你是怎么找到我的！我可以帮你制作#r永恒装备！#k\r\n#e#r心动吗？\r\n#b请选择你想制作的道具吧！#b\r\n(听说其他永恒道具也可以制作哦！)"
+		var options = new Array("#r永恒饰品(全职业可用)","#d能否告诉我需要什么材料？");
 		for (var i = 0; i < options.length; i++){
 			selStr += "\r\n#L" + i + "# " + options[i] + "#l";
 		}
@@ -40,41 +40,41 @@ function action(mode, type, selection) {
 	}
 	else if (status == 1 && mode == 1) {
 		selectedType = selection;
-		if (selectedType == 0){ //ȫְҵ���õ�����װ��
-			var selStr = "����в��ϣ��ҿ���Ϊ���������µ���Ʒ������Ҫ��һ�֣�#b";
-			var items = new Array ("������׹ �����Σ�#k(�ȼ����� : 120, ȫְҵ)#b","��ӡ���������� ��������#k(�ȼ����� : 120, ȫְҵ)#b","�������� �������� #k(�ȼ����� : 120, ȫְҵ)#b","���㲻������ �����磩#k(�ȼ����� : 120, ȫְҵ)#b");
+		if (selectedType == 0){ //全职业可用的永恒装备
+			var selStr = "如果有材料，我可以为你制作以下的物品。你需要哪一种？#b";
+			var items = new Array ("永恒金盾坠 （耳饰）#k(等级限制 : 120, 全职业)#b","封印的永恒玉佩 （项链）#k(等级限制 : 120, 全职业)#b","永恒玉佩 （项链） #k(等级限制 : 120, 全职业)#b","永恒不灭披风 （披风）#k(等级限制 : 120, 全职业)#b");
 			for (var i = 0; i < items.length; i++){
 				selStr += "\r\n#L" + i + "# " + items[i] + "#l";
 			}
 			cm.sendSimple(selStr);
 		}
-		else if (selectedType == 1){ //�ܷ��������Ҫʲô����
-			cm.sendOk("�ϳ�����װ����120��ȫְҵ���ã�������������²��ϲſ��Ժϳɣ�\r\n#r�����Ϲ�ͷ\r\n�����ѩ��\r\n��Ҷ\r\nð�ձ�\r\n#k���ϵ��߹�����ɵ���");
+		else if (selectedType == 1){ //能否告诉我需要什么材料
+			cm.sendOk("合成永恒装备（120级全职业可用）。如果你有以下材料才可以合成！\r\n#r陈年老骨头\r\n永恒的雪花\r\n枫叶\r\n冒险币\r\n#k以上道具怪物均可掉落");
 			cm.dispose();
-			//var selStr = "��...����ϳ�ʲô���ģ�#b";
+			//var selStr = "嗯...你想合成什么样的？#b";
 			//var items = new Array ("");
 			for (var i = 0; i < items.length; i++){
 				selStr += "\r\n#L" + i + "# " + items[i] + "#l";
 			}
 			cm.sendSimple(selStr);
 		}
-		else if (selectedType == 2){ //�����������ȥ�����죿
-			cm.sendOK("�𾴵���ң���������ֻ���Ժϳɵ������������Ŷ���������Ҫ����ְҵ������װ�����ߡ�������ȥ����������ͼŶ��");
+		else if (selectedType == 2){ //其他永恒道具去哪制造？
+			cm.sendOK("尊敬的玩家，在我这里只可以合成的永恒道具有限哦！如果你需要其他职业的永恒装备道具。不妨多去找找其他地图哦！");
 	
 
 			cm.sendSimple(selStr);
 		}
 		else if (selectedType == 3){ //wand refine
-			var selStr = "Ҫ�������ռ����ֲ��ϣ��Ҿ���ħ�����������ȡ�������ʲô���Ķ��ȣ�#b";
-			var items = new Array ("ľ�ƶ���#k(�ȼ����� : 8, ����)#b","�߼�ľ�ƶ���#k(�ȼ����� : 13, ����)#b","��������#k(�ȼ����� : 18, ����)#b","��������#k(�ȼ����� : 23, ħ��ʦ)#b","﮿����#k(�ȼ����� : 28, ħ��ʦ)#b","��ʦ����#k(�ȼ����� : 33, ħ��ʦ)#b","��������#k(�ȼ����� : 38, ħ��ʦ)#b","��ħ��ʦ����#k(�ȼ����� : 48, ħ��ʦ)#b");
+			var selStr = "要是你能收集各种材料，我就用魔法给你做短杖。你想做什么样的短杖？#b";
+			var items = new Array ("木制短杖#k(等级限制 : 8, 公用)#b","高级木制短杖#k(等级限制 : 13, 公用)#b","金属短杖#k(等级限制 : 18, 公用)#b","冰精短杖#k(等级限制 : 23, 魔法师)#b","锂矿短杖#k(等级限制 : 28, 魔法师)#b","法师短杖#k(等级限制 : 33, 魔法师)#b","妖精短杖#k(等级限制 : 38, 魔法师)#b","大魔法师短杖#k(等级限制 : 48, 魔法师)#b");
 			for (var i = 0; i < items.length; i++){
 				selStr += "\r\n#L" + i + "# " + items[i] + "#l";
 			}
 			cm.sendSimple(selStr);
 		}
 		else if (selectedType == 4){ //staff refine
-			var selStr = "Ҫ�������ռ����ֲ��ϣ��Ҿ���ħ�����������ȡ�������ʲô���ĳ��ȣ�#b";
-			var items = new Array ("ľ�Ƴ���#k(�ȼ����� : 10, ħ��ʦ)#b","����ʯ����#k(�ȼ����� : 15, ħ��ʦ)#b","��ĸԵ����#k(�ȼ����� : 15, ħ��ʦ)#b","��������#k(�ȼ����� : 20, ħ��ʦ)#b","��ʦ����#k(�ȼ����� : 25, ħ��ʦ)#b","���鳤��#k(�ȼ����� : 45, ħ��ʦ)#b");
+			var selStr = "要是你能收集各种材料，我就用魔法给你做长杖。你想做什么样的长杖？#b";
+			var items = new Array ("木制长杖#k(等级限制 : 10, 魔法师)#b","蓝宝石长杖#k(等级限制 : 15, 魔法师)#b","祖母缘长杖#k(等级限制 : 15, 魔法师)#b","古树长杖#k(等级限制 : 20, 魔法师)#b","法师长杖#k(等级限制 : 25, 魔法师)#b","精灵长杖#k(等级限制 : 45, 魔法师)#b");
 			for (var i = 0; i < items.length; i++){
 				selStr += "\r\n#L" + i + "# " + items[i] + "#l";
 			}
@@ -84,7 +84,7 @@ function action(mode, type, selection) {
 	else if (status == 2 && mode == 1) {
 		selectedItem = selection;
 
-		if (selectedType == 0){ //ȫְҵ���õ�����װ��
+		if (selectedType == 0){ //全职业可用的永恒装备
 			var itemSet = new Array(1032031,1122011,1122012,1102172);
 			var matSet = new Array(new Array(4031875,4000273,4001126),new Array(4031875,4000273,4001126),new Array(4031875,4000273,4001126),new Array(4031875,4000273,4001126));
 			var matQtySet = new Array(new Array(200,200,200),new Array(200,200,200),new Array(200,200,200),new Array(200,200,300));
@@ -140,7 +140,7 @@ function action(mode, type, selection) {
 			cost = costSet[selectedItem];
 		}
 		
-		var prompt = "������һ��#t" + item + "#������Ҫ����ĵ��ߡ���ô����������#b";
+		var prompt = "你想做一个#t" + item + "#吗？这需要下面的道具。怎么样？想做吗？#b";
 
 		if (mats instanceof Array){
 			for(var i = 0; i < mats.length; i++){
@@ -152,7 +152,7 @@ function action(mode, type, selection) {
 		}
 		
 		if (cost > 0)
-			prompt += "\r\n#i4031138# " + cost + " ���";
+			prompt += "\r\n#i4031138# " + cost + " 金币";
 		
 		cm.sendYesNo(prompt);
 	}
@@ -160,7 +160,7 @@ function action(mode, type, selection) {
 		var complete = true;
 		if (cm.getMeso() < cost)
 			{
-				cm.sendOk("����ȷ���Ƿ�����Ҫ����Ʒ���߱�����װ������û�пռ䡣")
+				cm.sendOk("请你确认是否有需要的物品或者背包的装备窗有没有空间。")
 			}
 			else
 			{
@@ -196,7 +196,7 @@ function action(mode, type, selection) {
 			}
 			
 			if (!complete) 
-				cm.sendOk("����ȷ���Ƿ�����Ҫ����Ʒ���߱�����װ������û�пռ䡣");
+				cm.sendOk("请你确认是否有需要的物品或者背包的装备窗有没有空间。");
 			else {
 				if (mats instanceof Array) {
 					for (var i = 0; i < mats.length; i++){
@@ -210,7 +210,7 @@ function action(mode, type, selection) {
 					cm.gainMeso(-cost);
 				
 				cm.gainItem(item, 1);
-				cm.sendOk("�ã���Ķ����Ѿ������ˣ��ҵ����չ�Ȼ�������㿴������ô�����Ķ������´������ɡ�");
+				cm.sendOk("好！你的东西已经做好了，我的手艺果然不错！你看见过这么完美的东西吗？下次再来吧。");
 			}
 		cm.dispose();
 	}

@@ -19,13 +19,13 @@ function action(mode, type, selection){
 		return;
 	}
 	if(status == 0) {
-		msg = "ÄãºÃ,ÎÒÊÇ»Ê¼ÒÆï³è´úÀíÈË,Äã½«Ô¸Òâ»¨·Ñµã¾íÔÚÎÒÕâÀïËæ»ú»ñÈ¡»Ê¼ÒÆï³è¼¼ÄÜÂğ ?";
+		msg = "ä½ å¥½,æˆ‘æ˜¯çš‡å®¶éª‘å® ä»£ç†äºº,ä½ å°†æ„¿æ„èŠ±è´¹ç‚¹å·åœ¨æˆ‘è¿™é‡Œéšæœºè·å–çš‡å®¶éª‘å® æŠ€èƒ½å— ?";
 		if(cm.getPlayer().getMountId() != 0 && Packages.server.MapleItemInformationProvider.getInstance().itemExists(cm.getPlayer().getMountId())){
-			msg += "\r\n#r Ä¿Ç°ÄãµÄÆï³èÊÇ : #i" + cm.getPlayer().getMountId() + "##t" + cm.getPlayer().getMountId() + "#";
+			msg += "\r\n#r ç›®å‰ä½ çš„éª‘å® æ˜¯ : #i" + cm.getPlayer().getMountId() + "##t" + cm.getPlayer().getMountId() + "#";
 		}
 		cm.sendYesNo(msg);
 	} else if(status == 1) {
-		cm.sendSimple("#b#L0# ³éÈ¡Æï³è#l\r\n#r #L1#²é¿´Æï³èÖÖÀà");
+		cm.sendSimple("#b#L0# æŠ½å–éª‘å® #l\r\n#r #L1#æŸ¥çœ‹éª‘å® ç§ç±»");
 	} else if(status == 2) {
 		msg = "\r\n";
 		if(selection == 1){
@@ -40,11 +40,11 @@ function action(mode, type, selection){
 		
 		if(selection == 0 && random){
 			if(cm.getPlayer().getNX() < need){
-				cm.sendNext("µã¾í²»×ã" + need);
+				cm.sendNext("ç‚¹å·ä¸è¶³" + need);
 				cm.dispose();
 				return;
 			} else if(!cm.canHold(1932081)){
-				//cm.sendNext("×°±¸À¸¿Õ¼ä²»×ã");
+				//cm.sendNext("è£…å¤‡æ ç©ºé—´ä¸è¶³");
 				//cm.dispose();
 				//return;
 			}
@@ -56,7 +56,7 @@ function action(mode, type, selection){
 			}while(!exist);
 			cm.getPlayer().setMountId(item[sel]);
 			cm.getPlayer().modifyCSPoints(1, -need, true);
-			cm.sendNext("Äã»ñµÃÁË #i"+item[sel]+":##t"+item[sel]+"#");
+			cm.sendNext("ä½ è·å¾—äº† #i"+item[sel]+":##t"+item[sel]+"#");
 			cm.dispose();
 		} else {
 			if(selection == 0){
@@ -69,12 +69,12 @@ function action(mode, type, selection){
 	} else if(status == 3){
 		if(!random){
 			sel = selection;
-			cm.sendYesNo("ÄãÈ·¶¨ÊÇ·ñÑ¡Ôñ #i"+item[sel]+":##t"+item[sel]+"#");
+			cm.sendYesNo("ä½ ç¡®å®šæ˜¯å¦é€‰æ‹© #i"+item[sel]+":##t"+item[sel]+"#");
 		}
 	} else if(status == 4){
 		if(!random){
 			cm.getPlayer().setMountId(item[sel]);
-			cm.sendNext("Äã»ñµÃÁË #i"+item[sel]+":##t"+item[sel]+"#");
+			cm.sendNext("ä½ è·å¾—äº† #i"+item[sel]+":##t"+item[sel]+"#");
 			cm.dispose();
 		}
 	} else {

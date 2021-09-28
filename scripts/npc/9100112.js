@@ -43,9 +43,9 @@ function action(mode,type,selection) {
 	} else if (status == -1) {
 		status = 0;
 		if (cm.haveItem(5220000)) {
-			cm.sendNext("ÄãºÃ..Èç¹ûÄã¿ÉÒÔ¸øÎÒ¸ö#v5220000#ÎÒ¿ÉÒÔ¸øÄã#rËï×Ó±ø·¨#kÅ¶£¡");
+			cm.sendNext("ä½ å¥½..å¦‚æœä½ å¯ä»¥ç»™æˆ‘ä¸ª#v5220000#æˆ‘å¯ä»¥ç»™ä½ #rå­™å­å…µæ³•#kå“¦ï¼");
 		} else {
-			cm.sendOk("¸ÉÂï....");
+			cm.sendOk("å¹²å˜›....");
 			cm.dispose();
 		}
 	} else if (status == 0) {

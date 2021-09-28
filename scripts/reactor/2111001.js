@@ -1,7 +1,7 @@
 /*
-	Ç×Ç××ìÃ°ÏÕ×¨ÓÃ½Å±¾
-	ÔúÀ¥ÕÙ»½
-	Ğ¾ËéÍõ×ÓĞŞ¸Ä
+	äº²äº²å˜´å†’é™©ä¸“ç”¨è„šæœ¬
+	æ‰æ˜†å¬å”¤
+	èŠ¯ç¢ç‹å­ä¿®æ”¹
 */
 
 function act() {
@@ -11,5 +11,5 @@ function act() {
         rm.changeMusic("Bgm06/FinalFight");
         rm.spawnFakeMonster(8800000);
         for (i=8800003; i<8800011; i++) rm.spawnMonster(i);
-	rm.mapMessage("Çë×¢Òâ!ÔúÀ¥³öÀ´ÁË.");
+	rm.mapMessage("è¯·æ³¨æ„!æ‰æ˜†å‡ºæ¥äº†.");
 }

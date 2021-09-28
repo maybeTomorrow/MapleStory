@@ -1,5 +1,5 @@
 function enter(pi) {
   
-	pi.showInstruction("ÕâÀï²»ÄÜ³öÈ¥,ÇëÊ¹ÓÃ#r@ÊĞ³¡#k»Ø³Ç.", 200, 5);
+	pi.showInstruction("è¿™é‡Œä¸èƒ½å‡ºå»,è¯·ä½¿ç”¨#r@å¸‚åœº#kå›åŸ.", 200, 5);
 	return false;
 }

@@ -40,7 +40,7 @@ function action(mode, type, selection) {
 	    }
 	} else if (selection == 2) {
 	    if (cm.getPlayer().getParty() == null || !cm.isLeader()) {
-		cm.sendOk("¶Ó³¤±ØĞëÔÚÕâÀï£¬ÇëÈÃËûºÍÎÒËµ»°.");
+		cm.sendOk("é˜Ÿé•¿å¿…é¡»åœ¨è¿™é‡Œï¼Œè¯·è®©ä»–å’Œæˆ‘è¯´è¯.");
 	    } else {
 		var party = cm.getPlayer().getParty().getMembers();
 		var mapId = cm.getPlayer().getMapId();

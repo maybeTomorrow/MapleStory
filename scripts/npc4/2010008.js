@@ -18,14 +18,14 @@ function action(mode, type, selection) {
 	status--;
 
     if (status == 0)
-	cm.sendSimple("ÄãÏëÒª×öÊ²Ã´£¿\r\n#b#L0#´´½¨/¸ü¸Ä¹«»á»ÕÕÂ#l#k");
+	cm.sendSimple("ä½ æƒ³è¦åšä»€ä¹ˆï¼Ÿ\r\n#b#L0#åˆ›å»º/æ›´æ”¹å…¬ä¼šå¾½ç« #l#k");
     else if (status == 1) {
 	sel = selection;
 	if (selection == 0) {
 	    if (cm.getPlayerStat("GRANK") == 1)
-		cm.sendYesNo("ÖØĞÂ´òÔìÒ»¸ö»ÕÕÂĞèÒª #b5,000,000½ğ±Ò#k£¬ÄãÈ·¶¨Òª¼ÌĞøÂğ£¿");
+		cm.sendYesNo("é‡æ–°æ‰“é€ ä¸€ä¸ªå¾½ç« éœ€è¦ #b5,000,000é‡‘å¸#kï¼Œä½ ç¡®å®šè¦ç»§ç»­å—ï¼Ÿ");
 	    else
-		cm.sendOk("´òÔì¹«»á»ÕÕÂĞèÒª¹«»á³¤À´ÕÒÎÒ²ÅĞĞà¸£¬ÇëÄãÃÇµÄ¹«»á³¤À´ÕÒÎÒ°É~");
+		cm.sendOk("æ‰“é€ å…¬ä¼šå¾½ç« éœ€è¦å…¬ä¼šé•¿æ¥æ‰¾æˆ‘æ‰è¡Œå–”ï¼Œè¯·ä½ ä»¬çš„å…¬ä¼šé•¿æ¥æ‰¾æˆ‘å§~");
 	}
 				
     } else if (status == 2) {

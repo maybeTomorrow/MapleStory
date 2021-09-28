@@ -16,18 +16,18 @@ function action(mode, type, selection){
 		return;
 	}
 	if(status == 1){
-		cm.sendYesNo("你真的确定要结婚吗?");
+		cm.sendYesNo("浣犵湡鐨勭‘瀹氳缁撳鍚�?");
 	} else if (status == 2){
 			if(cm.getPlayer().getMarriageId() > 0){
-                cm.sendNext("你已经结过婚");
+                cm.sendNext("浣犲凡缁忕粨杩囧");
                 cm.dispose();
                 return;
 			} else if (cm.getParty() == null) {
-                cm.sendNext("组队后在来找我");
+                cm.sendNext("缁勯槦鍚庡湪鏉ユ壘鎴�");
                 cm.dispose();
                 return;
             } else if (!cm.isLeader()) {
-                cm.sendNext("请让队长与我对话");
+                cm.sendNext("璇疯闃熼暱涓庢垜瀵硅瘽");
                 cm.dispose();
                 return;
             }
@@ -47,19 +47,19 @@ function action(mode, type, selection){
             }
 
             if (!next) {
-                cm.sendNext("请确认您跟您的的另外一半在这一张地图、不同性別、没结婚过、并且都在线以及队伍中沒有其他人");
+                cm.sendNext("璇风‘璁ゆ偍璺熸偍鐨勭殑鍙﹀涓€鍗婂湪杩欎竴寮犲湴鍥俱€佷笉鍚屾€у垾銆佹病缁撳杩囥€佸苟涓旈兘鍦ㄧ嚎浠ュ強闃熶紞涓矑鏈夊叾浠栦汉");
                 cm.dispose();
                 return;
             }
 			
             if (!victim.hasEquipped(ring) || !cm.getPlayer().hasEquipped(ring)) {
-                cm.sendNext("您或您的另一半沒有装备#v" + ring + "##z" + ring + "#？");
+                cm.sendNext("鎮ㄦ垨鎮ㄧ殑鍙︿竴鍗婃矑鏈夎澶�#v" + ring + "##z" + ring + "#锛�");
                 cm.dispose();
                 return;
             }
 			
 			if(!cm.canHold(1112804) || !victim.canHold(1112804)){
-                cm.sendNext("您或您的另一半背包空间不足");
+                cm.sendNext("鎮ㄦ垨鎮ㄧ殑鍙︿竴鍗婅儗鍖呯┖闂翠笉瓒�");
                 cm.dispose();
                 return;
 			}
@@ -67,9 +67,9 @@ function action(mode, type, selection){
 			victim.setMarriageId(cm.getPlayer().getId());
 			//cm.givePartyItems(1112804, 1, false);
 			cm.getPlayer().saveToDB(false, false);
-			Packages.handling.world.World.Broadcast.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(12, cm.getClient().getChannel(), "『月下老人』" + " : " + "[" + cm.getChar().getName() + "]和他的伴侣["+victim.getName()+"]结为夫妻。小姐珠圆玉润旺夫之相、宜室宜家,先生才高八斗、学富五车。现福禄鸳鸯缘定三生，佳偶天成，珠联壁合。祝二人：永结同心，百年好合、百子千孙,无论富贵贫穷同德同心、琴瑟合鸣、相敬如宾。结此终身之盟,守此终身之誓,不离不弃、白头偕老。大家祝福他[她]！我们祝他/她们从游戏走到现实婚姻的殿堂。"));
-			//cm.worldMessage(11, "『月下老人』" + " : " + "[" + cm.getChar().getName() + "]和他的伴侣["+victim.getName()+"]结为夫妻。小姐珠圆玉润旺夫之相、宜室宜家,先生才高八斗、学富五车。现福禄鸳鸯缘定三生，佳偶天成，珠联壁合。祝二人：永结同心，百年好合、百子千孙,无论富贵贫穷同德同心、琴瑟合鸣、相敬如宾。结此终身之盟,守此终身之誓,不离不弃、白头偕老。大家祝福他[她]！我们祝他/她们从游戏走到现实婚姻的殿堂。");
-			//cm.喇叭(2, "恭喜[" + cm.getPlayer().getName() + "]和他的伴侣["+victim.getName()+"]结为夫妻。小姐珠圆玉润旺夫之相、宜室宜家,先生才高八斗、学富五车。现福禄鸳鸯缘定三生，佳偶天成，珠联壁合。祝二人：永结同心，百年好合、百子千孙,无论富贵贫穷同德同心、琴瑟合鸣、相敬如宾。结此终身之盟,守此终身之誓,不离不弃、白头偕老。大家祝福他[她]！我们祝他/她们从游戏走到现实婚姻的殿堂。");
+			Packages.handling.world.World.Broadcast.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(12, cm.getClient().getChannel(), "銆庢湀涓嬭€佷汉銆�" + " : " + "[" + cm.getChar().getName() + "]鍜屼粬鐨勪即渚"+victim.getName()+"]缁撲负澶銆傚皬濮愮彔鍦嗙帀娑︽椇澶箣鐩搞€佸疁瀹ゅ疁瀹�,鍏堢敓鎵嶉珮鍏枟銆佸瀵屼簲杞︺€傜幇绂忕楦抽腐缂樺畾涓夌敓锛屼匠鍋跺ぉ鎴愶紝鐝犺仈澹佸悎銆傜浜屼汉锛氭案缁撳悓蹇冿紝鐧惧勾濂藉悎銆佺櫨瀛愬崈瀛�,鏃犺瀵岃吹璐┓鍚屽痉鍚屽績銆佺惔鐟熷悎楦ｃ€佺浉鏁瀹俱€傜粨姝ょ粓韬箣鐩�,瀹堟缁堣韩涔嬭獡,涓嶇涓嶅純銆佺櫧澶村仌鑰併€傚ぇ瀹剁绂忎粬[濂筣锛佹垜浠浠�/濂逛滑浠庢父鎴忚蛋鍒扮幇瀹炲濮荤殑娈垮爞銆�"));
+			//cm.worldMessage(11, "銆庢湀涓嬭€佷汉銆�" + " : " + "[" + cm.getChar().getName() + "]鍜屼粬鐨勪即渚"+victim.getName()+"]缁撲负澶銆傚皬濮愮彔鍦嗙帀娑︽椇澶箣鐩搞€佸疁瀹ゅ疁瀹�,鍏堢敓鎵嶉珮鍏枟銆佸瀵屼簲杞︺€傜幇绂忕楦抽腐缂樺畾涓夌敓锛屼匠鍋跺ぉ鎴愶紝鐝犺仈澹佸悎銆傜浜屼汉锛氭案缁撳悓蹇冿紝鐧惧勾濂藉悎銆佺櫨瀛愬崈瀛�,鏃犺瀵岃吹璐┓鍚屽痉鍚屽績銆佺惔鐟熷悎楦ｃ€佺浉鏁瀹俱€傜粨姝ょ粓韬箣鐩�,瀹堟缁堣韩涔嬭獡,涓嶇涓嶅純銆佺櫧澶村仌鑰併€傚ぇ瀹剁绂忎粬[濂筣锛佹垜浠浠�/濂逛滑浠庢父鎴忚蛋鍒扮幇瀹炲濮荤殑娈垮爞銆�");
+			//cm.鍠囧彮(2, "鎭枩[" + cm.getPlayer().getName() + "]鍜屼粬鐨勪即渚"+victim.getName()+"]缁撲负澶銆傚皬濮愮彔鍦嗙帀娑︽椇澶箣鐩搞€佸疁瀹ゅ疁瀹�,鍏堢敓鎵嶉珮鍏枟銆佸瀵屼簲杞︺€傜幇绂忕楦抽腐缂樺畾涓夌敓锛屼匠鍋跺ぉ鎴愶紝鐝犺仈澹佸悎銆傜浜屼汉锛氭案缁撳悓蹇冿紝鐧惧勾濂藉悎銆佺櫨瀛愬崈瀛�,鏃犺瀵岃吹璐┓鍚屽痉鍚屽績銆佺惔鐟熷悎楦ｃ€佺浉鏁瀹俱€傜粨姝ょ粓韬箣鐩�,瀹堟缁堣韩涔嬭獡,涓嶇涓嶅純銆佺櫧澶村仌鑰併€傚ぇ瀹剁绂忎粬[濂筣锛佹垜浠浠�/濂逛滑浠庢父鎴忚蛋鍒扮幇瀹炲濮荤殑娈垮爞銆�");
 			victim.saveToDB(false, false);
 			//cm.warpMapWithClock(700000200, 300);
 			cm.warpParty(700000200, 0);

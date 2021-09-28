@@ -18,9 +18,9 @@ function action(mode, type, sel){
 	}
 	
 	if (status == 0){
-		var msg = "ÇëÑ¡ÔñÄãÒªµÄ#d¹¦ÄÜ\r\n\r\n";
-		msg += "#L1##r³èÎï¸ÄÃû#l\r\n";
-		msg += "#L0##b³èÎï½ø»¯ºÍ¸´»î#l\r\n";
+		var msg = "è¯·é€‰æ‹©ä½ è¦çš„#dåŠŸèƒ½\r\n\r\n";
+		msg += "#L1##rå® ç‰©æ”¹å#l\r\n";
+		msg += "#L0##bå® ç‰©è¿›åŒ–å’Œå¤æ´»#l\r\n";
 		cm.sendSimple(msg);
 	} else if (status == 1) {
 		switch(sel){

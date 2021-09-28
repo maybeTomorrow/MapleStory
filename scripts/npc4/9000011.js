@@ -29,28 +29,28 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {	
-			cm.sendNext("嘿，我是 #p" + cm.getNpc() + "#, 如果你不忙的话…那我可以和你一起出去吗？我听说这里有人聚集在这里 #活动#k 但我不想亲自去那里…好吧，你想和我一起去看看吗?");
+			cm.sendNext("鍢匡紝鎴戞槸 #p" + cm.getNpc() + "#, 濡傛灉浣犱笉蹇欑殑璇濃€﹂偅鎴戝彲浠ュ拰浣犱竴璧峰嚭鍘诲悧锛熸垜鍚杩欓噷鏈変汉鑱氶泦鍦ㄨ繖閲� #娲诲姩#k 浣嗘垜涓嶆兂浜茶嚜鍘婚偅閲屸€﹀ソ鍚э紝浣犳兂鍜屾垜涓€璧峰幓鐪嬬湅鍚�?");
 		} else if (status == 1) {	
-			cm.sendSimple("哈？什么样的事件？嗯，那是..\r\n#L0##e1.#n#b 它是什么样的事件?#k#l\r\n#L1##e2.#n#b 向我解释事件游戏.#k#l\r\n#L2##e3.#n#b 好吧，我们走吧!#k#l\r\n#L3##e4.#n#b请更换奖励项连胜证书.#k#l");
+			cm.sendSimple("鍝堬紵浠€涔堟牱鐨勪簨浠讹紵鍡紝閭ｆ槸..\r\n#L0##e1.#n#b 瀹冩槸浠€涔堟牱鐨勪簨浠�?#k#l\r\n#L1##e2.#n#b 鍚戞垜瑙ｉ噴浜嬩欢娓告垙.#k#l\r\n#L2##e3.#n#b 濂藉惂锛屾垜浠蛋鍚�!#k#l\r\n#L3##e4.#n#b璇锋洿鎹㈠鍔遍」杩炶儨璇佷功.#k#l");
 		} else if (status == 2) {
 			if (selection == 0) {
-				cm.sendNext("这个月，全球正在庆祝其第三周年冒险岛! 用GM将在整个事件中举办一个惊喜的活动事件，所以GM举行，确保参加至少一项活动，为伟大的奖品!");
+				cm.sendNext("杩欎釜鏈堬紝鍏ㄧ悆姝ｅ湪搴嗙鍏剁涓夊懆骞村啋闄╁矝! 鐢℅M灏嗗湪鏁翠釜浜嬩欢涓妇鍔炰竴涓儕鍠滅殑娲诲姩浜嬩欢锛屾墍浠M涓捐锛岀‘淇濆弬鍔犺嚦灏戜竴椤规椿鍔紝涓轰紵澶х殑濂栧搧!");
 				cm.dispose();
 			} else if (selection == 1) {
-				cm.sendSimple("这个事件有很多游戏。在你玩游戏之前，它会帮助你知道如何玩游戏。选择一个你想知道更多的! #b\r\n#L0# Ola Ola#l\r\n#L1# 冒险岛枫体能测试#l\r\n#L2# 滚雪球比赛#l\r\n#L3# 打椰子比赛#l\r\n#L4# 0X智力测试#l\r\n#L5# 寻宝#l#k");
+				cm.sendSimple("杩欎釜浜嬩欢鏈夊緢澶氭父鎴忋€傚湪浣犵帺娓告垙涔嬪墠锛屽畠浼氬府鍔╀綘鐭ラ亾濡備綍鐜╂父鎴忋€傞€夋嫨涓€涓綘鎯崇煡閬撴洿澶氱殑! #b\r\n#L0# Ola Ola#l\r\n#L1# 鍐掗櫓宀涙灚浣撹兘娴嬭瘯#l\r\n#L2# 婊氶洩鐞冩瘮璧�#l\r\n#L3# 鎵撴ぐ瀛愭瘮璧�#l\r\n#L4# 0X鏅哄姏娴嬭瘯#l\r\n#L5# 瀵诲疂#l#k");
 			} else if (selection == 2) {
 				if (!cm.canHold()) {
-					cm.sendNext("尽量腾出你的背包空间.");
+					cm.sendNext("灏介噺鑵惧嚭浣犵殑鑳屽寘绌洪棿.");
 				} else if (cm.getChannelServer().getEvent() > -1) {
 					cm.saveReturnLocation("EVENT");
 					cm.getPlayer().setChalkboard(null);
 					cm.warp(cm.getChannelServer().getEvent(), cm.getChannelServer().getEvent() == 109080000 || cm.getChannelServer().getEvent() == 109080010 ? 0 : "join00");
 				} else {
-					cm.sendNext("无论是活动没有开始，你都已经有了 #b秘密卷轴#k, 或者你已经参加了这一活动在过去24小时内。请稍后再试!");
+					cm.sendNext("鏃犺鏄椿鍔ㄦ病鏈夊紑濮嬶紝浣犻兘宸茬粡鏈変簡 #b绉樺瘑鍗疯酱#k, 鎴栬€呬綘宸茬粡鍙傚姞浜嗚繖涓€娲诲姩鍦ㄨ繃鍘�24灏忔椂鍐呫€傝绋嶅悗鍐嶈瘯!");
 				}
 				cm.dispose();
 			} else if (selection == 3) {
-				var selStr = "你想交换哪一个直接赢的证书?";
+				var selStr = "浣犳兂浜ゆ崲鍝竴涓洿鎺ヨ耽鐨勮瘉涔�?";
 				for (var i = 0; i < quantities.length; i++) {
 					selStr += "\r\n#b#L" + i + "##t" + (4031332 + i) + "# Exchange(" + quantities[i] + ")#l";
 				}
@@ -59,22 +59,22 @@ function action(mode, type, selection) {
 			}
 		} else if (status == 3) {
 			if (selection == 0) {
-				cm.sendNext("#b[上楼 上楼]#k 是一个游戏，参与者爬梯子到达顶部。通过选择正确的光柱，从众多的光柱门中选择正确的光柱门，爬上你的方法. \r\n\r\n游戏由三个层次组成，时间限制是 #b6 分钟#k. 在[Ola Ola], 你 #b不能跳，瞬移，加速，或增加你的速度使用药剂或物品#k. 还有一些恶作剧的光柱门，将导致你到一个陌生的地方，所以请注意那些.");
+				cm.sendNext("#b[涓婃ゼ 涓婃ゼ]#k 鏄竴涓父鎴忥紝鍙備笌鑰呯埇姊瓙鍒拌揪椤堕儴銆傞€氳繃閫夋嫨姝ｇ‘鐨勫厜鏌憋紝浠庝紬澶氱殑鍏夋煴闂ㄤ腑閫夋嫨姝ｇ‘鐨勫厜鏌遍棬锛岀埇涓婁綘鐨勬柟娉�. \r\n\r\n娓告垙鐢变笁涓眰娆＄粍鎴愶紝鏃堕棿闄愬埗鏄� #b6 鍒嗛挓#k. 鍦╗Ola Ola], 浣� #b涓嶈兘璺筹紝鐬Щ锛屽姞閫燂紝鎴栧鍔犱綘鐨勯€熷害浣跨敤鑽墏鎴栫墿鍝�#k. 杩樻湁涓€浜涙伓浣滃墽鐨勫厜鏌遍棬锛屽皢瀵艰嚧浣犲埌涓€涓檶鐢熺殑鍦版柟锛屾墍浠ヨ娉ㄦ剰閭ｄ簺.");
 				cm.dispose();
 			} else if (selection == 1) {
-				cm.sendNext("#b[冒险岛的体能测试] 是一个种通过障碍物的#k 很像森林的耐心。你可以通过克服各种障碍，并在时限内到达最终目的地。 \r\n\r\n游戏由四个层次组成，时间限制是 #b15分钟#k.[冒险岛体能测试]时，你不可以使用传送或速度加成.");
+				cm.sendNext("#b[鍐掗櫓宀涚殑浣撹兘娴嬭瘯] 鏄竴涓閫氳繃闅滅鐗╃殑#k 寰堝儚妫灄鐨勮€愬績銆備綘鍙互閫氳繃鍏嬫湇鍚勭闅滅锛屽苟鍦ㄦ椂闄愬唴鍒拌揪鏈€缁堢洰鐨勫湴銆� \r\n\r\n娓告垙鐢卞洓涓眰娆＄粍鎴愶紝鏃堕棿闄愬埗鏄� #b15鍒嗛挓#k.[鍐掗櫓宀涗綋鑳芥祴璇昡鏃讹紝浣犱笉鍙互浣跨敤浼犻€佹垨閫熷害鍔犳垚.");
 				cm.dispose();
 			} else if (selection == 2) {
-				cm.sendNext("#b[滚雪球]#k 由两队、枫叶队和故事队组成，两队的勋章也看不见 #b在有限的时间里，哪个队把雪球滚得越远，越大#k. 如果游戏不能在时间段内决定，那么就把雪球滚到更远的地方 \r\n\r\n卷起的雪，在未攻击它g #bCtrl#k. 所有远程攻击和技能为基础的攻击将不在这里能使用, #b只有关闭的攻击将工作#k. \r\n\r\n如果一个角色接触到雪球，他/她会被送回起点。在出发点前面的雪人攻击，以防止对方从滚动的雪前进。这是一个计划好的策略，因为团队将决定是否攻击滚雪球或雪人.");
+				cm.sendNext("#b[婊氶洩鐞僝#k 鐢变袱闃熴€佹灚鍙堕槦鍜屾晠浜嬮槦缁勬垚锛屼袱闃熺殑鍕嬬珷涔熺湅涓嶈 #b鍦ㄦ湁闄愮殑鏃堕棿閲岋紝鍝釜闃熸妸闆悆婊氬緱瓒婅繙锛岃秺澶�#k. 濡傛灉娓告垙涓嶈兘鍦ㄦ椂闂存鍐呭喅瀹氾紝閭ｄ箞灏辨妸闆悆婊氬埌鏇磋繙鐨勫湴鏂� \r\n\r\n鍗疯捣鐨勯洩锛屽湪鏈敾鍑诲畠g #bCtrl#k. 鎵€鏈夎繙绋嬫敾鍑诲拰鎶€鑳戒负鍩虹鐨勬敾鍑诲皢涓嶅湪杩欓噷鑳戒娇鐢�, #b鍙湁鍏抽棴鐨勬敾鍑诲皢宸ヤ綔#k. \r\n\r\n濡傛灉涓€涓鑹叉帴瑙﹀埌闆悆锛屼粬/濂逛細琚€佸洖璧风偣銆傚湪鍑哄彂鐐瑰墠闈㈢殑闆汉鏀诲嚮锛屼互闃叉瀵规柟浠庢粴鍔ㄧ殑闆墠杩涖€傝繖鏄竴涓鍒掑ソ鐨勭瓥鐣ワ紝鍥犱负鍥㈤槦灏嗗喅瀹氭槸鍚︽敾鍑绘粴闆悆鎴栭洩浜�.");
 				cm.dispose();
 			} else if (selection == 3) {
-				cm.sendNext("#b[椰子比赛]#k 由两队，枫叶队和故事的团队，和两支出来勋章看不到#哪个团队收集了最多椰子#k. 时间限制 #b5 分钟#k. 如果游戏结束于一条领带，一个额外的2分钟将被授予确定获胜者。如果，为了某种原因，比分保持平局，那么游戏将以平局结束。\r\n \ r所有远程攻击技能的攻击将不会在这里工作，#市邦立的近距离攻击将#如果你不有一个近距离攻击的武器，你可以购买他们通过活动地图内的NPC。无论是性格、水平的武器或技能，所有赔偿的适用将是相同的。\r\n \ r \ nbeware的重重障碍和陷阱在地图。如果角色在游戏中死亡，玩家将被淘汰出局。在椰子下降的最后一个球员的球员。只有椰子砸到地上数，这意味着不要从树上掉下来的，或者偶尔的爆炸椰子就不算。还有一个隐藏的门在地图底部的一个壳，所以使用的是明智的!");
+				cm.sendNext("#b[妞板瓙姣旇禌]#k 鐢变袱闃燂紝鏋彾闃熷拰鏁呬簨鐨勫洟闃燂紝鍜屼袱鏀嚭鏉ュ媼绔犵湅涓嶅埌#鍝釜鍥㈤槦鏀堕泦浜嗘渶澶氭ぐ瀛�#k. 鏃堕棿闄愬埗 #b5 鍒嗛挓#k. 濡傛灉娓告垙缁撴潫浜庝竴鏉￠甯︼紝涓€涓澶栫殑2鍒嗛挓灏嗚鎺堜簣纭畾鑾疯儨鑰呫€傚鏋滐紝涓轰簡鏌愮鍘熷洜锛屾瘮鍒嗕繚鎸佸钩灞€锛岄偅涔堟父鎴忓皢浠ュ钩灞€缁撴潫銆俓r\n \ r鎵€鏈夎繙绋嬫敾鍑绘妧鑳界殑鏀诲嚮灏嗕笉浼氬湪杩欓噷宸ヤ綔锛�#甯傞偊绔嬬殑杩戣窛绂绘敾鍑诲皢#濡傛灉浣犱笉鏈変竴涓繎璺濈鏀诲嚮鐨勬鍣紝浣犲彲浠ヨ喘涔颁粬浠€氳繃娲诲姩鍦板浘鍐呯殑NPC銆傛棤璁烘槸鎬ф牸銆佹按骞崇殑姝﹀櫒鎴栨妧鑳斤紝鎵€鏈夎禂鍋跨殑閫傜敤灏嗘槸鐩稿悓鐨勩€俓r\n \ r \ nbeware鐨勯噸閲嶉殰纰嶅拰闄烽槺鍦ㄥ湴鍥俱€傚鏋滆鑹插湪娓告垙涓浜★紝鐜╁灏嗚娣樻卑鍑哄眬銆傚湪妞板瓙涓嬮檷鐨勬渶鍚庝竴涓悆鍛樼殑鐞冨憳銆傚彧鏈夋ぐ瀛愮牳鍒板湴涓婃暟锛岃繖鎰忓懗鐫€涓嶈浠庢爲涓婃帀涓嬫潵鐨勶紝鎴栬€呭伓灏旂殑鐖嗙偢妞板瓙灏变笉绠椼€傝繕鏈変竴涓殣钘忕殑闂ㄥ湪鍦板浘搴曢儴鐨勪竴涓３锛屾墍浠ヤ娇鐢ㄧ殑鏄槑鏅虹殑!");
 				cm.dispose();
 			} else if (selection == 4) {
-				cm.sendNext("#b[0X智力测试]#k is a game of MapleStory smarts through X's and O's. Once you join the game, turn on the minimap by pressing #bM#k to see where the X and O are. A total of #r10 questions#k will be given, and the character that answers them all correctly wins the game. \r\n\r\nOnce the question is given, use the ladder to enter the area where the correct answer may be, be it X or O. If the character does not choose an answer or is hanging on the ladder past the time limit, the character will be eliminated. Please hold your position until [CORRECT] is off the screen before moving on. To prevent cheating of any kind, all types of chatting will be turned off during the OX Quiz.");
+				cm.sendNext("#b[0X鏅哄姏娴嬭瘯]#k is a game of MapleStory smarts through X's and O's. Once you join the game, turn on the minimap by pressing #bM#k to see where the X and O are. A total of #r10 questions#k will be given, and the character that answers them all correctly wins the game. \r\n\r\nOnce the question is given, use the ladder to enter the area where the correct answer may be, be it X or O. If the character does not choose an answer or is hanging on the ladder past the time limit, the character will be eliminated. Please hold your position until [CORRECT] is off the screen before moving on. To prevent cheating of any kind, all types of chatting will be turned off during the OX Quiz.");
 				cm.dispose();
 			} else if (selection == 5) {
-				cm.sendNext("#b[寻宝]#k is a game in which your goal is to find the #btreasure scrolls#k that are hidden all over the map #rin 10 minutes#k. There will be a number of mysterious treasure chests hidden away, and once you break them apart, many items will surface from the chest. Your job is to pick out the treasure scroll from those items. \r\nTreasure chests can be destroyed using #bregular attacks#k, and once you have the treasure scroll in possession, you can trade it for the Scroll of Secrets through an NPC that's in charge of trading items. The trading NPC can be found on the Treasure Hunt map, but you can also trade your scroll through #bVikin#k of Lith Harbor.\r\n\r\nThis game has its share of hidden portals and hidden teleporting spots. To use them, press the #bup arrow#k at a certain spot, and you'll be teleported to a different place. Try jumping around, for you may also run into hidden stairs or ropes. There will also be a treasure chest that'll take you to a hidden spot, and a hidden chest that can only be found through the hidden portal, so try looking around.\r\n\r\nDuring the game of Treasure Hunt, all attack skills will be #rdisabled#k, so please break the treasure chest with the regular attack.");
+				cm.sendNext("#b[瀵诲疂]#k is a game in which your goal is to find the #btreasure scrolls#k that are hidden all over the map #rin 10 minutes#k. There will be a number of mysterious treasure chests hidden away, and once you break them apart, many items will surface from the chest. Your job is to pick out the treasure scroll from those items. \r\nTreasure chests can be destroyed using #bregular attacks#k, and once you have the treasure scroll in possession, you can trade it for the Scroll of Secrets through an NPC that's in charge of trading items. The trading NPC can be found on the Treasure Hunt map, but you can also trade your scroll through #bVikin#k of Lith Harbor.\r\n\r\nThis game has its share of hidden portals and hidden teleporting spots. To use them, press the #bup arrow#k at a certain spot, and you'll be teleported to a different place. Try jumping around, for you may also run into hidden stairs or ropes. There will also be a treasure chest that'll take you to a hidden spot, and a hidden chest that can only be found through the hidden portal, so try looking around.\r\n\r\nDuring the game of Treasure Hunt, all attack skills will be #rdisabled#k, so please break the treasure chest with the regular attack.");
 				cm.dispose();
 			}
 		} else if (status == 10) {

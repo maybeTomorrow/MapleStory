@@ -5,7 +5,7 @@ function enter(pi) {
         pi.getPlayer().enteredScript("dojang_Msg", pi.getPlayer().getMap().getId());
         pi.warp(925020001, 0);
     } else {
-        pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(5, "Îä¹«£º¹ş¹ş£¡±¾¹Ø¶¼Ã»ÓĞÍ¨¹ı£¬ÄÑµÀÄã¾ÍÏë½øÈëÏÂÒ»¹ØÂğ£¿ÕâÊÇ¾ø¶Ô²»ÔÊĞíµÄ¡£"));
+        pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(5, "æ­¦å…¬ï¼šå“ˆå“ˆï¼æœ¬å…³éƒ½æ²¡æœ‰é€šè¿‡ï¼Œéš¾é“ä½ å°±æƒ³è¿›å…¥ä¸‹ä¸€å…³å—ï¼Ÿè¿™æ˜¯ç»å¯¹ä¸å…è®¸çš„ã€‚"));
         return false;
     }
     return true;

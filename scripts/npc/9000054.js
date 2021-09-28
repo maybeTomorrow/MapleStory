@@ -1,6 +1,6 @@
 /*
-Vr001 ·â²â°æ ONLINE
-¹ÖÎïĞüÉÍÁîPQ µÚÒ»¹Ø
+Vr001 å°æµ‹ç‰ˆ ONLINE
+æ€ªç‰©æ‚¬èµä»¤PQ ç¬¬ä¸€å…³
 */
 
 importPackage(net.sf.odinms.client);
@@ -18,7 +18,7 @@ function action(mode, type, selection) {
             else {
                 if (status >= 0 && mode == 0) {
                 
-			cm.sendOk("¡­¡­");
+			cm.sendOk("â€¦â€¦");
 			cm.dispose();
 			return;                    
                 }
@@ -29,8 +29,8 @@ function action(mode, type, selection) {
 			status--;
 		} 
 		        if (status == 0) {
-			cm.sendSimple("ºÙ£¡\r\n#k\r\n#L1##b½øÈëÁì½±µØµã#r<#z4031460#>#k20#r¸ö");
-//------------------------------½øÈëÏÂÒ»¹Ø-------------------------------
+			cm.sendSimple("å˜¿ï¼\r\n#k\r\n#L1##bè¿›å…¥é¢†å¥–åœ°ç‚¹#r<#z4031460#>#k20#rä¸ª");
+//------------------------------è¿›å…¥ä¸‹ä¸€å…³-------------------------------
 			} else if (status == 1) { 
 			if (selection == 1) {
 			if (cm.haveItem(4031460,20)) { 
@@ -38,8 +38,8 @@ function action(mode, type, selection) {
 			cm.removeAll(4031460);
 		   	cm.warp(912000000);
 			cm.gainExp(300000);
-			cm.mapMessage("½øÈëPQÌôÕ½µÚ¶ş¹Ø£¡»ñµÃÁË 30Íò ¾­ÑéÖµ£¡");
+			cm.mapMessage("è¿›å…¥PQæŒ‘æˆ˜ç¬¬äºŒå…³ï¼è·å¾—äº† 30ä¸‡ ç»éªŒå€¼ï¼");
                   	cm.dispose();
                    	} else {
-	           	cm.sendOk("È±ÉÙ 20 ¸ö#v4031460#");
+	           	cm.sendOk("ç¼ºå°‘ 20 ä¸ª#v4031460#");
 			cm.dispose(); }}}}}

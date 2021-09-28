@@ -1,18 +1,18 @@
 
 function start() {
 	if(cm.getzb() > 0){
-			var 充值金额 = cm.getzb();
-			var 点卷倍率 = 充值金额 * 150;
-		//	var 积分倍率 = 充值金额 * 1;
-			cm.gainNX(点卷倍率);
-		//	cm.gainjf(积分倍率);
-			cm.setzb(-充值金额);
-			cm.sendOk("您已成功领取： "+点卷倍率+"点卷!\r\n点卷已添加到您的帐户! \r\n享受吧! #r赶快去商城购买你喜爱的商品吧!#k");//\r\n同时还获得了:"+积分倍率+"积分!
+			var 鍏呭€奸噾棰� = cm.getzb();
+			var 鐐瑰嵎鍊嶇巼 = 鍏呭€奸噾棰� * 150;
+		//	var 绉垎鍊嶇巼 = 鍏呭€奸噾棰� * 1;
+			cm.gainNX(鐐瑰嵎鍊嶇巼);
+		//	cm.gainjf(绉垎鍊嶇巼);
+			cm.setzb(-鍏呭€奸噾棰�);
+			cm.sendOk("鎮ㄥ凡鎴愬姛棰嗗彇锛� "+鐐瑰嵎鍊嶇巼+"鐐瑰嵎!\r\n鐐瑰嵎宸叉坊鍔犲埌鎮ㄧ殑甯愭埛! \r\n浜彈鍚�! #r璧跺揩鍘诲晢鍩庤喘涔颁綘鍠滅埍鐨勫晢鍝佸惂!#k");//\r\n鍚屾椂杩樿幏寰椾簡:"+绉垎鍊嶇巼+"绉垎!
 			cm.getChar().saveToDB(false, false);
-			cm.worldMessage(12, cm.getC().getChannel(),"〖充值系统〗" + " : " + " [" + cm.getPlayer().getName() + "]充值了"+ 点卷倍率 +"点卷,赶快去商场挑选喜欢的物品吧！", true);  
+			cm.worldMessage(12, cm.getC().getChannel(),"銆栧厖鍊肩郴缁熴€�" + " : " + " [" + cm.getPlayer().getName() + "]鍏呭€间簡"+ 鐐瑰嵎鍊嶇巼 +"鐐瑰嵎,璧跺揩鍘诲晢鍦烘寫閫夊枩娆㈢殑鐗╁搧鍚э紒", true);  
 			cm.dispose();
 		} else {
-			cm.sendOk("请确认你是否充值点卷了!");
+			cm.sendOk("璇风‘璁や綘鏄惁鍏呭€肩偣鍗蜂簡!");
 			cm.dispose();
 		}
 }

@@ -50,11 +50,11 @@ function action(mode, type, selection) {
 			else {
 				var outText;
 				if (mapId == 103000805) {
-					outText = "�ӳ��м�Ҫ���ж�Ա���ﱾ��ͼ���ڵ��NPC��ȥ,�����޷���û��ֵ�";
+					outText = "队长切记要所有队员到达本地图后在点此NPC出去,否则无法获得积分点";
 				} 
 				else 
 				{
-					outText = "�򿪴����ù���?���ȥ��?";
+					outText = "打开打退堂鼓了?想回去吗?";
 				}
 				cm.sendYesNo(outText);
 			}

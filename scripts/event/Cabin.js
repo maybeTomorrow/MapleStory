@@ -1,17 +1,17 @@
 /*
-*¸ÃÎÄ¼þÎªPQ½Å±¾
-*ÎÄ¼þÃû£ºshijian.js
-*ÊÊÓÃNPC-PQÌôÕ½NPC
-*ÊÊÓÃ·þÎñ¶Ë£ºXioxMS-079·Â¹Ù·½·þÎñ¶Ë
-*°æÈ¨ËùÓÐ£ºXioxMS-
-*¼¼ÊõÖ§³Ö£ºXioxMS-
-*ÁªÏµ£ºXioxMS@qq.com
+*è¯¥æ–‡ä»¶ä¸ºPQè„šæœ¬
+*æ–‡ä»¶åï¼šshijian.js
+*é€‚ç”¨NPC-PQæŒ‘æˆ˜NPC
+*é€‚ç”¨æœåŠ¡ç«¯ï¼šXioxMS-079ä»¿å®˜æ–¹æœåŠ¡ç«¯
+*ç‰ˆæƒæ‰€æœ‰ï¼šXioxMS-
+*æŠ€æœ¯æ”¯æŒï¼šXioxMS-
+*è”ç³»ï¼šXioxMS@qq.com
 */
 importPackage(net.sf.odinms.world); 
 var exitMap; 
 var instanceId; 
 var minPlayers = 1;
-var mapId = 200090200;   //´«ËÍµØÍ¼
+var mapId = 200090200;   //ä¼ é€åœ°å›¾
 var qtmapId = 240000110;
 
 importPackage(net.sf.odinms.world); 
@@ -36,7 +36,7 @@ function setup() {
  var map = mf.getMap(mapId); 
  map.shuffleReactors(); 
  var firstPortal = eim.getMapInstance(mapId).getPortal("next00"); 
- em.schedule("timeOut", 800* 120);//µ½´ïÖÆ¶¨µØÍ¼ºó¹æ¶¨Ê±¼äÊÇ2·ÖÖÓ¡£¿ÉÒÔÔÚ´ËÐÞ¸Ä
+ em.schedule("timeOut", 800* 120);//åˆ°è¾¾åˆ¶å®šåœ°å›¾åŽè§„å®šæ—¶é—´æ˜¯2åˆ†é’Ÿã€‚å¯ä»¥åœ¨æ­¤ä¿®æ”¹
   
  return eim; 
 } 
@@ -46,7 +46,7 @@ function playerEntry(eim, player) {
   
  //TODO: hold time across map changes 
  player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(120));
- player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "×£ÄãÂÃÍ¾Óä¿ì¡­¡­"));  //½øÈëµØÍ¼ºóÁÄÌì´°ÄÚÌáÊ¾¸ÃÓï¾ä
+ player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(5, "ç¥ä½ æ—…é€”æ„‰å¿«â€¦â€¦"));  //è¿›å…¥åœ°å›¾åŽèŠå¤©çª—å†…æç¤ºè¯¥è¯­å¥
  startInstance(eim); 
 } 
 function playerDead(eim, player) { 
@@ -153,7 +153,7 @@ function timeOut() {
   eim.dispose(); 
  } 
 }  
-/*ÒÔÏÂ´úÂë¿ÉÒÔÊµÏÖ¹ÖÎï×î´óÉèÖÃ¡£µ«ÊÇ·þÎñ¶ËÃ²ËÆ²»Ö§³ÖËùÓÐÆÁ³¨µô*/
+/*ä»¥ä¸‹ä»£ç å¯ä»¥å®žçŽ°æ€ªç‰©æœ€å¤§è®¾ç½®ã€‚ä½†æ˜¯æœåŠ¡ç«¯è²Œä¼¼ä¸æ”¯æŒæ‰€æœ‰å±æ•žæŽ‰*/
 /*function startInstance(eim) { 
  if (eim.getPlayerCount() > 0) { 
   var map = eim.getMapFactory().getMap(mapId, false, false); 

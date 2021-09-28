@@ -19,7 +19,7 @@ var status;
  			status--;
  		if (status == 0) {
 			
-			cm.sendYesNo("ÄúÈ·¶¨Òª³öÈ¥Âğ?" );
+			cm.sendYesNo("æ‚¨ç¡®å®šè¦å‡ºå»å—?" );
 			
 		}
 		if (status == 1) {			

@@ -24,18 +24,18 @@ function action(mode, type, selection) {
 			status--;
 		if (status == 0) {
 			if (cm.haveItem(4031035)) {
-				cm.sendNext("����~ �����Ҹ����Űɣ����ֹ��Ҳ�����̰���˰ɣ��ţ���~ �㰴�Ҹ�˵�ģ�һ·�ϴ��ų���һ���������𣿺ã�����ô����������ˣ��Ҹ�������������֮������ܶ�.");
+				cm.sendNext("哎呦~ 那是我哥哥的信吧！他又怪我不工作贪玩了吧？嗯？啊~ 你按我哥说的，一路上带着宠物一起上来的吗？好！你这么辛苦地上来了，我给你提高你跟宠物之间的亲密度.");
 			} else {
-				cm.sendOk("�Ҹ�����ҹ�����Щѵ�������õ��ϰ��豸���������������ң������ȥ����������...�����Ҹ翴������������һ���~");
+				cm.sendOk("我哥哥让我管理这些训练宠物用的障碍设备，不过他看不到我，我想出去玩会儿。呼呼...反正我哥看不到，我先玩一会儿~");
 				cm.dispose();
 			}
 		} else if (status == 1) {
 			if (cm.getPlayer().getNoPets() == 0) {
-				cm.sendNextPrev("�ţ�����ĳ������Ķ�������Ϊ����׼�����ϰ����û�г���Ϊʲô����������ȥ�ɣ�");
+				cm.sendNextPrev("嗯？！你的宠物在哪儿？这是为宠物准备的障碍物！你没有宠物为什么来这儿？快回去吧！");
 			} else {
 				cm.gainItem(4031035, -1);
 				cm.gainCloseness(2 * cm.getC().getChannelServer().getPetExpRate(), 0);
-				cm.sendNextPrev("��ô�����ǲ��Ǿ��ó������������ˣ��Ժ����пյ�ʱ�򣬾��������������ɡ����������ζ����ԡ�����������ȵõ��Ҹ������ɡ�");
+				cm.sendNextPrev("怎么样？是不是觉得宠物跟你更亲密了！以后你有空的时候，就来这儿锻炼宠物吧。随便锻炼几次都可以。但是你必须先得到我哥哥的许可。");
 			}
 			cm.dispose();
 		}

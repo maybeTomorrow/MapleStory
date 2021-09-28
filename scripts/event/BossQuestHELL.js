@@ -178,7 +178,7 @@ function allMonstersDead(eim) {
     var totalp = parseInt(eim.getProperty("points")) + num;
 
     eim.setProperty("points", totalp);
-    //ÔİÊ±È¥µôµã¾í½±Àø	
+    //æš‚æ—¶å»æ‰ç‚¹å·å¥–åŠ±	
     //eim.broadcastPlayerMsg(5, "Your team've gained " + num + " points! With a total of " + totalp + ".");
 
     eim.saveBossQuest(num);
@@ -187,7 +187,7 @@ function allMonstersDead(eim) {
         eim.broadcastPlayerMsg(6, "Prepare! The next boss will appear in a glimpse of an eye!");
     } else {
         eim.saveBossQuest(15000);
-        //ÔİÊ±È¥µôµã¾í½±Àø
+        //æš‚æ—¶å»æ‰ç‚¹å·å¥–åŠ±
         //eim.saveNX(5000);
         //eim.broadcastPlayerMsg(5, "Your team've beaten the HELL mode and have gained an extra 15,000 points and extra 5,000 Cash!");
         eim.giveAchievement(22);

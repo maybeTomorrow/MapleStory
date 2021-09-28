@@ -9,11 +9,11 @@ function start(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			qm.sendNext("��ô�����Ѿ�����#b110��#k�ˡ���ǰѧϰ�ļ������õ���Σ�");
+			qm.sendNext("怎么样，已经到达#b110级#k了。以前学习的技能运用的如何？");
 		} else if (status == 1) {
-			qm.sendNextPrev("#b��ʿ�ų�#k�Ǻ�����ѧ���������ļ��ܡ���Ҳ�����ţ���ȥѧϰ�ɡ���ʿ�ų���˵�����ᷴ�ԡ�����ѧ���ǲ�ѧ����ȡ�������Լ���");
+			qm.sendNextPrev("#b骑士团长#k们好像又学会了其他的技能。你也别闲着，快去学习吧。骑士团长们说不定会反对……但学还是不学还是取决于你自己。");
 		} else if (status == 2) {
-			qm.sendAcceptDecline("�������ʱ��ѧ�˺ܶ༼����Ӧ�ò��ٰɡ�����������ѧϰ#b�¼���#k��");
+			qm.sendAcceptDecline("你在这段时间学了很多技能吗？应该不少吧……现在你想学习#b新技能#k吗？");
 			qm.startQuest();
 			qm.dispose();
 		}

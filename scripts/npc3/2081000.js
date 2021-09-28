@@ -1,5 +1,5 @@
 /*
-Vr001 ·â²â°æ°æÈ¨
+Vr001 å°æµ‹ç‰ˆç‰ˆæƒ
 */
 var section;
 var temp;
@@ -34,7 +34,7 @@ function action(mode, type, selection) {
 		status++;
 	}
 	if(status == 0) {
-		cm.sendSimple("ÄãºÃ,ÍâµØÈË.ÎÒÊÇ´å³¤,ÕÒÎÒÓĞÊ²Ã´ÊÂÇéÄØ?\r\n#L0##b¹ºÂòÄ§·¨ÖÖ×Ó#k#l");
+		cm.sendSimple("ä½ å¥½,å¤–åœ°äºº.æˆ‘æ˜¯æ‘é•¿,æ‰¾æˆ‘æœ‰ä»€ä¹ˆäº‹æƒ…å‘¢?\r\n#L0##bè´­ä¹°é­”æ³•ç§å­#k#l");
 	} else if(status == 1) {
 		section = selection;
 		if(section == 0) {

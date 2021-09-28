@@ -1,6 +1,6 @@
-//ÁìµØµÄÉóÅĞ
-//Event¸±±¾
-//¹úÍâ½Å±¾£¬ºº»¯
+//é¢†åœ°çš„å®¡åˆ¤
+//Eventå‰¯æœ¬
+//å›½å¤–è„šæœ¬ï¼Œæ±‰åŒ–
 
 
 var i = 5;
@@ -56,7 +56,7 @@ function announce() {
 	em.setProperty("entryPossible", "true");
 	if (i == 0) i = 5;
 	em.getChannelServer().broadcastPacket( 
-		net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[¹«¸æÊÂÏî] ÁìµØµÄÉóÅĞ¸±±¾ÈÎÎñ " + i + " ·ÖÖÓºó¿ªÆô¡£"));
+		net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[å…¬å‘Šäº‹é¡¹] é¢†åœ°çš„å®¡åˆ¤å‰¯æœ¬ä»»åŠ¡ " + i + " åˆ†é’Ÿåå¼€å¯ã€‚"));
 	i--;
 }
 
@@ -70,7 +70,7 @@ function mesoDistribution() {
 			var randWinner = Math.floor(Math.random() * eim.getPlayerCount());
 			var winner = eim.getPlayers().get(randWinner);
 			var map = eim.getMapFactory().getMap(mapId, false, false);
-			map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[¹«¸æÊÂÏî] ¹§Ï² " + winner.getName() + " Íæ¼Ò »ñµÃÁË " + meso + " ½ğ±Ò"));
+			map.broadcastMessage(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[å…¬å‘Šäº‹é¡¹] æ­å–œ " + winner.getName() + " ç©å®¶ è·å¾—äº† " + meso + " é‡‘å¸"));
 			winner.gainMeso(meso, true, true, true);
 		}
 	}
@@ -79,7 +79,7 @@ function mesoDistribution() {
 function start() {
 	scheduleNew();
 	em.getChannelServer().broadcastPacket( 
-		net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[¹«¸æÊÂÏî] ÁìµØµÄÉóÅĞ¸±±¾ÈÎÎñÒÑ¾­¿ªÆô¡£"));	
+		net.sf.odinms.tools.MaplePacketCreator.serverNotice(6, "[å…¬å‘Šäº‹é¡¹] é¢†åœ°çš„å®¡åˆ¤å‰¯æœ¬ä»»åŠ¡å·²ç»å¼€å¯ã€‚"));	
 	var iter = em.getInstances().iterator();
 	while (iter.hasNext()) {
 		var eim = iter.next();
@@ -276,7 +276,7 @@ function playerDead(eim, player) {
 	player.setHp(1);
 	player.changeMap(returnMap, returnMap.getPortal(0));
 	eim.unregisterPlayer(player);
-	player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(1, "ÄãÊ§È¥ÁË " + eim.getKillCount(player) + " µã¡£"));
+	player.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(1, "ä½ å¤±å»äº† " + eim.getKillCount(player) + " ç‚¹ã€‚"));
 }
 
 function playerDisconnected(eim, player) {
@@ -513,7 +513,7 @@ function allMonstersDead(eim) {
 	var iter = eim.getPlayers().iterator();
 	while (iter.hasNext()) {
 		var winner = iter.next();
-		winner.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(1, "Äã»ñÈ¡ÁË " + eim.getKillCount(winner) + " µãÈ¯\r\nÄã½«ÔÚ2·ÖÖÓÄÚ´«ËÍ³ö¡£"));
+		winner.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(1, "ä½ è·å–äº† " + eim.getKillCount(winner) + " ç‚¹åˆ¸\r\nä½ å°†åœ¨2åˆ†é’Ÿå†…ä¼ é€å‡ºã€‚"));
 		winner.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.getClock(120));
 		eim.saveWinner(winner);
 	}

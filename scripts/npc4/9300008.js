@@ -14,7 +14,7 @@ function action(mode, type ,selection){
 		return;
 	}
 	if(status == 1){
-		cm.sendYesNo("你是否返回?");
+		cm.sendYesNo("浣犳槸鍚﹁繑鍥�?");
 	} else if(status == 2){
 		var map = cm.getSavedLocation("WEDDING");
 		cm.warp(map, 0);

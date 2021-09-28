@@ -44,7 +44,7 @@ function action(mode, type, selection) {
 	else
 		status--;
 	if (status == 0) {
-		cm.sendOk("你是谁？你来这里要做什么？你在跟我说话吗？");
+		cm.sendOk("浣犳槸璋侊紵浣犳潵杩欓噷瑕佸仛浠�涔堬紵浣犲湪璺熸垜璇磋瘽鍚楋紵");
 		cm.dispose();
 		}
 	}

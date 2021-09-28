@@ -1,6 +1,6 @@
 /*
-Vr001 ·â²â°æ ONLINE
-ÍêÉÆÖĞµÄÍæ¾ß³Ç½Å±¾
+Vr001 å°æµ‹ç‰ˆ ONLINE
+å®Œå–„ä¸­çš„ç©å…·åŸè„šæœ¬
 */
 
 var status = 0;
@@ -29,11 +29,11 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			if (cm.getParty() == null) { //Ã»ÓĞ×é¶Ó
-				cm.sendOk("½øÈëĞèÒª: #r\r\n" + minPartySize + " Î»×éÔ±.×îµÍ " + minLevel + " ¼¶,×î¸ß " + maxLevel + "¼¶.");
+			if (cm.getParty() == null) { //æ²¡æœ‰ç»„é˜Ÿ
+				cm.sendOk("è¿›å…¥éœ€è¦: #r\r\n" + minPartySize + " ä½ç»„å‘˜.æœ€ä½ " + minLevel + " çº§,æœ€é«˜ " + maxLevel + "çº§.");
 				cm.dispose();
-			} else if (!cm.isLeader()) { // ²»ÊÇ¶Ó³¤
-				cm.sendOk("ÇëeÈÃÄãµÄĞ¡×é×é³¤ºÍÎÒ¶Ô»°£¡.");
+			} else if (!cm.isLeader()) { // ä¸æ˜¯é˜Ÿé•¿
+				cm.sendOk("è¯·eè®©ä½ çš„å°ç»„ç»„é•¿å’Œæˆ‘å¯¹è¯ï¼.");
 				cm.dispose();
 			} else {
 				// Check if all party members are within PQ levels
@@ -83,12 +83,12 @@ function action(mode, type, selection) {
 								em.setProperty("entryPossible", "false");
 							}
 						} else {
-							cm.sendNext("ÀïÃæÒÑ¾­¿ªÊ¼ÁËÕ½¶·£¬ÄãÃÇµÈµÈ°É£¬»òÕß»»¸öÆµµÀÊÔÊÔ°É£¡");
+							cm.sendNext("é‡Œé¢å·²ç»å¼€å§‹äº†æˆ˜æ–—ï¼Œä½ ä»¬ç­‰ç­‰å§ï¼Œæˆ–è€…æ¢ä¸ªé¢‘é“è¯•è¯•å§ï¼");
 						}
 					}
 					cm.dispose();
 				} else {
-					cm.sendNext("ÄãºÃ£¬ÄãÏëÌôÕ½Õâ¸öPQÂğ£¿½øÈëÊÕµ½ÁËÏŞÖÆ£¬ÇëÈ·¶¨ÄãµÄ×é¶ÓÊ±ÕâÑùÍêÕûµÄ¡£½øÈëĞèÒª: #r\r\n" + minPartySize + " Î»×éÔ±.×îµÍ " + minLevel + " ¼¶,×î¸ß " + maxLevel + "¼¶.");
+					cm.sendNext("ä½ å¥½ï¼Œä½ æƒ³æŒ‘æˆ˜è¿™ä¸ªPQå—ï¼Ÿè¿›å…¥æ”¶åˆ°äº†é™åˆ¶ï¼Œè¯·ç¡®å®šä½ çš„ç»„é˜Ÿæ—¶è¿™æ ·å®Œæ•´çš„ã€‚è¿›å…¥éœ€è¦: #r\r\n" + minPartySize + " ä½ç»„å‘˜.æœ€ä½ " + minLevel + " çº§,æœ€é«˜ " + maxLevel + "çº§.");
 					cm.dispose();
 				}
 			}

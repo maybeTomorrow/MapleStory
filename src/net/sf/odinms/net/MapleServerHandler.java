@@ -120,7 +120,15 @@ public class MapleServerHandler extends IoHandlerAdapter {
                     if (client.getPlayer() != null) {
                         from = "from " + client.getPlayer().getName() + " ";
                     }
-                    log.info("Got Message {}handled by {} ({}) {}\n{}", new Object[]{from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});
+                    String cname=packetHandler.getClass().getSimpleName();
+                    if(cname.equals("MoveLifeHandler")){
+
+                    }else if(cname.equals("NPCAnimation")){
+
+                    }else{
+                        log.info("Got Message {}handled by {} ({}) {}\n{}", new Object[]{from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});
+
+                    }
                 }
                 packetHandler.handlePacket(slea, client);
                 if (client.hasPacketLog()) {

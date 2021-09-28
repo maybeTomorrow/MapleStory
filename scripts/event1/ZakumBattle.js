@@ -36,7 +36,7 @@ function playerRevive(eim,player) {
 	player.changeMap(exitMap, exitMap.getPortal(0));
 	var party = eim.getPlayers();
 	if (party.size() < minPlayers) {
-		end(eim,"Ã»ÓÐ×ã¹»µÄ³ÉÔ±¡£ÈÎÎñ½«ÉÔºó±»ÖÐ¶Ï¡£");
+		end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„æˆå‘˜ã€‚ä»»åŠ¡å°†ç¨åŽè¢«ä¸­æ–­ã€‚");
 	}
 	return false;
 }
@@ -51,12 +51,12 @@ function playerDisconnected(eim,player) {
 		var iter = party.iterator();
 		while (iter.hasNext()) {
 			var pl = iter.next();
-			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"´Ë¶ÓÎé¶Ó³¤ÒÑ¾­Àë¿ª£¬ÈÎÎñ½«»á±»ÖÐ¶Ï¡£"));
+			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"æ­¤é˜Ÿä¼é˜Ÿé•¿å·²ç»ç¦»å¼€ï¼Œä»»åŠ¡å°†ä¼šè¢«ä¸­æ–­ã€‚"));
 		}
 	}
 	// and, if the party is too small
 	if (party.size() < minPlayers) {
-		end(eim,"Ã»ÓÐ×ã¹»µÄ³ÉÔ±¡£ÈÎÎñ½«ÉÔºó±»ÖÐ¶Ï¡£");
+		end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„æˆå‘˜ã€‚ä»»åŠ¡å°†ç¨åŽè¢«ä¸­æ–­ã€‚");
 	}
 }
 
@@ -66,7 +66,7 @@ function monsterValue(eim,mobId) { // potentially display time of death? does no
 		var iter = party.iterator();
 		while (iter.hasNext()) {
 			var pl = iter.next();
-			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"¹§Ï²³É¹¦´ò°Ü´ó¹ÖÎï£ºÔúÀ¥"));
+			pl.getClient().getSession().write(net.sf.odinms.tools.MaplePacketCreator.serverNotice(6,"æ­å–œæˆåŠŸæ‰“è´¥å¤§æ€ªç‰©ï¼šæ‰Žæ˜†"));
 		}
 	}
 	return -1;
@@ -82,7 +82,7 @@ function playerExit(eim,player) {
 	player.changeMap(exitMap,exitMap.getPortal(0));
         var party = eim.getPlayers();
         if (party.size() < minPlayers) { //not enough after someone left
-                end(eim,"Ã»ÓÐ×ã¹»µÄ³ÉÔ±¡£ÈÎÎñ½«ÉÔºó±»ÖÐ¶Ï¡£");
+                end(eim,"æ²¡æœ‰è¶³å¤Ÿçš„æˆå‘˜ã€‚ä»»åŠ¡å°†ç¨åŽè¢«ä¸­æ–­ã€‚");
         }
 }
 

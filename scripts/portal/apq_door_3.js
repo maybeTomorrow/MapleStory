@@ -35,7 +35,7 @@ function enter(pi) {
 	// only let people through if the eim is ready
 	var avail = eim.getProperty("2stageclear");
 	if (avail == null) {
-		pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(6, "�ŵ�ǰ�ǹرյ�"));
+		pi.getPlayer().getClient().getSession().write(MaplePacketCreator.serverNotice(6, "门当前是关闭的"));
 		return false;	}
 	else {
 		pi.getPlayer().changeMap(target, targetPortal);

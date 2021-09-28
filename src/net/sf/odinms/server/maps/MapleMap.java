@@ -449,7 +449,8 @@ public class MapleMap {
             int chance = (int) (Math.random() * 100);
             if (chance < 70) 
             toDrop.add(4031802); //小石球的碎片
-        }   
+        }
+
         if (monster.getId() == 8810018) {
             toDrop.add(2290096); //[能手册]冒险岛勇士
         }

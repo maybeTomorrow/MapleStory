@@ -529,8 +529,20 @@ public class UseCashItemHandler extends AbstractMaplePacketHandler {
                     c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MaplePacketCreator.changePetName(c.getPlayer(), newName, 1), true);
                     MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
                     break;
+                case 519: //宠物改名
+                    MaplePet pet3 = c.getPlayer().getPet(0);
+                    if (pet3 == null) {
+                        c.getSession().write(MaplePacketCreator.enableActions());
+                        return;
+                    }
+                    pet3.setUniqueId(itemId);
+                    c.getSession().write(MaplePacketCreator.updatePet(pet3, true));
+                    c.getSession().write(MaplePacketCreator.enableActions());
+                    c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MaplePacketCreator.updatePet(pet3,true), true);
+                    MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
+                    break;
                 case 520:
-                    c.getPlayer().gainMeso(ii.getMeso(itemId), true, false, true);
+                    c.getPlayer().gainMeso(ii.getMeso(itemId), true,    false, true);
                     MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
                     c.getSession().write(MaplePacketCreator.enableActions());
                     break;

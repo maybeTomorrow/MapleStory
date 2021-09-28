@@ -1,9 +1,9 @@
 /*
-	Ç×Ç××ìÃ°ÏÕ×¨ÓÃ½Å±¾
+	äº²äº²å˜´å†’é™©ä¸“ç”¨è„šæœ¬
 
-	ÉÙÁÖÑıÉ® -- µØÍ¼·´Ó¦
+	å°‘æ—å¦–åƒ§ -- åœ°å›¾ååº”
 	
-	by-- Ğ¾ËéÍõ×Ó
+	by-- èŠ¯ç¢ç‹å­
 		
 	QQ:7851103
 
@@ -16,7 +16,7 @@ function start(ms) {
 	var mob = MapleLifeFactory.getMonster(9400633);
 	var pMap = ms.getPlayer().getMap();
 	if(ms.getPlayer().getBossLog("shaolingb") >= 3){		
-		NPCScriptManager.getInstance().start(ms.getPlayer().getClient(), 1100000); //²»ÖªµÀÔõÃ´Ğ´¶ÓÔ±Ã»µãNPCµÄÇé¿öÏÂÒ²ÄÜĞ´Bosslog¼ÇÂ¼´ÎÊı£¬Ö»ÄÜÓÃÕââÈÖ÷ÒâÁË!
+		NPCScriptManager.getInstance().start(ms.getPlayer().getClient(), 1100000); //ä¸çŸ¥é“æ€ä¹ˆå†™é˜Ÿå‘˜æ²¡ç‚¹NPCçš„æƒ…å†µä¸‹ä¹Ÿèƒ½å†™Bosslogè®°å½•æ¬¡æ•°ï¼Œåªèƒ½ç”¨è¿™é¦Šä¸»æ„äº†!
 	}else{
 	   ms.getPlayer().setBossLog("shaolingb");
 	}
@@ -24,7 +24,7 @@ function start(ms) {
 if (pMap.countMobOnMap() < 1){		
 		pMap.addMapTimer(1800, pMap.getReturnMapId());
        		pMap.spawnMonsterWithEffect(mob, 2, new Point(619, 45));  
-		pMap.mapMessage(5, " µØÓü´ó¹«±»ÕÙ»½£¬ÄúÖ»ÓĞ30·ÖÖÓÊ±¼äÌôÕ½Ëü,Å¬Á¦Õ½¶·°É!!");	
+		pMap.mapMessage(5, " åœ°ç‹±å¤§å…¬è¢«å¬å”¤ï¼Œæ‚¨åªæœ‰30åˆ†é’Ÿæ—¶é—´æŒ‘æˆ˜å®ƒ,åŠªåŠ›æˆ˜æ–—å§!!");	
         	
 	}
 

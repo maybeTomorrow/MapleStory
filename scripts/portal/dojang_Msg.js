@@ -5,6 +5,6 @@ function start(ms) {
 		ms.getPlayer().startMapEffect(messages[Math.floor(Math.random()*messages.length)], 5120024);
 	} else {
 		ms.getPlayer().resetEnteredScript();
-		ms.getPlayer().startMapEffect("哈！我不会让你离开的，除非你能打败我！", 5120024);
+		ms.getPlayer().startMapEffect("鍝堬紒鎴戜笉浼氳浣犵寮�鐨勶紝闄ら潪浣犺兘鎵撹触鎴戯紒", 5120024);
 	}
 }

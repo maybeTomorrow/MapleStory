@@ -1,4 +1,4 @@
 function action(mode, type, selection) {
-cm.sendOk("¾º¼¼³¡ÔİÊ±²»¿ª·Å¡£");
+cm.sendOk("ç«æŠ€åœºæš‚æ—¶ä¸å¼€æ”¾ã€‚");
 cm.dispose();
 }

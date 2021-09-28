@@ -20,6 +20,6 @@
  */
 
 function enter(pi) {
-	pi.showInstruction("同时按下#e#b[↓]#k#n键和#e#b[Alt]#k#n键，可以跳到下面", 200, 5);
+	pi.showInstruction("鍚屾椂鎸変笅#e#b[鈫揮#k#n閿拰#e#b[Alt]#k#n閿紝鍙互璺冲埌涓嬮潰", 200, 5);
 	return false;
 }

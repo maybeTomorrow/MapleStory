@@ -2,21 +2,21 @@ var status = -1;
 
 function action(mode, type, selection) {
     if (mode != 1) {
-	cm.sendOk("完成公会任务的好运气!");
+	cm.sendOk("瀹屾垚鍏細浠诲姟鐨勫ソ杩愭皵!");
 	cm.dispose();
 	return;
     }
 status++;
     if (status == 0) {
 	if (cm.isPlayerInstance()) {
-		cm.sendSimple("你想做什么? \r\n #L0#离开家族任务#l");
+		cm.sendSimple("浣犳兂鍋氫粈涔�? \r\n #L0#绂诲紑瀹舵棌浠诲姟#l");
 	} else {
-		cm.sendOk("对不起，我不能为你做任何事!");
+		cm.sendOk("瀵逛笉璧凤紝鎴戜笉鑳戒负浣犲仛浠讳綍浜�!");
 		cm.dispose();
 	}
     }
     else if (status == 1) {
-	cm.sendYesNo("你确定你想做的吗？你将不能回来!");
+	cm.sendYesNo("浣犵‘瀹氫綘鎯冲仛鐨勫悧锛熶綘灏嗕笉鑳藉洖鏉�!");
     }
     else if (status == 2) {
 	if (cm.isPlayerInstance()) { 

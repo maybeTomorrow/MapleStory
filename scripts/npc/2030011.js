@@ -39,7 +39,7 @@ function action(mode, type, selection){
 	} else {
 		status++;
 		if (status == 0) {
-			cm.sendNext("Ïëµ½ÍâÃæÈ¥¾Í¸úÎÒËµ°É¡£ÖĞÍ¾·ÅÆúÕæµÄ¿ÉÏ§°¡£¡");
+			cm.sendNext("æƒ³åˆ°å¤–é¢å»å°±è·Ÿæˆ‘è¯´å§ã€‚ä¸­é€”æ”¾å¼ƒçœŸçš„å¯æƒœå•Šï¼");
 		} else {
 			cm.warp(211042300);
 			cm.removeAll(4001015);

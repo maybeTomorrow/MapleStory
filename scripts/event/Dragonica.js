@@ -88,7 +88,7 @@ function clearPQ(eim) {
 function allMonstersDead(eim) {
     if (eim.getMapInstance(4).getAllMonstersThreadsafe().size() == 0) {
         eim.getMapInstance(4).spawnNpc(2085003, new java.awt.Point(700, -10));
-        eim.broadcastPlayerMsg(6, "御龙魔已被消灭，传送门已开启！");
+        eim.broadcastPlayerMsg(6, "寰￠緳榄斿凡琚秷鐏紝浼犻�侀棬宸插紑鍚紒");
     }
 }
 

@@ -6,23 +6,23 @@ function start() {
     if (cm.getQuestStatus(6225) == 1 || cm.getQuestStatus(6315) == 1) {
 	var ret = checkJob();
 	if (ret == -1) {
-	    cm.sendOk("请再组成一个队伍，再跟我说一次.");
+	    cm.sendOk("璇峰啀缁勬垚涓€涓槦浼嶏紝鍐嶈窡鎴戣涓€娆�.");
 	} else if (ret == 0) {
-	    cm.sendOk("请确保组队人数为2.");
+	    cm.sendOk("璇风‘淇濈粍闃熶汉鏁颁负2.");
 	} else if (ret == 1) {
-	    cm.sendOk("你的一个队员没有资格进入另一个世界.");
+	    cm.sendOk("浣犵殑涓€涓槦鍛樻病鏈夎祫鏍艰繘鍏ュ彟涓€涓笘鐣�.");
 	} else if (ret == 2) {
-	    cm.sendOk("你的一个队员的水平是没有资格进入另一个世界.");
+	    cm.sendOk("浣犵殑涓€涓槦鍛樼殑姘村钩鏄病鏈夎祫鏍艰繘鍏ュ彟涓€涓笘鐣�.");
 	} else {
 	    var dd = cm.getEventManager("ElementThanatos");
 	    if (dd != null) {
 		dd.startInstance(cm.getParty(), cm.getMap());
 	    } else {
-		cm.sendOk("发生未知错误.");
+		cm.sendOk("鍙戠敓鏈煡閿欒.");
 	    }
 	}
     } else {
-	cm.sendOk("你似乎没有理由满足我.");
+	cm.sendOk("浣犱技涔庢病鏈夌悊鐢辨弧瓒虫垜.");
     }
     cm.dispose();
 }

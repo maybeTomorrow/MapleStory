@@ -1,7 +1,7 @@
 
 /*
-��ԵNPC
-��Ҷ��ȡ���
+星缘NPC
+枫叶换取点卷
 */
 
 importPackage(net.sf.odinms.client);
@@ -19,7 +19,7 @@ function action(mode, type, selection) {
             else {
                 if (status >= 0 && mode == 0) {
                 
-			cm.sendOk("���Ǹ����ܵģ�������");
+			cm.sendOk("我是个万能的！哈哈。");
 			cm.dispose();
 			return;                    
                 }
@@ -30,54 +30,54 @@ function action(mode, type, selection) {
 			status--;
 		} 
 		        if (status == 0) {
-			cm.sendSimple("�𾴵������ã�������Ľ��������һ���ĵ�װ���Ƿ�
-����Ľ������ҵ�˫��˫���ĸ�����\r\n������������ʹ��#r��Ҷ#k�һ�#r���#k��\r\n#L1##bʹ
-��#r1000����Ҷ�һ�1000���#k\r\n#L2##b������ת���ܣ�#r����ת����뼤���Ȼ������Ч����");
-			} else if (status == 1) { //ʹ��10000��Ҷ��ȡ10000���
+			cm.sendSimple("尊敬的玩家你好！还在羡慕别人身上一身的点装吗？是否还
+在羡慕其他玩家的双倍双暴的福利吗？\r\n在我这里。你可以使用#r枫叶#k兑换#r点卷#k！\r\n#L1##b使
+用#r1000个枫叶兑换1000点卷#k\r\n#L2##b激活四转技能！#r（四转后必须激活。不然技能无效！）");
+			} else if (status == 1) { //使用10000枫叶换取10000点卷
 			if (selection == 1) {
 			if (cm.haveItem(4001126, 1000)) { 
 		   	cm.gainItem(4001126, -1000);
             		cm.gainNX(1000);
-			cm.sendOk("�𾴵���ң�����˻��Ѿ��ɹ�������1000����ˣ�");
+			cm.sendOk("尊敬的玩家，你的账户已经成功增加了1000点卷了！");
                   	cm.dispose();
                    	} else {
-	           	cm.sendOk("�𾴵���ң���ķ�Ҷ����1000����~��");
+	           	cm.sendOk("尊敬的玩家，你的枫叶不足1000个啊~！");
 			cm.dispose(); }
-//-------------------------------������ת����-----------------------------
+//-------------------------------激活四转技能-----------------------------
 			} else if  (selection == 2) { 
 			if ((cm.getMeso() >= 50000000000)&&(cm.haveItem(3011000, 1))||
 (cm.getMeso() <= 500000)) { 
-                   	cm.sendOk("��ת���ܿ���ȥ��#bð�յ���ӪԱ#k������..");
+                   	cm.sendOk("四转技能可以去找#b冒险岛运营员#k来提升..");
                    	cm.dispose();
                    	} else {
-		   	cm.sendOk("���Ѿ��ɹ����˵������ӣ���������50��ð�ձң�"); 
-			cm.gainItem(3011000,1); //��������
+		   	cm.sendOk("你已经成功买到了钓鱼椅子！花费了你50万冒险币！"); 
+			cm.gainItem(3011000,1); //钓鱼椅子
 			cm.gainMeso(-500000);
 		   	cm.dispose(); }
-//------------------------------�߼�����һ�----------------------------------
+//------------------------------高级鱼饵兑换----------------------------------
             } else if (selection == 3) {
            	   if (cm.haveItem(5350000, 1)) { 
                    cm.gainItem(5350000,-1);
                    cm.gainItem(2300001,100);
-                   cm.sendOk("�һ��ɹ���");
+                   cm.sendOk("兑换成功！");
                    cm.dispose();
                    } else {
-		   cm.sendOk("��û�и߼����~"); 
+		   cm.sendOk("你没有高级鱼饵~"); 
 		   cm.dispose(); }
-//--------------------------------����һ�------------------------------------
+//--------------------------------鱼饵兑换------------------------------------
             } else if (selection == 4) {
            	 if ((cm.getMeso() >= 3000)) { 
                    cm.gainItem(2300000,50);
 		   cm.gainMeso(-3000);
-                   cm.sendOk("�һ��ɹ���");
+                   cm.sendOk("兑换成功！");
                    cm.dispose();
                    } else {
-		   cm.sendOk("ð�ձҲ���~��Ҫ3000ð�ձ�"); 
+		   cm.sendOk("冒险币不够~需要3000冒险币"); 
 		   cm.dispose(); }
-//-------------------------------���ڵ��㳡------------------------------------
+//-------------------------------关于钓鱼场------------------------------------
 	                 } else if (selection == 5) {
-                   cm.sendNextPrev("������㳡��Ҫ#b�߼����#k����#b���#k,Ҳ��Ҫ#b���㳡ר
-������#k,��#b���#k,��Щ�㶼����ͨ����������.#b���#k��ȥ��������̳�����!");
+                   cm.sendNextPrev("进入钓鱼场需要#b高级鱼竿#k或者#b鱼竿#k,也需要#b钓鱼场专
+用椅子#k,和#b鱼饵#k,这些你都可以通过我来购买.#b鱼竿#k请去点卷购物商场购买!");
                    cm.dispose();
 		}}
 	}

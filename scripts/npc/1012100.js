@@ -41,7 +41,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if (mode == 0 && status == 2) {
-			cm.sendOk("ÇëÄúÏëºÃÁËÒÔºóÔÙÀ´ÕÒÎÒ.");
+			cm.sendOk("è¯·æ‚¨æƒ³å¥½äº†ä»¥åå†æ¥æ‰¾æˆ‘.");
 			cm.dispose();
 			return;
 		}
@@ -52,9 +52,9 @@ function action(mode, type, selection) {
 		if (status == 0) {
 			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER)) {
 				if (cm.getLevel() >= 10 && cm.getChar().getDex() >= 25)
-					cm.sendNext("ÄãÒÑ¾­¾ö¶¨×ªÖ°³ÉÎªÒ»Ãû #r¹­¼ıÊÖ#k?");
+					cm.sendNext("ä½ å·²ç»å†³å®šè½¬èŒæˆä¸ºä¸€å #rå¼“ç®­æ‰‹#k?");
 				else {
-					cm.sendOk("ÄãĞèÒª¼ÓÇ¿¸ü¶àµÄĞŞÁ¶,ÎÒ²ÅÄÜ¸æËßÄãÔõÑù³ÉÎªÒ»Ãû³öÉ«µÄ#r¹­¼ıÊÖ#k.")
+					cm.sendOk("ä½ éœ€è¦åŠ å¼ºæ›´å¤šçš„ä¿®ç‚¼,æˆ‘æ‰èƒ½å‘Šè¯‰ä½ æ€æ ·æˆä¸ºä¸€åå‡ºè‰²çš„#rå¼“ç®­æ‰‹#k.")
 					cm.dispose();
 				}
 			} else {
@@ -66,64 +66,64 @@ function action(mode, type, selection) {
 						if (cm.getQuestStatus(100002) ==
 						 net.sf.odinms.client.MapleQuestStatus.Status.COMPLETED) {
 							status = 20;
-							cm.sendNext("ÎÒÈÏÎªÄã×öµÃÏàµ±²»´í. ÎÒ½«ÔÊĞíÄã½øÈëÒ»ÏÂÂş³¤µÄĞŞÁ¶½×¶Î.");
+							cm.sendNext("æˆ‘è®¤ä¸ºä½ åšå¾—ç›¸å½“ä¸é”™. æˆ‘å°†å…è®¸ä½ è¿›å…¥ä¸€ä¸‹æ¼«é•¿çš„ä¿®ç‚¼é˜¶æ®µ.");
 						} else {
 							cm.sendOk("Go and see the #rJob Instructor#k.")
 							cm.dispose();
 						}
 					} else {
 						status = 10;
-						cm.sendNext("ÄãÄ¿Ç°Ëù×ö³öµÄ½ø²½ÕæµÄºÜÈÃÈË³Ô¾ª.");
+						cm.sendNext("ä½ ç›®å‰æ‰€åšå‡ºçš„è¿›æ­¥çœŸçš„å¾ˆè®©äººåƒæƒŠ.");
 					}
 				} else if (cm.getQuestStatus(100100).equals(MapleQuestStatus.Status.STARTED)) {
 					cm.completeQuest(100101);
 					if (cm.getQuestStatus(100101).equals(MapleQuestStatus.Status.COMPLETED)) {
-						cm.sendOk("ÄÇÃ´,Çë°ÑÕâ¸ö×ª½»¸ø#bRene#k.");
+						cm.sendOk("é‚£ä¹ˆ,è¯·æŠŠè¿™ä¸ªè½¬äº¤ç»™#bRene#k.");
 					} else {
 						cm.sendOk("Hey, " + cm.getChar().getName() + "! I need a #bBlack Charm#k. Go and find the Door of Dimension.");
 						//cm.startquest(100101);
 					}
 					cm.dispose();
 				} else {
-					cm.sendOk("ÄãµÄÑ¡ÔñÊÇÃ÷ÖÇµÄ.");
+					cm.sendOk("ä½ çš„é€‰æ‹©æ˜¯æ˜æ™ºçš„.");
 					cm.dispose();
 				}
 			}
 		} else if (status == 1) {
-			cm.sendNextPrev("ÕâÊÇ·Ç³£ÖØÒªÒ²ÊÇÄã×îºó×÷³öµÄÒ»¸öÑ¡Ôñ. Ò»µ©ÄãÑ¡ÔñÁË¸ÃÖ°Òµ,Äã½«ÓÀÔ¶²»ÄÜ¸Ä±ä.");
+			cm.sendNextPrev("è¿™æ˜¯éå¸¸é‡è¦ä¹Ÿæ˜¯ä½ æœ€åä½œå‡ºçš„ä¸€ä¸ªé€‰æ‹©. ä¸€æ—¦ä½ é€‰æ‹©äº†è¯¥èŒä¸š,ä½ å°†æ°¸è¿œä¸èƒ½æ”¹å˜.");
 		} else if (status == 2) {
-			cm.sendYesNo("ÄãÕæµÄÏë³ÉÎªÒ»Ãû#r¹­¼ıÊÖ#kÂğ?");
+			cm.sendYesNo("ä½ çœŸçš„æƒ³æˆä¸ºä¸€å#rå¼“ç®­æ‰‹#kå—?");
 		} else if (status == 3) {
 			if (cm.getJob().equals(net.sf.odinms.client.MapleJob.BEGINNER))
 				cm.changeJob(net.sf.odinms.client.MapleJob.BOWMAN);
-			cm.sendOk("×ªÖ°³É¹¦!ÄÇÃ´ÏÖÔÚÇëÄãÈ¥ÎªÁË¸ü¸ßµÄ¾³½ç¶ø·Ü¶·°É.");
+			cm.sendOk("è½¬èŒæˆåŠŸ!é‚£ä¹ˆç°åœ¨è¯·ä½ å»ä¸ºäº†æ›´é«˜çš„å¢ƒç•Œè€Œå¥‹æ–—å§.");
 			cm.dispose();
 		} else if (status == 11) {
-			cm.sendNextPrev(" ×÷ÎªÒ»Ãû#rÁÔÈË#k»òÕß#råó¹­ÊÖ#k,ÄãÓ¦¸Ã×öºÃÌôÕ½ÏÂÒ»¸ö½×¶ÎµÄ×¼±¸.")
+			cm.sendNextPrev(" ä½œä¸ºä¸€å#rçŒäºº#kæˆ–è€…#rå¼©å¼“æ‰‹#k,ä½ åº”è¯¥åšå¥½æŒ‘æˆ˜ä¸‹ä¸€ä¸ªé˜¶æ®µçš„å‡†å¤‡.")
 		} else if (status == 12) {
-			cm.sendAcceptDecline("µ«ÎÒÊ×ÏÈµÃ¿¼¿¼ÄãµÄÄÜÁ¦. Äã×¼±¸ºÃÁËÂğ?");
+			cm.sendAcceptDecline("ä½†æˆ‘é¦–å…ˆå¾—è€ƒè€ƒä½ çš„èƒ½åŠ›. ä½ å‡†å¤‡å¥½äº†å—?");
 		} else if (status == 13) {
 			if (cm.haveItem(4031010)) {
 				cm.sendOk("Please report this bug at http://odinms.de/forum/.\r\nstatus = 13");
 			} else {
 				//cm.startquest(100000);
-				cm.sendOk("ÇëÄã°ÑÕâ·âĞÅ´ø¸ø#b2×ªµÄ½Ì¹Ù#k Ëû¾ÍÔÚ Henesys. Ëû½«»á¸øÄã×ªÖ°µÄÖ¸Òı.");
+				cm.sendOk("è¯·ä½ æŠŠè¿™å°ä¿¡å¸¦ç»™#b2è½¬çš„æ•™å®˜#k ä»–å°±åœ¨ Henesys. ä»–å°†ä¼šç»™ä½ è½¬èŒçš„æŒ‡å¼•.");
 			}
 		} else if (status == 21) {
-			cm.sendSimple("ÄãÏë×ªÎªÏÂÃæÄÄ¸öÖ°ÒµÄØ?#b\r\n#L0#ÁÔÈË#l\r\n#L1#åó¹­ÊÖ#l#k");
+			cm.sendSimple("ä½ æƒ³è½¬ä¸ºä¸‹é¢å“ªä¸ªèŒä¸šå‘¢?#b\r\n#L0#çŒäºº#l\r\n#L1#å¼©å¼“æ‰‹#l#k");
 		} else if (status == 22) {
 			var jobName;
 			if (selection == 0) {
-				jobName = "ÁÔÈË";
+				jobName = "çŒäºº";
 				job = net.sf.odinms.client.MapleJob.HUNTER;
 			} else {
-				jobName = "åó¹­ÊÖ";
+				jobName = "å¼©å¼“æ‰‹";
 				job = net.sf.odinms.client.MapleJob.CROSSBOWMAN;
 			}
-			cm.sendYesNo("ÄãÕæµÄÏë³ÉÎªÒ»Ãû#r" + jobName + "#k?");
+			cm.sendYesNo("ä½ çœŸçš„æƒ³æˆä¸ºä¸€å#r" + jobName + "#k?");
 		} else if (status == 23) {
 			cm.changeJob(job);
-			cm.sendOk("×ªÖ°³É¹¦!ÄÇÃ´ÏÖÔÚÇëÄãÈ¥ÎªÁË¸ü¸ßµÄ¾³½ç¶ø·Ü¶·°É.");
+			cm.sendOk("è½¬èŒæˆåŠŸ!é‚£ä¹ˆç°åœ¨è¯·ä½ å»ä¸ºäº†æ›´é«˜çš„å¢ƒç•Œè€Œå¥‹æ–—å§.");
 		}
 	}
 }	

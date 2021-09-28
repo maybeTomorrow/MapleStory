@@ -1,6 +1,6 @@
 /*
  *
- *  ´Ë½Å±¾ÓÉÃ°ÏÕµºÖÆ×÷Íê³É
+ *  æ­¤è„šæœ¬ç”±å†’é™©å²›åˆ¶ä½œå®Œæˆ
  * 
  *
  */
@@ -28,7 +28,7 @@ function action(mode, type, selection)
 	}
 	else if (mode == 0)
 	{
-		cm.sendOk("ºÃµÄÈç¹ûÒªÌôÕ½#bÑıÉ®#kËæÊ±À´ÕÒÎÒ.");
+		cm.sendOk("å¥½çš„å¦‚æœè¦æŒ‘æˆ˜#bå¦–åƒ§#kéšæ—¶æ¥æ‰¾æˆ‘.");
 		cm.dispose();
 	} 
 	else 
@@ -40,14 +40,14 @@ function action(mode, type, selection)
 		
 	if (status == 0)
 	{	/*if (cm.getC().getChannel() != 2){
-			cm.sendOk("   ÉÙÁÖÑıÉ®µÄÌôÕ½Ö»ÄÜÔÚ#r2#kÆµµÀ½øĞĞ!");
+			cm.sendOk("   å°‘æ—å¦–åƒ§çš„æŒ‘æˆ˜åªèƒ½åœ¨#r2#ké¢‘é“è¿›è¡Œ!");
 			cm.dispose();
 			}else{*/
 			if (cm.getPlayerCount(702060000) > 0){
-	            cm.sendOk("ÒÑ¾­ÓĞÈËÌôÕ½ÑıÉ®ÄãÎŞ·¨½øÈë£¡");
+	            cm.sendOk("å·²ç»æœ‰äººæŒ‘æˆ˜å¦–åƒ§ä½ æ— æ³•è¿›å…¥ï¼");
                     cm.dispose();
 			}else{
-				cm.sendYesNo("ÄãÊÇ·ñÒªÌôÕ½#bÑıÉ®#kÄØ?");
+				cm.sendYesNo("ä½ æ˜¯å¦è¦æŒ‘æˆ˜#bå¦–åƒ§#kå‘¢?");
 			}
 		//}
 	}
@@ -55,13 +55,13 @@ function action(mode, type, selection)
 	{ 	
 		var party = cm.getPlayer().getParty();		
 		if (party == null || party.getLeader().getId() != cm.getPlayer().getId()) {
-                    cm.sendOk("Äã²»ÊÇ¶Ó³¤¡£ÇëÄãÃÇ¶Ó³¤À´Ëµ»°°É£¡");
+                    cm.sendOk("ä½ ä¸æ˜¯é˜Ÿé•¿ã€‚è¯·ä½ ä»¬é˜Ÿé•¿æ¥è¯´è¯å§ï¼");
                     cm.dispose();
                 }else if(cm.getBossLog("shaoling") > 1) {
-	            cm.sendOk("ÄúºÃ,ÏµÍ³ÏŞ¶¨Ã¿ÌìÖ»ÄÜÌôÕ½1´Î!");
+	            cm.sendOk("æ‚¨å¥½,ç³»ç»Ÿé™å®šæ¯å¤©åªèƒ½æŒ‘æˆ˜1æ¬¡!");
                     cm.dispose();
 		}else if(party.getMembers().size() < 1) {
-	            cm.sendOk("ĞèÒª 1 ÈËÒÔÉÏµÄ×é¶Ó²ÅÄÜ½øÈë£¡!");
+	            cm.sendOk("éœ€è¦ 1 äººä»¥ä¸Šçš„ç»„é˜Ÿæ‰èƒ½è¿›å…¥ï¼!");
                     cm.dispose();
 		}else{
 if(cm.getMonsterCount(702060000) <= 0){

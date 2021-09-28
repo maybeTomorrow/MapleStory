@@ -1,5 +1,5 @@
 /* 
-	NPC Name: 		É£¿ËË¹
+	NPC Name: 		æ¡‘å…‹æ–¯
 	Map(s): 		Maple Road : Southperry (60000)
 	Description: 		Brings you to Victoria Island
 */
@@ -12,7 +12,7 @@ function start() {
 
 function action(mode, type, selection) {
     if (status >= 0 && mode == 0) {
-        cm.sendOk("ºß...»¹ÓĞĞ©ÊÂÃ»ÓĞ´¦ÀíÍê°É£¿");
+        cm.sendOk("å“¼...è¿˜æœ‰äº›äº‹æ²¡æœ‰å¤„ç†å®Œå§ï¼Ÿ");
         cm.dispose();
         return;
     }
@@ -22,12 +22,12 @@ function action(mode, type, selection) {
         status--;
     }
     if (status == 0) {
-        cm.sendYesNo("ºß...ÄãÏëÈ¥½ğÒøµºÂğ£¿");
+        cm.sendYesNo("å“¼...ä½ æƒ³å»é‡‘é“¶å²›å—ï¼Ÿ");
     } else if (status == 1) {
         if (cm.haveItem(4031801)) {
             cm.sendNext("Okay, now give me 150 mesos... Hey, what's that? Is that the recommendation letter from Lucas, the chief of Amherst? Hey, you should have told me you had this. I, Shanks, recognize greatness when I see one, and since you have been recommended by Lucas, I see that you have a great, great potential as an adventurer. No way would I charge you for this trip!");
         } else {
-            cm.sendNext("ÄãÊÇ²»ÊÇÒÑ¾­Ñá¾ëÁËÕâÀï? ºÃ... ÏÈÊÕ¸ö #e150 ½ğ±Ò#n...");
+            cm.sendNext("ä½ æ˜¯ä¸æ˜¯å·²ç»åŒå€¦äº†è¿™é‡Œ? å¥½... å…ˆæ”¶ä¸ª #e150 é‡‘å¸#n...");
         }
     } else if (status == 2) {
         if (cm.haveItem(4031801)) {
@@ -38,7 +38,7 @@ function action(mode, type, selection) {
                     cm.sendOk("What? You're telling me you wanted to go without any money? You're one weirdo...");
                     cm.dispose();
                 } else {
-                    cm.sendNext("·Ç³£ºÃ! ÊÕµ½ÁË#e150 ½ğ±Ò#n ! ºÃ~ ÏÖÔÚ¿ªÊ¼Ïò #b½ğÒøµº#k³ö·¢~!");
+                    cm.sendNext("éå¸¸å¥½! æ”¶åˆ°äº†#e150 é‡‘å¸#n ! å¥½~ ç°åœ¨å¼€å§‹å‘ #bé‡‘é“¶å²›#kå‡ºå‘~!");
                 }
             } else {
                 cm.sendOk("Let's see... I don't think you are strong enough. You'll have to be at least Level 7 to go to Victoria Island.");
