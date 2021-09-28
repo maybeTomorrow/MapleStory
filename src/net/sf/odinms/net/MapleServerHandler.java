@@ -15,13 +15,15 @@ import org.apache.mina.common.IdleStatus;
 import org.apache.mina.common.IoHandlerAdapter;
 import org.apache.mina.common.IoSession;
 
+import java.util.ArrayList;
+
 public class MapleServerHandler extends IoHandlerAdapter {
 
     private final static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(MapleServerHandler.class);
     private final static short MAPLE_VERSION = 79;
     private PacketProcessor processor;
     private int channel = -1;
-    private boolean trace = false;
+    private boolean trace = true;
 
     public MapleServerHandler(PacketProcessor processor) {
         this.processor = processor;
@@ -108,7 +110,8 @@ public class MapleServerHandler extends IoHandlerAdapter {
                 from = "from " + client.getPlayer().getName() + " ";
             }
             if (packetHandler == null) {
-                //log.info("发现玩家  {} ({}) {}\n{}", new Object[]{from, content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});
+                log.info("pack id ",packetId);
+                log.info("发现玩家  {} ({}) {}\n{}", new Object[]{from, content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});
             } else if (log.isTraceEnabled()) {
                 //log.trace("有消息 {}由 {} ({}) {}\n{}", new Object[]{from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});
             }
@@ -121,9 +124,13 @@ public class MapleServerHandler extends IoHandlerAdapter {
                         from = "from " + client.getPlayer().getName() + " ";
                     }
                     String cname=packetHandler.getClass().getSimpleName();
-                    if(cname.equals("MoveLifeHandler")){
-
-                    }else if(cname.equals("NPCAnimation")){
+                    ArrayList list=new ArrayList<String>();
+                    list.add("MoveLifeHandler");
+                    list.add("NPCAnimation");
+                    list.add("MovePetHandler");
+                    list.add("MovePlayerHandler");
+                    list.add("LoginRequiringNoOpHandler");
+                    if(list.contains(cname)){
 
                     }else{
                         log.info("Got Message {}handled by {} ({}) {}\n{}", new Object[]{from, packetHandler.getClass().getSimpleName(), content.length, HexTool.toString(content), HexTool.toStringFromAscii(content)});

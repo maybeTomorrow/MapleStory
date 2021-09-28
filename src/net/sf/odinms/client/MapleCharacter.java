@@ -2264,6 +2264,7 @@ public void maxAllSkills(int amount) {
     }
 
     public void setAutoHpPot(int itemId) {
+        log.info("set hp",itemId);
         autoHpPot = itemId;
     }
 
@@ -2272,6 +2273,7 @@ public void maxAllSkills(int amount) {
     }
 
     public void setAutoMpPot(int itemId) {
+        log.info("set mp",itemId);
         autoMpPot = itemId;
     }
 

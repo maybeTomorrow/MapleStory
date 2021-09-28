@@ -138,6 +138,7 @@ public enum RecvPacketOpcode implements WritableIntValueHolder {
     PET_COMMAND,
     PET_LOOT,
     PET_AUTO_POT,
+    PET_AUTO_POT2,
     MOVE_SUMMON,
     SUMMON_ATTACK,
     DAMAGE_SUMMON,

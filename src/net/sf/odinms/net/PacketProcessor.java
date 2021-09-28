@@ -186,6 +186,7 @@ public final class PacketProcessor {
             registerHandler(RecvPacketOpcode.PET_COMMAND, new PetCommandHandler());
             registerHandler(RecvPacketOpcode.PET_LOOT, new PetLootHandler());
             registerHandler(RecvPacketOpcode.PET_AUTO_POT, new PetAutoPotHandler());
+            registerHandler(RecvPacketOpcode.PET_AUTO_POT2, new PetAutoPotHandler());
             registerHandler(RecvPacketOpcode.MOVE_SUMMON, new MoveSummonHandler());
             registerHandler(RecvPacketOpcode.SUMMON_ATTACK, new SummonDamageHandler());
             registerHandler(RecvPacketOpcode.DAMAGE_SUMMON, new DamageSummonHandler());

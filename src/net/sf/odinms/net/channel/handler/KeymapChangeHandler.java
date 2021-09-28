@@ -23,9 +23,9 @@ public class KeymapChangeHandler extends AbstractMaplePacketHandler {
                 c.getPlayer().changeKeybinding(key, newbinding);
             }
         } else if (mode == 1) {
-            c.getPlayer().setAutoHpPot(slea.readInt());
-        } else if (mode == 2) {
             c.getPlayer().setAutoMpPot(slea.readInt());
+        } else if (mode == 2) {
+            c.getPlayer().setAutoHpPot(slea.readInt());
         }
     }
 }

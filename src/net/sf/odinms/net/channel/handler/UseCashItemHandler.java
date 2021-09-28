@@ -514,8 +514,8 @@ public class UseCashItemHandler extends AbstractMaplePacketHandler {
                     }
                     break;
                 case 517: //宠物改名
-                    MaplePet pet = c.getPlayer().getPet(0);
-                    if (pet == null) {
+                    MaplePet pet2 = c.getPlayer().getPet(0);
+                    if (pet2 == null) {
                         c.getSession().write(MaplePacketCreator.enableActions());
                         return;
                     }
@@ -523,36 +523,25 @@ public class UseCashItemHandler extends AbstractMaplePacketHandler {
                     if (newName.length() > 13) {
                         return;
                     }
-                    pet.setName(newName);
-                    c.getSession().write(MaplePacketCreator.updatePet(pet, true));
+                    pet2.setName(newName);
+                    c.getSession().write(MaplePacketCreator.updatePet(pet2, true));
                     c.getSession().write(MaplePacketCreator.enableActions());
                     c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MaplePacketCreator.changePetName(c.getPlayer(), newName, 1), true);
                     MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
                     break;
-                case 519: //宠物改名
-                    MaplePet pet3 = c.getPlayer().getPet(0);
-                    if (pet3 == null) {
-                        c.getSession().write(MaplePacketCreator.enableActions());
-                        return;
-                    }
-                    pet3.setUniqueId(itemId);
-                    c.getSession().write(MaplePacketCreator.updatePet(pet3, true));
-                    c.getSession().write(MaplePacketCreator.enableActions());
-                    c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MaplePacketCreator.updatePet(pet3,true), true);
-                    MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
-                    break;
+                    
                 case 520:
                     c.getPlayer().gainMeso(ii.getMeso(itemId), true,    false, true);
                     MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
                     c.getSession().write(MaplePacketCreator.enableActions());
                     break;
                 case 524:
-                    MaplePet pet1 = c.getPlayer().getPet(0);
-                    if (pet1 == null) {
+                    MaplePet pet = c.getPlayer().getPet(0);
+                    if (pet == null) {
                         c.getSession().write(MaplePacketCreator.enableActions());
                         return;
                     }
-                    if (!pet1.canConsume(itemId)) {
+                    if (!pet.canConsume(itemId)) {
                         pet = c.getPlayer().getPet(1);
                         if (pet != null) {
                             if (!pet.canConsume(itemId)) {
@@ -572,21 +561,21 @@ public class UseCashItemHandler extends AbstractMaplePacketHandler {
                             return;
                         }
                     }
-                    pet1.setFullness(100);
+                    pet.setFullness(100);
                     int closeGain = 100 * c.getChannelServer().getPetExpRate();
-                    if (pet1.getCloseness() < 30000) {
-                        if (pet1.getCloseness() + closeGain > 30000) {
-                            pet1.setCloseness(30000);
+                    if (pet.getCloseness() < 30000) {
+                        if (pet.getCloseness() + closeGain > 30000) {
+                            pet.setCloseness(30000);
                         } else {
-                            pet1.setCloseness(pet1.getCloseness() + closeGain);
+                            pet.setCloseness(pet.getCloseness() + closeGain);
                         }
-                        while (pet1.getCloseness() >= ExpTable.getClosenessNeededForLevel(pet1.getLevel() + 1)) {
-                            pet1.setLevel(pet1.getLevel() + 1);
-                            c.getSession().write(MaplePacketCreator.showOwnPetLevelUp(c.getPlayer().getPetSlot(pet1)));
-                            c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.showPetLevelUp(c.getPlayer(), c.getPlayer().getPetSlot(pet1)));
+                        while (pet.getCloseness() >= ExpTable.getClosenessNeededForLevel(pet.getLevel() + 1)) {
+                            pet.setLevel(pet.getLevel() + 1);
+                            c.getSession().write(MaplePacketCreator.showOwnPetLevelUp(c.getPlayer().getPetSlot(pet)));
+                            c.getPlayer().getMap().broadcastMessage(MaplePacketCreator.showPetLevelUp(c.getPlayer(), c.getPlayer().getPetSlot(pet)));
                         }
                     }
-                    c.getSession().write(MaplePacketCreator.updatePet(pet1, true));
+                    c.getSession().write(MaplePacketCreator.updatePet(pet, true));
                     c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MaplePacketCreator.commandResponse(c.getPlayer().getId(), 0, 1, true), true);
                     MapleInventoryManipulator.removeById(c, MapleInventoryType.CASH, itemId, 1, true, false);
                     break;
