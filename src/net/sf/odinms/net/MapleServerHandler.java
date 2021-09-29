@@ -68,8 +68,8 @@ public class MapleServerHandler extends IoHandlerAdapter {
         byte ivRecv[] = {70, 114, 122, 82};
         byte ivSend[] = {82, 48, 120, 115};
 
-        ivRecv[3] = (byte) (Math.random() * 255);
-        ivSend[3] = (byte) (Math.random() * 255);
+//        ivRecv[3] = (byte) (Math.random() * 255);
+//        ivSend[3] = (byte) (Math.random() * 255);
         MapleAESOFB sendCypher = new MapleAESOFB(MapleAESOFB.MAPLE_AES_KEY, ivSend, (short) (0xFFFF - MAPLE_VERSION));
         MapleAESOFB recvCypher = new MapleAESOFB(MapleAESOFB.MAPLE_AES_KEY, ivRecv, MAPLE_VERSION);
 

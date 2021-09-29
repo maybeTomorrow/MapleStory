@@ -29,6 +29,7 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder {
             session.setAttribute(DECODER_STATE_KEY, decoderState);
         }
 
+
         if (in.remaining() >= 4 && decoderState.packetlength == -1) {
             int packetHeader = in.getInt();
             if (!client.getReceiveCrypto().checkPacket(packetHeader)) {
@@ -47,11 +48,17 @@ public class MaplePacketDecoder extends CumulativeProtocolDecoder {
             in.get(decryptedPacket, 0, decoderState.packetlength);
             decoderState.packetlength = -1;
 
+            log.info("原始包1");
+            log.info(HexTool.toString(decryptedPacket));
             client.getReceiveCrypto().crypt(decryptedPacket);
+            log.info("原始包2");
+            log.info(HexTool.toString(decryptedPacket));
             MapleCustomEncryption.decryptData(decryptedPacket);
+            log.info("原始包3");
+            log.info(HexTool.toString(decryptedPacket));
             out.write(decryptedPacket);
             if (decryptedPacket.length <= 300) {
-               // log.info(HexTool.toString(decryptedPacket));
+//                log.info(HexTool.toString(decryptedPacket));
             } else {
               // log.info(HexTool.toString(new byte[]{decryptedPacket[0], decryptedPacket[1]}) + "...");
             }
